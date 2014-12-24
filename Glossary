@@ -1,0 +1,131 @@
+=Glossary of terms=
+
+Source Mage utilizes a magic and mythology metaphor for the names of many of our project components. Some of these are defined below.
+
+==Core Terms and Components==
+
+[[Sorcery]]
+
+Source Mage's package management system component.
+
+[[Spell]]
+
+A collection of scripts, processed by Sorcery, to install a particular software package (similar to an RPM, ebuild, etc. for other distributions).
+
+[[Grimoire]]
+
+Generally, Source Mage's package collection component. More specifically, a collection of spells for a particular purpose. Currently we provide the following grimoires ourselves; others may provide more:
+
+|= Grimoire =|= Description =|
+| **stable** | a release cycle-controlled collection of spells that should be bug-free |
+| **stable-rc** | a release cycle-controlled collection of spells that is the next stable version release candidate |
+| **test** | a collection of spells that represents the bleeding edge; these versions compile for at least the developer that committed them, but may leave your system a smoldering ruin |
+| **games** | a collection of spells to install games, game servers and clients, etc. |
+| **z-rejected** | a collection of spells which are not included in the primary grimoires because of licensing or other issues. These are more or less supported, depending on individual interest and availability |
+| **binary** | a collection of free (FSF-approved) software that are distributed in binary form, for example, binary versions of OpenOffice.org and Firefox |
+
+[[Codex]]
+
+A collection of grimoires.
+
+[[Cauldron]]
+
+Source Mage's installer and ISO generation scripts component.
+
+[[Tome]]
+
+Source Mage's documentation component, including general docs as well as end user-facing services such as web-sites, mailing lists, bug-tracking system, etc.
+----
+
+==People==
+
+[[Elder]]
+
+A Lead Developer or Assistant Lead as defined in our [[Developer Organization]] document.
+
+[[Warlock]]
+
+An optional title for an elder who works with the cauldron or sorcery set of scripts.
+
+[[Archon]]
+
+An optional title for an elder who works with the grimoire.
+
+[[Sage]]
+
+An optional title for an elder who works with the tome.
+
+[[Mage]]
+
+A General Developer as defined in our [[Developer Organization]] document.
+
+[[Wizard]]
+
+An optional title for a mage who works with the cauldron or sorcery set of scripts.
+
+[[Guru]]
+
+An optional title for a mage who works with the grimoire, especially those who are responsible for a particular section, e.g. "Mail Guru".
+
+[[Scribe]]
+
+An optional title for a mage who works with the tome.
+
+See also: [[#head-1-3|Other commands]], **Scribe**.
+
+[[Council of Elders]]
+
+The Lead Developer Team and their Assistants, as defined in our [[Developer Organization]] document.
+
+[[Circle of Mages]]
+
+The General Developer Team, as defined in our [[Developer Organization]] document.
+
+[[Apprentice]]
+
+A developer in training, whose development commits must be approved by another developer before they reach the user-facing "test" releases. This is a voluntary restriction; all of our new developers have the option to immediately become full developers, and apprentices can become full developers any time they believe they are ready.
+
+[[Acolyte]], [[Herald]]
+
+A Source Mage user (not a developer).
+
+[[Golem]]
+
+An automated process, e.g. an IRC-bot.
+----
+
+==Other commands==
+
+[[Alter]]
+
+Sorcery command to modify the tracked files of an already-installed spell.
+
+[[Cast]]
+
+Sorcery command to install a spell.
+
+[[Cleanse]]
+
+Sorcery command to inspect, clean, and repair broken systems.
+
+[[Gaze]]
+
+Sorcery command to query system and spell information.
+
+[[Prometheus]]
+
+Automated QA/testing framework. Once started on a machine, Prometheus constantly casts random spells with random options selected and automatically files bugs for any failures encountered.
+
+[[MultipleGrimoiresWithScribbler|Scribbler]]
+
+Sorcery command to copy spells between grimoires.
+
+[[Scribe]]
+
+Sorcery command to add, remove, and manage grimoires installed on a system.
+
+See also: [[#head-1-2|People]], **Scribe**.
+
+[[Summon]]
+
+Sorcery command to download upstream sources for a spell.
