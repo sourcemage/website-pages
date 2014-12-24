@@ -8,6 +8,7 @@
 * A "Developer" in this policy is any General or Lead Developer, as defined by the [[Developer Organization]] document, who was a Developer at the time the given vote began (the time the call for nominations was made or the time a given motion was first proposed).
 * The terms "**MAY**", "**SHOULD**", "**MUST**", and "**MUST NOT**" when used in this Policy have the meanings assigned them in [[http://www.ietf.org/rfc/rfc2119.txt|RFC 2119]]. The term "**WILL**" is used to specify expectations for the voting process itself and the person(s) administering it. If a vote is not held in compliance with these "**WILL**" specifications, any Developer MAY move that the current vote be invalidated and started over. If the revote motion is seconded the current vote WILL be immediately suspended and the revote motion WILL proceed as an Issue Vote as described below. If the revote motion carries (on initial vote or veto) the current vote WILL be started over by the relevant Lead or their Assistant(s) within one week of the scheduled end of the revote motion vote.
 * All nominations, motions, seconds, votes, etc. MUST be GPG-signed by the Developer's GPG key as recorded at [[Key Signing]] to be valid.
+----
 
 ==Lead Developer Votes==
 
@@ -17,6 +18,7 @@
 * The nomination MUST be accepted within one week of being made.
 * If a nomination is seconded and accepted the Project Lead or their assistant(s) WILL call for a vote within two weeks of the date the nomination was made.
 * Votes WILL proceed per the Lead Voting Process described below.
+----
 
 ==Project and Component Lead Votes==
 
@@ -38,6 +40,7 @@
 * The Lead's term begins the first day of the month following their election and lasts for one year.
 * If a Project or Component Lead is removed or steps down before the end of their regular term, the Project Lead (or, in the case of the Project Lead being the one removed, any other Lead Developer) WILL call for nominations for a replacement within one week of the effective date of the Lead's removal. The voting process for the replacement WILL continue as described above. The replacement WILL at most serve out the remainder of the existing term for that position, and the regular vote WILL be held when scheduled.
 * If at any time a Project or Component Lead position is empty (due to lack of available candidates, etc.), the Project Lead (or any Lead Developer, in the case of a Project Lead vacancy) MAY schedule a new vote for a temporary Lead to fill the position until the next scheduled election. The vote will continue as described above.
+----
 
 ==Lead Voting Process==
 
@@ -55,6 +58,7 @@
 * If contested, the vote counter WILL produce the full votes with their signatures and receipt strings to three other Lead Developers within 48 hours of the contest reaching the Mailing List.
 * These three Leads WILL provide their own list of receipt strings and their respective votes to the Mailing List within 72 hours of receiving the votes.
 * If the results are still contested, the vote counter WILL provide all votes and their signatures and receipt strings to the Mailing List within 48 hours of the (second) contest.
+----
 
 ==Issue Voting Process==
 
@@ -68,6 +72,7 @@
 * More than 50% of the Lead Developers MUST cast a vote, or the vote is invalid and fails.
 * Votes require a simple majority (greater than 50% of all binding votes cast) to pass.
 * Motions which pass are considered active immediately upon the majority vote reaching the Mailing List.
+----
 
 ==Developer Removal Voting Process==
 
@@ -79,6 +84,7 @@
 *** All General and Lead Developers (other than the Developer being voted upon) are counted as having voted unless a normal vote is required as described above.
 * Successful or failed removal votes MAY be vetoed by the entire group of Developers.
 * If an Automated Removal Vote fails, the Developer in question WILL be automatically nominated and seconded for a Removal Vote every six months they continue to be inactive.
+----
 
 ==Veto Process==
 
