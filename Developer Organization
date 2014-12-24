@@ -1,0 +1,53 @@
+=Developer Organization=
+
+Source Mage GNU/Linux contributors are organized into a team of **Lead Developers** and a team of **General Developers**. Leads are further divided into a **Project Lead**, identified **Component Leads**, and **General Leads**. The **Project and Component Leads** may also have **Assistants**.
+
+==General Developers==
+
+* Are defined as all **non-Lead Developers** listed at [[Developers]]
+* Can be added to the project and given repository access by any **Lead Developer**
+* Have commit access to the various project components, at the discretion of the Lead over that component
+* Have the option to cast a binding vote in all **Lead Election** votes
+* Have the option to cast a non-binding vote in all other votes
+* Can be removed by a super majority vote of the **Lead Developers**
+* Can have a removal vote vetoed by a super majority vote of all **Developers**
+* Are automatically nominated and seconded for a removal vote after one year of inactivity (defined as no committed changes to any part of the project's source code or documentation repositories (including web sites))
+* Once someone is no longer considered a developer, their entry on the [[Developers]] page, all of their SCM accounts, @sourcemage.org mail aliases, sourcemage IRC cloak, and special #sourcemage IRC permissions (including permissions on other IRC channels related to the Project) must be removed
+----
+
+==Lead Developers==
+
+* Are elected from among the **General Developer** by a simple majority vote of the **General Developers** + **Lead Developers**
+* Have commit access to the various project components, at the discretion of the Lead over that component
+* Are required to cast a binding vote in all **Lead Election** and other votes
+* Serve an unlimited term as long as they are not removed by vote
+* Can be removed as Leads by a super majority vote of the other **Lead Developers**
+* Can have a removal vote vetoed by a super majority vote of all **Developers**
+* Are automatically removed without vote or veto if they fail to cast any votes for two consecutive months or longer, provided there were at least two votes hold in that period
+* Are automatically nominated and seconded for a removal vote after six months of inactivity (defined as no committed changes to any part of the project's source code or documentation repositories (including web sites))
+* Revert to **General Developers** if removed
+----
+
+==Project and Component Leads==
+
+* Are elected from among the **Lead Developers** by a simple majority vote of the **General Developers** + **Lead Developers**
+* Remain **Lead Developers**
+* Have primary responsibilty for and daily authority over one of the identified **Project Components** (or in the case of the **Project Lead**, the entire Project)
+* Are subject to the outcome of any votes affecting their Components
+* Serve a one year term, with no limit on number of terms
+* Can be removed as **Project Lead** or **Component Lead** by a super majority vote of the other **Lead Developers**
+* Can have a removal vote vetoed by a super majority vote of all **Developers**
+* Remain **Lead Developers** if removed
+----
+
+==Assistants==
+
+* Can be any **General Developer** or **Lead Developer** chosen by the individual **Project Leads** and **Component Leads**
+* Act on behalf of and with the authority of the Lead they are assisting, at the Lead's discretion
+* Do not receive any extra binding or non-binding vote as an **Assistant**
+* Can cast the Lead's binding vote in their place in any vote, at the Lead's discretion
+* Retain their own binding or non-binding individual vote for all elections they would otherwise be involved in
+* Revert to their regular, non-assistant status if the Lead they are assisting steps down or is otherwise removed as Lead
+----
+
+For more information on Lead elections see the [[Voting Policy]].
