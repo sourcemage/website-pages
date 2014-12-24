@@ -1,0 +1,41 @@
+=The Source Mage GNU/Linux Organizational Chart=
+
+We have **20** active developers, listed below.
+
+If you're wondering how to become a developer then please read the [[Contribution]] page.
+
+See also the [[Glossary|Source Mage Glossary]] and [[Developer organization]].
+
+==Council of Elders (Lead Developers and Assistants)==
+
+|= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
+| Arjan Bouter | Lead Developer, Windowmanagers Guru | ##abouter## | abouter@sourcemage.org |
+| David Kowis | Project Lead | ##BeepDog## | dkowis@sourcemage.org |
+| Eric Sandall | Lead Developer | ##sandalle## | sandalle@sourcemage.org |
+| Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | lynxlynxlynx@sourcemage.org |
+| Jeremy Blosser | Lead Developer | ##emrys## | jblosser@sourcemage.org |
+| Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | crypto@sourcemage.org |
+| Robin Cook | Lead Developer | ##CuZnDragon## | cuzndragon@sourcemage.org |
+| Vlad Glagolev | Grimoire Lead | ##Stealth## | stealth@sourcemage.org |
+
+==Circle of Mages (General Developers)==
+
+|= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
+| Florian Franzmann | General Guru | ##{{{|beowulf|}}}## | beowulf@sourcemage.org |
+| Ismael Luceno | General Guru | ##ismaell##  | ismael@sourcemage.org |
+| Jeremy Kajikawa | General Guru  | ##Belxjander## | belxjander@sourcemage.org |
+| Julien Rozo | General Guru | ##_kaze_## | julien@rozo.org |
+| Justin Boffemmyer | General Guru | ##flux_control## | flux@sourcemage.org |
+| Mark Bainter | General Guru | ##Shamgar## | mbainter@sourcemage.org |
+| Pol Vinogradov | General Guru | ##public## | vin.public@gmail.com |
+| Remko van der Vossen | General Guru | ##wich## | wich@sourcemage.org |
+| Seth Woolley | QA, Security and Sorcery Wizard | ##swoolley## | swoolley@sourcemage.org |
+| Thomas Orgis | General Guru | ##sobukus## | sobukus@sourcemage.org |
+| Tommy Boatman | General Guru | ##tboatman## | tboatman@sourcemage.org |
+| Treeve Jelbert | Database and Telephony Guru | ##treeve## | treeve@sourcemage.org |
+
+Grimoire sections //archive//, //cluster//, //devel//, //display//, //doc//, //gnu//, //i18n//, //java//, //kernels//, //libs//, //mobile//, //printer//, //security//, //shell-term-fm//, //telephony//, //utils// and //x11// are currently un-maintained but are mostly up to date. Many developers have project subscriptions for their particular spells and are walk in walk out positions.
+
+Contact the [[mailto:grimoire@sourcemage.org|Grimoire Team Lead]] for more information.
+
+[[Hall of Fame]]
