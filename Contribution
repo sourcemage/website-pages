@@ -1,0 +1,103 @@
+=Contributing=
+
+There are four areas in which you may "belong" for contributing to Source Mage GNU/Linux:
+
+* Unofficial Developer
+* Official Developer
+* Official Lead
+* Official Team Lead
+
+Being an Unofficial Developer is the easiest and least intensive, while the others become progressively more time consuming. Most Official Developers will start out as Unoffical Developers and then either ask or be asked by an Official Team Lead to join the team they feel they'd most enjoy/benefit.
+
+All code developed by/for Source Mage GNU/Linux is licensed under the [[http://www.gnu.org/licenses/licenses.html#GPL|GPL]].
+
+==Developer Duties==
+
+Here is a list of requirements/duties if you're thinking of contributing to Source Mage GNU/Linux and your status.
+
+===Unofficial Developer===
+
+* Submit patches and/or bug reports to http://bugs.sourcemage.org
+* **Recommended, but not required**: hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]]
+* Have a read-only clone of our git repositories and ask developers to pull changes from you (see [[HowTo/Anonymous Git]])
+
+===Official Developer===
+
+* Work under a Team Lead
+* Vote for Team Leads
+* Submit fixes through our Source Code Management (SCM) system
+* Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+* **Recommended, but not required**: hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]])
+
+===Official Lead (Lead)===
+
+* Vote for Team Leads
+* Submit fixes through our Source Code Management (SCM) system
+* Communicate with other developers
+* Hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]]) and [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+* Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+
+===Official Team Lead (Component Lead)===
+
+* Vote for Team Leads
+* Submit fixes through our Source Code Management (SCM) system
+* Communicate with their team members
+* Communicate with other Team Leads
+* Subscribe to and read all SCM commits by all developers (//[[http://scmweb.sourcemage.org|scmweb.sourcemage.org]] is an alternative that may be easier to read than email//)
+* Hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]]) and [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+* Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+
+===Project Lead===
+
+The Project Lead (PL) is responsible for the following:
+
+* Maintain cohesion between the various Team Leads
+* Schedule and preside over developer meetings
+* Initiate and administer public votes for Source Mage GNU/Linux
+* Promote Source Mage GNU/Linux to news organizations, magazines, and websites
+* Maintain the [[Roadmap]]
+* Forward appropriate Team announcements to the proper channels
+* Maintain contacts with popular news sites that accept our announcements ([[http://distrowatch.com|DistroWatch]], [[http://www.osnews.com|OSNews]], [[http://slashdot.org|Slashdot]], magazines, etc.)
+* Announce team releases (Sorcery and Cauldron mainly) to news sites
+* Work with the Tome Team to keep our website "schnazzy"
+
+===Sorcery Lead===
+
+The Sorcery Lead (SL) will be responsible for the following:
+
+* Manage [[The Sorcery Team]] to produce timely and stable Sorcery releases
+* Maintain Sorcery release tarballs and send out announcements //(the Project Lead will forward stable release announcements to various news sources)// as well as maintaining the following information:
+** Sorcery documentation
+** Sorcery ChangeLog
+** [[Roadmap/Sorcery|Sorcery Roadmap]]
+
+===Grimoire Lead===
+
+The Grimoire Lead (GL) will be responsible for the following:
+
+* Recruit capable users to fill in section guruships as well as general guruship
+* Maintain Grimoire documentation
+* Maintain [[Roadmap/Grimoire|Grimoire Roadmap]]
+* Maintain [[Grimoire Guru Handbook]]
+* Setup and maintain [[Prometheus]]
+* Setup and maintain a system to system-test each "release" of the stable Grimoire
+* Organize groups to test grimoires, ISOs, Sorcery, and documentation accuracy
+* Keep abreast of security issues and make sure Source Mage GNU/Linux is not vulnerable
+* Monitor or subscribe to at least these mailing lists (security@sourcemage@org should be already subscribed to them):
+** [[http://seclists.org/|seclists.org]]
+** [[http://www.openwall.com/lists/oss-security/|oss-security @ openwall]]
+
+===Cauldron Lead===
+
+The Cauldron Lead (CL) will be responsible for the following:
+
+* Maintain ISO releases and send out announcements as well as maintaining the following information:
+** ISO ChangeLog
+** [[Roadmap/ISO|ISO Roadmap]]
+
+===Tome Lead===
+
+The Tome Lead (TL) will be responsible for the following:
+
+* Maintain our websites, keep them up-to-date, and close security vulnerabilities
+* Maintain documentation accuracy
