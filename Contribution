@@ -20,7 +20,7 @@ Here is a list of requirements/duties if you're thinking of contributing to Sour
 
 * Submit patches and/or bug reports to http://bugs.sourcemage.org
 * **Recommended, but not required**: hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]]
-* Have a read-only clone of our git repositories and ask developers to pull changes from you (see [[Anonymous Git]])
+* Have a read-only clone of our git repositories and ask developers to pull changes from you (see [[Git Guide]])
 
 ===Official Developer===
 
