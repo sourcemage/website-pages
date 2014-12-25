@@ -66,4 +66,4 @@
 | [[http://subkeys.pgp.net:11371/pks/lookup?search=0x243070DA&fingerprint=on&op=index|243070DA]] | ##PyroBor## | Bor Kraljic | ##7F17 085E CC73 D9B5 77C4  EB81 9FE0 B049 386B 44FE## |
 | [[http://subkeys.pgp.net:11371/pks/lookup?search=0x386B44FE&fingerprint=on&op=index|386B44FE]] | ##chp## | Peng Chang (Charles) | ##F3AA 9C17 347C 7234 6F11 E6C8 2467 52D6 2430 70DA## |
 
-As the links are to ##subkeys.pgp.net## which always throws you to a different server there might be some incompatibility or a 404 here and there but a retry after a few minutes should switch it again.
+As the links are to ##subkeys.pgp.net## which always throws you to a different server there might be some incompatibility or a 404 here and there but a retry after a few minutes should switch it again. The last working alias was http://keys.riverwillow.net.au:11371.
