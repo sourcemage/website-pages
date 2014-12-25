@@ -1,0 +1,96 @@
+=Keysigning=
+
+Install ##gnupg## and //(optionally)// ##gpa##
+
+{{{
+# cast gnupg
+# cast gpa
+}}}
+
+Read the ##man## page for ##gpg##
+
+{{{
+$ man gpg
+}}}
+
+==Source Mage keysigning==
+
+Generate keys and send your public key to keyservers
+Generate a key and select the default key types //(for most uses this is ok)//:
+
+{{{
+$ gpg --gen-key
+}}}
+
+Write down your ID and fingerprint -- these are for giving to people to sign your key:
+
+{{{
+$ gpg --fingerprint
+}}}
+
+Make sure that these match: ##8C97 9818 F889 EDE3 B54C AAD6 E936 BF83 8431 7E6A##
+
+{{{
+$ gpg --recv-keys --keyserver subkeys.pgp.net 84317E6A
+$ gpg --fingerprint 84317E6A
+}}}
+
+Now you have swoolley's ID and public key to verify everyone else who's been signed.
+
+Send your key(s) to ##subkeys.pgp.net##:
+
+{{{
+$ gpg --send-keys --keyserver subkeys.pgp.net <your pub key ID>
+}}}
+
+Install an IRC client //(like xchat or irssi)//:
+
+{{{
+$ cast irssi
+}}}
+
+Join [[irc://irc.freenode.net/#sourcemage-keysigning|#sourcemage-keysigning]] on [[irc://irc.freenode.net|irc.freenode.net]]:
+
+{{{
+$ irssi -n <yournick> -c irc.freenode.net
+> /join #sourcemage-keysigning
+}}}
+
+Use ctrl-n and ctrl-p to go between windows in irssi and alt-windownum works too.
+
+Register your nick with nickserv if you haven't already:
+
+{{{
+> /msg nickserv help
+> /msg nickserv register <password>
+}}}
+
+Now you are registered. Use this to identify when you log into to chat:
+
+{{{
+> /msg nickserv identify <password>
+}}}
+
+Send a message after you've registered, with your key and fingerprint:
+
+{{{
+> /msg #sourcemage-keysigning Hey, my key ID and fingerprint are: 00000000: 0000 0000 0000 0000 0000 0000 0000 0000
+}}}
+
+Replace the zeros above with your public ID and fingerprint from:
+
+{{{
+$ gpg --fingerprint <your email address>
+}}}
+
+[[Keysigning/Developer keys|Here]] is a list of keys and fingerprints associated to IRC usernames.
+
+To sign a number of people:
+
+{{{
+KEYS='space-separated list of key numbers'
+$ gpg --recv-keys --keyserver subkeys.pgp.net $KEYS
+$ for i in $KEYS; do gpg --sign-key $i; done
+$ gpg --send-keys --keyserver subkeys.pgp.net $KEYS
+$ gpg --send-keys --keyserver www.keyserver.net $KEYS
+}}}
