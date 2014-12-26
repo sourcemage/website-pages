@@ -1,10 +1,11 @@
 = Grimoire ChangeLog =
 
-The grimoire ChangeLog is used to record any changes on the grimoire or section level.
-* new spells
-* moved spells
-* deleted spells
-* changes to grimoire functions (FUNCTIONS, libaccount, libgcc, etc.) and auxiliary files (accounts, groups, etc.)
+The grimoire ChangeLog is used to record any changes on the grimoire or section level:
+
+* New spells
+* Moved spells
+* Deleted spells
+* Changes to grimoire functions (FUNCTIONS, libaccount, libgcc, etc.) and auxiliary files (accounts, groups, etc.)
 
 The reason to include new spells in the ChangeLog, although they technically have their own change logs (the spell HISTORY files) is that sorcery will offer to show the grimoire ChangeLog on a scribe udpate. With new spells in there it's easy to see what's been added.
 
