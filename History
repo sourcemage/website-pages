@@ -4,7 +4,7 @@ In the beginning there was Sorcerer GNU/Linux, a GNU/Linux distro created by Kyl
 
 Unfortunately, due to several issues, Sorcerer was forked into Lunar Penguin (now [[http://www.lunar-linux.org|Lunar Linux]]), and Kyle took the original Sorcerer offline with no explanation. Thanks to the freedom granted by the GPL, we continued the Sorcerer distro from assembled backups, etc.
 
-A month later, as Sorcerer was starting to regain lost ground, Kyle relaunched his version of [[http://sorcerer.silverice.org|Sorcerer]] under a non-forking (thus non-free) license he calls the SPL and dropped the term //"GNU/Linux"//. We renamed our distro to Source Mage after a vote, out of respect for Kyle's wishes.
+A month later, as Sorcerer was starting to regain lost ground, Kyle relaunched his version of [[http://sorcerer.silverice.org|Sorcerer]] under a non-forking (thus non-free) license he calls the [[SPL]] and dropped the term //"GNU/Linux"//. We renamed our distro to Source Mage after a vote, out of respect for Kyle's wishes.
 
 Development now continues on 3 seperate distros with three distinct goals.
 * Lunar-Linux aims to produce a stable, solid, source-based distro using well tested software versions.
