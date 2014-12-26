@@ -2,9 +2,7 @@
 
 This is a grimoire which contains all of the games which have been submitted and added.
 
-Here are some notes describing specifics of spells in the games grimoire.
-
-== Paths and permissions ==
+Here are some notes describing specifics of spells in the games grimoire:
 
 * All games should install their binaries to: {{{"/usr/games"}}}
 * In case a game needs to have it's data in the same dir as the binary a symbolic link or a launcher script (preferred) should be used and the binary installed to {{{"/usr/share/games/$gamedir"}}}
