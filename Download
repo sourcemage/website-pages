@@ -1,0 +1,79 @@
+= Get Source Mage =
+
+This is our main download page, where you can find all your downloadable bliss!
+
+For installation instructions, please see the [[Install]] page.
+----
+
+== Source Mage ISO ==
+
+=== x86 ===
+
+* The current **stable** Source Mage i486 ISO is [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2|0.10.0]] ([[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.sig|GPG]], [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.md5|MD5]]):
+** Kernel version: **2.6.27.10**
+** Release date: **20090605**
+* The previous **stable** Source Mage i486 ISO is [[http://download.sourcemage.org/iso/x86/0.9.6/smgl-0.9.6.3-x86.iso.bz2|0.9.6.3]] ([[http://download.sourcemage.org/iso/x86/0.9.6/smgl-0.9.6.3-x86.iso.bz2.md5|MD5]]), [[http://download.sourcemage.org/iso/x86/0.9.6/smgl-0.9.6.3-x86.iso.bz2.torrent|torrent]]:
+** Kernel version: **2.6.19.5**
+** Release date: **20070326**
+* The current **test** Source Mage i486 ISO is [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2|0.10.0]] ([[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.sig|GPG]], [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.md5|MD5]]):
+** Kernel version: **2.6.27.10**
+** Release date: **20090605**
+
+=== x86_64 ===
+
+* The current **rc** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.10.0/rc/smgl-0.10.0-x86_64-rc1.iso.bz2|0.10.0-rc1]] ([[http://download.sourcemage.org/iso/x86_64/0.10.0/rc/smgl-0.10.0-x86_64-rc1.iso.bz2.sig|GPG]], [[http://download.sourcemage.org/iso/x86_64/0.10.0/rc/smgl-0.10.0-x86_64-rc1.iso.bz2.md5|MD5]]):
+** Kernel version: **2.6.27.42** //(does not support ext4)//
+** Release date: **20100506**
+* The previous **test** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.10.0/test/smgl-test-quinq-x86_64-20090608.iso.bz2|test-quinq-x86_64-20090608]] ([[http://download.sourcemage.org/iso/x86_64/0.10.0/test/smgl-test-quinq-x86_64-20090608.iso.bz2.md5|MD5]]):
+** Kernel version: **2.6.27.24**
+** Release date: **20090608**
+
+=== PPC ===
+
+* The current **stable** Source Mage PowerPC ISO is [[http://download.sourcemage.org/iso/ppc/0.9.6/smgl-0.9.6-ppc.iso.bz2|0.9.6]] ([[http://download.sourcemage.org/iso/ppc/0.9.6/smgl-0.9.6-ppc.iso.bz2.md5|MD5]]):
+** Kernel version: **2.6.12**
+** Release date: **20060312**
+
+=== Other versions ===
+
+For other ISO versions, please visit [[http://download.sourcemage.org/iso/|ISO download page]] directly. Also, use that location to download //MD5 sums// and //GPG signatures// to verify your newly acquired ISO.
+
+=== Mirror sites ===
+
+* [US] Georgia Institute of Technology ([[http://ftp.gtlib.gatech.edu/pub/sourcemage/iso/|HTTP]], [[ftp://ftp.gtlib.gatech.edu/pub/sourcemage/iso/|FTP]])
+* [RU] Stealth Zone ([[http://sourcemage.ru/iso/|HTTP]], [[ftp://ftp.stealth.zone/sourcemage/iso/|FTP]])
+----
+
+== Chroot images ==
+
+=== x86 ===
+
+* The current **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2|0.60]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz.sig|GPG]]):
+** Kernel version: **3.0.0**
+** Release date: **20120510**
+* The current **stable-rc** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz.sig|GPG]]):
+** Kernel version: **3.0.31**
+** Release date: **20120517**
+
+=== x86_64 ===
+
+* The current **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2|0.60]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.xz.sig|GPG]]):
+** Kernel version: **3.0.0**
+** Release date: **20120510**
+* The current **stable-rc** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz.sig|GPG]]):
+** Kernel version: **3.0.31**
+** Release date: **20120517**
+
+=== Mirror sites ===
+
+* [RU] Stealth Zone ([[http://sourcemage.ru/image/|HTTP]], [[ftp://ftp.stealth.zone/sourcemage/image/|FTP]])
+----
+
+== Codex ==
+
+* [[http://codex.sourcemage.org|Codex]] - current Codex listing
+----
+
+== Everything and anything ==
+
+* To browse everything on our primary download site, visit http://download.sourcemage.org
