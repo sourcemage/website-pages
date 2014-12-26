@@ -50,7 +50,7 @@ grimoire
 $ cd grimoire
 }}}
 
-**Note:** If you don't want to authenticate for every action, you can also use {{{git://}}} instead of {{{ssh://}}} for read/update operations (useful for anonymous access if specified without "<user@>" part). You will need {{{ssh://}}} for any write operations. Do not use {{{http://}}}, even if it seems to work. It is not a supported mechanism for developers getting timely updates.
+**Note:** If you don't want to authenticate for every action, you can also use {{{git://}}} instead of {{{ssh://}}} for read/update operations (useful for anonymous access if specified without "<user@>" part). You will need {{{ssh://}}} for any write operations. Do not use {{{http://}}}, even if it seems to work. It is not a supported mechanism for developers getting timely updates. But you can overview all [[http://scmweb.sourcemage.org/|available repositories]] with a web-browser instead.
 
 === Any other initial setup I need? ===
 
