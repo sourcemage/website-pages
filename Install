@@ -8,18 +8,6 @@ Chroot image -- is a compressed archive of a live system. It contains everything
 Here we have a few official images to start with, which contain all the essential programs and libraries to boot from any modern hardware and specific networking setup (PPPoE, Wi-Fi, etc.).
 It is usually based on specific Grimoire release, and inside our project is used for testing purposes and Grimoire upgrading process.
 
-The latest stable version is **20120510** (based on **0.60-stable** Grimoire). Download links for both architectures:
-
-Master mirror:
-* [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2|i686 .bz2 image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2.sig|pgp]]) || [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz|i686 .xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz.sig|pgp]])
-* [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2|x86_64 .bz2 image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2.sig|pgp]]) || [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.xz|x86_64 .xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.xz.sig|pgp]])
-
-Original mirror ([[ftp://ftp.stealth.zone/sourcemage/image/official/|FTP]] links are also available respectively):
-* [[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2|i686 .bz2 image]] ([[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2.sig|pgp]]) || [[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-i686.tar.xz|i686 .xz image]] ([[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-i686.tar.xz.sig|pgp]])
-* [[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2|x86_64 .bz2 image]] ([[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2.sig|pgp]]) || [[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-x86_64.tar.xz|x86_64 .xz image]] ([[http://www.sourcemage.ru/image/official/smgl-stable-0.60-basesystem-x86_64.tar.xz.sig|pgp]])
-
-NOTE: this release uses [[http://www.kernel.org|Linux]] version **3.0.0**.
-
 ==How?==
 ----
 Chroot image is just an archive, so to make your system up and running, you need to boot from some LiveCD/LiveUSB/LiveLAN Linux-based media to partition your drive, extract image, install bootloader and configure some basic stuff like network interface, hostname, etc.
