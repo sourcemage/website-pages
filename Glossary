@@ -14,15 +14,7 @@ A collection of scripts, processed by Sorcery, to install a particular software 
 
 [[Grimoire]]
 
-Generally, Source Mage's package collection component. More specifically, a collection of spells for a particular purpose. Currently we provide the following grimoires ourselves; others may provide more:
-
-|= Grimoire =|= Description =|
-| **stable** | a release cycle-controlled collection of spells that should be bug-free |
-| **stable-rc** | a release cycle-controlled collection of spells that is the next stable version release candidate |
-| **test** | a collection of spells that represents the bleeding edge; these versions compile for at least the developer that committed them, but may leave your system a smoldering ruin |
-| **games** | a collection of spells to install games, game servers and clients, etc. |
-| **z-rejected** | a collection of spells which are not included in the primary grimoires because of licensing or other issues. These are more or less supported, depending on individual interest and availability |
-| **binary** | a collection of free (FSF-approved) software that are distributed in binary form, for example, binary versions of OpenOffice.org and Firefox |
+Generally, Source Mage's package collection component. More specifically, a collection of spells for a particular purpose.
 
 [[Codex]]
 
