@@ -88,19 +88,19 @@ An automated process, e.g. an IRC-bot.
 
 == Other commands ==
 
-[[Alter]]
+[[Sorcery/Commands/Alter|Alter]]
 
 Sorcery command to modify the tracked files of an already-installed spell.
 
-[[Cast]]
+[[Sorcery/Commands/Cast|Cast]]
 
 Sorcery command to install a spell.
 
-[[Cleanse]]
+[[Sorcery/Commands/Cleanse|Cleanse]]
 
 Sorcery command to inspect, clean, and repair broken systems.
 
-[[Gaze]]
+[[Sorcery/Commands/Gaze|Gaze]]
 
 Sorcery command to query system and spell information.
 
@@ -112,12 +112,12 @@ Automated QA/testing framework. Once started on a machine, Prometheus constantly
 
 Sorcery command to copy spells between grimoires.
 
-[[Scribe]]
+[[Sorcery/Commands/Scribe]]
 
 Sorcery command to add, remove, and manage grimoires installed on a system.
 
 See also: [[#head-1-2|People]], **Scribe**.
 
-[[Summon]]
+[[Sorcery/Commands/Summon|Summon]]
 
 Sorcery command to download upstream sources for a spell.
