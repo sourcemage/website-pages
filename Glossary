@@ -104,6 +104,10 @@ Sorcery command to install a spell.
 
 Sorcery command to inspect, clean, and repair broken systems.
 
+[[Sorcery/Commands/Dispel|Dispel]]
+
+Sorcery command to uninstall a spell.
+
 [[Sorcery/Commands/Gaze|Gaze]]
 
 Sorcery command to query system and spell information.
