@@ -1,7 +1,8 @@
 = Sorcery commands =
 
-There are **12** commands in [[Sorcery]]:
+There are **13** commands in [[Sorcery]]:
 
+* [[Sorcery/Commands/Alter|Alter]]
 * [[Sorcery/Commands/Cabal|Cabal]]
 * [[Sorcery/Commands/Cast|Cast]]
 * [[Sorcery/Commands/Cleanse|Cleanse]]
