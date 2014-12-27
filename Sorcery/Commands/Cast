@@ -2,7 +2,7 @@
 
 In Source Mage, "casting spells" means installing programs. The [[Grimoire]] contains the list of spells one can cast.
 
-"cast" casts a program by:
+{{{`cast`}}} casts a program by:
 
 {{{
 cast <spell>
