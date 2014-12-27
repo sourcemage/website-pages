@@ -104,6 +104,10 @@ Sorcery command to install a spell.
 
 Sorcery command to inspect, clean, and repair broken systems.
 
+[[Sorcery/Commands/Confmeld|Confmeld]]
+
+Sorcery command to merge staged configuration files into the system.
+
 [[Sorcery/Commands/Dispel|Dispel]]
 
 Sorcery command to uninstall a spell.
@@ -115,6 +119,10 @@ Sorcery command to query system and spell information.
 [[Prometheus]]
 
 Automated QA/testing framework. Once started on a machine, Prometheus constantly casts random spells with random options selected and automatically files bugs for any failures encountered.
+
+[[Sorcery/Commands/Resurrect|Resurrect]]
+
+Sorcery command to install a spell from a cache tarball.
 
 [[Sorcery/Commands/Scribbler|Scribbler]]
 
