@@ -1,0 +1,9 @@
+= Dispel command =
+
+"dispel" removes a previously-cast spell from a system:
+
+{{{
+# dispel <spell>
+}}}
+
+will remove a spell from the system.
