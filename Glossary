@@ -92,6 +92,10 @@ An automated process, e.g. an IRC-bot.
 
 Sorcery command to modify the tracked files of an already-installed spell.
 
+[[Sorcery/Commands/Cabal|Cabal]]
+
+A tool to allow management of several Source Mage systems from a single machine.
+
 [[Sorcery/Commands/Cast|Cast]]
 
 Sorcery command to install a spell.
