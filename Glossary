@@ -108,7 +108,7 @@ Sorcery command to query system and spell information.
 
 Automated QA/testing framework. Once started on a machine, Prometheus constantly casts random spells with random options selected and automatically files bugs for any failures encountered.
 
-[[MultipleGrimoiresWithScribbler|Scribbler]]
+[[Sorcery/Commands/Scribbler|Scribbler]]
 
 Sorcery command to copy spells between grimoires.
 
