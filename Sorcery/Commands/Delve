@@ -10,7 +10,7 @@ Usage of {{{`delve`}}} comes in these forms:
 # delve <spell> success|failure
 }}}
 
-//-f// is an option to force the running of the remaining specified states even after previous states have failed, though the remaining states may fail anyway because of the previous failures. \\ //`-c`// is an option to continuously run from the start state to the end state.
+//-f// is an option to force the running of the remaining specified states even after previous states have failed, though the remaining states may fail anyway because of the previous failures. \\ //-c// is an option to continuously run from the start state to the end state.
 
 Please note that //-fc// does **not** imply //-f// and //-c// and //-f// must be the first flag.
 
