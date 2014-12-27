@@ -79,7 +79,7 @@ The Grimoire Lead (GL) will be responsible for the following:
 * Recruit capable users to fill in section guruships as well as general guruship
 * Maintain Grimoire documentation
 * Maintain [[Roadmap/Grimoire|Grimoire Roadmap]]
-* Maintain [[Grimoire Guru Handbook]]
+* Maintain [[Grimoire/Guru Handbook|Grimoire Guru Handbook]]
 * Setup and maintain [[Prometheus]]
 * Setup and maintain a system to system-test each "release" of the stable Grimoire
 * Organize groups to test grimoires, ISOs, Sorcery, and documentation accuracy
