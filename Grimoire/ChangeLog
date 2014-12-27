@@ -7,6 +7,6 @@ The grimoire ChangeLog is used to record any changes on the grimoire or section 
 * Deleted spells
 * Changes to grimoire functions (FUNCTIONS, libaccount, libgcc, etc.) and auxiliary files (accounts, groups, etc.)
 
-The reason to include new spells in the ChangeLog, although they technically have their own change logs (the spell HISTORY files) is that sorcery will offer to show the grimoire ChangeLog on a scribe udpate. With new spells in there it's easy to see what's been added.
+The reason to include new spells in the ChangeLog, although they technically have their own change logs (the spell [[Spell/Files/HISTORY|HISTORY]] files) is that sorcery will offer to show the grimoire ChangeLog on a scribe udpate. With new spells in there it's easy to see what's been added.
 
-The format of the ChangeLog file is the same as for [[Spell/Files/HISTORY|HISTORY]] files.
+The format of the ChangeLog file is the same as for HISTORY files.
