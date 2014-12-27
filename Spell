@@ -1,3 +1,5 @@
 = Spell definition =
 
-Spell is a set of instructions contained in the [[Grimoire]] which tell [[Sorcery]] how to obtain, configure, compile, and install programs. Each program has its own directory in {{{/var/lib/sorcery/codex/<grimoire>/<section>/<spell>}}} containing the files with this information.
+Spell is a set of instructions contained in the [[Grimoire]] which tell [[Sorcery]] how to obtain, configure, compile, and install programs.
+
+Each program has its own directory in {{{/var/lib/sorcery/codex/<grimoire>/<section>/<spell>}}} containing the files with this information.
