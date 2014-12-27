@@ -1,0 +1,15 @@
+= Summon command =
+
+Summon downloads the source code for a specified [[Spell|spell]]:
+
+{{{
+# summon <spell>
+}}}
+
+After the download is complete, a spell can be [[Sorcery/Commands/Cast|cast]] without having to wait for a download. If the desire is to summon all spells before casting them, then {{{`cast -s`}}} will do so.
+
+Multiple spells can be summoned like so:
+
+{{{
+# summon <spell 1> <spell 2> <spell 3> … <spell N>
+}}}
