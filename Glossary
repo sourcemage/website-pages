@@ -112,7 +112,7 @@ Automated QA/testing framework. Once started on a machine, Prometheus constantly
 
 Sorcery command to copy spells between grimoires.
 
-[[Sorcery/Commands/Scribe]]
+[[Sorcery/Commands/Scribe|Scribe]]
 
 Sorcery command to add, remove, and manage grimoires installed on a system.
 
