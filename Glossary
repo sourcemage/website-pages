@@ -1,8 +1,8 @@
-=Glossary of terms=
+= Glossary of terms =
 
 Source Mage utilizes a magic and mythology metaphor for the names of many of our project components. Some of these are defined below.
 
-==Core Terms and Components==
+== Core Terms and Components ==
 
 [[Sorcery]]
 
@@ -29,64 +29,64 @@ Source Mage's installer and ISO generation scripts component.
 Source Mage's documentation component, including general docs as well as end user-facing services such as web-sites, mailing lists, bug-tracking system, etc.
 ----
 
-==People==
+== People ==
 
-[[Elder]]
+**Elder**
 
 A Lead Developer or Assistant Lead as defined in our [[Developer Organization]] document.
 
-[[Warlock]]
+**Warlock**
 
 An optional title for an elder who works with the cauldron or sorcery set of scripts.
 
-[[Archon]]
+**Archon**
 
 An optional title for an elder who works with the grimoire.
 
-[[Sage]]
+**Sage**
 
 An optional title for an elder who works with the tome.
 
-[[Mage]]
+**Mage**
 
 A General Developer as defined in our [[Developer Organization]] document.
 
-[[Wizard]]
+**Wizard**
 
 An optional title for a mage who works with the cauldron or sorcery set of scripts.
 
-[[Guru]]
+**Guru**
 
-An optional title for a mage who works with the grimoire, especially those who are responsible for a particular section, e.g. "Mail Guru".
+An optional title for a mage who works with the grimoire, especially those who are responsible for a particular section, e.g. "mail Guru".
 
-[[Scribe]]
+**Scribe**
 
 An optional title for a mage who works with the tome.
 
 See also: [[#head-1-3|Other commands]], **Scribe**.
 
-[[Council of Elders]]
+**Council of Elders**
 
 The Lead Developer Team and their Assistants, as defined in our [[Developer Organization]] document.
 
-[[Circle of Mages]]
+**Circle of Mages**
 
 The General Developer Team, as defined in our [[Developer Organization]] document.
 
-[[Apprentice]]
+**Apprentice**
 
 A developer in training, whose development commits must be approved by another developer before they reach the user-facing "test" releases. This is a voluntary restriction; all of our new developers have the option to immediately become full developers, and apprentices can become full developers any time they believe they are ready.
 
-[[Acolyte]], [[Herald]]
+**Acolyte**, **Herald**
 
 A Source Mage user (not a developer).
 
-[[Golem]]
+**Golem**
 
 An automated process, e.g. an IRC-bot.
 ----
 
-==Other commands==
+== Other commands ==
 
 [[Alter]]
 
