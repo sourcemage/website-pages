@@ -1,0 +1,18 @@
+= Sorcery commands =
+
+There are **12** commands in [[Sorcery]]:
+
+* [[Sorcery/Commands/Cabal|Cabal]]
+* [[Sorcery/Commands/Cast|Cast]]
+* [[Sorcery/Commands/Cleanse|Cleanse]]
+* [[Sorcery/Commands/Confmeld|Confmeld]]
+* [[Sorcery/Commands/Delve|Delve]]
+* [[Sorcery/Commands/Dispel|Dispel]]
+* [[Sorcery/Commands/Gaze|Gaze]]
+* [[Sorcery/Commands/Resurrect|Resurrect]]
+* [[Sorcery/Commands/Scribbler|Scribbler]]
+* [[Sorcery/Commands/Scribe|Scribe]]
+* [[Sorcery/Commands/Sorcery|Sorcery]]
+* [[Sorcery/Commands/Summon|Summon]]
+
+Other core parts of Sorcery include the [[Codex]], composed of [[Grimoire|grimoires]], and [[Spell|spells]].
