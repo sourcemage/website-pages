@@ -1,0 +1,5 @@
+= Gaze command =
+
+"gaze" is a command used for retrieving information from various sorcery-related sources, such as the [[Grimoire]]. \\ "gaze" is the most complex command in [[Sorcery]], because it has so many different command line options.
+
+See //gaze(1)// man page to get information about them.
