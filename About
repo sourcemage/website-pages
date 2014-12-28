@@ -1,7 +1,7 @@
 //{{logo_big.png}}//
-[[http://beta.sourcemage.ru|Source Mage]] (or //SMGL// in abbreviated form) is a source-based GNU/Linux distribution based on a Sorcery metaphor of "casting" and "dispelling" programs, which we refer to as "spells", and a package manager called "Sorcery". Our packages are designed to allow the user to customize the package any way they want (custom CFLAGS, LDFLAGS, ./configure flags, etc.) as well as offering as many of the package options as possible to the user up-front (you will not need to know what options a package has or what optional dependencies it can use ahead of time).
+[[http://beta.sourcemage.ru|Source Mage]] (or //SMGL// in abbreviated form) is a source-based GNU/Linux distribution based on a sorcery metaphor of "casting" and "dispelling" programs, which we refer to as "[[Spell|spells]]", and a package manager called "[[Sorcery]]". Our packages are designed to allow the user to customize the package any way they want (custom CFLAGS, LDFLAGS, ./configure flags, etc.) as well as offering as many of the package options as possible to the user up-front (you will not need to know what options a package has or what optional dependencies it can use ahead of time).
 
-All of our scripts are GPL'd and our package manager and packages are written in Bash, so they are easy to learn and modify. Sorcery supports custom packages maintained by users, which can override the default package and will never be touched by updates. The magic is truly in your hands with Source Mage.
+All of our scripts are GPL'd and our package manager and packages are written in [[http://www.gnu.org/software/bash/|bash]], so they are easy to learn and modify. Sorcery supports custom packages maintained by users, which can override the default package and will never be touched by updates. The magic is truly in your hands with Source Mage.
 
 Meet [[Developers|The Team]] that brings this magic to you.
 
