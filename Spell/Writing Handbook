@@ -21,9 +21,9 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 (…DETAILS is run again…)
 
 * [[Spell/Files/CONFLICTS|CONFLICTS]]
-* [[Spell/Files/PRE_BUILD|CONFLICTS]]
+* [[Spell/Files/PRE_BUILD|PRE_BUILD]]
 * [[Spell/Files/BUILD|BUILD]]
-* [[Spell/Files/PRE_INSTALL]]
+* [[Spell/Files/PRE_INSTALL|PRE_INSTALL]]
 * [[Spell/Files/INSTALL|INSTALL]]
 * [[Spell/Files/FINAL|FINAL]]
 * [[Spell/Files/TRIGGERS|TRIGGERS]]
