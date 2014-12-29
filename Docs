@@ -1,1 +1,38 @@
-* [[Install]]
+=Source Mage documentation =
+
+This is the core webspace for the storage, browsing and editing of Source Mage related documents.
+
+== About Source Mage ==
+
+* [[History|Our history]]
+* [[Social Contract]]
+* [[Contact|Contact us]]
+* [[Glossary|Glossary of terms]]
+* [[Developers|Source Mage developers]]
+* [[Developer Organization]]
+* [[Voting Policy]]
+
+== Installing Source Mage ==
+
+* [[Download|Download Source Mage]]
+* [[Install|Install Source Mage]]
+** [[Install/ISO|Install from the ISO]]
+** [[Install/Chroot|Install from the chroot image]]
+
+== Using Source Mage ==
+
+* [[Intro]]
+* [[Sorcery]]
+* The [[Codex]]
+
+== Source Mage development ==
+
+* [[Needs|Our needs]]
+* [[Contribution|How to contribute]]
+* [[Join|Become]] part of [[Developers|The Team]]
+* [[Grimoire]] development:
+** [[Grimoire/Guru Handbook|Grimoire  Guru Handbook]] -- a guide to being a Grimoire Guru
+** [[Spell/Writing Handbook|Spell Writing Handbook]] -- reference material for making spells, contains a listing of each of the spell files, with information on the purpose of each file.
+** [[Git guide]] -- a guide to using our Grimoire respository
+* [[http://bugs.sourcemage.org|Bug-tracking system]]
+* [[Hall of Fame]] for past developers
