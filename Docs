@@ -9,8 +9,6 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 * [[Contact|Contact us]]
 * [[Glossary|Glossary of terms]]
 * [[Developers|Source Mage developers]]
-* [[Developer Organization]]
-* [[Voting Policy]]
 
 == Installing Source Mage ==
 
@@ -23,7 +21,7 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 
 * [[Intro]]
 * [[Sorcery]]
-* The [[Codex]]
+* [[Codex|The Codex]]
 
 == Source Mage development ==
 
@@ -35,4 +33,6 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 ** [[Spell/Writing Handbook|Spell Writing Handbook]] -- reference material for making spells, contains a listing of each of the spell files, with information on the purpose of each file.
 ** [[Git guide]] -- a guide to using our Grimoire respository
 * [[http://bugs.sourcemage.org|Bug-tracking system]]
+* [[Developer Organization]]
+** [[Voting Policy]]
 * [[Hall of Fame]] for past developers
