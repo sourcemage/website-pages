@@ -27,9 +27,9 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 
 * [[Needs|Our needs]]
 * [[Contribution|How to contribute]]
-* [[Join|Become]] part of [[Developers|The Team]]
+* [[Join|Become]] part of our [[Developers|Team]]
 * [[Grimoire]] development:
-** [[Grimoire/Guru Handbook|Grimoire  Guru Handbook]] -- a guide to being a Grimoire Guru
+** [[Grimoire/Guru Handbook|Grimoire Guru Handbook]] -- a guide to being a Grimoire Guru
 ** [[Spell/Writing Handbook|Spell Writing Handbook]] -- reference material for making spells, contains a listing of each of the spell files, with information on the purpose of each file.
 ** [[Git guide]] -- a guide to using our Grimoire respository
 * [[http://bugs.sourcemage.org|Bug-tracking system]]
