@@ -1,15 +1,17 @@
 =Chroot Install Guide=
 
 Here's a complete guide to install Source Mage GNU/Linux using chroot tarballs. \\ Before starting please take a look at our [[Download|download]] page.
+----
 
 ==What?==
-----
+
 Chroot image -- is a compressed archive of a live system. It contains everything you need to extract on your disk and start using Source Mage.
 Here we have a few official images to start with, which contain all the essential programs and libraries to boot from any modern hardware and specific networking setup (PPPoE, Wi-Fi, etc.).
 It is usually based on specific Grimoire release, and inside our project is used for testing purposes and Grimoire upgrading process.
+----
 
 ==How?==
-----
+
 Chroot image is just an archive, so to make your system up and running, you need to boot from some LiveCD/LiveUSB/LiveLAN Linux-based media to partition your drive, extract image, install bootloader and configure some basic stuff like network interface, hostname, etc.
 These steps will help you to do so in a proper order:
 
@@ -237,4 +239,4 @@ Don't forget to set HDD as a primary media in boot priority list of BIOS.
 
 **9. Report**
 
-Feel free to report back, comment and yell on this guide by dropping me a mail to stealth@sourcemage.org or notifying me on IRC.
+Feel free to report back, comment and yell on this guide by dropping me a mail to stealth@sourcemage.org or notifying me on [[Contact/IRC|IRC]].
