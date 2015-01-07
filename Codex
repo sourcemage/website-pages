@@ -4,7 +4,7 @@ The Codex is the collection of [[Grimoire|grimoires]] used in Source Mage. \\ Yo
 
 == Managing grimoires ==
 
-All of the [[Grimoire|official grimoires]] can be added or removed by using the {{{"scribe"}}} command, which defaults to prepending to the newly added grimoire in index.
+All of the official grimoires can be added or removed by using the [[Sorcery/Commands/Scribe|scribe]] command, which defaults to prepending to the newly added grimoire in index.
 
 For example, to add the [[Grimoire/test|test]] and [[Grimoire/games|games]] grimoires and remove the [[Grimoire/stable|stable]] grimoire, you would do the following:
 
