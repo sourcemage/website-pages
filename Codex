@@ -27,7 +27,7 @@ Codex Listing
 The main Source Mage grimoires are also available via rsync by running a command like:
 
 {{{
-scribe add games from rsync://sourcemage.org::games
+scribe add games from rsync://sourcemage.org::codex/games
 }}}
 
 Grimoire tarballs are generated and published on http://codex.sourcemage.org every 6 hours: \\ at 0, 6, 12 and 18 hours EST ([[http://www.wikipedia.org/wiki/Time_zone|EST]] Eastern Standard Time = [[http://www.wikipedia.org/wiki/Coordinated_Universal_Time|UTC]] Coordinated Universal Time - 5h).
