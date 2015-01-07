@@ -1,13 +1,14 @@
 =Chroot Install Guide=
 
-Here's a complete guide to install Source Mage GNU/Linux using chroot tarballs. \\ Before starting please take a look at our [[Download|download]] page.
+Here's a complete guide to install Source Mage GNU/Linux using chroot tarballs.
 ----
 
 ==What?==
 
 Chroot image -- is a compressed archive of a live system. It contains everything you need to extract on your disk and start using Source Mage.
+
 Here we have a few official images to start with, which contain all the essential programs and libraries to boot from any modern hardware and specific networking setup (PPPoE, Wi-Fi, etc.).
-It is usually based on specific Grimoire release, and inside our project is used for testing purposes and Grimoire upgrading process.
+It is usually based on specific [[Grimoire|grimoire]] release, and inside our project is used for testing purposes and grimoire upgrading process.
 ----
 
 ==How?==
@@ -24,12 +25,14 @@ But, as told above, it can be any Linux boot media you'd like to use.
 
 **2. Boot it**
 
-Burn ISO image or ``dd'' prepared boot image to USB-key, or prepare TFTP-server to boot via network, and boot into its minimal environment.
+Burn ISO image or {{{`dd`}}} prepared boot image to USB-key, or prepare TFTP-server to boot via network, and boot into its minimal environment.
 
 **3. Get chroot image**
 
 Almost all modern Linux distributions support network configuration and have download programs available when boot process is complete.
 So it's usually not a problem. Though if you don't have (or you know that you won't have Internet-connection inplace for some reason) such ability, you can put desired chroot image on USB-key, or CD/DVD disc.
+
+The latest stable version is **20120510** (based on **0.60-stable** grimoire). You can download the appropriate chroot image from our [[Download|downloads]] page. 
 
 Let's imagine there's no trouble with our Ethernet adapter, and we know how networking works in Linux on a very basic level:
 
