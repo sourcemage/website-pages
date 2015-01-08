@@ -14,7 +14,7 @@ For example, to add the [[Grimoire/test|test]] and [[Grimoire/games|games]] grim
 # scribe remove stable
 }}}
 
-That would then give you a codex index (view with {{{"scribe index"}}}) like this:
+That would then give you a codex index (view with {{{scribe index}}}) like this:
 
 {{{
 Codex Listing
