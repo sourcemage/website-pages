@@ -35,14 +35,14 @@ You can also browse the [[Codex]] online to get a peek at the available packages
 
 == Boot up ==
 
-The first and most important thing you need to do (besides putting the installer CD into your CD-ROM drive) is to setup the BIOS to boot from the CD-ROM drive. Once you boot up, you will be greeted with a short welcoming message and copyright information, as well as instructions for entering special kernel parameters. Most users at this point would just press {{{"Enter"}}} to boot.
+The first and most important thing you need to do (besides putting the installer CD into your CD-ROM drive) is to setup the BIOS to boot from the CD-ROM drive. Once you boot up, you will be greeted with a short welcoming message and copyright information, as well as instructions for entering special kernel parameters. Most users at this point would just press {{{Enter}}} to boot.
 
 {{Install/ISO/boot.png}}
 ----
 
 == How to use the Installer ==
 
-The Source Mage Installer is text-based and provides the step required to install a bootable Source Mage system. It is navigated by typing {{{"next"}}} after completion of the step's tasks. Other commands available are {{{"prev"}}}, {{{"todo"}}}, {{{"jump"}}} and {{{"help"}}}.
+The Source Mage Installer is text-based and provides the step required to install a bootable Source Mage system. It is navigated by typing {{{next}}} after completion of the step's tasks. Other commands available are {{{prev}}}, {{{todo}}}, {{{jump}}} and {{{help}}}.
 
 Many of the steps are self-descriptive, so we will give just a few notes on them where necessary.
 ----
@@ -132,7 +132,7 @@ After you have decided how to partition your drive you will need to decide what 
 
 And now you're done! All that's left is to reboot into your freshly installed Source Mage system, setup your internet connection, connect to the Internet, and update your system.
 
-To setup networking you must create an interfaces file in {{{"/etc/network"}}} directory. \\ There is an example in {{{"/usr/share/doc/ifupdown/examples/network-interfaces"}}}.
+To setup networking you must create an interfaces file in {{{/etc/network}}} directory. \\ There is an example in {{{/usr/share/doc/ifupdown/examples/network-interfaces}}}.
 ----
 
 == Post-install steps ==
@@ -145,10 +145,10 @@ If you installed the "smgl-setup" man page (selected to be installed by default 
 
 Now is the **perfect** time to do a rebuild of your system. Once you have booted your new system, it's recommended to:
 
-* ensure that networking is up (run {{{`ifconfig`}}})
-* run {{{`sorcery update`}}} to update the sorcery scripts
-* run {{{`scribe update && cast smgl-archspecs`}}} to update the spell lists and tell sorcery the latest list for supported CPU architectures
-* configure sorcery (run {{{`sorcery`}}}, then go to **Options**)
+* ensure that networking is up (run {{{ifconfig}}})
+* run {{{sorcery update}}} to update the sorcery scripts
+* run {{{scribe update && cast smgl-archspecs}}} to update the spell lists and tell sorcery the latest list for supported CPU architectures
+* configure sorcery (run {{{sorcery}}}, then go to **Options**)
 * update essential spells for compiling //(when gettext/glibc are updated to use your architecture specs)// by using the command (compile in order):
 
 {{{
@@ -164,7 +164,7 @@ Now is the **perfect** time to do a rebuild of your system. Once you have booted
 # cast -c g++ gettext glibc
 }}}
 
-* run {{{`sorcery rebuild`}}} to build everything with your chosen optimizations
+* run {{{sorcery rebuild}}} to build everything with your chosen optimizations
 
 Doing all of this will recompile your installed spells and optimize them for your processor. We **highly** recommend that you do this now, as it can speed up your system. \\ The longer you hold off, the more spells will be recompiled later on.
 
