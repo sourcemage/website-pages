@@ -56,7 +56,7 @@ SOURCE_URL[0]=http://xzgv.browser.org/${SOURCE}
 
 **SOURCEn_URL[*]**
 
-Arrays specifying the download links for additional SOURCEn entries. The numbering starts with "2" (i.e. SOURCE2_URL).
+Arrays specifying the download links for additional {{{SOURCEn}}} entries. The numbering starts with "2" (i.e. {{{SOURCE2_URL}}}).
 
 {{{
 SOURCE2_URL[0]=http://xzgv.browser.org/${SOURCE2}
@@ -100,7 +100,7 @@ SOURCE_GPG="gurus.gpg:${SOURCE}.sig:WORKS_FOR_ME"
 This can be used instead of {{{SOURCE_GPG}}} or {{{SOURCE_HASH}}} to tell sorcery not to check the file. The content of this variable states the reason why it shouldn't be checked. It can be one of:
 * //signature// -- the source is an upstream GPG signature
 * //unversioned// -- the source changes without changing its filename
-* //volatile// -- the source is downloaded from a version control system like CVS or Subversion
+* //volatile// -- the source is downloaded from a version control system like CVS, Subversion, Git or Mercurial
 
 {{{
 SOURCE2_IGNORE=signature
@@ -124,7 +124,7 @@ ENTERED=20020406
 
 **PATCHLEVEL**
 
-The number of revisions a spell has gone through without changing VERSION. This defaults to 0 if ommited. Any change to a spell that should trigger a rebuild on all systems using that spell should have PATCHLEVEL updated. On a VERSION change PATCHLEVEL should be removed.
+The number of revisions a spell has gone through without changing {{{VERSION}}}. This defaults to "0" if ommited. Any change to a spell that should trigger a rebuild on all systems using that spell should have {{{PATCHLEVEL}}} updated. On a {{{VERSION}}} change {{{PATCHLEVEL}}} should be removed.
 
 {{{
 PATCHLEVEL=2
@@ -132,11 +132,13 @@ PATCHLEVEL=2
 
 **SECURITY_PATCH**
 
-The number of security related spell changes or version updates the spell has gone through. This number is used by {{{sorcery queue-security}}} to determine what spells need to be rebuilt for security reasons. SECURITY_PATCH must never be reset.
+The number of security related spell changes or version updates the spell has gone through. This number is used by {{{sorcery queue-security}}} to determine what spells need to be rebuilt for security reasons.
 
 {{{
 SECURITY_PATCH=3
 }}}
+
+**Note:** {{{SECURITY_PATCH}}} must never be reset.
 
 **LICENSE[*]**
 
@@ -165,7 +167,7 @@ SHORT="GTK+/Imlib-based picture viewer for X"
 
 **DOCS**
 
-Optional tag used to override the implicit DOCS variable to change what docs are installed. Only copies files, for dirs use DOC_DIRS instead.
+Optional tag used to override the implicit {{{DOCS}}} variable to change what docs are installed. Only copies files, for dirs use {{{DOC_DIRS}}} instead.
 
 {{{
 DOCS="README* FAQ* CHAN* DOC* SETUP LICENSE COPYING NEWS *rc"
@@ -175,7 +177,7 @@ DOCS="$DOCS etc/*.conf"
 
 **DOC_DIRS**
 
-Optional tag used to override the implicit DOC_DIRS variable to change what doc dirs are installed. Only copies dirs and their contents.
+Optional tag used to override the implicit {{{DOC_DIRS}}} variable to change what doc dirs are installed. Only copies dirs and their contents.
 
 {{{
 DOC_DIRS="doc* conf"
@@ -212,4 +214,4 @@ This is a numerical string indicating the date this spell was last changed. Used
 UPDATED=20020406
 }}}
 
-**Note:** This is still supported, but shouldn't be used anymore. Instead use PATCHLEVEL or SECURITY_PATCH as applicable.
+**Note:** This is still supported, but shouldn't be used anymore. Instead use {{{PATCHLEVEL}}} or {{{SECURITY_PATCH}}} as applicable.
