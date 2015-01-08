@@ -6,7 +6,7 @@ Usage of "delve" comes in these forms:
 
 {{{
 # delve [-f] -c <beginning> <end> <spell>
-# delve [-f] <spell> <state0> [ <state1> … <stateN> ]
+# delve [-f] <spell> <state0> [ <state1> ... <stateN> ]
 # delve <spell> success|failure
 }}}
 
