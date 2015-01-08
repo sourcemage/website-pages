@@ -39,7 +39,7 @@ SOURCE2="xzgv-addons.tar.gz"
 
 **SOURCE_DIRECTORY**
 
-Used to specify the location where the source will be unpacked. You must pay special attention to the naming of the directory when unpacking the source file (i.e. if the subdirectory is {{{${SPELL}-${VERSION}}}}, or perhaps just {{{${SPELL}}}}, etc.). {{{${BUILD_DIRECTORY}}}} is a special variable which is set by the sorcery tools to allow you to not have to worry about where sorcery will unpack the source from, currently sorcery uses {{{"/usr/src"}}} to begin the unpacking of the application's source.
+Used to specify the location where the source will be unpacked. You must pay special attention to the naming of the directory when unpacking the source file (i.e. if the subdirectory is {{{${SPELL}-${VERSION}}}}, or perhaps just {{{${SPELL}}}}, etc.). {{{${BUILD_DIRECTORY}}}} is a special variable which is set by the sorcery tools to allow you to not have to worry about where sorcery will unpack the source from, currently sorcery uses {{{/usr/src}}} to begin the unpacking of the application's source.
 
 {{{
 SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
@@ -62,7 +62,7 @@ Arrays specifying the download links for additional SOURCEn entries. The numberi
 SOURCE2_URL[0]=http://xzgv.browser.org/${SOURCE2}
 }}}
 
-You can use special global variables already pre-defined by Sorcery, e.g. URL for SourceForge project:
+You can use special global variables already pre-defined by [[Sorcery]], e.g. URL for [[http://sourceforge.net/|SourceForge]] project:
 
 {{{
 SOURCE_URL[0]=${SOURCEFORGE_URL}/${SPELL}/${SOURCE}
@@ -132,7 +132,7 @@ PATCHLEVEL=2
 
 **SECURITY_PATCH**
 
-The number of security related spell changes or version updates the spell has gone through. This number is used by {{{`sorcery queue-security`}}} to determine what spells need to be rebuilt for security reasons. SECURITY_PATCH must never be reset.
+The number of security related spell changes or version updates the spell has gone through. This number is used by {{{sorcery queue-security}}} to determine what spells need to be rebuilt for security reasons. SECURITY_PATCH must never be reset.
 
 {{{
 SECURITY_PATCH=3
@@ -183,7 +183,7 @@ DOC_DIRS="doc* conf"
 
 **REJECT**
 
-This is a short description of why a spell was rejected. This should be present for spells in [[Grimoire/z-rejected|z-rejected grimoire]].
+This is a short description of why a spell was rejected. This should be present for spells in [[Grimoire/z-rejected|z-rejected]] grimoire.
 
 {{{
 REJECT="has licensing issues"
@@ -212,4 +212,4 @@ This is a numerical string indicating the date this spell was last changed. Used
 UPDATED=20020406
 }}}
 
-**Note:** This is still supported, but shouldn't be used anymore. Instead use {{{PATCHLEVEL}}} or {{{SECURITY_PATCH}}} as applicable.
+**Note:** This is still supported, but shouldn't be used anymore. Instead use PATCHLEVEL or SECURITY_PATCH as applicable.
