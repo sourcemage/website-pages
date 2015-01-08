@@ -8,7 +8,7 @@ This document describes how to go about getting help from IRC and notes on the g
 * Search manuals next
 ** the standard unix-ish "man" command is often useful.
 ** the standard gnu-ish "info" command is often quite detailed, comparable to BSD's good man commands.
-** see what other docs might be there (in Source Mage: {{{`gaze install <spell> | grep doc`}}})
+** see what other docs might be there (in Source Mage: {{{gaze install <spell> | grep doc}}})
 * Search the web if the online manuals are not good enough -- file a documentation bug with the author if you had to go this far.
 * Think about the problem with the knowledge of the above, even if you don't have the direct answer yet.
 * Lurk in the room for a while to become familiar with the pace and quality of answers to expect. Don't expect to be treated differently.
