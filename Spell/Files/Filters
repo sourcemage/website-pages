@@ -7,22 +7,22 @@ Filtering files based on the way [[Sorcery]] should treat them:
 | file is uninstalled | yes | only if unmodified //(also depends on your settings)// | no | no |
 | file's MD5 matters | no | yes | no | yes |
 
-Currently there are system level filter files in {{{"/var/lib/sorcery"}}}. Each line is a single pattern, each pattern is matched against a filename's full path with {{{$INSTALL_ROOT}}} stripped off. A pattern such as {{{"^/etc"}}} matches any file in {{{"/etc"}}}. Filter functions to filter in or out files are utilized in sorcery depending on what is required.
+Currently there are system level filter files in {{{/var/lib/sorcery}}}. Each line is a single pattern, each pattern is matched against a filename's full path with {{{$INSTALL_ROOT}}} stripped off. A pattern such as {{{^/etc}}} matches any file in {{{/etc}}}. Filter functions to filter in or out files are utilized in sorcery depending on what is required.
 
 Here are the following filter files, again these are lists of regular expressions, one per line, a file is said to "match" if it is described by any regular expression in the filter file:
 
 * //excluded// -- any file matched will not be included in the install log, and thus will not be tracked (if excluded by a single [[Spell|spell]], the files may be owned by another spell), also, not that it matters extensively, but any file matched will also not be dispelled.
 * //protected// -- any file matched will not be dispelled under any circumstances, this means, if the spell that owns them is dispelled, these files will become aliens, use of this particular filter should be reserved for things that if accidentally removed could break the system irrecoverably, or cause sorcery or the script that is supposed to replace said file from functioning. An example of this would be "cp" or "install", why this would be an issue is left as an exercise to the reader.
-* //volatiles// -- any file matched will be ignored by {{{`cleanse --fix`}}} and its subsequent checks. An example would be {{{"/usr/share/info/dir"}}} which is changed by every spell that installs an info page.
-* //configs// -- this describes a file as a "configuration" file, namely, things in {{{"/etc"}}} that the administrator will freely modify. Another example is a hi-score file. These files will be handled specially:
+* //volatiles// -- any file matched will be ignored by {{{cleanse --fix}}} and its subsequent checks. An example would be {{{/usr/share/info/dir}}} which is changed by every spell that installs an info page.
+* //configs// -- this describes a file as a "configuration" file, namely, things in {{{/etc}}} that the administrator will freely modify. Another example is a hi-score file. These files will be handled specially:
 ** on [[Sorcery/Commands/Dispel|dispel]], if the file is modified, the user will have the option (default to "no") to remove the file
 ** on [[Sorcery/Commands/Resurrect|resurrect]], the file will not be replaced if it already exists (there may be a user query about this, but the default will be to leave the file as is unless it doesn't exist)
 
 Some remarks about the relationship between these files:
 
-# "volatiles" and "configs" files should probably be nearly an identical set. They're separated because it's just as easy codewise to do it this way, and it will provide greater flexibility in the future. However one has to be aware that marking a file as a "config" file is **not** sufficient for getting [[Sorcery/Commands/Cleanse|cleanse]] to ignore it and funny things might happen if you don't.
-# Adding things to the "protected/volatiles/configs" list is useless if the file is in "excluded" (it won't be tracked).
+# "volatiles" and "configs" files should probably be nearly an identical set. They're separated because it's just as easy codewise to do it this way, and it will provide greater flexibility in the future. However one has to be aware that marking a file as a config file is **not** sufficient for getting [[Sorcery/Commands/Cleanse|cleanse]] to ignore it and funny things might happen if you don't.
+# Adding things to the {{{protected}}}/{{{volatiles}}}/{{{configs}}} list is useless if the file is in {{{excluded}}} (it won't be tracked).
 # On dispel protected files are kept from being removed.
 # There currently is no way to negate a pattern in the system level filter files.
 
-**Note:** if you put file under the {{{"configs"}}}, sorcery won't (and can't) stop the spell itself to overwrite its configs upon recast.
+**Note:** if you put file under the {{{configs}}}, sorcery won't (and can't) stop the spell itself to overwrite its configs upon recast.
