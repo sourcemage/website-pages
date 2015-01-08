@@ -1,6 +1,6 @@
 = Delve command =
 
-{{{delve}}} is a low-level tool that allows the running of single [[Spell]] states such as [[Spell/Files/PRE_BUILD|PRE_BUILD]] and [[Spell/Files/INSTALL|INSTALL]]. It should not be used normally as it can harm one's system if used improperly. As such, please do not complain if your system becomes broken if this is used. Consider if what your doing could be useful to more than one person. If it can, file a bug report to get the spell changed.
+"delve" is a low-level tool that allows the running of single [[Spell]] states such as [[Spell/Files/PRE_BUILD|PRE_BUILD]] and [[Spell/Files/INSTALL|INSTALL]]. It should not be used normally as it can harm one's system if used improperly. As such, please do not complain if your system becomes broken if this is used. Consider if what your doing could be useful to more than one person. If it can, file a bug report to get the spell changed.
 
 Usage of "delve" comes in these forms:
 
