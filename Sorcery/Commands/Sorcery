@@ -1,8 +1,8 @@
 = Sorcery command =
 
-The {{{sorcery}}} command is a menu-driven interface for all sorcery scripts.
+The {{{sorcery}}} command is a menu-driven interface for all [[Sorcery]] scripts.
 
-The menu system of [[Sorcery]] allows managing grimoires, spells, and changing features of a system easily. To do it just run:
+The menu system of sorcery allows managing [[Grimoire|grimoires]], [[Spell|spells]], and changing features of a system easily. \\ To do it just run:
 
 {{{
 # sorcery
