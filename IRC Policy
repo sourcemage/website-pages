@@ -4,7 +4,7 @@ This policy is applied to all official channels listed at [[Contact/IRC]]. \\ Co
 
 == Generic policy ==
 
-* All official channels (#sourcemage-*) should have the Project Lead listed as the Founder (+F; /msg chanserv INFO <channel>; field "Founder")
+* All official channels (#sourcemage-*) should have the Project Lead listed as the Founder (+F; {{{/msg chanserv INFO <channel>}}}; field "Founder")
 
 == Primary channels (#sourcemage and #sourcemage-admin) ==
 
