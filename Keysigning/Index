@@ -94,3 +94,5 @@ $ for i in $KEYS; do gpg --sign-key $i; done
 $ gpg --send-keys --keyserver subkeys.pgp.net $KEYS
 $ gpg --send-keys --keyserver www.keyserver.net $KEYS
 }}}
+
+Look at the [[Keysigning/Keyring management|Keyring management]] page to know how to add/remove keys to/from keyrings.
