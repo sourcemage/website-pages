@@ -2,7 +2,7 @@
 
 # The most frequent mistake is to forget to add a [[Spell/Files/HISTORY|HISTORY]] entry.
 # The second most frequent mistake is to forget to add a [[Grimoire/ChangeLog|ChangeLog]] entry when one is **needed**, usually when adding new [[Spell|spells]].
-# Forgetting to include new files in the commit. For any new files to get committed, one needs to ##`git add`## them first. Inspect the commented ##`git status`## output when you're making the commit for any missing or extra files.
-# Forgetting to truly remove files in the commit. See the note above (##`git-rm`##).
+# Forgetting to include new files in the commit. For any new files to get committed, one needs to {{{git add}}} them first. Inspect the commented {{{git status}}} output when you're making the commit for any missing or extra files.
+# Forgetting to truly remove files in the commit. See the note above ({{{git-rm}}}).
 # Forgetting to chain commands with "&&". Even things like variable assignment can potentially fail and we need to catch it. But more importantly, unless they are at the very start of a file, such omissions break the existing chain and the spell file could succeed while it really shouldn't.
 # Forgetting to commit only one spell at a time.
