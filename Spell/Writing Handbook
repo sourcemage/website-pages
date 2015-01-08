@@ -44,7 +44,7 @@ These are the files used during a resurrect, in their execution order:
 * [[Spell/Files/PRE_RESURRECT|PRE_RESURRECT]]
 * [[Spell/Files/POST_RESURRECT|POST_RESURRECT]]
 
-These files are processed during a {{{`scribe update`}}}, {{{`cleanse --tablet`}}}, or {{{`cleanse --tablet_spell`}}}, in their execution order:
+These files are processed during a {{{scribe update}}}, {{{cleanse --tablet}}}, or {{{cleanse --tablet_spell}}}, in their execution order:
 
 * [[Spell/Files/REPAIR|REPAIR^* files]]
 
