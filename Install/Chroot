@@ -25,7 +25,7 @@ But, as told above, it can be any Linux boot media you'd like to use.
 
 **2. Boot it**
 
-Burn ISO image or {{{`dd`}}} prepared boot image to USB-key, or prepare TFTP-server to boot via network, and boot into its minimal environment.
+Burn ISO image or {{{dd}}} prepared boot image to USB-key, or prepare TFTP-server to boot via network, and boot into its minimal environment.
 
 **3. Get chroot image**
 
