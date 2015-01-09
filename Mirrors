@@ -6,6 +6,7 @@
 * [[http://dbg.download.sourcemage.org/|Fallback download mirror / USA, TX (HTTP)]]: CT -- GMT-6 (CST) in winter and GMT-5 (CDT) in summer
 * [[http://www.sourcemage.ru/|Russian Federation (HTTP)]]: MSK -- GMT+3
 * [[ftp://ftp.stealth.zone/sourcemage/|Russian Federation (FTP)]]: MSK -- GMT+3
+----
 
 == Outdated ==
 
@@ -13,6 +14,7 @@
 * [[ftp://ftp.gtlib.gatech.edu/pub/sourcemage/|USA, GA (FTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
 * [[http://ftp.sunet.se/pub/Linux/distributions/sourcemage/|Sweden (HTTP)]]: CET -- GMT+1 in winter and GMT+2 in summer
 * [[ftp://ftp.sunet.se/pub/Linux/distributions/sourcemage/|Sweden (FTP)]]: CET -- GMT+1 in winter and GMT+2 in summer
+----
 
 == How to become a mirror ==
 
