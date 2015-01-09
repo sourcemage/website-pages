@@ -222,7 +222,7 @@ All timezone files are located in **/usr/share/zoneinfo** directory.
 
 * Get back to real environment
 
-This is usually done with 'CTRL+D' or by typing:
+This is usually done with {{{Ctrl+D}}} or by typing:
 
 {{{
 # exit
