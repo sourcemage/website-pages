@@ -40,7 +40,7 @@ The first and most important thing you need to do (besides putting the installer
 {{Install/ISO/boot.png}}
 ----
 
-=== How to use the Installer ===
+== How to use the Installer ==
 
 The Source Mage Installer is text-based and provides the step required to install a bootable Source Mage system. It is navigated by typing {{{next}}} after completion of the step's tasks. Other commands available are {{{prev}}}, {{{todo}}}, {{{jump}}} and {{{help}}}.
 
