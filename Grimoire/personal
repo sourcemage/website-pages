@@ -42,7 +42,7 @@ Codex Listing
  [1] : craft : /var/lib/sorcery/codex/craft
 }}}
 
-Now we will copy some simple [[Spell]] (which doesn't use specific functions from FUNCTIONS file in grimoire's root directory, otherwise you need to copy/link these files from the existent grimoire):
+Now we will copy some simple [[Spell|spell]] (which doesn't use specific functions from FUNCTIONS file in grimoire's root directory, otherwise you need to copy/link these files from the existent grimoire):
 
 {{{
 # mkdir /var/lib/sorcery/codex/craft/utils
