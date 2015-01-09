@@ -33,26 +33,26 @@ The current version of Source Mage GNU/Linux for x86 is **0.10.0**. You can down
 You can also browse the [[Codex]] online to get a peek at the available packages.
 ----
 
-== Boot up ==
+=== Boot up ===
 
 The first and most important thing you need to do (besides putting the installer CD into your CD-ROM drive) is to setup the BIOS to boot from the CD-ROM drive. Once you boot up, you will be greeted with a short welcoming message and copyright information, as well as instructions for entering special kernel parameters. Most users at this point would just press {{{Enter}}} to boot.
 
 {{Install/ISO/boot.png}}
 ----
 
-== How to use the Installer ==
+=== How to use the Installer ===
 
 The Source Mage Installer is text-based and provides the step required to install a bootable Source Mage system. It is navigated by typing {{{next}}} after completion of the step's tasks. Other commands available are {{{prev}}}, {{{todo}}}, {{{jump}}} and {{{help}}}.
 
 Many of the steps are self-descriptive, so we will give just a few notes on them where necessary.
 ----
 
-== Install Welcome ==
+=== Install welcome ===
 
 {{Install/ISO/welcome.png}}
 ----
 
-== Partition disk ==
+=== Partition disk ===
 
 {{Install/ISO/partition.png}}
 
@@ -61,19 +61,19 @@ At this point you will have to decide how to partition the drive. The simplest i
 Depending on the file system you are using it may be important to have ///boot// on a separate partition. It is also useful to put ///home// on a separate partition so that the system can be reinstalled without touching the user files.
 ----
 
-== Format disk ==
+=== Format disk ===
 
 {{Install/ISO/format.png}}
 
 After you have decided how to partition your drive you will need to decide what file system to use. This is a very personal choice. The commands are provided in the instructions for //ext2//, //ext3//, //reiserfs//, //jfs// and //xfs//. Most would use ext3 which is very stable, provides journaling and holds up pretty well to errors and unintended system power-offs. Source Mage is all about choice and you can choose whichever you believe works best for your situation.
 ----
 
-== Mount partitions ==
+=== Mount partitions ===
 
 {{Install/ISO/mount.png}}
 ----
 
-== Select spells ==
+=== Select spells ===
 
 {{Install/ISO/spells.png}}
 {{Install/ISO/spells2.png}}
@@ -81,17 +81,17 @@ After you have decided how to partition your drive you will need to decide what 
 {{Install/ISO/spells4.png}}
 ----
 
-== Install ==
+=== Install ===
 
 {{Install/ISO/install.png}}
 ----
 
-== Edit configuration files ==
+=== Edit configuration files ===
 
 {{Install/ISO/config.png}}
 ----
 
-== Setup kernel ==
+=== Setup kernel ===
 
 {{Install/ISO/kernel.png}}
 
@@ -104,7 +104,7 @@ After you have decided how to partition your drive you will need to decide what 
 {{Install/ISO/kernel-compile.png}}
 ----
 
-== Setup boot loader ==
+=== Setup boot loader ===
 
 **Note**: **lilo** and **grub2** //(not covered here)// are the only two options for **x86_64** out-of-the-box.
 
@@ -119,12 +119,12 @@ After you have decided how to partition your drive you will need to decide what 
 {{Install/ISO/loader-grub.png}}
 ----
 
-== User setup ==
+=== User setup ===
 
 {{Install/ISO/user.png}}
 ----
 
-== Reboot ==
+=== Reboot ===
 
 {{Install/ISO/reboot.png}}
 
