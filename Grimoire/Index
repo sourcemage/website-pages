@@ -14,7 +14,7 @@ Currently we provide the following grimoires ourselves; others may provide more:
 
 There are also [[Grimoire/personal|personal]] grimoires, where you can keep your own spells (or different versions of spells) locally and/or distribute it via http, git, rsync, etc.
 
-The grimoire by itself is just a reference; it becomes truly useful when you use the [[Sorcery]] [[Sorcery/Commands|command-set]] to retrieve a [[Spell]] from the grimoire and implement ([[Sorcery/Commands/Cast|cast]]) it. For example, suppose you wanted to put xorg-server on a freshly installed Source Mage box. At the prompt say:
+The grimoire by itself is just a reference; it becomes truly useful when you use the [[Sorcery]] [[Sorcery/Commands|command-set]] to retrieve a [[Spell|spell]] from the grimoire and implement ([[Sorcery/Commands/Cast|cast]]) it. For example, suppose you wanted to put xorg-server on a freshly installed Source Mage box. At the prompt say:
 
 {{{
 root@SMGL:~# cast xorg-server
