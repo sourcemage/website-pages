@@ -1,0 +1,63 @@
+= How to become a mirror =
+
+Currently, we support mirroring via [[http://rsync.samba.org/|rsync]] //(in SMGL you can run {{{cast rsync}}} to install it)//. If you want to create a mirror for Source Mage, you can use the following commands to do so (where {{{/var/ftp/sourcemage}}} is your path served by HTTP or FTP server):
+
+{{{
+$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/" "/var/ftp/sourcemage/codex"
+}}}
+
+This command will clone all our [[Codex]] sources located at [[http://download.sourcemage.org/codex/|download.sourcemage.org/codex/]].
+
+{{{
+$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/" "/var/ftp/sourcemage/iso"
+}}}
+
+And this command will do to the same for our ISO images at [[http://download.sourcemage.org/iso/|download.sourcemage.org/iso/]]. \\ Alternatively, you can use full path to a file (e.g. to an ISO image) to host it:
+
+{{{
+$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-x86(i486).iso.bz2" "/var/ftp/sourcemage/iso"
+}}}
+
+The most popular are //HTTP// and //FTP// mirrors. But you can provide BitTorrent files and seed them on open torrent trackers like [[http://linuxtracker.org/|Linuxtracker]] as well.
+
+Here's an example of partial mirroring for the most important parts of Source Mage put into one crontab file:
+
+{{{
+$ crontab -l
+# ----------------------+
+# Source Mage mirroring |
+
+# Sorcery::stable
+0       6       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/sorcery-stable.tar.bz2" "/var/ftp/sourcemage/sorcery"
+0       6       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/sorcery-stable.tar.bz2.asc" "/var/ftp/sourcemage/sorcery"
+
+# Sorcery::test|devel
+15      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/sorcery-test.tar.bz2" "/var/ftp/sourcemage/sorcery"
+15      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/sorcery-test.tar.bz2.asc" "/var/ftp/sourcemage/sorcery"
+15      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/sorcery-devel.tar.bz2" "/var/ftp/sourcemage/sorcery"
+15      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/sorcery-devel.tar.bz2.asc" "/var/ftp/sourcemage/sorcery"
+
+# Codex::stable|stable-rc
+0       7       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/stable.tar.bz2" "/var/ftp/sourcemage/codex"
+0       7       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/stable.tar.bz2.asc" "/var/ftp/sourcemage/codex"
+0       7       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/stable-rc.tar.bz2" "/var/ftp/sourcemage/codex"
+0       7       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/stable-rc.tar.bz2.asc" "/var/ftp/sourcemage/codex"
+
+# Codex::test|games|binary|z-rejected
+30      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/test.tar.bz2" "/var/ftp/sourcemage/codex"
+30      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/test.tar.bz2.asc" "/var/ftp/sourcemage/codex"
+32      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/games.tar.bz2" "/var/ftp/sourcemage/codex"
+32      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/games.tar.bz2.asc" "/var/ftp/sourcemage/codex"
+34      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/binary.tar.bz2" "/var/ftp/sourcemage/codex"
+34      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/binary.tar.bz2.asc" "/var/ftp/sourcemage/codex"
+36      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/z-rejected.tar.bz2" "/var/ftp/sourcemage/codex"
+36      *       *       *       *       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/z-rejected.tar.bz2.asc" "/var/ftp/sourcemage/codex"
+
+# ISO::ppc|x86(i486)
+0       3       *       *       5       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-ppc.iso.bz2" "/var/ftp/sourcemage/iso"
+0       3       *       *       5       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-ppc.iso.sig" "/var/ftp/sourcemage/iso"
+45      3       *       *       5       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-x86(i486).iso.bz2" "/var/ftp/sourcemage/iso"
+45      3       *       *       5       /usr/bin/rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-x86(i486).iso.sig" "/var/ftp/sourcemage/iso"
+}}}
+
+Once it's ready, please [[Contact|contact us]] and provide geo-location and timezone information of the hosting server.
