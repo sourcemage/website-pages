@@ -12,7 +12,7 @@ Currently we provide the following grimoires ourselves; others may provide more:
 | [[Grimoire/z-rejected|z-rejected]] | a collection of spells which are not included in the primary grimoires because of licensing or other issues. These are more or less supported, depending on individual interest and availability |
 | [[Grimoire/binary|binary]] | a collection of free (FSF-approved) software that are distributed in binary form, for example, binary versions of OpenOffice.org and Firefox |
 
-The grimoire by itself is just a reference; it becomes truly useful when you use the sorcery command-set to retrieve a spell from the grimoire and implement ([[Sorcery/Commands/Cast|cast]]) it. For example, suppose you wanted to put xorg-server on a freshly installed Source Mage box. At the prompt say:
+The grimoire by itself is just a reference; it becomes truly useful when you use the [[Sorcery]] [[Sorcery/Commands|command-set]] to retrieve a spell from the grimoire and implement ([[Sorcery/Commands/Cast|cast]]) it. For example, suppose you wanted to put xorg-server on a freshly installed Source Mage box. At the prompt say:
 
 {{{
 root@SMGL:~# cast xorg-server
