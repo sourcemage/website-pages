@@ -1,5 +1,6 @@
 = Listing of mirrors =
 
+* [[http://download.sourcemage.org/|Main download mirror / USA, TX (HTTP)]]: CT -- GMT-6 (CST) in winter and GMT-5 (CDT) in summer
 * [[http://ftp.gtlib.gatech.edu/pub/sourcemage/|USA, GA (HTTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
 * [[ftp://ftp.gtlib.gatech.edu/pub/sourcemage/|USA, GA (FTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
 * [[http://www.sourcemage.ru/|Russian Federation (HTTP)]]: MSK -- GMT+3
