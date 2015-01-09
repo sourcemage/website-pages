@@ -24,7 +24,7 @@ Codex Listing
  [1] : games : /var/lib/sorcery/codex/games
 }}}
 
-The main Source Mage grimoires are also available via rsync by running a command like:
+The main Source Mage grimoires are also available via [[http://rsync.samba.org/|rsync]] by running a command like:
 
 {{{
 scribe add games from rsync://download.sourcemage.org::codex/games
