@@ -9,6 +9,12 @@ $ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download
 This command will clone all our [[Codex]] sources located at [[http://download.sourcemage.org/codex/|download.sourcemage.org/codex/]].
 
 {{{
+$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/" "/var/ftp/sourcemage/sorcery"
+}}}
+
+This one will copy all [[Sorcery]] branches located at [[http://download.sourcemage.org/sorcery/|download.sourcemage.org/sorcery/]].
+
+{{{
 $ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/" "/var/ftp/sourcemage/iso"
 }}}
 
