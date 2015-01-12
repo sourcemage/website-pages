@@ -1,0 +1,52 @@
+= New to Source Mage =
+
+== Introduction ==
+
+Welcome to [[About|Source Mage GNU/Linux]] and congratulations on a succesful [[Install|install]]!
+
+This is a brief introduction to Source Mage GNU/Linux //(SMGL)//. It will only cover those subjects required for basic use. For a more in-depth look, please see the manpages, current [[Docs|web-documentation]], and the [[Contact/Mailing Lists|mailing lists]]. You are also welcome to join our [[Contact/IRC|IRC]] channel [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[irc://irc.freenode.net|irc.freenode.net]], where you'll find active support for most of the time.
+
+== Basic terminology ==
+
+The Source Mage tagline is: "**Linux so advanced, it may as well be magic.**". Basic terminology is similarily magic-oriented. Program packages are called [[Spell|spells]], and a collection of spells is called a [[Grimoire]]. All installed grimoires likewise make up the [[Codex]].
+
+Installing a spell is called "casting", and removing it is called "dispelling". Such terms are not only figures of speech, though: {{{cast}}} and {{{dispel}}} are also 
+the programs used to perform the said tasks.
+
+== Spells ==
+
+A spell is simply a directory containing script files that are used for downloading, unpacking, configuring, compiling, and installing a program. The actual source is not included in the spell, but is downloaded directly from the program's own website.
+
+Spells are stored in section directories inside the grimoire directories. The grimoires themselves are located in the codex directory {{{/var/lib/sorcery/codex}}}. For instance, the spell from stable grimoire for the GNU C compiler, called "gcc", is located in {{{/var/lib/sorcery/codex/stable/gnu/gcc}}}.
+
+Different grimoires exist for different kinds of spells. The [[Grimoire/stable|stable]] and [[Grimoire/test|test]] grimoires contain spells for most programs. Non-Free and binary spells belong in the [[Grimoire/z-rejected|z-rejected]] and [[Grimoire/binary|binary]] grimoires respectively, and games belong in the [[Grimoire/games|games]] grimoire.
+
+== The Sorcery suite of scripts ==
+
+The Source Mage collection of system tools is called [[Sorcery]]. It contains utilities for different system management tasks whose names reflect SMGL's "magical" theme.
+
+The main program, used for modifying core system behavior, is also named "sorcery".
+
+The utilities you'll need the most in everyday use are:
+
+* [[Sorcery/Commands/Sorcery|sorcery]]
+
+The command {{{sorcery}}} opens a menu where you can modify the behavior and appearance of all sorcery tools. Also available are e.g. compiler optimization settings, as well as a menu-based interface for spell management. {{{sorcery}}} also has command-line options that are used e.g. for doing system updates.
+
+* [[Sorcery/Commands/Cast|cast]]
+
+Casting spells, an activity most other distributions refer to as "installing packages", is done with {{{cast}}}. Generally this means typing {{{cast <spell>}}}, answering some queries pertaining to the spell, and allowing the {{{cast}}} to download, compile, and install the program.
+
+* [[Sorcery/Commands/Dispel|dispel]]
+
+Uninstalling spells is done with {{{dispel}}}. It operates like {{{cast}}}, with the difference that there usually aren't any queries to answer, and it takes a lot less time than casting.
+
+* [[Sorcery/Commands/Gaze|gaze]]
+
+{{{gaze}}} is used to retrieve information about spells or about your system. For example you can use {{{gaze search <phrase>}}} and {{{gaze}}} will search all available packages for mention of the phrase you entered. You can read any spell's description by doing {{{gaze what <spell>}}}.
+
+* [[Sorcery/Commands/Scribe|scribe]]
+
+Scribe is a utility for controlling the grimoires in your codex, and the spells in your grimoires. For example, you can use {{{scribe add stable}}} to add "stable" to your grimoires. {{{scribe remove stable}}} would then remove it. Scribe is also used for updating the spells in your grimoire using the command {{{scribe update}}}.
+
+**Note:** You can see all available options for each utility by typing {{{<utility> --help}}}.
