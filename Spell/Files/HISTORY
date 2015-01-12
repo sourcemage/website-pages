@@ -1,0 +1,62 @@
+= HISTORY =
+
+The HISTORY file is used to contain the revision history of the [[Spell|spell]] for all to see: every change to a spell gets an entry in HISTORY, consisting of one entry head, and a number of entry lines describing the edit in more detail. The format is the common [[http://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html|ChangeLog format]]. The permissions are set to the standard 0644.
+
+== Layout ==
+
+Every entry head holds:
+* the date
+* name of the Guru
+* email of the Guru
+
+Every entry line gets:
+* a newline
+* one tab
+* an asterisk
+* a space
+* optionally the file(s) altered if this clarifies
+* description of the edit
+
+Longer lines get wrapped: use one tab and two spaces to line out the lines.
+----
+
+== Examples ==
+
+{{{
+2005-01-26[one-space]John Doe[one-space]<john@example.net>
+[one-tab]*[one-space]This line is supposed to look like a too long line, so the line gets
+[one-tab][two-spaces]wrapped to the next line, not using another asterisk.
+
+2002-10-31[one-space]John Doe[one-space]<john@example.net>
+[one-tab]*[one-space]BUILD: modified to use more of default_build from
+[one-tab][two-spaces]/var/lib/sorcery/modules/libgrimoire; fixed Bug #1448
+
+2002-10-07[one-space]John Doe[one-space]<john@example.net>
+[one-tab]*[one-space]DETAILS, DEPENDS, BUILD: created spell
+[newline]
+}}}
+
+will look like:
+
+{{{
+2005-01-26 John Doe <john@example.net>
+	* This line is supposed to look like a too long line, so the line gets
+	  wrapped to the next line, not using another asterisk.
+
+2002-10-31 John Doe <john@example.net>
+	* BUILD: modified to use more of default_build from
+	  /var/lib/sorcery/modules/libgrimoire; fixed Bug #1448
+
+2002-10-07 John Doe <john@example.net>
+	* DETAILS, DEPENDS, BUILD: created spell
+
+
+}}}
+----
+
+== The "Don'ts" ==
+
+Some changes are not considered worth mentioning in HISTORY. \\ Those are:
+
+* changing spell signature between GPG key and SHA512 sum
+* removing/adding signature file
