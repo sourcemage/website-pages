@@ -23,7 +23,7 @@ Different grimoires exist for different kinds of spells. The [[Grimoire/stable|s
 
 == The Sorcery suite of scripts ==
 
-The Source Mage collection of system tools is called [[Sorcery]]. It contains utilities for different system management tasks whose names reflect SMGL's "magical" theme.
+The Source Mage collection of system tools is called [[Sorcery]]. It contains [[Sorcery/Commands|utilities]] for different system management tasks whose names reflect SMGL's "magical" theme.
 
 The main program, used for modifying core system behavior, is also named "sorcery".
 
