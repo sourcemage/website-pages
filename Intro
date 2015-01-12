@@ -17,7 +17,7 @@ the programs used to perform the said tasks.
 
 A spell is simply a directory containing script files that are used for downloading, unpacking, configuring, compiling, and installing a program. The actual source is not included in the spell, but is downloaded directly from the program's own website.
 
-Spells are stored in section directories inside the grimoire directories. The grimoires themselves are located in the codex directory {{{/var/lib/sorcery/codex}}}. For instance, the spell from stable grimoire for the GNU C compiler, called "gcc", is located in {{{/var/lib/sorcery/codex/stable/gnu/gcc}}}.
+Spells are stored in section directories inside the grimoire directories. The grimoires themselves are located in the codex directory {{{/var/lib/sorcery/codex}}}. For instance, the spell from stable grimoire for the [[http://gcc.gnu.org/|GNU C compiler]], called "gcc", is located in {{{/var/lib/sorcery/codex/stable/gnu/gcc}}}.
 
 Different grimoires exist for different kinds of spells. The [[Grimoire/stable|stable]] and [[Grimoire/test|test]] grimoires contain spells for most programs. Non-Free and binary spells belong in the [[Grimoire/z-rejected|z-rejected]] and [[Grimoire/binary|binary]] grimoires respectively, and games belong in the [[Grimoire/games|games]] grimoire.
 
