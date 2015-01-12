@@ -30,7 +30,7 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 
 (…The triggered spells are cast now…)
 
-These are the files used during the download, in their execution order:
+These are the files used during the [[Sorcery/Commands/Summon|download]], in their execution order:
 
 * [[Spell/Files/DOWNLOAD|DOWNLOAD]]
 
@@ -39,7 +39,7 @@ These are the files used during a [[Sorcery/Commands/Dispel|dispel]], in their e
 * [[Spell/Files/PRE_REMOVE|PRE_REMOVE]]
 * [[Spell/Files/POST_REMOVE|POST_REMOVE]]
 
-These are the files used during a resurrect, in their execution order:
+These are the files used during a [[Sorcery/Commands/Resurrect|resurrect]], in their execution order:
 
 * [[Spell/Files/PRE_RESURRECT|PRE_RESURRECT]]
 * [[Spell/Files/POST_RESURRECT|POST_RESURRECT]]
