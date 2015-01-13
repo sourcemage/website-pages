@@ -1,0 +1,3 @@
+= Spell's tablet =
+
+The tablet is where all installed [[Spell|spell]] information is kept. Usually it is {{{/var/state/sorcery/tablet/<spell>}}}.
