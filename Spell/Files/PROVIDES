@@ -1,0 +1,32 @@
+= PROVIDES =
+
+The PROVIDES file is used to contain information about what generic dependencies a [[Spell|spell]] provides.
+
+The format of this file is a simple list of uppercase provider names, separated by newlines.
+
+For instance, [[http://www.exim.org/|exim]], [[http://www.postfix.org/|postfix]] and [[http://www.sendmail.org/|sendmail]] are mailer daemons, so they provide {{{MAIL-TRANSPORT-AGENT}}}.
+
+Example from mozilla:
+
+{{{
+MOZILLA-BROWSER
+EMAIL-CLIENT
+WEB-BROWSER
+GRAPHICAL-WEB-BROWSER
+GECKO
+NS-PLUGIN-COMPATIBLE
+}}}
+
+You use the provider just like any other dependency:
+
+{{{
+depends GECKO &&
+
+suggest_depends WEB-BROWSER "" "" "for browsing the html docs"
+}}}
+
+So when something needs a pager, you don't put in your favourite one, but {{{PAGER}}} and let the user choose the provider.
+
+When adding a spell to an existing provider (e.g. adding a new provider for {{{GECKO}}}), **all** spells using that provider have to work with the new spell or need to be fixed.
+
+**Note:** due to historical reasons, another syntax using {{{provides <PROVIDER>}}} is also supported, but should not be used.
