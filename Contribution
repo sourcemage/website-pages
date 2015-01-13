@@ -84,7 +84,7 @@ The Grimoire Lead (GL) will be responsible for the following:
 * Setup and maintain a system to system-test each "release" of the stable Grimoire
 * Organize groups to test grimoires, ISOs, Sorcery, and documentation accuracy
 * Keep abreast of security issues and make sure Source Mage GNU/Linux is not vulnerable
-* Monitor or subscribe to at least these mailing lists (security@sourcemage@org should be already subscribed to them):
+* Monitor or subscribe to at least these mailing lists (security@sourcemage.org should be already subscribed to them):
 ** [[http://seclists.org/|seclists.org]]
 ** [[http://www.openwall.com/lists/oss-security/|oss-security @ openwall]]
 
