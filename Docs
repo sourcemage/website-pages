@@ -22,7 +22,21 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 
 * [[Intro]]
 * [[Sorcery]]
+** [[Sorcery/Commands/Sorcery|sorcery - the command]] -- manage sorcery options
+** [[Sorcery/Commands/Cast|cast]] -- install software
+** [[Sorcery/Commands/Dispel|dispel]] -- remove software
+** [[Sorcery/Commands/Gaze|gaze]] -- inspect software and system
+** [[Sorcery/Commands/Summon|summon]] -- download software sources
+** [[Sorcery/Commands/Scribe|scribe]] -- manage software collections
+** [[Sorcery/Commands/Cleanse|cleanse]] -- clean up the system from stale data
+** [[Sorcery/Commands/Scribbler|scribbler]] -- switch between multiple software collections or use them all at once
 * The [[Codex]]
+** [[Grimoire/stable|Stable grimoire]] -- production-ready environment
+** [[Grimoire/stable-rc|Stable-rc grimoire]] -- ready for testing upcoming stable
+** [[Grimoire/test|Test grimoire]] -- provides recent versions of programs
+** [[Grimoire/games|Games grimoire]] -- play your favorite games on Linux
+** [[Grimoire/z-rejected|Z-rejected grimoire]] -- use non-free blobs in your free system if you need to
+** [[Grimoire/personal|Personal grimoires]] -- use unofficial collections of software or create your own
 
 == Source Mage development ==
 
