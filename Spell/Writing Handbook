@@ -15,6 +15,7 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 * [[Spell/Files/DETAILS|DETAILS]] -- Informational file, required for all spells.
 * [[Spell/Files/CONFIGURE|CONFIGURE]] -- Used to select and modify a package's compile time options.
 * [[Spell/Files/DEPENDS|DEPENDS]] -- Lists all other spells that are required or optionally required to be cast.
+* [[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] -- Provides the opportunity to use runtime registration of {{{on_cast}}} triggers.
 * [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] -- Used to make a spell depend on another spell with certain features enabled.
 * [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] -- Tells [[Sorcery]] whether or not the sub-dependee is providing the given sub-depends.
 
