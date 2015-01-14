@@ -1,6 +1,6 @@
 = CONFIGURE =
 
-The CONFIGURE script is sourced during a [[Sorcery/Commands/Cast|cast]], after [[Spell/Files/DETAILS|DETAILS]] and before [[Spell/Files/DEPENDS|DEPENDS]] and [[Spell/Files/CONFLICTS|CONFLICTS]]. It is used to take care of more complex [[Spell|spells]] for which extra information must be gathered and stored. This can be needed when there are optional //./configure// switches that don't require any extra spells, or for doing extra things in the [[Spell/Files/BUILD|BUILD]] script. The query can be made in the CONFIGURE and then the flags stored can be used in any of the spell scripts.
+The CONFIGURE script is sourced during a [[Sorcery/Commands/Cast|cast]], after [[Spell/Files/DETAILS|DETAILS]] and before [[Spell/Files/DEPENDS|DEPENDS]] and [[Spell/Files/CONFLICTS|CONFLICTS]]. It is used to take care of more complex [[Spell|spells]] for which extra information must be gathered and stored. This can be needed when there are optional ./configure switches that don't require any extra spells, or for doing extra things in the [[Spell/Files/BUILD|BUILD]] script. The query can be made in the CONFIGURE and then the flags stored can be used in any of the spell scripts.
 
 == Persistence ==
 
