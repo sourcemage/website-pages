@@ -45,7 +45,6 @@ Used to specify the location where the source will be unpacked. You must pay spe
 SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
 }}}
 
-
 **SOURCE_URL[*]**
 
 An array where you specify as many targets of where to download the source from. Must specify the full path (including filename) of the application source, so it is known where to download the spell from. Incrementing the number in the []'s will add additional entries, attempted in numerical order.
@@ -181,6 +180,14 @@ Optional tag used to override the implicit {{{DOC_DIRS}}} variable to change wha
 
 {{{
 DOC_DIRS="doc* conf"
+}}}
+
+**ARCHIVE**
+
+This forces the enabling or disabling to archive a spell. The option is either "on" or "off". This should be set to "off" when the spell is a binary install. \\ Otherwise, this should remain untouched, as this is a variable set by user's preferences.
+
+{{{
+ARCHIVE="off"
 }}}
 
 **REJECT**
