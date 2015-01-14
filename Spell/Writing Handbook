@@ -25,18 +25,18 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 
 * [[Spell/Files/CONFLICTS|CONFLICTS]]
 
-//- Build API start -//
+//-- [[Grimoire/API|Build API]] start --//
 
 * [[Spell/Files/PRE_BUILD|PRE_BUILD]]
 * [[Spell/Files/BUILD|BUILD]]
-* [[Spell/Files/POST_BUILD|POST_BUILD]] ([[Sorcery/libapi1|libapi1]] only)
-* [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] ([[Sorcery/libapi2|libapi2]] only)
-* [[Spell/Files/INSTALL|INSTALL]] (libapi2 only)
+* [[Spell/Files/POST_BUILD|POST_BUILD]] (build API 1 only)
+* [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] (build API 2 only)
+* [[Spell/Files/INSTALL|INSTALL]] (build API 2 only)
 * [[Spell/Files/POST_INSTALL|POST_INSTALL]]
-* [[Spell/Files/FINAL|FINAL]] (libapi2 only)
+* [[Spell/Files/FINAL|FINAL]] (build API 2 only)
 * [[Spell/Files/TRIGGERS|TRIGGERS]]
 
-//- Build API end -//
+//-- Build API end --//
 
 (…The triggered spells are cast now…)
 
