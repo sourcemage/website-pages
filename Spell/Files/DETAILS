@@ -197,6 +197,8 @@ KEYWORDS="python www"
 
 A brief description of the spell. What it is, it's purpose etc. Used primarily by the [[Sorcery/Commands/Gaze|gaze]] command of the sorcery tools.
 
+**Note:** the entire phrase should fit on one line in the DETAILS file, including the spacing for {{{SHORT=}}}.
+
 {{{
 SHORT="GTK+/Imlib-based picture viewer for X"
 }}}
