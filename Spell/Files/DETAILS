@@ -261,6 +261,7 @@ EOF
 == WIP ==
 
 * **TMPFS**
+* **STAGED_INSTALL**
 * **SOURCE_HINTS/SOURCEn_HINTS**
 
 == Deprecated variables ==
