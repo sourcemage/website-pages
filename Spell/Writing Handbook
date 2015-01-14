@@ -78,4 +78,4 @@ These are the other files:
 
 * General rule: no tabs except in HISTORY, align '='s in DETAILS, and use newlines.
 * For other formatting rules, check the appropriate spell file pages above.
-* [[Spell/Multi version|Multi version spells]] -- the standard for spells with multiple versions.
+* [[Spell/Multiversion|Multiversion spells]] -- the standard for spells with multiple versions.
