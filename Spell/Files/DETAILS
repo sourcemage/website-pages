@@ -182,6 +182,14 @@ Optional tag used to override the implicit {{{DOC_DIRS}}} variable to change wha
 DOC_DIRS="doc* conf"
 }}}
 
+**GATHER_DOCS**
+
+Used to enable or disable gathering of docs defined in {{{DOCS}}} and {{{DOC_DIRS}}} (both can be pre-defined in {{{/etc/sorcery/config}}}).
+
+{{{
+GATHER_DOCS="off"
+}}}
+
 **ARCHIVE**
 
 This forces the enabling or disabling to archive a spell. The option is either "on" or "off". This should be set to "off" when the spell is a binary install. \\ Otherwise, this should remain untouched, as this is a variable set by user's preferences.
