@@ -24,9 +24,9 @@ Moreover [[Sorcery]] gives you tools for querying user for information. The func
 
 These functions do have three parameters:
 
-* variable name
-* question presented to the user
-* default (preselected) answer
+* //variable name//
+* //question presented to the user//
+* //default (preselected) answer//
 
 Example:
 
