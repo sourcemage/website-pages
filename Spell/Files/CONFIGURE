@@ -1,0 +1,75 @@
+= CONFIGURE =
+
+The CONFIGURE script is sourced during a [[Sorcery/Commands/Cast|cast]], after [[Spell/Files/DETAILS|DETAILS]] and before [[Spell/Files/DEPENDS|DEPENDS]] and [[Spell/Files/CONFLICTS|CONFLICTS]]. It is used to take care of more complex [[Spell|spells]] for which extra information must be gathered and stored. This can be needed when there are optional //./configure// switches that don't require any extra spells, or for doing extra things in the [[Spell/Files/BUILD|BUILD]] script. The query can be made in the CONFIGURE and then the flags stored can be used in any of the spell scripts.
+
+== Persistence ==
+
+Sorcery provides a way to store and later re-store environment variables between different spell scripts. The environment variable you want to persist must be marked by function {{{persistent_add}}}:
+
+{{{
+persistent_add VAR BLAH SPELL_OPTION
+}}}
+
+This way you marked the three variables so that they will be persisted.
+
+== Asking the user ==
+
+Moreover [[Sorcery]] gives you tools for querying user for information. The functions are provided for your convenience:
+
+* config_query
+* config_query_string
+* config_query_list
+* config_query_option
+* config_query_multi (defined in {{{config_query_multi.function}}} file found in the root of some [[Grimoire|grimoires]])
+
+These functions do have three parameters:
+
+* variable name
+* question presented to the user
+* default (preselected) answer
+
+Example:
+
+{{{
+config_query RMRF "Perform rm -rf / ?" y
+config_query_string NAME "What is your name ?" $USER
+config_query_list MTA "Which mta would you like to use ?" qmail sendmail postfix
+config_query_option SPELL_OPTION "Use X ?" y "--with-x" "--without-x"
+config_query_multi SOMETHING "What do you want?" all none something1 something2
+}}}
+
+{{{config_query_option}}} is a bit different, it does not overwrite content of {{{$SPELL_OPTION}}}, rather the result is appended to it.
+{{{config_query_multi}}} is different from {{{config_query_list}}} in that it makes available multiple options instead of just one.
+
+To use it one has to add {{{. "$GRIMOIRE/config_query_multi.function"}}} before calling it. \\ **Note** a dot at the beginning.
+
+All {{{config_query*}}} functions also mark the variable to be persistent automatically, and if that variable allready exists it won't ask again, just print out the answer from last query. If it isn't apparent then you should know that if you change the {{{config_query*}}} call you'll also want to change the variable name.
+
+For more examples and functions look into {{{/var/lib/sorcery/modules/libapi}}}
+
+== Passing the options to BUILD ==
+
+In order to make actual use of user specified options via listed above {{{config_query*}}} functions in CONFIGURE file we have to pass the saved values of the variables to a spell BUILD file. This is done by declaring a custom variable in CONFIGURE file and then specifying this variable name in BUILD file. \\ The following example shows what is required to be done:
+
+Example, irssi spell -- CONFIGURE file:
+
+{{{
+config_query_option IRSSI_OPTS "build with irssi-bot" n \
+                               "--with-bot" "--without-bot" &&
+config_query_option IRSSI_OPTS \
+        "build with irssi-proxy (to use irssi as a bouncer)" n \
+        "--with-proxy" "--without-proxy"
+}}}
+
+{{{IRSSI_OPTS}}} is the custom variable that stores answers a user gives us, e.g. {{{--with-bot}}} or {{{--without-bot}}}. We then need to create a BUILD file and put in there the stored user answers this way:
+
+Example, irssi spell -- BUILD file:
+
+{{{
+OPTS="$IRSSI_OPTS $OPTS" &&
+default_build
+}}}
+
+{{{OPTS=""}}} contains both {{{$IRSSI_OPTS}}}, a custom variable that we declared in CONFIGURE file, and a mandatory {{{$OPTS}}} variable that is **always expected to be placed after** all of the custom variables. {{{$OPTS}}} is an internal sorcery variable holding some common flags and the ones from the dependencies.
+
+The scenario described above provides a method that lets us ask a user some configuration related questions, obtain and store answers and then be able to apply changes to a spell configuration according to a user's instructions.
