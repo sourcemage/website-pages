@@ -27,7 +27,6 @@ cat << EOF
 Description that is wrapped to 80 columns or less.
 EOF
 }}}
-
 ----
 
 == Variables ==
@@ -72,6 +71,14 @@ Used to specify the location where the source will be unpacked. You must pay spe
 SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
 }}}
 
+**SOURCEn_DIRECTORY**
+
+Used to specify the location for multiple source directories where 'n' is a positive integer.
+
+{{{
+SOURCE2_DIRECTORY="${BUILD_DIRECTORY}/x509-${VERSION2}-${SPELL}-${VERSION}"
+}}}
+
 **SOURCE_URL[*]**
 
 An array where you specify as many targets of where to download the source from. Must specify the full path (including filename) of the application source, so it is known where to download the spell from. Incrementing the number in the []'s will add additional entries, attempted in numerical order.
@@ -93,7 +100,6 @@ You can use special global variables already pre-defined by [[Sorcery]], e.g. UR
 {{{
 SOURCE_URL[0]=${SOURCEFORGE_URL}/${SPELL}/${SOURCE}
 }}}
-
 
 **FORCE_DOWNLOAD**
 
