@@ -13,4 +13,4 @@ The following variables are available in PREPARE:
 
 For more info on these variables, check {{{/var/lib/sorcery/modules/libcodex}}}.
 
-An important usecase for PREPARE is in [[Spell/Multi version|multi version spells]].
+An important usecase for PREPARE is in [[Spell/Multiversion|multiversion spells]].
