@@ -258,6 +258,11 @@ EOF
 }}}
 ----
 
+== WIP ==
+
+* **TMPFS**
+* **SOURCE_HINTS/SOURCEn_HINTS**
+
 == Deprecated variables ==
 
 **UPDATED**
