@@ -246,7 +246,7 @@ REJECT="has licensing issues"
 }}}
 ----
 
-After all of the entries have been made for the details file. The last thing should be the long description for this spell. Used to give a more lengthy description of what this spell is and it's common uses etc. The description must be aligned to 80 characters (no line should exceed the 80th character).
+After all of the entries have been made for the DETAILS file. The last thing should be the long description for this spell. Used to give a more lengthy description of what this spell is and it's common uses etc. The description must be aligned to 80 characters (no line should exceed the 80th character).
 
 {{{
 cat << EOF
