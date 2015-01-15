@@ -265,7 +265,6 @@ EOF
 * **SOURCE_HINTS/SOURCEn_HINTS**
 * **DISTCC_HOSTS** (sets DISTCC to "on" or "off" depending on this)
 * **CCACHE**
-* **MAKE_NJOBS**
 * **MAINTAINER**
 * **ACTIVE_FTP**
 
