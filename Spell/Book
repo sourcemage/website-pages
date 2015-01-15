@@ -69,6 +69,7 @@ These are the other files:
 
 * [[Spell/Files/HISTORY|HISTORY]]
 * [[Spell/Files/PROVIDES|PROVIDES]]
+* [[Spell/Files/EXPORTS|EXPORTS]]
 * services
 * init.d directory
 * pam.d directory
