@@ -1,6 +1,6 @@
 = Summon command =
 
-Summon downloads the source code for a specified [[Spell|spell]]:
+{{{summon}}} downloads the source code for a specified [[Spell|spell]]:
 
 {{{
 # summon <spell>
