@@ -113,7 +113,7 @@ FORCE_DOWNLOAD[n]=on # for SOURCEn not SOURCE[n]!
 
 **SOURCE_HASH/SOURCEn_HASH**
 
-The hash of the source file. Consists of {{{<algorithm>:<hash>:<verification level>}}}. The algorithm we currently use is sha512. Verification level can be either {{{WORKS_FOR_ME}}} (no verification done) or other verification levels listed in [[Source integrity checking standards]].
+The hash of the source file. Consists of {{{<algorithm>:<hash>:<verification level>}}}. The algorithm we currently use is sha512. Verification level can be either {{{WORKS_FOR_ME}}} (no verification done) or other verification levels listed in [[Spell/Standards/Integrity|source integrity checking standards]].
 
 The second form is for multiple hash verifications, where 'n' is a positive integer.
 
@@ -123,7 +123,7 @@ SOURCE_HASH=sha512:cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce
 
 **SOURCE_GPG/SOURCEn_GPG**
 
-A signature used to verify the source file. Consists of {{{<key file>:<signature file>:<verification level>}}}. The key file has to exist in either the spell, the section or the grimoire the spell is in. The signature should be in the spell or downloaded by the spell. Verification levels are listed in [[Source integrity checking standards]]. See [[Spell/GPG checking|Spell GPG checking]] for details about how to generate a key.
+A signature used to verify the source file. Consists of {{{<key file>:<signature file>:<verification level>}}}. The key file has to exist in either the spell, the section or the grimoire the spell is in. The signature should be in the spell or downloaded by the spell. Verification levels are listed in [[Spell/Standards/Integrity|source integrity checking standards]]. See [[Spell/GPG checking|Spell GPG checking]] for details about how to generate a key.
 
 The second form is for multiple source verifications, there 'n' is a positive integer.
 
