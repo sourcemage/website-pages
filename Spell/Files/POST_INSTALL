@@ -1,0 +1,7 @@
+= POST_INSTALL =
+
+Often used to display some important follow-up action that the sys-admin may need to take. \\ Also used to clean up special build directories or other cruft needed during the [[Sorcery/Commands/Cast|cast]].
+
+In [[Grimoire/API|build API]] 2, it now does what [[Spell/Files/POST_BUILD|POST_BUILD]] used to do. The default is {{{default_post_install}}}.
+
+You override this file if you have qualms with the extra installation stuff that [[Sorcery]] does (like gather docs, install PAM files, etc.), or want to add more and for some reason can't do it in [[Spell/Files/INSTALL|INSTALL]].
