@@ -9,7 +9,7 @@ The format of the filename is: {{{REPAIR^ID^FILENAME}}}
 {{{ID}}} can be one of the things below:
 
 * a spell's version
-* a spell's UPDATED field //(deprecated)//
+* a spell's {{{UPDATED}}} field //(deprecated)//
 * the md5sum of {{{FILENAME}}}
 * the exact string 'none'
 * the exact string 'all'
