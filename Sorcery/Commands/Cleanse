@@ -1,5 +1,5 @@
 = Cleanse command =
 
-{{{cleanse}}} is a script whose purpose is to clean up the SMGL portion of a system.
+{{{cleanse}}} is a script whose purpose is to clean up the SMGL portion of a system. It is used for self-healing dependency problems and file corruption through many integrity checks.
 
 To know how it works please read //cleanse(8)// man page.
