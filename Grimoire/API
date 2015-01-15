@@ -22,8 +22,8 @@ A quick rundown of what '1' and '2' mean:
 
 Build API 1:
 
-[[Spell/Files/PRE_BUILD|PRE_BUILD]] -> [[Spell/Files/BUILD|BUILD]] -> [[Spell/Files/POST_BUILD|POST_BUILD]] -> [[Spell/Files/POST_INSTALL|POST_INSTALL]] -> [[Spell/Files/TRIGGERS|TRIGGERS]]
+[[Spell/Files/PRE_BUILD|PRE_BUILD]] → [[Spell/Files/BUILD|BUILD]] → [[Spell/Files/POST_BUILD|POST_BUILD]] → [[Spell/Files/POST_INSTALL|POST_INSTALL]] → [[Spell/Files/TRIGGERS|TRIGGERS]]
 
 Build API 2:
 
-[[Spell/Files/PRE_BUILD|PRE_BUILD]] -> [[Spell/Files/BUILD|BUILD]] -> [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] -> [[Spell/Files/INSTALL|INSTALL]] -> [[Spell/Files/POST_INSTALL|POST_INSTALL]] -> [[Spell/Files/FINAL|FINAL]] -> [[Spell/Files/TRIGGERS|TRIGGERS]]
+[[Spell/Files/PRE_BUILD|PRE_BUILD]] → [[Spell/Files/BUILD|BUILD]] → [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] → [[Spell/Files/INSTALL|INSTALL]] → [[Spell/Files/POST_INSTALL|POST_INSTALL]] → [[Spell/Files/FINAL|FINAL]] → [[Spell/Files/TRIGGERS|TRIGGERS]]
