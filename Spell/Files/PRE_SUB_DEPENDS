@@ -10,7 +10,7 @@ Some rules are applied to this file:
 
 == Example usage in spells ==
 
-"pygame" spell:
+* "pygame" spell:
 
 {{{
 case $THIS_SUB_DEPENDS in
@@ -23,7 +23,7 @@ esac
 return 1
 }}}
 
-"fxruby" spell:
+* "fxruby" spell:
 
 {{{
 case $THIS_SUB_DEPENDS in
@@ -32,7 +32,7 @@ esac  &&
 return 1
 }}}
 
-Example of checking for an optional provider ("FAM" in this case):
+* checking for an optional provider ("FAM" in this case):
 
 {{{
 case $THIS_SUB_DEPENDS in
