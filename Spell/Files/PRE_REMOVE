@@ -1,0 +1,13 @@
+= PRE_REMOVE =
+
+PRE_REMOVE is used to prepare a [[Spell|spell]] for removal. This is only necessary in a few special cases.
+
+An example from the "shadow" spell:
+
+{{{
+# Restore /etc/passwd when dispelling shadow
+${INSTALL_ROOT}/usr/sbin/pwunconv &&
+${INSTALL_ROOT}/usr/sbin/grpunconv
+}}}
+
+//(done in PRE_REMOVE because those commands are installed by "shadow", thus aren't available after the [[Sorcery/Commands/Dispel|dispel]])//
