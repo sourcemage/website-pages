@@ -1,0 +1,6 @@
+= Quill =
+
+Quill is an interactive [[Spell|spell]] generating and updating tool. It's meant to eventually become the be-all for spell manipulation. It has support for moving the working
+copy of the spell around, so any lacking features can easily be circumvented manually (the old way).
+
+See also [[Quill/Workflow|simple workflow example]] illustrating quill usage.
