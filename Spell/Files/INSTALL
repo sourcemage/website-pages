@@ -1,0 +1,11 @@
+= INSTALL =
+
+This file controls the actual install process.
+
+If the INSTALL file is not present in the [[Spell|spell]], [[Sorcery/Commands/Cast|cast]] uses {{{default_install}}} //(remember, {{{FUNCTIONS}}} file in [[Grimoire|grimoire]] root/section can redefine (replace) this function)//:
+
+{{{
+make install
+}}}
+
+**Note:** this {{{default_install}}} function is for the [[Grimoire/API|build api]] 2 only! In build api 1, {{{make install}}} is included in [[Spell/Files/BUILD|BUILD]].
