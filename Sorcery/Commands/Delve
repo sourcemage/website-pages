@@ -1,8 +1,8 @@
 = Delve command =
 
-"delve" is a low-level tool that allows the running of single [[Spell]] states such as [[Spell/Files/PRE_BUILD|PRE_BUILD]] and [[Spell/Files/INSTALL|INSTALL]]. It should not be used normally as it can harm one's system if used improperly. As such, please do not complain if your system becomes broken if this is used. Consider if what your doing could be useful to more than one person. If it can, file a bug report to get the spell changed.
+{{{delve}}} is a low-level tool that allows the running of single [[Spell]] states such as [[Spell/Files/PRE_BUILD|PRE_BUILD]] and [[Spell/Files/INSTALL|INSTALL]]. It should not be used normally as it can harm one's system if used improperly. As such, please do not complain if your system becomes broken if this is used. Consider if what your doing could be useful to more than one person. If it can, file a bug report to get the spell changed.
 
-Usage of "delve" comes in these forms:
+Usage of {{{delve}}} comes in these forms:
 
 {{{
 # delve [-f] -c <beginning> <end> <spell>
@@ -15,9 +15,9 @@ Usage of "delve" comes in these forms:
 
 Please note that {{{-fc}}} does **not** imply {{{-f}}} and {{{-c}}} and {{{-f}}} must be the first flag.
 
-"delve", although against recommendation, can be useful to circumvent dependencies, such as when there are files that would fulfill a spell's dependencies otherwise or to fix up a spell's source interactively in order to use {{{make}}} strength to recompile only what is needed. It can also be useful for debugging.
+{{{delve}}}, although against recommendation, can be useful to circumvent dependencies, such as when there are files that would fulfill a spell's dependencies otherwise or to fix up a spell's source interactively in order to use {{{make}}} strength to recompile only what is needed. It can also be useful for debugging.
 
-Spell states depend on API. The spell states for each API are listed, as well as the order of the states. The default is API2.
+Spell states depend on [[Grimoire/API|build API]]. The spell states for each API are listed, as well as the order of the states. The default is API 2.
 
 {{{
 API1=start PRE_BUILD config_loc BUILD POST_BUILD POST_INSTALL TRIGGERS end
@@ -28,4 +28,4 @@ API2=start PRE_BUILD config_loc BUILD PRE_INSTALL INSTALL INSTALL_EXTRAS POST_IN
 * //config_loc// will ask for custom {{{./configure}}} flags if {{{CONFIG_LOC}}} is enabled in {{{sorcery}}} feature menu, otherwise it is an empty state.
 * there are also special "substates" of //end// which are //success// and //failure//:
 ** if all previous states to //end// were successful, then the //success// sequence is played, such as marking the spell as installed, playing the sounds, etc.
-** //failure// plays its failure state as well. "delve" can use these as well, e.g. {{{delve <spell> failure}}}
+** //failure// plays its failure state as well. {{{delve}}} can use these as well, e.g. {{{delve <spell> failure}}}
