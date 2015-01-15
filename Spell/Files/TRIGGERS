@@ -1,0 +1,51 @@
+= TRIGGERS =
+
+Triggers are a solution to the problem that [[Spell|spells]] might need to act upon events happening to other spells.
+
+To this end, four triggers have been created:
+
+* on_cast
+* on_pre_cast
+* on_dispel
+* on_pre_dispel
+
+And four actions that can be triggered:
+
+* cast_self
+* dispel_self
+* check_self
+* run_script <file>
+
+These triggers are acted upon by [[Sorcery]] when the events specified in the triggers happen. The {{{*_pre_*}}} triggers are executed before the spell is [[Sorcery/Commands/Cast|cast]] or [[Sorcery/Commands/Dispel|dispelled]], and the others -- after the spell is cast or dispelled.
+
+== Usage ==
+
+Each line in TRIGGERS consists of:
+
+# the trigger
+# the spell to watch for
+# the action to be triggered
+
+i.e.
+
+{{{
+<trigger> <spell> <action>
+}}}
+
+Or, when using action {{{run_script}}}:
+
+{{{
+<trigger> <spell> run_script <file>
+}}}
+
+Take for example the following line in nvidia_driver's TRIGGERS file:
+
+{{{
+on_cast linux cast_self
+}}}
+
+If "nvidia_driver" is installed and "linux" is cast, the above trigger causes "nvidia_driver" to cast itself after "linux" is done casting.
+
+== Adding TRIGGERS to spells ==
+
+New triggers are only registered for a spell when it is cast. They are not automatically registered during [[Grimoire|grimoire]] update. If you are adding a new TRIGGERS file, or a line to an existing one, you may also want to update {{{PATCHLEVEL}}} in [[Spell/Files/DETAILS|DETAILS]]. Most of the times, however, a new trigger shouldn't force a rebuild. If something breaks, [[Sorcery/Commands/Cleanse|cleanse]] will identify problems and suggest a recast, causing new triggers to be registered.
