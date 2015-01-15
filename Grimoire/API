@@ -28,4 +28,4 @@ Build API 2:
 
 [[Spell/Files/PRE_BUILD|PRE_BUILD]] → [[Spell/Files/BUILD|BUILD]] → [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] → [[Spell/Files/INSTALL|INSTALL]] → [[Spell/Files/POST_INSTALL|POST_INSTALL]] → [[Spell/Files/FINAL|FINAL]] → [[Spell/Files/TRIGGERS|TRIGGERS]]
 
-**Note:** do not write spells in build api 1, use build api 2 instead!
+**Note:** do not write spells in build API 1, use build API 2 instead!
