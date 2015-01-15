@@ -465,7 +465,7 @@ You probably don't have repository access. Bug the [[mailto:grimoire@sourcemage.
 * More detailed examples and information on git: [[http://www-cs-students.stanford.edu/~blynn/gitmagic/index.html|Git Magic]]
 * Useful aliases and initial configuration example: [[http://wincent.com/wiki/git_quickstart|Wincent: Git quickstart]]
 * Good tutorial on the basics of git:  [[http://cworth.org/hgbook-git/tour/|A tour of git: the basics]]
-* [[Grimoire/Simple workflow example|Simple workflow example]] illustrating the use of git and quill by Jaka Kranjc
+* [[Quill/Workflow|Simple workflow example]] illustrating the use of git and [[Quill]] by Jaka Kranjc
 * Take a look at [[Grimoire/Common mistakes|this page]] explaining typical mistakes a Grimoire Guru can but **must not** make
 * A few notes on [[Grimoire/ChangeLog|Grimoire ChangeLog]]
 * The [[http://git-scm.com/book/|Pro Git Book]] by Scott Chacon, which is freely viewable online
