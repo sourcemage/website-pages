@@ -2,15 +2,15 @@
 
 In Source Mage, "casting spells" means installing programs. The [[Grimoire]] contains the list of [[Spell|spells]] one can cast.
 
-"cast" casts a program by:
+{{{cast}}} casts a program by:
 
 {{{
 cast <spell>
 }}}
 
-"cast" does rather more than simply install a program. The process can be broken down into four main steps:
+{{{cast}}} does rather more than simply install a program. The process can be broken down into four main steps:
 
-# Prepare: \\ "cast" prepares all the options before the compile and downloading begins. This way, user input is only needed at one stage and the system can be left alone. Spells should rarely ever need human input past this step. This step also houses dependency resolution.
+# Prepare: \\ {{{cast}}} prepares all the options before the compile and downloading begins. This way, user input is only needed at one stage and the system can be left alone. Spells should rarely ever need human input past this step. This step also houses dependency resolution.
 # Summon: \\ depending on the settings, cast uses "wget" or "aria2" to download the source code of the program from its web site.
 # Compile: \\ by following the instructions defined in the spell and the configuration before the download step, the spell is compiled accordingly.
 # Install: \\ the spell also contains instructions about where to put the compiled files once the compilation phase is over. Logs documenting the installed files are kept in {{{/var/log/sorcery/install}}} by default. [[Sorcery/Commands/Dispel|Dispel]] needs this file to know what to delete.
