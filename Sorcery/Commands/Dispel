@@ -1,6 +1,6 @@
 = Dispel command =
 
-"dispel" removes a previously-[[Sorcery/Commands/Cast|cast]] [[Spell]] from a system:
+{{{dispel}}} removes a previously-[[Sorcery/Commands/Cast|cast]] [[Spell|spell]] from a system:
 
 {{{
 # dispel <spell>
