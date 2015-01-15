@@ -1,0 +1,5 @@
+= POST_BUILD =
+
+This follows the [[Spell/Files/BUILD|BUILD]] script and thus is run after any {{{make install}}} command. Sometimes used to perform additional steps to ensure the application will run, such as installing default configuration files. Also sometimes used to prevent the {{{default_post_build}}} function from running, in this case, POST_BUILD will contain the single word 'true'.
+
+**Note:** you're not supposed to use POST_BUILD anymore with [[Grimoire/API|build API]] 2!
