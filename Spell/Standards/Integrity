@@ -1,0 +1,57 @@
+= Source integrity checking standards =
+
+* Primary reason [[Spell/GPG checking|GPG integrity checking]] was included in [[Sorcery]] was to offload all the awareness of various hash algorithms to [[http://www.gnupg.org/|GPG]]. For this reason we are moving **all** integrity checks to GPG. This includes both signatures and hash verification under the new {{{SOURCE_HASH}}} API.
+* This raises questions about what it means for a developer to sign an upstream tarball when no upstream key/signature is available. To keep things clear to our users (and developers):
+** Developers should not use their personal key for signing tarballs. They should create a new key used only for this. "What it means" for a developer to sign a tarball is different from what it means for them to sign someone else's key in a web of trust context; more on this is below.
+** Developers already have secure access to [[http://git-scm.com/|git]], so they don't necessarily need to get their GPG keys verified by other developers. They should upload them **over stunnel** to the [[Grimoire|grimoire]] directly.
+* Upstream keys are always required if available, since they maintain a complete validation chain of the source and require the least ongoing maintenance for gurus. \\ However, before including an upstream key in the grimoire(s), gurus should attempt to verify the key at least three of the following ways:
+** Get the key/fingerprint from the primary distribution site for the package in question.
+** Get the key/fingerprint from the home page of one of the package's primary developers.
+** Get the key from one of the public keyservers (either [[https://pgp.mit.edu/|pgp.mit.edu]] or [[http://subkeys.pgp.net:11371/|subkeys.pgp.net]]).
+** Get the key/fingerprint from an official post to a mailing list for the package in question.
+** Get the key/fingerprint from another project that treats it as authentic, if that project's verification standards are at least as strict as these.
+** Have a version of the key that is signed by a key we already include and have three-method verification for.
+** Confirm the fingerprint via private email/mail/IRC-chat/phone/etc. with the upstream key owner.
+
+**Note:** a single physical server can not be used to provide more than one verification source. To use e.g. a key posted on the primary site as a source and a project mailing list post as a second source the ML post must be available from a location other than the primary site.
+
+"Verification" means that the fingerprint retrieved in the above method matches the fingerprint of the key to be included in the grimoire. For example, getting the key from the primary upstream site and comparing the fingerprint against the same key from a keyserver and a fingerprint published to the relevant project's mailing list counts as three methods.
+
+* Sorcery has been extended for both GPG sigs and hashes to allow gurus to indicate to what extent they have verified upstream sources.  This indication comes in the form of a string added to the existing {{{SOURCE_GPG}}}/{{{SOURCE_HASH}}} variable as follows:
+** {{{SOURCE_HASH=<hashname>:<hashcode>:<level>}}}
+** {{{SOURCE_GPG=<key>:<sig>:<level>}}}
+
+Users can set preferences to indicate the types of verification they are willing to accept. Any method not in their list is counted as a verification failure, at which point the existing user preference for how to deal with verification failures applies (ignore, continue, etc.).
+
+* The following levels are currently defined:
+** {{{[ignore]}}}: This level doesn't actually exist, but is the effective level when {{{SOURCEn_IGNORE}}} is set (e.g. SCM sources are being used).
+** {{{WORKS_FOR_ME}}}: The guru downloaded the sources from the primary upstream distribution site and verified they compiled and ran.
+** {{{UPSTREAM_HASH}}}: The guru verified the downloaded sources matched a hash published by the upstream authors.
+** {{{VERIFIED_UPSTREAM_HASH}}}: The guru verified the downloaded sources against a hash published by the upstream authors through at least two channels other than the official upstream download site that hosts the tarball in question.
+** {{{UPSTREAM_KEY}}}: The [[Spell|spell]] is using an upstream key obtained from the primary upstream distribution site.
+** {{{ESTABLISHED_UPSTREAM_KEY}}}: The spell is using an upstream key that has been consistently used by the upstream authors for at least 3 version releases across at least 1 year. The developer should have first-hand knowledge that the key has not changed and not rely on things like mailing list archives, since these could be modified by an attacker to create the illusion of historical consistency.
+** {{{VERIFIED_UPSTREAM_KEY}}}: The spell is using an upstream key that has been verified using three of the above listed methods.
+** {{{ID_CHECK_UPSTREAM_KEY}}}: The spell is using an upstream key that has been verified in person via an official ID check.
+
+Levels {{{WORKS_FOR_ME}}} through {{{VERIFIED_UPSTREAM_HASH}}} apply to spells using {{{SOURCE_HASH}}} or that are guru-signed. Level {{{UPSTREAM_KEY}}} through {{{ID_CHECK_UPSTREAM_KEY}}} apply to vendor-signed sources. If no level is specified in {{{SOURCE_HASH}}}/{{{SOURCE_GPG}}}, level {{{WORKS_FOR_ME}}} is assumed.
+
+**Note** that if you are using an upstream key this means you should at least set the level to {{{UPSTREAM_KEY}}}. Sorcery can't tell the difference between an upstream signature and a guru signature.
+
+* Gurus who are unable or unsure how to do upstream key or source verification can make updates to the best of their ability in devel and mark it WIP, and someone with GPG/verification experience will perform the key or source verification from there. If an update needs to go from devel to test before the verification has been done, this can happen, with the understanding the stated verification level may need to be temporarily degraded as a result.
+
+* When an upstream key is included in the grimoire, the relevant [[Spell/Files/HISTORY|HISTORY]] file should be updated to indicate the way(s) in which it was verified. If less than three verifications were achieved but more were attempted this should be noted as well. For non-vendor-signed spells, when upstream sources are updated and the version update happens, the relevant HISTORY file entry should include the way the sources were verified if the stated verification level is higher than {{{WORKS_FOR_ME}}}.
+
+== Bugs classification ==
+
+* The following are currently valid bugs:
+** Spells which use {{{MD5[]}}} instead of either {{{SOURCE_HASH}}} or {{{SOURCE_GPG}}}.
+** Spells which use hashes or guru signatures when upstream keys/signatures are available.
+** Spells which include upstream keys but have not attempted the three-method verification described above, or have not documented the verifications performed in the relevant HISTORY log.
+** Spells which have caches distributed on our ISOs which are not verified at {{{ID_CHECK}}}.
+
+* The following are **not** valid bugs:
+** Spells which include upstream keys without the three-method verification described above IF that verification has been attempted and was not possible, and the attempts and results are documented in the relevant HISTORY log.
+** Spells which do not include an upstream key when no upstream key is available.
+
+* The following are not valid bugs yet, but may be in the future:
+** Spells which use {{{SOURCE_HASH}}} instead of {{{SOURCE_GPG}}}.
