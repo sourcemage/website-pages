@@ -39,3 +39,7 @@ unlikely errors:
 * use [[Grimoire/API|build API]] 1
 
 {{#export}} **Note:** exporting variables in spells should be avoided, as sorcery makes no guarantee that they will be around in another file. Therefore even if it works, it works by accident and may break in the future. There might be some cases where compiling a program successfully requires an {{{export <variable>=<value>}}}, but for spells' internal operation it is **never** allowed. Use CONFIGURE and persistent variables instead. Also note that exporting important environmental variables can break other spells in queue.
+
+== Integrity checking ==
+
+See source [[Spell/Standards/Integrity|integrity checking standards]] for more information.
