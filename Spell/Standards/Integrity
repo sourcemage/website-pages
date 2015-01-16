@@ -3,7 +3,7 @@
 * Primary reason [[Spell/GPG checking|GPG integrity checking]] was included in [[Sorcery]] was to offload all the awareness of various hash algorithms to [[http://www.gnupg.org/|GPG]]. For this reason we are moving **all** integrity checks to GPG. This includes both signatures and hash verification under the new {{{SOURCE_HASH}}} API.
 * This raises questions about what it means for a developer to sign an upstream tarball when no upstream key/signature is available. To keep things clear to our users (and developers):
 ** Developers should not use their personal key for signing tarballs. They should create a new key used only for this. "What it means" for a developer to sign a tarball is different from what it means for them to sign someone else's key in a web of trust context; more on this is below.
-** Developers already have secure access to [[http://git-scm.com/|git]], so they don't necessarily need to get their GPG keys verified by other developers. They should upload them **over stunnel** to the [[Grimoire|grimoire]] directly.
+** Developers already have secure access to [[ssh://scm.sourcemage.org|git]], so they don't necessarily need to get their GPG keys verified by other developers. They should upload them **over stunnel** to the [[Grimoire|grimoire]] directly.
 * Upstream keys are always required if available, since they maintain a complete validation chain of the source and require the least ongoing maintenance for gurus. \\ However, before including an upstream key in the grimoire(s), gurus should attempt to verify the key at least three of the following ways:
 ** Get the key/fingerprint from the primary distribution site for the package in question.
 ** Get the key/fingerprint from the home page of one of the package's primary developers.
@@ -17,11 +17,14 @@
 
 "Verification" means that the fingerprint retrieved in the above method matches the fingerprint of the key to be included in the grimoire. For example, getting the key from the primary upstream site and comparing the fingerprint against the same key from a keyserver and a fingerprint published to the relevant project's mailing list counts as three methods.
 
-* Sorcery has been extended for both GPG sigs and hashes to allow gurus to indicate to what extent they have verified upstream sources.  This indication comes in the form of a string added to the existing {{{SOURCE_GPG}}}/{{{SOURCE_HASH}}} variable as follows:
+* Sorcery has been extended for both GPG sigs and hashes to allow gurus to indicate to what extent they have verified upstream sources. This indication comes in the form of a string added to the existing {{{SOURCE_GPG}}}/{{{SOURCE_HASH}}} variable as follows:
 ** {{{SOURCE_HASH=<hashname>:<hashcode>:<level>}}}
 ** {{{SOURCE_GPG=<key>:<sig>:<level>}}}
+** {{{SOURCE_IGNORE=<reason>}}}
 
 Users can set preferences to indicate the types of verification they are willing to accept. Any method not in their list is counted as a verification failure, at which point the existing user preference for how to deal with verification failures applies (ignore, continue, etc.).
+
+* The following hashes are available: {{{md5}}}, {{{sha1}}}, {{{sha256}}}, {{{sha384}}}, {{{sha512}}} and {{{ripemd160}}}. {{{sha512}}} is the currently-used hash. {{{gpg}}} command is used to calculate the hash value except for {{{md5}}} and {{{sha1}}}, which coreutils spell provides.
 
 * The following levels are currently defined:
 ** {{{[ignore]}}}: This level doesn't actually exist, but is the effective level when {{{SOURCEn_IGNORE}}} is set (e.g. SCM sources are being used).
@@ -36,6 +39,13 @@ Users can set preferences to indicate the types of verification they are willing
 Levels {{{WORKS_FOR_ME}}} through {{{VERIFIED_UPSTREAM_HASH}}} apply to spells using {{{SOURCE_HASH}}} or that are guru-signed. Level {{{UPSTREAM_KEY}}} through {{{ID_CHECK_UPSTREAM_KEY}}} apply to vendor-signed sources. If no level is specified in {{{SOURCE_HASH}}}/{{{SOURCE_GPG}}}, level {{{WORKS_FOR_ME}}} is assumed.
 
 **Note** that if you are using an upstream key this means you should at least set the level to {{{UPSTREAM_KEY}}}. Sorcery can't tell the difference between an upstream signature and a guru signature.
+
+* {{{SOURCE_IGNORE}}} is also known as IGNORE mode. In this mode the checks are performed for the following text:
+** {{{volatile}}} -- for cvs/svn/any-other-scm
+** {{{unversioned}}} -- the source file changes frequently, but not a direct scm
+** {{{signature}}} -- for GPG signatures
+
+Those are the reasons for ignoring the source code validation. Signatures are silently ignored (i.e. not printed to user). Everything else respects {{{MD5SUM_DL}}}, which is **deprecated**.
 
 * Gurus who are unable or unsure how to do upstream key or source verification can make updates to the best of their ability in devel and mark it WIP, and someone with GPG/verification experience will perform the key or source verification from there. If an update needs to go from devel to test before the verification has been done, this can happen, with the understanding the stated verification level may need to be temporarily degraded as a result.
 
