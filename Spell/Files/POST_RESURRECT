@@ -1,0 +1,12 @@
+= POST_RESURRECT =
+
+This file is used for any post-installation commands when a [[Spell|spell]] is installed with [[Sorcery/Commands/Resurrect|resurrect]].
+
+POST_RESURRECT example of "mksh" spell:
+
+{{{
+. $GRIMOIRE/FUNCTIONS
+install_shell mksh /bin/mksh
+}}}
+
+which often repeats actions defined in [[Spell/Files/FINAL|FINAL]].
