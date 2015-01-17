@@ -49,3 +49,7 @@ If "nvidia_driver" is installed and "linux" is cast, the above trigger causes "n
 == Adding TRIGGERS to spells ==
 
 New triggers are only registered for a spell when it is cast. They are not automatically registered during [[Grimoire|grimoire]] update. If you are adding a new TRIGGERS file, or a line to an existing one, you may also want to update {{{PATCHLEVEL}}} in [[Spell/Files/DETAILS|DETAILS]]. Most of the times, however, a new trigger shouldn't force a rebuild. If something breaks, [[Sorcery/Commands/Cleanse|cleanse]] will identify problems and suggest a recast, causing new triggers to be registered.
+
+== Comparison with UP_TRIGGERS ==
+
+Remember, [[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] probably obsoletes most of the TRIGGERS' uses and has the benefit that it will work already on the first run: normal triggers need one pass to be saved first (i.e. cast twice).
