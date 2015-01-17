@@ -256,6 +256,39 @@ This forces the enabling or disabling to archive a spell. The option is either "
 ARCHIVE="off"
 }}}
 
+**STAGED_INSTALL**
+
+This one is used to turn off [[Stage root|stage root]] install managed by [[castfs]]. The default is 'on' when "castfs" is installed.
+
+{{{
+STAGED_INSTALL=off
+}}}
+
+**TMPFS**
+
+Attempt to compile entirely in RAM. This also modifies {{{mk_source_dir}}} function, which can be used in PRE_BUILD later to create {{{${SOURCE_DIRECTORY}}}} with specified size in tmpfs //(file system stored in volatile memory)//. You need one more argument for the size. Usually it's a global option, but can be used in DETAILS to override default behavior on a spell level:
+
+{{{
+TMPFS=off
+}}}
+
+But if it's turned on, PRE_BUILD can look like this:
+
+{{{
+# requires 3 gigabytes to unpack sources
+mk_source_dir "${SOURCE_DIRECTORY}" 3g &&
+cd "${SOURCE_DIRECTORY}" &&
+unpack_file
+}}}
+
+**CCACHE**
+
+Manages [[http://ccache.samba.org/|ccache]] (compiler cache) ability on a spell level. This allows to cache the initial compilation of a spell so that upgrading the spell later on will be much faster.
+
+{{{
+CCACHE=off
+}}}
+
 **REJECT**
 
 This is a short description of why a spell was rejected. This should be present for spells in [[Grimoire/z-rejected|z-rejected]] grimoire.
@@ -276,13 +309,6 @@ used solely from the keyboard.
 EOF
 }}}
 ----
-
-== WIP ==
-
-* **TMPFS**
-* **STAGED_INSTALL**
-* **CCACHE**
-* **MAINTAINER**
 
 == Deprecated variables ==
 
