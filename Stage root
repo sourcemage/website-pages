@@ -1,0 +1,21 @@
+= Stage root =
+
+== What is stage root? ==
+
+Stage root is a way to transparently move files during the install to a staged location so that [[Spell|spells]] can have more options to deal with how a package installs it's files to the system and users can have more control over config file management. Copy-on-write semantics are used, what this means is that if files get installed to {{{/usr/lib}}} during the install stage root will instead place them in {{{$STAGE_DIRECTORY/TRANSL/usr/lib}}}. Also if a package installs files to non-standard location the spell can handle this more easily than with pre-staging implementations of [[Sorcery]].
+
+== How does stage root work? ==
+
+Stage root uses a fuse file-system ([[castfs]]) to bind the root of the filesystem-namespace onto a sub-directory while providing copy-on-write semantics using an overlay directory (the "stage"). Within a chroot of the fuse mounted sub-directory sorcery invokes the spell installation phase. Modifications made by the installation phase are stored within the stage and later used for deployment on the root filesystem.
+----
+
+== FAQ ==
+
+|= Question =|= Answer =|
+| I think staging doesn't work! Why? | Make sure you have castfs installed. Also some rare spells specifically disable it. You'll know it works when you see plenty of green lines of castfs output at the end part of each [[Sorcery/Commands/Cast|cast]]. |
+| Why do the symlinks point to files or directories that aren't there? | Most likely the symlink is pointing to an absolute file or directory. Since the symlink file is translated not the linked location depending on how the symlink is being used the file it's pointing to may not exist until after [[Spell/Files/POST_INSTALL|POST_INSTALL]]. |
+| When I try and run <spell> during [[Spell/Files/INSTALL|INSTALL]] it can't find a library that was installed previously in INSTALL. | The linker might not be able to find the library because the binary was linked with {{{rpath}}}. This means that the location of the library is hard coded in the compiled executable you are trying to execute and since the library was translated to the stage root it doesn't exist where the linker thinks it's supposed to be. This means you should add the directory where the library should be to {{{LD_LIBRARY_PATH}}}. |
+| If a spell fails to install with stage root how can I figure out why it failed? | The best solution is to remember that when INSTALL is happening the files are getting moved to a different location. Also you should consider that what you are trying to do shouldn't really be done in INSTALL or could be done in POST_INSTALL or [[Spell/Files/FINAL|FINAL]] where staging is turned off. |
+| How can I turn off stage root during INSTALL? | By running {{{STAGED_INSTALL=off cast <spell>}}} or specifying {{{STAGED_INSTALL="off"}}} in [[Spell/Files/DETAILS|DETAILS]]. |
+| How do I take advantage of stage root? | The POST_INSTALL file is {{{cd}}}'ed to the directory {{{$STAGE_DIRECTORY}}} before the files are moved to the system. So you should {{{cd}}} to {{{TRANSL}}} then modify the file locations as if they were installed to the system. |
+| An INSTALL line with {{{mv}}} fails! Why? | Don't use {{{mv}}}, but {{{cp}}}. It's a castfs design limitation/decision. |
