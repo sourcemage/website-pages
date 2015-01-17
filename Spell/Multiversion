@@ -1,6 +1,6 @@
 = Multiversion spells =
 
-There are cases where a spell writer wants to allow a choice of version in a [[Spell|spell]]. Most of the times this is about pulling the current version from a source code management system like CVS, Subversion, Git, Mercurial, etc. There are other cases where an upstream project releases "stable" and "development" versions.
+There are cases where a spell writer wants to allow a choice of version in a [[Spell|spell]]. Most of the times this is about pulling the current version from a source code management system like [[http://cvs.nongnu.org/|CVS]], [[http://subversion.apache.org/|Subversion]], [[http://git-scm.com/|Git]], [[http://mercurial.selenic.com/|Mercurial]], etc. There are other cases where an upstream project releases "stable" and "development" versions.
 
 First rule for allowing such a version choice is that all dependencies of the spell need to work with all versions, otherwise the spell should be split.
 
@@ -16,7 +16,7 @@ If there are only two versions, an alternative would be to do a single query for
 config_query MPLAYER_CVS "Build CVS version?" n
 }}}
 
-For versions downloading from a source code management system, the spell should also ask the user whether he wants to update that spell automatically on every {{{sorcery [system-update|queue]}}}:
+For versions downloading from a source code management system, the spell should also ask the user whether he wants to update that spell automatically on every {{{sorcery system-update}}} or {{{sorcery queue}}}:
 
 {{{
 if [[ "${FVWM_RELEASE}" == "cvs" ]]; then
@@ -24,7 +24,8 @@ if [[ "${FVWM_RELEASE}" == "cvs" ]]; then
 fi
 }}}
 
-The actual multi-version handling is done in [[Spell/Files/DETAILS|DETAILS]]:
+The actual multiversion handling is done in [[Spell/Files/DETAILS|DETAILS]]:
+
 {{{
            SPELL=mplayer
 if [ "$MPLAYER_CVS" == "y" ]; then
