@@ -145,7 +145,8 @@ if [[ $VERSION != $(installed_version gcc) ]]; then
 fi
 }}}
 
-Without that, casting "g++" when there is an update available would try to use the older gcc.
+{{{force_depends}}} forces ordering and that's what helps most. "gcc" could've been recompiled later in the queue, but this spell needs the latest before its own build.
 
 == Sub-dependencies ==
+
 See [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] and [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] duo for more information on sub-dependencies.
