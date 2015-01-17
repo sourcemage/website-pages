@@ -27,16 +27,20 @@ return 1
 
 {{{
 case $THIS_SUB_DEPENDS in
-  FXSCINTILLA)  if is_depends_enabled $SPELL fxscintilla; then return 0; fi;;
-esac  &&
-return 1
+  fxscintilla) if is_depends_enabled $SPELL fxscintilla; then return 0; fi;;
+            *) return 1 ;;
+esac
 }}}
 
-* checking for an optional provider ("FAM" in this case):
+* checking for an optional provider ("SSL" in this case):
 
 {{{
 case $THIS_SUB_DEPENDS in
-  XL_FAM) if is_depends_enabled $SPELL $(get_spell_provider $SPELL FAM); then return 0; fi;;
-esac  &&
+    SSL) if is_depends_enabled $SPELL $(get_spell_provider $SPELL SSL) || is_depends_enabled $SPELL gnutls; then
+         return 0
+         fi
+         ;;
+      *) echo "unknown sub_depends!" ;;
+esac
 return 1
 }}}
