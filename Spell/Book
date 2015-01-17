@@ -29,10 +29,11 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 
 * [[Spell/Files/PRE_BUILD|PRE_BUILD]]
 * [[Spell/Files/BUILD|BUILD]]
-* [[Spell/Files/POST_BUILD|POST_BUILD]] (build API 1 only)
 * [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] (build API 2 only)
 * [[Spell/Files/INSTALL|INSTALL]] (build API 2 only)
+* [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]] (build API 2 only) / [[Spell/Files/POST_BUILD|POST_BUILD]] (build API 1 only)
 * [[Spell/Files/POST_INSTALL|POST_INSTALL]]
+* [[Spell/Files/TRANSFER|TRANSFER]] (build API 2 only)
 * [[Spell/Files/FINAL|FINAL]] (build API 2 only)
 * [[Spell/Files/TRIGGERS|TRIGGERS]]
 
@@ -70,8 +71,6 @@ These are the other files:
 * [[Spell/Files/HISTORY|HISTORY]]
 * [[Spell/Files/PROVIDES|PROVIDES]]
 * [[Spell/Files/EXPORTS|EXPORTS]]
-* [[Spell/Files/TRANSFER|TRANSFER]]
-* [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]]
 * services
 * init.d directory
 * pam.d directory
