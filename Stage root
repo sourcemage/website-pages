@@ -6,7 +6,7 @@ Stage root is a way to transparently move files during the install to a staged l
 
 == How does stage root work? ==
 
-Stage root uses a fuse file-system ([[castfs]]) to bind the root of the filesystem-namespace onto a sub-directory while providing copy-on-write semantics using an overlay directory (the "stage"). Within a chroot of the fuse mounted sub-directory sorcery invokes the spell installation phase. Modifications made by the installation phase are stored within the stage and later used for deployment on the root filesystem.
+Stage root uses a [[http://fuse.sourceforge.net/|fuse]] file-system ([[castfs]]) to bind the root of the filesystem-namespace onto a sub-directory while providing copy-on-write semantics using an overlay directory (the "stage"). Within a chroot of the fuse mounted sub-directory sorcery invokes the spell installation phase. Modifications made by the installation phase are stored within the stage and later used for deployment on the root filesystem.
 ----
 
 == FAQ ==
