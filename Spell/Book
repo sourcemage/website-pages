@@ -72,9 +72,10 @@ These are the other files:
 * [[Spell/Files/PROVIDES|PROVIDES]]
 * [[Spell/Files/EXPORTS|EXPORTS]]
 * services
-* init.d directory
-* pam.d directory
-* xinetd.d directory
+* {{{init.d}}} directory
+* {{{pam.d}}} directory
+* {{{xinetd.d}}} directory
+* {{{desktop}}} directory
 
 == Standards ==
 
