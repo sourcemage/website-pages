@@ -1,0 +1,24 @@
+= EXPORTS =
+
+This file is used to provide persistent variables of a [[Spell|spell]] to another spell.
+
+For example here's EXPORTS file from "xorg-server" spell:
+
+{{{
+XORG_SERVER_OPTS
+}}}
+
+which is used later in DEPENDS of "x11vnc" spell:
+
+{{{
+persistent_read xorg-server XORG_SERVER_OPTS XORG_SERVER_OPTS &&
+
+if list_find "$XORG_SERVER_OPTS" "--enable-record"; then
+  config_query_option X11VNC_OPTS \
+                      "Enable xrecord extension support?" y \
+                      "--with-xrecord" \
+                      "--without-xrecord"
+fi
+}}}
+
+**Note:** since the variables are read from within a spell's [[Spell/Tablet|tablet]], don't forget to add a [[Spell/Files/REPAIR|REPAIR^all^EXPORTS]] file if needed.
