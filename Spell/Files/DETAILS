@@ -101,6 +101,17 @@ You can use special global variables already pre-defined by [[Sorcery]], e.g. UR
 SOURCE_URL[0]=${SOURCEFORGE_URL}/${SPELL}/${SOURCE}
 }}}
 
+**SOURCE_HINTS/SOURCEn_HINTS**
+
+Special hints for [[Sorcery/Commands/Summon|summon]], so sources can be downloaded without error. Possible values currently include:
+* {{{old_svn_compat}}} -- maintain compatibility with original [[http://subversion.apache.org/|Subversion]] URL format (needed for {{{SOURCE_URL}}}s that use {{{http://}}} instead of {{{svn://}}})
+* {{{no-check-certificates}}} -- disable certificate checking for HTTPS transfers (useful for self-signed certificates on upstream download locations)
+
+{{{
+SOURCE_HINTS="no-check-certificates"
+SOURCE2_HINTS="no-check-certificate"
+}}}
+
 **FORCE_DOWNLOAD**
 
 When set to 'on', the source will be downloaded by sorcery, regardless of it being present in the spool directory.
@@ -109,6 +120,14 @@ When set to 'on', the source will be downloaded by sorcery, regardless of it bei
 FORCE_DOWNLOAD=on
 FORCE_DOWNLOAD[2]=on # for SOURCE2 not SOURCE[2]!
 FORCE_DOWNLOAD[n]=on # for SOURCEn not SOURCE[n]!
+}}}
+
+**ACTIVE_FTP**
+
+Set to 'on' if the spell's sources are on FTP servers that are not accessible in passive FTP mode.
+
+{{{
+ACTIVE_FTP=on
 }}}
 
 **SOURCE_HASH/SOURCEn_HASH**
@@ -262,11 +281,8 @@ EOF
 
 * **TMPFS**
 * **STAGED_INSTALL**
-* **SOURCE_HINTS/SOURCEn_HINTS**
-* **DISTCC_HOSTS** (sets DISTCC to "on" or "off" depending on this)
 * **CCACHE**
 * **MAINTAINER**
-* **ACTIVE_FTP**
 
 == Deprecated variables ==
 
@@ -279,3 +295,9 @@ UPDATED=20020406
 }}}
 
 **Note:** This is still supported, but shouldn't be used anymore. Instead use {{{PATCHLEVEL}}} or {{{SECURITY_PATCH}}} as applicable.
+
+**DISTCC_HOSTS**
+
+If for some reason the spell can't be compiled with the help of "distcc" (and it isn't just a {{{make -jN}}} bug), use {{{DISABLE_DISTCC=yes}}} to disable it.
+
+**Note:** try to avoid this, but otherwise it sets {{{DISTCC}}} to "on" or "off", though it may work only //some// of the time: if you used "ccache" in addition to "distcc", "distcc" wouldn't get disabled.
