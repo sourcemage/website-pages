@@ -286,7 +286,7 @@ unpack_file
 Manages [[http://ccache.samba.org/|ccache]] (compiler cache) ability on a spell level. This allows to cache the initial compilation of a spell so that upgrading the spell later on will be much faster.
 
 {{{
-CCACHE=off
+CCACHE=on
 }}}
 
 **REJECT**
