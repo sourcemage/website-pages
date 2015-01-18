@@ -52,7 +52,7 @@
 * More than 50% of the Lead Developers MUST cast a vote, or the vote is invalid.
 * Votes require a simple majority (greater than 50% of all votes cast) to pass.
 * If no quorum or majority is achieved, and the vote is for a Project or Component lead, and the incumbent is a valid candidate, they are reelected. If there is no incumbent or they have not accepted a nomination, the position becomes vacant.
-* Within 48 hours of the receipt of a vote the vote counter WILL respond to the voter via private email with an acknowledgement of the vote and an anonymized receipt string (currently using [[http://lists.ibiblio.org/pipermail/sm-discuss/2006-June/014720.html|probst]]).
+* Within 48 hours of the receipt of a vote the vote counter WILL respond to the voter via private email with an acknowledgement of the vote and an anonymized receipt string (currently using [[http://lists.ibiblio.org/pipermail/sm-discuss/2006-May/014536.html|probst]]).
 * Within 72 hours of the end of the vote the vote counter WILL post the results to the Mailing List as a list of all anonymized receipt strings and the vote they represent.
 * Any voter MAY contest the results within 72 hours of their posting.
 * If contested, the vote counter WILL produce the full votes with their signatures and receipt strings to three other Lead Developers within 48 hours of the contest reaching the Mailing List.
