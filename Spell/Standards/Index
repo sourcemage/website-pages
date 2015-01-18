@@ -10,13 +10,14 @@ Another purpose of this document is to gather together info about everything tha
 * call {{{exit}}}. Use {{{return 1}}} when aborting from a spell
 * [[#export|export variables]]
 * query the user anywhere else but in [[Spell/Files/CONFIGURE|CONFIGURE]], [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]], [[Spell/Files/DEPENDS|DEPENDS]] (only as necessary), or rarely in [[Spell/Files/PREPARE|PREPARE]] -- modify {{{Makefile}}}s if you have to
+* do downloading anywhere else but in [[Spell/Files/DOWNLOAD|DOWNLOAD]] for specific download instructions.
 * install man pages anywhere but in {{{/usr/share/man}}}
 * install info pages anywhere but in {{{/usr/share/info}}}
 * install files into {{{/usr/local}}}
 * use {{{UPDATED}}} (see [[Spell/Files/DETAILS|DETAILS]] documentation which includes {{{PATCHLEVEL}}} and {{{SECURITY_PATCH}}})
 * use {{{uname}}}, {{{$HOST}}}, etc. to detect CPU arch, but {{{SMGL_ARCHSPECS[?]}}} (in transition periods don't forget to depend on "smgl-archspecs" spell)
 * modify any variable provided by [[Sorcery]] (excluding {{{OPTS}}} and only during [[Spell/Files/BUILD|BUILD]] and [[Spell/Files/INSTALL|INSTALL]])
-* use a variable in a spell that is not declared //local//, //persistent/, or is explicitly provided by sorcery (all temporary variables should be //local//)
+* use a variable in a spell that is not declared //local//, //persistent//, or is explicitly provided by sorcery (all temporary variables should be //local//)
 * fail from a spell file when a non-fatal error occurs (for example, many spells call install-info in [[Spell/Files/POST_REMOVE|POST_REMOVE]])
 * use {{{STAGED_INSTALL="off"}}} without first consulting the Sorcery Team
 * use relative paths to find files in the section or grimoire
