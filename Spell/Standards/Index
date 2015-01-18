@@ -10,7 +10,7 @@ Another purpose of this document is to gather together info about everything tha
 * call {{{exit}}}. Use {{{return 1}}} when aborting from a spell
 * [[#export|export variables]]
 * query the user anywhere else but in [[Spell/Files/CONFIGURE|CONFIGURE]], [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]], [[Spell/Files/DEPENDS|DEPENDS]] (only as necessary), or rarely in [[Spell/Files/PREPARE|PREPARE]] -- modify {{{Makefile}}}s if you have to
-* do downloading anywhere else but in [[Spell/Files/DOWNLOAD|DOWNLOAD]] for specific download instructions.
+* do downloading anywhere else but in [[Spell/Files/DOWNLOAD|DOWNLOAD]] for specific download instructions
 * install man pages anywhere but in {{{/usr/share/man}}}
 * install info pages anywhere but in {{{/usr/share/info}}}
 * install files into {{{/usr/local}}}
