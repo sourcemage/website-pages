@@ -5,7 +5,7 @@
 == General ==
 
 * The Mailing List used for voting is sm-discuss@lists.ibiblio.org.
-* A "Developer" in this policy is any General or Lead Developer, as defined by the [[Developer Organization]] document, who was a Developer at the time the given vote began (the time the call for nominations was made or the time a given motion was first proposed).
+* A "Developer" in this policy is any General or Lead Developer, as defined by the [[Developers/Organization|Developer Organization]] document, who was a Developer at the time the given vote began (the time the call for nominations was made or the time a given motion was first proposed).
 * The terms "**MAY**", "**SHOULD**", "**MUST**", and "**MUST NOT**" when used in this Policy have the meanings assigned them in [[http://www.ietf.org/rfc/rfc2119.txt|RFC 2119]]. The term "**WILL**" is used to specify expectations for the voting process itself and the person(s) administering it. If a vote is not held in compliance with these "**WILL**" specifications, any Developer MAY move that the current vote be invalidated and started over. If the revote motion is seconded the current vote WILL be immediately suspended and the revote motion WILL proceed as an Issue Vote as described below. If the revote motion carries (on initial vote or veto) the current vote WILL be started over by the relevant Lead or their Assistant(s) within one week of the scheduled end of the revote motion vote.
 * All nominations, motions, seconds, votes, etc. MUST be GPG-signed by the Developer's GPG key as recorded at [[Keysigning]] to be valid.
 ----
@@ -79,7 +79,7 @@
 * General and Lead Developer Removal Votes WILL proceed per the Issue Voting Process described above, with the following exceptions:
 ** The Developer in question MUST NOT vote.
 ** Removal Votes require a super majority (greater than 2/3 of all binding votes cast) to pass.
-** Exception to the above: Automatic Removal Votes (triggered by inactivity as specified in the [[Developer Organization]] document) automatically pass unless a simple majority (greater than 50% of all binding votes cast) vote against the removal.
+** Exception to the above: Automatic Removal Votes (triggered by inactivity as specified in the [[Developers/Organization|Developer Organization]] document) automatically pass unless a simple majority (greater than 50% of all binding votes cast) vote against the removal.
 *** An Automatic Removal Vote vote must be proposed and seconded as per the Issue Voting Process, but no voting will take place unless a vote to keep the Developer is entered, then voting will proceed as normal.
 *** All General and Lead Developers (other than the Developer being voted upon) are counted as having voted unless a normal vote is required as described above.
 * Successful or failed removal votes MAY be vetoed by the entire group of Developers.
