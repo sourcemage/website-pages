@@ -1,0 +1,99 @@
+= Source Mage Voting Policy =
+
+**Note:** several aspects of the Voting Policy are inspired by voting formats used by other F/OSS projects, most notably the Apache project. If you are unfamilar with terms like '(non-)binding votes' or expressing a vote as '+/-1' and '+/-0', please refer to the [[http://www.apache.org/foundation/voting.html|Apache Voting Process]] for some general discussion, but keep in mind that only the usage explicitly described in this policy is valid for Source Mage.
+
+== General ==
+
+* The Mailing List used for voting is sm-discuss@lists.ibiblio.org.
+* A "Developer" in this policy is any General or Lead Developer, as defined by the [[Developer Organization]] document, who was a Developer at the time the given vote began (the time the call for nominations was made or the time a given motion was first proposed).
+* The terms "**MAY**", "**SHOULD**", "**MUST**", and "**MUST NOT**" when used in this Policy have the meanings assigned them in [[http://www.ietf.org/rfc/rfc2119.txt|RFC 2119]]. The term "**WILL**" is used to specify expectations for the voting process itself and the person(s) administering it. If a vote is not held in compliance with these "**WILL**" specifications, any Developer MAY move that the current vote be invalidated and started over. If the revote motion is seconded the current vote WILL be immediately suspended and the revote motion WILL proceed as an Issue Vote as described below. If the revote motion carries (on initial vote or veto) the current vote WILL be started over by the relevant Lead or their Assistant(s) within one week of the scheduled end of the revote motion vote.
+* All nominations, motions, seconds, votes, etc. MUST be GPG-signed by the Developer's GPG key as recorded at [[Keysigning]] to be valid.
+----
+
+== Lead Developer votes ==
+
+* A General Developer MAY be nominated for Lead Developer at any time by any other Developer.
+* Nominations MUST be sent to the Mailing List.
+* The nomination MUST be seconded within one week of being made.
+* The nomination MUST be accepted within one week of being made.
+* If a nomination is seconded and accepted the Project Lead or their assistant(s) WILL call for a vote within two weeks of the date the nomination was made.
+* Votes WILL proceed per the Lead Voting Process described below.
+----
+
+== Project and Component Lead votes ==
+
+* Component Lead Votes WILL occur during specific months, as follows:
+** **January:** Project Lead
+** **March:** Grimoire Lead
+** **May:** Cauldron Lead
+** **July:** Sorcery Lead
+** **September:** Tome Lead
+* The Project Lead WILL send a call for nominations to the Mailing List the first week of the relevant month.
+* Nominations WILL last for one week from the time the call for nominations is sent.
+* Nominations MUST be sent to the Mailing List.
+* The nomination MUST be seconded within one week of being made.
+* The nomination MUST be accepted within one week of being made.
+* Accepting nominees SHOULD send a message to the list explaining why they are running for the position and why people might want to elect them.
+* Two weeks after calling for nominations, the Project Lead or his Assistant(s) WILL call for a vote.
+* Votes WILL proceed per the Lead Voting Process described below.
+* If there are no nominees or the incumbent Lead is the only accepting nominee they are reelected without a vote.
+* The Lead's term begins the first day of the month following their election and lasts for one year.
+* If a Project or Component Lead is removed or steps down before the end of their regular term, the Project Lead (or, in the case of the Project Lead being the one removed, any other Lead Developer) WILL call for nominations for a replacement within one week of the effective date of the Lead's removal. The voting process for the replacement WILL continue as described above. The replacement WILL at most serve out the remainder of the existing term for that position, and the regular vote WILL be held when scheduled.
+* If at any time a Project or Component Lead position is empty (due to lack of available candidates, etc.), the Project Lead (or any Lead Developer, in the case of a Project Lead vacancy) MAY schedule a new vote for a temporary Lead to fill the position until the next scheduled election. The vote will continue as described above.
+----
+
+== Lead voting process ==
+
+* Lead votes last one week from the date they are called for.
+* Votes MUST be sent via private email to the Project Lead or the Assistant who called the vote as an ordered list of the candidates or "abstain".
+* Votes MUST be received at the designated email address by the scheduled end of the vote to be valid.
+* Lead Developers MUST cast a vote.
+* General Developers MAY cast a vote.
+* More than 50% of the Lead Developers MUST cast a vote, or the vote is invalid.
+* Votes require a simple majority (greater than 50% of all votes cast) to pass.
+* If no quorum or majority is achieved, and the vote is for a Project or Component lead, and the incumbent is a valid candidate, they are reelected. If there is no incumbent or they have not accepted a nomination, the position becomes vacant.
+* Within 48 hours of the receipt of a vote the vote counter WILL respond to the voter via private email with an acknowledgement of the vote and an anonymized receipt string (currently using [[http://lists.ibiblio.org/pipermail/sm-discuss/2006-June/014720.html|probst]]).
+* Within 72 hours of the end of the vote the vote counter WILL post the results to the Mailing List as a list of all anonymized receipt strings and the vote they represent.
+* Any voter MAY contest the results within 72 hours of their posting.
+* If contested, the vote counter WILL produce the full votes with their signatures and receipt strings to three other Lead Developers within 48 hours of the contest reaching the Mailing List.
+* These three Leads WILL provide their own list of receipt strings and their respective votes to the Mailing List within 72 hours of receiving the votes.
+* If the results are still contested, the vote counter WILL provide all votes and their signatures and receipt strings to the Mailing List within 48 hours of the (second) contest.
+----
+
+== Issue voting process ==
+
+* While we prefer to operate based on general consensus, votes are at times necessary to moves issues to resolution. Therefore, any General or Lead Developer MAY move for any issue to be put to a vote.
+* Motions for votes MUST be seconded within one week of being made.
+* If the motion is seconded the Project Lead or his Assistant(s) WILL call for a vote within one week of the initial motion.
+* Votes last one week from the date they are called for.
+* Votes MUST be sent to the Mailing List as +1 (yes), -1 (no), +/-0 (abstain) or an unambiguous equivalent. "Unambiguous" is defined at the sole discretion of the Project Lead.
+* Lead Developers MUST cast a vote.
+* General Developers MAY cast a vote, but their votes are advisory only (i.e., non-binding).
+* More than 50% of the Lead Developers MUST cast a vote, or the vote is invalid and fails.
+* Votes require a simple majority (greater than 50% of all binding votes cast) to pass.
+* Motions which pass are considered active immediately upon the majority vote reaching the Mailing List.
+----
+
+== Developer removal voting process ==
+
+* General and Lead Developer Removal Votes WILL proceed per the Issue Voting Process described above, with the following exceptions:
+** The Developer in question MUST NOT vote.
+** Removal Votes require a super majority (greater than 2/3 of all binding votes cast) to pass.
+** Exception to the above: Automatic Removal Votes (triggered by inactivity as specified in the [[Developer Organization]] document) automatically pass unless a simple majority (greater than 50% of all binding votes cast) vote against the removal.
+*** An Automatic Removal Vote vote must be proposed and seconded as per the Issue Voting Process, but no voting will take place unless a vote to keep the Developer is entered, then voting will proceed as normal.
+*** All General and Lead Developers (other than the Developer being voted upon) are counted as having voted unless a normal vote is required as described above.
+* Successful or failed removal votes MAY be vetoed by the entire group of Developers.
+* If an Automated Removal Vote fails, the Developer in question WILL be automatically nominated and seconded for a Removal Vote every six months they continue to be inactive.
+----
+
+== Veto process ==
+
+* The Developers MAY veto any Developer Removal Votes and any Issue Votes which would modify the Project's organizational structure or Voting Policy.
+* Motions to veto MUST reach the Mailing List within 72 hours of the scheduled end of the vote in question.
+* Veto votes WILL proceed per the Issue Voting Process described above, with the following exceptions:
+** For Removal Votes, the Developer in question MUST NOT vote.
+** Lead Developers MAY vote, but are not required to.
+** General Developers MAY cast a binding vote.
+** More than 50% of the Developers (Lead + General Developers) MUST cast a vote, or the veto is invalid and fails.
+** Vetos require a super majority (greater than 2/3 of all votes cast) to pass.
+* Veto votes are final.
