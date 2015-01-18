@@ -97,3 +97,23 @@
 ** More than 50% of the Developers (Lead + General Developers) MUST cast a vote, or the veto is invalid and fails.
 ** Vetos require a super majority (greater than 2/3 of all votes cast) to pass.
 * Veto votes are final.
+----
+
+== Vote acknowledgement ==
+
+Currently, {{{probst}}} function is used to generate and/or verify hashes of votes.
+
+The source code written by Seth Wooley is below:
+
+{{{
+probst() {
+  D="$(pgpdump -i)"
+  for i in '' $(seq 2 1000) ; do
+    echo "$D$i" | gpg --print-md sha512 | tr -d '\n ' | tr '[A-f]' '[a-f]'
+    echo
+    if [ "$1" == "$i" ]; then break; fi
+  done
+}
+}}}
+
+**Note:** you will need "pgpdump" utility which you can get by running {{{cast pgpdump}}} on SMGL system.
