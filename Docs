@@ -45,9 +45,10 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 * [[Join|Become]] a part of our [[Developers|Team]]
 * [[Bugs|Bug-tracking system]]
 * [[Grimoire]] development:
-** [[Grimoire/Guru Handbook|Grimoire Guru Handbook]] -- a guide to being a Grimoire Guru
+** [[Grimoire/Guru Handbook|Grimoire Guru Handbook]] -- a guide to being a Grimoire Guru.
 ** [[Spell/Book|Spellbook]] -- reference material for making spells, contains a listing of each of the spell files, with information on the purpose of each file.
-** [[Git guide]] -- a guide to using our Grimoire respository
+** [[Spell/Deprecation|Spell deprecation process]] -- a guide to perform [[Spell|spell]] deprecation.
+** [[Git guide]] -- a guide to using our Grimoire respository.
 * [[Developer Organization]]
 ** [[Voting Policy]]
 * [[Hall of Fame]] for past developers
