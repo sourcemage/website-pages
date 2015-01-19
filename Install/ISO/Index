@@ -135,6 +135,7 @@ And now you're done! All that's left is to reboot into your freshly installed So
 To setup networking you must create an interfaces file in {{{/etc/network}}} directory. \\ There is an example in {{{/usr/share/doc/ifupdown/examples/network-interfaces}}}.
 ----
 
+{{#post-install}}
 == Post-install steps ==
 
 If you installed the "smgl-setup" man page (selected to be installed by default in the ISO), you should start with:
