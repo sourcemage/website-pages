@@ -1,0 +1,101 @@
+= bashdoc =
+
+== Purpose ==
+
+First of all, bashdoc is here to help you, the developer. It provides you with a simple, easy to use method of documenting your code. It also provides a standardized way to generate pretty HTML documentation as a reference.
+
+== Grammar ==
+{{{
+File := <FileSegment>*
+FileSegment := <BashDoc>|<Code>
+Code := anything not BashDoc  ;)
+BashDoc := <Start><Body><End>
+Start, End := #---[-]*
+Body := <Line>*
+Line := ##<L2>
+L2 := TagLine | DescLine
+TagLine := @<Tag> <Text>
+Tag := param | <Word>
+DescLine := <Text>
+Text := .* | <Link><Text>
+Link := \\<@function (<File>,)?<Function>\\>
+File := filename
+Function := function name
+Word := [[:alpha:]]+
+}}}
+
+Suggested tags:
+
+{{{
+ @param: when order is important
+ @Arguments: when order is unimportant
+ @Stdout: what is dumped to stdout by this function
+ @Stderr: whe is dumped to stderr
+ @Stdin: what is expected from stdin
+ @return: what the return values mean
+ @Globals: global variables used
+}}}
+
+Some others are that are used:
+
+{{{
+ @Type API: if it's an API function
+ @Synopsis
+ @Copyright
+ @License
+}}}
+
+Keep in mind that {{{<@function some_function>}}} will make a link to the named function in the current file. If you want to link to a function in another file, you'll have to use {{{<@function file,function>}}} where {{{file}}} is the name of the bashdoc file, not the real file (so use {{{var.lib.sorcery.modules.libsorcery}}} instead of {{{/var/lib/sorcery/modules/libsorcery}}}).
+
+Any funny symbols will not be translated for you, so putting {{{<something>}}} in the comments would be a no-no.
+
+There are two kinds of bashdoc comments. Comments for the whole file and comments for functions. If the comment is directly followed by a function line, then it is assumed that the comment pertains to that function (thus it is not necessary to specify what function a comment is for). If there is not a function line directly following the end of the bashdoc comment, it is assumed to be for the whole file. Only the first global comment is used, the rest are discarded.
+
+For example this is proper use for a function:
+
+{{{
+#---
+## Some text
+#---
+function foo()
+...
+}}}
+
+== Use ==
+
+from the bashdoc.sh script:
+
+{{{
+   @Synopsis Reads specialy formated shell scripts and creates docs
+   @Copyright     Copyright 2003, Paul Mahon
+   @License  GPL v2
+   Parses comments between lines of '---'
+   Lines to be parsed start with . All tags start with @.
+   Lines without a tag are considered simple description of the section.
+   If the line following the comment block doesn't start with 'function'
+   the it's assumed that the comment is for the whole file. Only the first
+   non-function comment block will be used, the other will be ignored.
+   <p>
+   Multiple identical tags are allowed, the contents are appended and separated
+   with a space. @param tags are treated specials and are assumed to be in order.
+   <p>
+   There is an additional &lt;@function FUNCTION_NAME&gt; tag that can be embeded
+   in any bashdoc comment. It will be transformed into a link to that function.
+   Note, this will only work for functions that are defined in the same script.
+   <p><pre>
+   Usage:    [-p project] [-o directory] [-e tag] [--] script [ script ...]
+   '-p project'   Name of the project
+   '-o directory' Specifies the directory you want the
+        resulting html to go into
+  '-e tag'   Only output if the block has this tag
+   '--'      No more arguments, only scripts
+   'script'  The script you want documented
+   </pre>
+}}}
+
+There are two other scripts to enhance bashdoc: {{{src2html.sh}}} and {{{flow.sh}}}.
+
+* {{{src2html}}} converts bash source to cross-referenced HTML files (all function calls in the script are linked the bashdoc description of the function), and each function entry in bashdoc has a link to the hyperlinked source.
+* {{{flow.sh}}} creates a diagram of what functions call what functions.
+
+**Note:** these both have {{{--help}}} argument to see how to use them.
