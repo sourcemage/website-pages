@@ -43,6 +43,7 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 * [[Needs|Our needs]]
 * [[Contribution|How to contribute]]
 * [[Join|Become]] a part of our [[Developers|Team]]
+* [[Keysigning]] guide for secure interactions
 * [[Bugs|Bug-tracking system]]
 * Sorcery development:
 ** [[Sorcery/libapi|libapi]] -- reference for sorcery functions which can be used in [[Spell|spells]]
