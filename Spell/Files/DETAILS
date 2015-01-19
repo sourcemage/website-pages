@@ -324,6 +324,8 @@ UPDATED=20020406
 
 **DISTCC_HOSTS**
 
+[[Distributed compilation]] setting.
+
 If for some reason the spell can't be compiled with the help of "distcc" (and it isn't just a {{{make -jN}}} bug), use {{{DISABLE_DISTCC=yes}}} to disable it.
 
 **Note:** try to avoid this, but otherwise it sets {{{DISTCC}}} to "on" or "off", though it may work only //some// of the time: if you used "ccache" in addition to "distcc", "distcc" wouldn't get disabled.
