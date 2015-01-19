@@ -95,7 +95,7 @@ from the bashdoc.sh script:
 
 There are two other scripts to enhance bashdoc: {{{src2html.sh}}} and {{{flow.sh}}}.
 
-* {{{src2html}}} converts bash source to cross-referenced HTML files (all function calls in the script are linked the bashdoc description of the function), and each function entry in bashdoc has a link to the hyperlinked source.
+* {{{src2html}}} converts bash source to crossreferenced HTML files (all function calls in the script are linked the bashdoc description of the function), and each function entry in bashdoc has a link to the hyperlinked source.
 * {{{flow.sh}}} creates a diagram of what functions call what functions.
 
 **Note:** these both have {{{--help}}} argument to see how to use them.
