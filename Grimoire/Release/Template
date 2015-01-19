@@ -2,43 +2,15 @@
 
 == Vitals ==
 
-The {{{-rc}}} branch for this release will be cut on YYYY/MM/DD. The target release date is YYYY/MM/DD.
+The {{{-rc}}} branch for this release will be cut on **YYYY/MM/DD**. The target release date is **YYYY/MM/DD**.
 
-This release is being shepherded by <YOUR NAME> -- contact him with questions.
-
-Join the [[irc://irc.freenode.net/#sourcemage-grimoire|#sourcemage-grimoire]] on [[http://www.freenode.net|irc.freenode.net]] if you want to help or need help.
-
-== How to test ==
-
-# Pick some [[Spell|spells]] from the lists below and put your name in as the {{{Volunteer}}}. Optionally add some spells to the [[#extra|Extra spells]] section, with your name as {{{Volunteer}}}.
-# For your spells, search [[Bugs|bug-tracker]] for any existing bugs. Decide which are gating and which aren't, and fill out the {{{Notes}}} column appropriately. Put an {{{X}}} in the {{{Searched}}} column so we know someone has done the search.
-# Get a machine with the current [[Grimoire/stable|stable]] on it: either your regular box or just a [[#chroot-vm|chroot/vm]] image.
-# [[Sorcery/Commands/Cast|Cast]] your spells from stable if you don't have them already. If they won't install, ignore it and keep going.
-# Get stable-rc on that machine, either via {{{scribe add stable-rc}}} or just using the git branch directly.
-# Try updating your spells, or if they wouldn't install in stable try casting them directly from {{{-rc}}}.
-# Note any failures, issues, etc. in the {{{Notes}}} column. File bugs as necessary, noting which new issues are gating and which aren't.
-# Once the spell has cast for you without any gating problems, put an {{{X}}} in the {{{Signed-Off}}} column //(unless otherwise specified this applies to x86)//.
-
-It's up to you to define "gating" for your spells.
-
-Keeping us informed of what you've found is more important than fixing everything yourself. If you run out of time someone else can pick up for you but only if they can tell what's going on.
+This release is being shepherded by **<YOUR NAME>** -- contact him with questions.
 
 {{#chroot-vm}}
 == Getting the chroot/vm image ==
 
-If you're already are running stable somewhere, you don't need to wait, just test with that. Otherwise, download the chroot below:
-
-|= Chroot =|= Volunteer =|= Download =|
+|= Chroot/vm =|= Volunteer =|= Download =|
 | n/a | n/a | n/a |
-
-== List of supported spells ==
-
-Place an {{{X}}} in the signed off column once you have signed off on the spell. If you happen to test a full system-upgrade, feel free to put an {{{X}}} and your nick in the {{{Alt Sign-Off}}} column for any spells that work for you.
-
-We release once all spells below have:
-
-# An {{{X}}} in the {{{Searched}}} column indicating someone has at least searched the [[Bugs|bug-tracker]] for known issues, even if they found nothing.
-# Sign-off by the volunteer owning that spell this release, **or** sign-off by someone in the {{{Alt Sign-Off}}} column **if** there are no gating bugs noted by the owner.
 
 == Basesystem spells ==
 
