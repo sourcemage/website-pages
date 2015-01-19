@@ -240,6 +240,10 @@ and follow post-boot recommendations.
 
 Don't forget to set HDD as a primary media in boot priority list of BIOS.
 
-**9. Report**
+**9. Continue on**
+
+Follow the [[Install/ISO#post-install|post-installation steps]] in our ISO install guide to update and optimize the system for your hardware.
+
+**10. Report**
 
 Feel free to report back, comment and yell on this guide by dropping me a mail to stealth@sourcemage.org or notifying me on [[Contact/IRC|IRC]].
