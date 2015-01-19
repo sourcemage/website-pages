@@ -1,0 +1,28 @@
+= Sorcery feature menu =
+
+This page gives in-depth information about the various selectable freatures you can select for [[Sorcery]] to use. \\ The menu can be accessed via going to {{{Option}}} → {{{Feature Menu}}} after invoking {{{sorcery}}} command.
+
+|= Feature =|= Default =|= Information =|
+| archive | on | Archive all installed components of a [[Spell|spell]] so that if you decide to [[Sorcery/Commands/Dispel|dispel]] the spell it can easily be recovered and [[Sorcery/Commands/Resurrect|ressurrected]] |
+| autofix | on | Has sorcery check for broken spells and fix them after {{{sorcery update}}} |
+| updatefix | off | Ensure basesystem is not broken before {{{sorcery update}}} |
+| autoprune | off | Automatically remove old sources and installs cached sources upon {{{sorcery update}}} |
+| ccache | off | Cache (using [[https://ccache.samba.org/|ccache]]) the initial compilation of a spell so that upgrading the spell later on will be much faster |
+| color | on | When selected, [[Sorcery/Commands/Cast|cast]] and dispel show colored messages |
+| config_loc | on | Locally customize spell configuration (e.g. {{{Do you wish to add "--" options to ./configure? [n]}}}) |
+| gather_docs | on | Automatically gather miscellaneous documentation from spells |
+| mail_reports | off | Email reports to address specified via {{{sorcery}}} → {{{Option}}} → {{{Email of Sorcerer}}} |
+| preserve | on | Preserve modified files or back them up and overwrite with defaults |
+| sustain | on | Disallow dispelling of spells that would cause terrible malfunctions (according to {{{/var/lib/sorcery/sustained}}}) |
+| tmpfs | off | Attempt to compile entirely in RAM |
+| view_reports | off | Prompt to view a report of the compilation |
+| voyeur | on | View compilation as it happens |
+| reap | on | Remove files installed by a spell when dispelling |
+| store_conf_log | off | Store configuration log file {{{config.log}}} (usually used by {{{./configure}}} script) |
+| net_select | off | Use [[http://apenwarr.ca/netselect/|netselect]] to try fastest mirrors first if "netselect" spell is installed |
+| clean_source | off | Clean up source directories after failures |
+| cross_install | off | Non-native installation/cross-compilation |
+| set_term_title | off | Set xterm title/screen window title on cast |
+| screen | off | Toggle usage of [[http://www.gnu.org/software/screen/|screen]] in cast |
+| per_spell_cflags | off | Ask for custom {{{CFLAGS}}} for each spell |
+| show_gaze_short_query | on | Show spell description option in queries for optional dependencies |
