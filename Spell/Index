@@ -3,3 +3,5 @@
 Spell is a set of instructions contained in the [[Grimoire]] which tell [[Sorcery]] how to obtain, configure, compile, and install programs.
 
 Each program has its own directory in {{{/var/lib/sorcery/codex/<grimoire>/<section>/<spell>}}} containing the files with this information.
+
+Not every spell has all the files that are possible; some simple spells have only couple of files, whereas complex spells may have 10 or more. All the files are [[http://www.gnu.org/software/bash/|bash]] scripts containing information about the spell. The one file that is required for all spells is [[Spell/Files/DETAILS|DETAILS]]. Check out the [[Spell/Book|Spellbook]] to get more information about each particular file.
