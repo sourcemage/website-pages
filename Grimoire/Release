@@ -18,7 +18,7 @@ This page describes how [[Grimoire/stable|stable grimoire]] is updated regularly
 * {{{git commit -m "VERSION: $(cat VERSION)" VERSION}}}
 * {{{git push origin master}}}
 
-**3.** A new page is created for the new release by using [[Release/Template]] to make [[Grimoire/stable]]{{{/$STABLE_RC_VERSION}}}.
+**3.** A new page is created for the new release by using [[Grimoire/Release/Template]] to make [[Grimoire/stable]]{{{/$STABLE_RC_VERSION}}}.
 
 **4.** The release testing proceeds as described on the release page, with the following additions:
 
