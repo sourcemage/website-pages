@@ -1,21 +1,22 @@
-=Keysigning=
+= Keysigning =
 
-Install ##gnupg## and //(optionally)// ##gpa##
+Install [[https://www.gnupg.org/|gnupg]] and //(optionally)// [[https://www.gnupg.org/related_software/gpa/|gpa]]:
 
 {{{
 # cast gnupg
 # cast gpa
 }}}
 
-Read the ##man## page for ##gpg##
+Read the man page for "gpg":
 
 {{{
 $ man gpg
 }}}
 
-==Source Mage keysigning==
+== Source Mage keysigning ==
 
-Generate keys and send your public key to keyservers
+Generate keys and send your public key to keyservers.
+
 Generate a key and select the default key types //(for most uses this is ok)//:
 
 {{{
