@@ -1,0 +1,109 @@
+= Root variables =
+
+We had a meeting at which we discussed how to best make [[Sorcery]] flexible enough to fit the different usage patterns of install rooting, and cross installing and everything. We want to be able to have a model general enough to make installing to {{{/}}} the way things normally work simple, but also have the ability to install things to other places and track them in meaningful ways and support several different possible applications.
+
+We came to the conclusion that it would be best described by 4 variables:
+
+* **{{{INSTALL_ROOT}}}** is where files get installed to, usually this is {{{/}}} or the "root directory". The idea with {{{INSTALL_ROOT}}} is you can install your files (data) to somewhere other than {{{/}}}.
+
+* **{{{CODEX_ROOT}}}** is where to look for your grimoires, usually this is in {{{/var/lib/sorcery/codex}}} but it seemed useful to some people to be able to easily abstract it away to some other place so you could have another set of grimoires for your install roots. It is still currently un-implemented as it really has nothing to do with the other three and can be easily worked around.
+
+* **{{{STATE_ROOT}}}**: since spells install "data" it would seem logical to conclude that they also install "meta-data" or data that helps describe whats installs and stuff. This would be stuff in {{{/var/state/sorcery}}}, and some of the stuff in {{{/etc/sorcery}}}, but not all of it as well as things in {{{/var/cache}}} and {{{/var/log}}}. However once we get to install logs, things get interesting...
+
+* **{{{TRACK_ROOT}}}**: this describes what prefix should be given to files installed in the install log. Depending on what we're doing we might want to have the full prefix, including the value of {{{INSTALL_ROOT}}}, or we might want to think of the files as having been installed in a chroot system and we want to chroot into the system and have all the state files appear natural.
+
+== Usage examples ==
+
+**1.** normal install under {{{/}}}
+
+{{{
+INSTALL_ROOT=/
+TRACK_ROOT=/
+STATE_ROOT=/
+}}}
+
+**2.** install something under a different {{{INSTALL_ROOT}}} and maintain sorcery state there (so you could concievably chroot there and everything will be fine). This means that we need to strip the install root directory from the install list.
+
+{{{
+INSTALL_ROOT=/opt/foobar
+TRACK_ROOT=/
+STATE_ROOT=/opt/foobar
+}}}
+
+**3.** install root something under a different directory but use the (or non {{{INSTALL_ROOT}}}) sorcery state files. This is useful if say you want two separate conflicting spells installed, and just want to dump one in some other place off your main system.
+
+{{{
+INSTALL_ROOT=/opt/foobar
+TRACK_ROOT=/opt/foobar
+STATE_ROOT=/
+}}}
+
+**4.** install root with a cross compiler, this would compile something for a different arch and link to the right libraries. Sorcery state would need to be maintained in the install root, but sorcery should still be able to interact with it, this is like **2.**, but not natively chrootable.
+
+{{{
+INSTALL_ROOT=/opt/foobar
+TRACK_ROOT=/
+STATE_ROOT=/opt/foobar
+}}}
+
+**5.** install root with a cross compiler, like **4.**, but we keep our sorcery state files somewhere special so we can deploy a small system without any sorcery stuff on it (say this is a PDA we are trying to make a small image for).
+
+{{{
+INSTALL_ROOT=/opt/foobar
+TRACK_ROOT=/
+STATE_ROOT=/opt/bazqux
+}}}
+
+There will be a little sorcery menu for setting these either manually or to some predefined cases like above.
+
+As you can see there are other combinations and quite a few places one can go with all of this. One of the take home messages here is that the old idea of installing sorcery
+into the {{{INSTALL_ROOT}}} and running it from there is gone. Sorcery is going to be run from its native place on the current machine (unless you chroot), and thats it. Agreeing to do that, however we can have this much simpler and more flexible scheme where sorcery can now install things to other places.
+
+With all that in mind I'll discuss the topic of log adjustment. There are three ways to describe a file: "filterable", "root", and "log".
+
+* In filterable form the file has {{{INSTALL_ROOT}}} or {{{STATE_ROOT}}} stripped off the front, in this form you can apply {{{filter}}} functions to it and get meaningful results.
+* In root format the file has {{{INSTALL_ROOT}}} and {{{STATE_ROOT}}} in front of it, in this form you can use the {{{test}}} builtin to see if a file actually exists or not.
+* Log format in broad terms means {{{INSTALL_ROOT}}} is replaced with {{{TRACK_ROOT}}}. However this causes some ambiguity with {{{INSTALL_ROOT}}} if {{{STATE_ROOT}}} is inside it.
+
+Heres some example situations one could have:
+
+**Inside:**
+
+{{{
+INSTALL_ROOT=/opt/quxor/
+STATE_ROOT=/opt/quxor/stater
+}}}
+
+**Outside:**
+
+{{{
+INSTALL_ROOT=/opt/baz/
+STATE_ROOT=/opt/fimb/
+}}}
+
+**Equal to:**
+
+{{{
+INSTALL_ROOT=/opt/foobar/
+STATE_ROOT=/opt/foobar/
+}}}
+
+The heuristic is: if {{{STATE_ROOT}}} is inside {{{INSTALL_ROOT}}}, the {{{INSTALL_ROOT}}} part is stripped off (this also works for the equal to case actually). So
+we'd have the following translations if {{{TRACK_ROOT}}} was {{{/media/toble/}}}:
+
+**Inside:**
+
+* state file: {{{/opt/quxor/stater/var/log/sorcery/install/foo-1.0}}} → {{{/media/toble/stater/var/log/sorcery/install/foo}}}
+* regular file: {{{/opt/quxor/bin/foo}}} → {{{/media/toble/bin/foo}}}
+
+**Outside:**
+
+* state file: {{{/opt/fimb/var/log/sorcery/install/foo-1.0}}} → {{{/opt/fimb/var/log/sorcery/install/foo-1.0}}}
+* regular file: {{{/opt/baz/bin/foo}}} → {{{/media/toble/bin/foo}}}
+
+**Equal to:**
+
+* state file: {{{/opt/foobar/var/log/sorcery/install/foo-1.0}}} → {{{/media/toble/var/log/sorcery/install/foo-1.0}}}
+* regular file: {{{/opt/foobar/bin/foo}}} → {{{/media/toble/bin/foo}}}
+
+**Note**: if {{{STATE_ROOT}}} is outside of {{{INSTALL_ROOT}}} is left alone, but if it's inside or equal to, it's adjusted. I believe this is the most consistent behavior with what one might want, e.g. if {{{STATE_ROOT}}} is inside {{{INSTALL_ROOT}}} they're planning on using both while chrooted into {{{INSTALL_ROOT}}}, on the other hand if {{{STATE_ROOT}}} is outside they probably won't want it translated. Also, it is exceedingly difficult to reliably do things other ways, and any other way I could think of didn't really feel consistent with the spirit of {{{INSTALL_ROOT}}}/{{{TRACK_ROOT}}}/{{{STATE_ROOT}}}.
