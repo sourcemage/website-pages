@@ -47,6 +47,7 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 * [[Bugs|Bug-tracking system]]
 * Sorcery development:
 ** [[Sorcery/libapi|libapi]] -- reference for sorcery functions which can be used in [[Spell|spells]]
+** [[Sorcery/Roots|Root variables]] -- special variables allowing different scenarios with chroots and custom installs
 * [[Grimoire]] development:
 ** [[Spell/Book|Spellbook]] -- reference material for making spells, contains a listing of each of the spell files, with information on the purpose of each file
 ** [[Git guide]] -- a guide to using our grimoire repository
