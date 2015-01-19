@@ -22,7 +22,7 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 
 * [[Intro]]
 * [[Sorcery]]
-** [[Sorcery/Commands/Sorcery|sorcery - the command]] -- manage sorcery options
+** [[Sorcery/Commands/Sorcery|sorcery - the command]] -- manage sorcery options and [[Sorcery/Feature menu|features]]
 ** [[Sorcery/Commands/Cast|cast]] -- install software
 ** [[Sorcery/Commands/Dispel|dispel]] -- remove software
 ** [[Sorcery/Commands/Gaze|gaze]] -- inspect software and system
