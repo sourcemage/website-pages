@@ -1,0 +1,86 @@
+= Distributed compilation with distcc =
+
+Distributed compilation in Source Mage allows a [[Sorcery/Commands/Cast|cast]] to spread the load of a build over several computers. This can greatly increase the speed of casting [[Spell|spells]].
+
+== Requirements ==
+
+* [[https://code.google.com/p/distcc/|distcc]] and [[https://gcc.gnu.org/|GCC]] must be installed on involved computers
+* the GCC versions and build targets must be compatible, this means a GCC installation targeting //sparc// can't be used in a network of //x86// computers and a GCC version of //2.95.3// can't be used together with //3.1//
+* computers which act as volunteers must run the distcc daemon. In Source Mage this is most easily done by selecting {{{y}}} when asked whether distcc should be invoked via xinetd ({{{cast xinetd}}} to install it on SMGL system)
+
+== Usage ==
+
+On the computer which should use distributed compilation run {{{sorcery}}} command and go to the {{{Parallel/Cached/Distributed Compiling}}} menu under {{{Option}}}, enter the network hostnames or IP-addresses of the volunteers in the {{{DISTCC_HOSTS}}} text field. Don't forget to add {{{localhost}}} if you want it to help.
+
+Try casting a spell now and hopefully the compilation will be spread among the volunteers you specified.
+
+**Warning:** only enable distributed compilation on a trusted network -- no access control is done.
+
+== Cross compilation with distcc ==
+
+A cross compiler for the desired target architecture (we will assume it's for an x86-64 on an x86 machine and located under {{{/opt/x86_64-unknown-linux-gnu}}}. \\ Have "distcc" spell installed and working either using the init script or the xinetd to run distcc.
+
+For more info on cross compilers see [[http://www.kegel.com/crosstool/]].
+
+=== Steps on the client ===
+
+**1.** Set up a "masquerade directory":
+
+{{{
+# mkdir /usr/lib/distcc/bin
+# cd /usr/lib/distcc/bin
+# ln -s ../../../bin/distcc gcc
+# ln -s ../../../bin/distcc cc
+# ln -s ../../../bin/distcc g++
+# ln -s ../../../bin/distcc c++
+}}}
+
+**2.** Add the "masquerade directory" infront of your {{{PATH}}} variable:
+
+* for temporary testing: {{{export PATH="/usr/lib/distcc/bin:$PATH"}}}
+* for more permanent change add the command above to your {{{~/.bash_profile}}} file
+
+This doesn't hurt normal compiling, just don't [[Sorcery/Commands/Dispel|dispel]] distcc without removing this from your path.
+
+=== Steps on the server ===
+
+**1.** Create a user for distcc to run as:
+
+{{{
+# useradd distcc
+}}}
+
+**2.** Make sure your cross tools {{{bin}}} directory has a {{{gcc}}}, {{{cc}}}, {{{g++}}} and {{{c++}}} symlinks to the appropriate binaries:
+
+{{{
+# cd /opt/x86_64-unknown-linux-gnu/bin
+# ln -s x86_64-unknown-linux-gnu-gcc gcc
+# ln -s x86_64-unknown-linux-gnu-gcc cc
+# ln -s x86_64-unknown-linux-gnu-g++ c++
+# ln -s x86_64-unknown-linux-gnu-g++ g++
+}}}
+
+There isn't any need to link the {{{ld}}}, {{{ar}}}, {{{cpp}}} or as distcc is a distributed compilation tool not a distributed linker, C preprocessor, assembler or archiver ;-)
+
+**3.** Modify the {{{/etc/sysconfig/distcc}}} or {{{/etc/xinetd.d/distccd}}} scripts appropriately to make {{{distccd}}} run as the {{{distcc}}} user:
+
+* xinetd: {{{user = distcc}}}
+* init.d: {{{USER="distcc"}}}
+
+**4.** Give the user the appropriate path:
+
+Make sure the {{{/etc/passwd}}} has the users shell as {{{/bin/sh}}}:
+
+{{{
+# su distcc
+$ cd
+$ cp /etc/skel/.bash_profile ./
+$ vim .bash_profile
+}}}
+
+and add {{{export DISTCCD_PATH="/opt/x86_64-unknown-linux-gnu/bin:$PATH"}}} to the file after the {{{PATH}}} variable is set.
+
+**5.** Restart your distcc server:
+
+* init.d: {{{telinit run distcc restart}}}
+* xinetd: {{{telinit run xinetd restart}}}
