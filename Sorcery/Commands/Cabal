@@ -1,0 +1,5 @@
+= Cabal command =
+
+A "cabal" is a conspiratorial group of plotters or intriguers.
+
+In terms of Source Mage, cabal is the system that will allow easy administration of multiple servers. Once setup, you can [[Sorcery/Commands/Cast|cast]] a [[Spell|spell]] on a collection of servers from a single interface.
