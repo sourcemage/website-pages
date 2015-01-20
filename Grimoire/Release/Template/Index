@@ -1,6 +1,9 @@
 = Stable grimoire release template =
 
-== Vitals ==
+You can find the source code (including markup) of the page below [[Grimoire/Release/Template/Source|here]].
+----
+
+= Grimoire stable-<VERSION> release =
 
 The {{{-rc}}} branch for this release will be cut on **YYYY/MM/DD**. The target release date is **YYYY/MM/DD**.
 
