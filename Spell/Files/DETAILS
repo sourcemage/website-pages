@@ -214,7 +214,7 @@ KEYWORDS="python www"
 
 **SHORT**
 
-A brief description of the spell. What it is, it's purpose etc. Used primarily by the [[Sorcery/Commands/Gaze|gaze]] command of the sorcery tools.
+A brief description of the spell. What it is, it's purpose etc. Used primarily by the [[Sorcery/Commands/Gaze|gaze]] command of the [[Sorcery/Commands|sorcery tools]].
 
 **Note:** the entire phrase should fit on one line in the DETAILS file, including the spacing for {{{SHORT=}}}.
 
