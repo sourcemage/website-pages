@@ -1,0 +1,82 @@
+= Grimoire stable-0.14 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/10/01**. The target release date is **2007/10/15**.
+
+This release is being shepherded by **Eric Sandall** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot stable-0.13 x86 | sandalle | [[http://download.sourcemage.org/image/official/smgl-stable-0.13-basesystem-x86.tar.bz2|smgl-stable-0.13-basesystem-x86.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.13-basesystem-x86.tar.bz2.sig|sig]]) |
+| chroot stable-0.13 x86_64 | sandalle | [[http://download.sourcemage.org/image/official/smgl-stable-0.13-basesystem-x86_64.tar.bz2|smgl-stable-0.13-basesystem-x86_64.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.13-basesystem-x86_64.tar.bz2.sig|sig]])
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | sandalle (x86_64) | |
+| bash | sandalle | X | X | sandalle (x86_64) | Bug #13654: ncurses -> UTF8 |
+| binutils | lynx | X | X | sandalle (x86_64) | temporarily fixed #14015 |
+| bison | sandalle | X | X | sandalle (x86_64) | |
+| bzip2 | mar_s | X | X | sandalle (x86_64) | |
+| console-tools | sandalle | X | X | sandalle (x86_64) | |
+| console-data | sandalle | X | X | sandalle (x86_64) | |
+| coreutils | sandalle | X | X | sandalle (x86_64) | |
+| cpio | mar_s | X | X | sandalle (x86_64) | |
+| device-mapper | sandalle | X | X | sandalle (x86_64) | |
+| dhcpcd | lynx | X | X | sandalle (x86_64) | |
+| dialog | lynx | X | X | sandalle (x86_64) | |
+| diffutils | mar_s | X | X | sandalle (x86_64) | |
+| e2fsprogs | lynx | X | X | sandalle (x86_64) | |
+| elvis | sandalle | X | X | sandalle (x86_64) | |
+| file | mar_s | X | X | sandalle (x86_64) | |
+| findutils | mar_s | X | X | sandalle (x86_64) | |
+| flex | lynx | X | X | sandalle (x86_64) | |
+| gawk | mar_s | X | X | sandalle (x86_64) | |
+| g++ | sandalle | X | X | sandalle (x86_64) | |
+| gcc | sandalle | X | X | sandalle (x86_64) | |
+| gettext | sandalle | X | X | sandalle (x86_64) | |
+| glibc | sandalle | X | X | sandalle (x86_64) | |
+| gnupg | mar_s | X | X | sandalle (x86_64) | Bug 9666: does not cast on sparc machines, last activity was January 2007. Not gating. |
+| grep | lejatorn | X | X | sandalle (x86_64) | |
+| grub | sandalle | X | X | | |
+| gzip | mar_s | X | X | sandalle (x86_64) | |
+| iana-etc | sandalle | X | X | sandalle (x86_64) | |
+| init.d | lynx | X | X | sandalle (x86_64) | nothing severe |
+| installwatch | sandalle | X | X | sandalle (x86_64) | |
+| jed | sandalle | X | X | sandalle (x86_64) | |
+| jfsutils | sandalle | X | X | sandalle (x86_64) | |
+| kbd | sandalle | X | X | sandalle (x86_64) | |
+| less | mar_s | X | X | sandalle (x86_64) | |
+| lilo | sandalle | X | X | sandalle (x86_64) | |
+| locale | sandalle | X | X | sandalle (x86_64) | |
+| m4 | lynx | X | X | sandalle (x86_64) | |
+| make | sandalle | X | X | sandalle (x86_64) | |
+| mktemp | mar_s | X | X | sandalle (x86_64) | |
+| module-init-tools | sandalle | X | X | sandalle (x86_64) | |
+| nano | mar_s | X | X | sandalle (x86_64) | |
+| ncurses | sandalle | X | X | sandalle (x86_64) | Bug #13654: ncurses -> UTF8 |
+| netconf | lynx | X | X | sandalle (x86_64) | nothing severe |
+| net-tools | lynx | X | X | sandalle (x86_64) | nothing severe |
+| patch | mar_s | X | X | sandalle (x86_64) | |
+| perl | sandalle | X | X | sandalle (x86_64) | |
+| procps | mar_s | X | X | sandalle (x86_64) | |
+| readline | lynx | X | X | sandalle (x86_64) | nothing severe |
+| reiserfsprogs | sandalle | X | X | sandalle (x86_64) | |
+| sed | mar_s | X | X | sandalle (x86_64) | |
+| shadow | sandalle | X | X | sandalle (x86_64) | |
+| simpleinit-msb | sandalle | X | X | sandalle (x86_64) | |
+| smgl-archspecs | sandalle | X | X | sandalle (x86_64) | |
+| smgl-fhs | sandalle | X | X | sandalle (x86_64) | |
+| tar | mar_s | X | X | sandalle (x86_64) | |
+| texinfo | mar_s | X | X | sandalle (x86_64) | |
+| udev | lynx | X | X | sandalle (x86_64) | nothing severe |
+| unzip | mar_s | X | X | sandalle (x86_64) | |
+| util-linux | sandalle | X | X | sandalle (x86_64) | |
+| vim | mar_s | X | X | sandalle (x86_64) | |
+| wget | mar_s | X | X | sandalle (x86_64) | |
+| xfsprogs | sandalle | X | X | sandalle (x86_64) | |
+| zlib | sandalle | X | X | sandalle (x86_64) | Bug 13735, not sure if gating |
+
+== Extra spells ==
+
+None
