@@ -1,0 +1,95 @@
+= Grimoire stable-0.6 release =
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| stable x86 | n/a | [[http://scry.dtdm.net/chroot.tar.bz2|chroot.tar.bz2]] |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | | X | | non-gating bugs: #9118, 2.4 kernel defaults and #12857, text-editor and pager provides |
+| bash | swoolley | | X | | |
+| binutils | ruskie | | X | | No problems sobukus: do we want to consider now? |
+| bison | public | | X | | No issues were found. Casts well |
+| bzip2 | public | | X | | No issues were found. Casts well |
+| console-tools | lynx | | X | | doesn't work, because of an old stable tarball, the fix is in git |
+| console-data | lynx | | X | | no problems found |
+| coreutils | CuZnDragon | | X | | all done here, restoring your X -- sobukus |
+| cpio | qnr | | X | | No bugs, successful cast |
+| dialog | afrayedknot | | X | | |
+| diffutils | dinolinux | | X | | No bugs, casting successful |
+| e2fsprogs | sandalle | | X | | |
+| file | qnr | | X | | Fine, excepting version difference at primary site |
+| findutils | CuZnDragon | | X | | No bugs listed, Cast successful |
+| flex | ruskie | | X | | Nothing I could find |
+| gawk | afrayedknot | | X | | |
+| gcc | sandalle | | X | | |
+| gettext | sandalle | | X | | |
+| glibc | lynx | | X | | 11874 too rare, nobody reported any problems |
+| gnupg | treeve | | X | | cast and upgrades ok |
+| grep | lejatorn | | X | | There is bug #12990 but can't reproduce it and doesn't seem gating to me. |
+| grub | sandalle | | X | | Updates and installs fine, but has a potential issue with #12852 |
+| gzip | public | | X | | No issues were found. Casts well |
+| iana-etc | treeve | | X | | casts and upgrades ok |
+| init.d | emrys | | X | | debatable: #13114 |
+| installwatch | afrayedknot | | X | | |
+| less | treeve | | X | | casts and upgrades ok |
+| lilo | CuZnDragon | | X | | No bugs listed, Cast successful |
+| locale | public | | X | | No gating bugs found. Casts well. |
+| kbd | lynx | | X | | nothing remotely gating |
+| m4 | public | | X | | No issues were found. Casts well |
+| make | sandalle | | X | | |
+| mktemp | treeve | | X | | casts and upgrades ok |
+| module-init-tools | sandalle | | X | | No changes, but depends on udev (#13265, #13417) |
+| nano | qnr | | X | | No bugs, casts |
+| ncurses | p3pilot | | X | | #10004, My update to stable-rc didn't find this bug. 5.4 on iso to stable-rc 5.5 |
+| netconf | iuso | | X | | fixed + integrated: #12900, #13401; non-gating: #10517, #11694. upgrade works |
+| net-tools | sandalle | | X | | |
+| patch | ruskie | | X | | Nothinc wrong I can find |
+| perl | swoolley | | X | | |
+| procps | sandalle | | X | | Bug #13338 only affects gcc 4.1.1 with -ffast-math. gcc 4.0.3 is in stable-rc-0.6 |
+| readline | p3pilot | | X | | #8506 My update to stable-rc didn't find this bug 5.0->5.1->5.2 |
+| sed | treeve | | X | | casts and upgrades ok |
+| shadow | sandalle | | X | | Bugs #4008 (non-gating) and #8834 (gating) _are_ fixed and integrated... imho can be signed off -- sobukus |
+| simpleinit-msb | swool | | X | | |
+| smgl-archspecs | sobukus | | X | | obviously works as nothing else would work without it; a number of bugs, though, see #13240; they are supposedly fixed in archspecs git (and test soon) |
+| smgl-fhs | sandalle | | X | | Non-Gating #8653 (master bug) |
+| tar | ruskie | | X | | Nothing I can find wrong |
+| texinfo | sandalle | | X | | |
+| udev | iuso | | | | going to postpone the udev->hotplug transition until the next stable, which means we probably should downgrade udev in stable-rc to the version from stable 0.4 |
+| unzip | treeve | | X | | casts and upgrades ok |
+| util-linux | sandalle | | X | | |
+| wget | lejatorn | | X | | wget broke because of bug #13121. Still signed off because it should happen (argueably) rarely and it's not gonna be fixed soon anyway. |
+| zlib | treeve | | X | | casts and upgrades ok |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| automake | sandalle | | X | | dependency of cracklib |
+| buntstift | sobukus | | X | | works nicely |
+| cracklib | sandalle | | X | | optional dependency of shadow. cracklib from stable-0.4 fails to install, but from stable-rc-0.6 installs fine |
+| dermixd | sobukus | | X | | all fine |
+| dtach | ruskie | | X | | Not yet in stable-rc so nothing to check |
+| gaim | p3pilot | | X | | Works fine in stable-rc. No gating bugs |
+| gcc34 | sandalle | | X | | Dependency of grub, one of the potential BOOTLOADERs |
+| gdb | afrayedknot | | X | | Failed initially due to unset ARCHITECTURE, not a gating issue |
+| kazehakase | ruskie | | X | | No problems I could find |
+| libburn-pykix | ruskie | | X | | Non-gating the original URL is not working anymore but it's still available from fallbacks |
+| libxml2 | p3pilot | | X | | Fails missing depends libtool. #13387 Fixed in test, stable-rc. |
+| lighttpd | p3pilot | | X | | Builds in stable environment. No bugs. |
+| linux-pam | sobukus | | X | | casts and updates fine, tested with shadow tools and openssh (which is not triggered to recast on update but nevertheless works after update); we should settle on #680 at some time (or can it be closed?) Also check #4008 for an issue with linux-pam and coreutils |
+| locale | sandalle | | X | | new dependency for glibc, didn't exist before |
+| pam_ldap | sobukus | | X | | fine now |
+| mesalib | ruskie | | X | | Nothing here but a version update which works as it should |
+| mpg123 | sobukus | | X | | security update done |
+| mutt | sobukus | | X | | security update done |
+| ntp | iuso | | X | | My fix was integrated -- sobukus |
+| openssh | sobukus | | X | | casts/updates fine, works as expected |
+| param | sobukus | | X | | works nicely |
+| php | p3pilot | | X | | Fails in stable environment due to libxml2 failing. libxml2 fixed in stable-rc, test |
+| textdata | sobukus | | X | | works nicely |
+| tor | afrayedknot | | X | | Failed in stable, but error is fixed in stable-rc |
+| wpa_supplicant | iuso | | X | | This is OK, additional driver options aren't a gating bug, also well tested on my box already |
+| xfsprogs | sandalle | | X | | |
+| xmms2 | ruskie | | X | | Works without a prob |
