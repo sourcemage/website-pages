@@ -65,7 +65,7 @@ SOURCE2="xzgv-addons.tar.gz"
 
 **SOURCE_DIRECTORY**
 
-Used to specify the location where the source will be unpacked. You must pay special attention to the naming of the directory when unpacking the source file (i.e. if the subdirectory is {{{${SPELL}-${VERSION}}}}, or perhaps just {{{${SPELL}}}}, etc.). {{{${BUILD_DIRECTORY}}}} is a special variable which is set by the sorcery tools to allow you to not have to worry about where sorcery will unpack the source from, currently sorcery uses {{{/usr/src}}} to begin the unpacking of the application's source.
+Used to specify the location where the source will be unpacked. You must pay special attention to the naming of the directory when unpacking the source file (i.e. if the subdirectory is {{{${SPELL}-${VERSION}}}}, or perhaps just {{{${SPELL}}}}, etc.). {{{${BUILD_DIRECTORY}}}} is a special variable which is set by the sorcery tools to allow you to not have to worry about where sorcery will unpack the source to, currently sorcery uses {{{/usr/src}}} to begin the unpacking of the application's source.
 
 {{{
 SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
@@ -105,10 +105,10 @@ SOURCE_URL[0]=${SOURCEFORGE_URL}/${SPELL}/${SOURCE}
 
 Special hints for [[Sorcery/Commands/Summon|summon]], so sources can be downloaded without error. Possible values currently include:
 * {{{old_svn_compat}}} -- maintain compatibility with original [[http://subversion.apache.org/|Subversion]] URL format (needed for {{{SOURCE_URL}}}s that use {{{http://}}} instead of {{{svn://}}})
-* {{{no-check-certificates}}} -- disable certificate checking for HTTPS transfers (useful for self-signed certificates on upstream download locations)
+* {{{no-check-certificate}}} -- disable certificate checking for HTTPS transfers (useful for self-signed certificates on upstream download locations)
 
 {{{
-SOURCE_HINTS="no-check-certificates"
+SOURCE_HINTS="no-check-certificate"
 SOURCE2_HINTS="no-check-certificate"
 }}}
 
