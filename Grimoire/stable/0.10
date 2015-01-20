@@ -1,0 +1,82 @@
+= Grimoire stable-10 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/05/01**. The target release date is **2007/05/18**.
+
+This release is being shepherded by **Eric Sandall** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| 0.10 x86 | emrys | [[http://download.sourcemage.org/cauldron/image/official/smgl-stable-0.9-basesystem-x86.tar.bz2|smgl-stable-0.9-basesystem-x86.tar.bz2]] |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | | |
+| bash | | X | | X (sandalle) | #13654 |
+| binutils | sandalle | X | X | | |
+| bison | sandalle | X | X | | |
+| bzip2 | Phoul | X | X | X (sandalle) | |
+| console-tools | sandalle | X | X | | |
+| console-data | sandalle | X | X | | |
+| coreutils | sandalle | X | X | X (emrys) | |
+| cpio | | X | | X (sandalle) | |
+| dialog | | X | | X (sandalle) | |
+| diffutils | | X | | X (sandalle) | |
+| e2fsprogs | sandalle | X | X | | |
+| elvis | | X | | X (sandalle) | |
+| file | | X | | X (sandalle) | |
+| findutils | | X | | X (sandalle) | |
+| flex | | X | | X (sandalle) | |
+| gawk | | X | | X (sandalle) | |
+| gcc | | X | | X (sandalle) | |
+| gettext | | X | | X (sandalle) | |
+| glibc | sandalle | X | X | | #13771 |
+| gnupg | | X | | X (sandalle) | |
+| grep | lejatorn | X | X | X (sandalle) | |
+| grub | | X | | X (sandalle) | |
+| gzip | | X | | X (emrys) | |
+| iana-etc | | X | | X (sandalle) | |
+| init.d | | X | | X (sandalle) | |
+| installwatch | | X | | X (sandalle) | |
+| jed | Phoul | X | X | X (sandalle) | |
+| kbd | | X | | X (sandalle) | |
+| less | Phoul | X | X | X (sandalle) | |
+| lilo | | X | | X (emrys) | |
+| locale | | X | | X (sandalle) | |
+| m4 | | X | | X (sandalle) | |
+| make | | X | | X (sandalle) | |
+| mktemp | | X | | X (sandalle) | |
+| module-init-tools | | X | | X (sandalle) | |
+| nano | Phoul | X | X | X (emrys) | |
+| ncurses | | X | | X (sandalle) | #13654, #13731 |
+| netconf | | X | | X (sandalle) | |
+| net-tools | | X | | X (sandalle) | #13373 OMG, this has been broken forever. really needs to be fixed. If it's too late it can safely be skipped, but I'd like to see it in there (dkowis) |
+| patch | | X | | X (sandalle) | |
+| perl | Phoul | X | X | X (sandalle) | |
+| procps | | X | | X (sandalle) | |
+| readline | | X | | X (sandalle) | |
+| sed | | X | | X (sandalle) | |
+| shadow | sandalle | X | X | | |
+| simpleinit-msb | sandalle | X | X | | |
+| smgl-archspecs | sandalle | X | X | | |
+| smgl-fhs | sandalle | X | X | | |
+| tar | mar_s | X | X | | No bugs found |
+| texinfo | sandalle | X | X | | |
+| udev | sandalle | X | X | X (emrys) | #13769 Only matters if the version is 104 in the stable-rc (even devel has 108) |
+| unzip | mar_s | X | X | | No bugs found |
+| util-linux | sandalle | X | X | | |
+| vim | Phoul | X | X | X (sandalle) | |
+| wget | lejatorn | X | X | X (sandalle) | |
+| zlib | sandalle | X | X | | |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| imagemagick | sandalle | X | | | Bug #13685: Versioned tarball changes way too often |
+| lftp | lejatorn | | | | Fails because it misses g++ dependency. will be fixed for next release. |
+| monodevelop | sandalle | X | | | Bug #13718: gnome-sharp cannot find gtkhtml >= 3.8 |
+| pure-ftpd | lejatorn | | X | | |
+| xfsdump | sandalle | X | X | | |
+| xfsprogs | sandalle | X | X | | |
+| zsh | Phoul | X | X | X (sandalle) | |
