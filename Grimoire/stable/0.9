@@ -1,0 +1,90 @@
+= Grimoire stable-0.9 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/04/01**. The target release date is **2007/04/15**.
+
+This release is being shepherded by **David Brown** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot-0.8 x86 | emrys | [[http://download.sourcemage.org/image/official/smgl-stable-0.8-basesystem-x86.tar.bz2|smgl-stable-0.8-basesystem-x86.tar.bz2]] |
+| just a different mirror | emrys | [[http://dmlb2000.homelinux.org/pub/image/official/smgl-stable-0.8-basesystem-x86.tar.bz2|smgl-stable-0.8-basesystem-x86.tar.bz2]] |
+| mainly for a starting point for this arch. udev+console-tools and no /lib64 -> lib dirs | dmlb2000 | [[http://dmlb2000.homelinux.org/pub/image/testing/smgl-stable-0.8-basesystem-x86_64.tar.bz2|smgl-stable-0.8-basesystem-x86_64.tar.bz2]] |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | | Bug #12857 (mostly fixed) |
+| bash | sandalle | X | X | | Bug #13654: switching ncurses to utf-8 breaks bash |
+| binutils | sandalle | X | X | | |
+| bison | sandalle | X | X | | |
+| bzip2 | sandalle | X | X | | |
+| console-tools | sandalle | X | X | | |
+| console-data | sandalle | X | X | | |
+| coreutils | sandalle | X | X | | Bug #13574: coreutils 6.7 is available, but untested |
+| cpio | sandalle | X | X | | |
+| dialog | sandalle | X | X | | |
+| diffutils | sandalle | X | X | | |
+| e2fsprogs | sandalle | X | X | | |
+| elvis | lynx | X | X | | |
+| file | sandalle | X | X | | |
+| findutils | sandalle | X | X | | |
+| flex | sandalle | X | X | | |
+| gawk | sandalle | X | X | | |
+| gcc | | X | X (sandalle) | | Bug #13330: gcc fails to build without at least -O2. This is gating |
+| gettext | sandalle | X | X | | |
+| glibc | sandalle | X | X | | Bug #8238: export CC=gcc prevents proper cross compilation, Bug #8240: LD symlink is working only on x86 and ppc, Bug #8241: CROSS_INSTALL check should be removed, Bug #8243: ldconfig breaks bi-arch compilation, Bug #8244: GLIBC_ARCH definition is wrong when cross compiling, Bug #9580: Fails to compile on SPARC, Bug #12962: optionally depend on perl. All are non-gating |
+| gnupg | sandalle | X | X | | |
+| grep | lejatorn | X | X | X (sandalle) | |
+| grub | | X | | X (sandalle) | |
+| gzip | sandalle | X | X | | |
+| iana-etc | | X | | | Bug #13075: offer to add hostname in /etc/hosts |
+| init.d | emrys | X | X | X (sandalle) | Bug #7311: update left a broken inittab and /etc/sysconfig/devices behind, Bug #9177: mountall.sh LVM fix (PATCH PROVIDED), Bug #10439: has a grep that throws an error in init.d/udevd, Bug #13381: install should be dependency-aware, Bug #13450: mountroot.sh and raid |
+| installwatch | | X | | X (sandalle) | |
+| jed | lynx | X | X | | |
+| kbd | sandalle | X | X | | |
+| less | sandalle | X | X | | |
+| lilo | | X | | X (sandalle) | Bug #8191: patch to build bin86 (and therefore lilo) under x86_64, non-gating |
+| locale | sandalle | X | X | | Bug #13485: should explicitly say it will build all locales if none is selected (fixed) |
+| m4 | sandalle | X | X | | |
+| make | sandalle | X | X | | |
+| mktemp | sandalle | X | X | | |
+| module-init-tools | | X | | X (sandalle) | Bug #8865: fails to build in a chroot |
+| nano | lynx | X | X | X (sandalle) | |
+| ncurses | | X | | X (sandalle) | Bug #13654: Switching to utf-8 breaks bash |
+| netconf | | X | | X (sandalle) | Bug #10517: should use ifplugd, Bug #11694: Shouldn't mangle /etc/hosts |
+| net-tools | | X | | X (sandalle) | Bug #10207: hardware/protocol suppot choice better as dialog, Bug #10746: should be smarter about the mountnetwork script |
+| patch | lynx | X | X | X (sandalle) | |
+| perl | | X | | X (sandalle) | |
+| procps | lynx | X | X | X (sandalle) | |
+| readline | sandalle | X | X | | |
+| sed | sandalle | X | X | | |
+| shadow | | X | | X (sandalle) | Bug #13505: useradd and adduser should be improved/fixed, Bug #13601: version 4.0.18.1 non-gating |
+| simpleinit-msb | emrys | X | X | X (sandalle) | |
+| smgl-archspecs | | X | | X (sandalle) | |
+| smgl-fhs | | X | | X (sandalle) | Bug #11747: creates broken X links, Bug #13112: should be updated, Bug #13354: don't create /usr/X11* |
+| tar | sandalle | X | X | | Bug #13593: installs incorrectly with INSTALL_ROOT |
+| texinfo | | X | | X (sandalle) | |
+| udev | | X | | X (sandalle) | Bug #12700: rules should be minimal with optional additions, Bug #12739: should have git option, non-gating |
+| unzip | | X | | X (sandalle) | |
+| util-linux | | X | | X (sandalle) | |
+| vim | sandalle | X | X | | |
+| wget | lejatorn | X | X | X (sandalle) | |
+| zlib | sandalle | X | X | | |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| attr | sandalle | X | X | | |
+| dmapi | sandalle | X | X | | |
+| gnome2-profile | dmlb2000 | X | X | | gnome title actual bugs with gnome below ([[http://dmlb2000.homelinux.org/pub/image/testing/smgl-stable-0.8-basesystem-x86-gnome.tar.bz2|tarball]]) |
+| gnome-games2 | dmlb2000 | X | X | | #7493 not gating |
+| gnome-applets2 | dmlb2000 | X | X | | #10202 not gating |
+| kde-profile | dmlb2000 | X | X | | kde title actual bugs with kde below ([[http://dmlb2000.homelinux.org/pub/image/testing/smgl-stable-0.8-basesystem-x86-kde.tar.bz2|tarball]]) |
+| libtool | sandalle | X | X | | |
+| linux | dmlb2000 | X | X | | #9014, #10797 about time for someone to audit the linux spell, #13597 again good opportunity to audit the linux spell, but I'm going to call these non-gating |
+| pure-ftpd | lejatorn | X | X | | |
+| slang | lynx | X | X | | |
+| xfce4-profile | dmlb2000 | X | X | | xfce4 title actual bugs with xfce below ([[http://dmlb2000.homelinux.org/pub/image/testing/smgl-stable-0.8-basesystem-x86-xfce4.tar.bz2|tarball]]) |
+| xfsdump | sandalle | X | X | | |
+| xfsprogs | sandalle | X | X | | |
