@@ -11,4 +11,7 @@ One of our best features is our self-repairing functionality and security. Every
 There are other features, such as administering software on a cluster of machines via SSH from one machine, rebuilding every application on your system with one command, and others.
 
 == Other Information ==
-Here is a list of [[Sorcery/Commands|Sorcery commands]].
+
+Here is a full list of [[Sorcery/Commands|Sorcery commands]].
+
+[[Sorcery/Feature menu|Feature menu]] gives access to several Sorcery preferences so you can tune it according to your needs.
