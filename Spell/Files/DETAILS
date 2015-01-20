@@ -264,9 +264,11 @@ This one is used to turn off [[Stage root|stage root]] install managed by [[cast
 STAGED_INSTALL=off
 }}}
 
+**Note:** you shouldn't normally set this variable.
+
 **TMPFS**
 
-Attempt to compile entirely in RAM. This also modifies {{{mk_source_dir}}} function, which can be used in PRE_BUILD later to create {{{${SOURCE_DIRECTORY}}}} with specified size in tmpfs //(file system stored in volatile memory)//. You need one more argument for the size. Usually it's a global option, but can be used in DETAILS to override default behavior on a spell level:
+Attempt to compile entirely in RAM. This also modifies {{{mk_source_dir}}} function, which can be used in [[Spell/Files/PRE_BUILD|PRE_BUILD]] later to create {{{${SOURCE_DIRECTORY}}}} with specified size in tmpfs //(file system stored in volatile memory)//. You need one more argument for the size. Usually it's a global option, but can be used in DETAILS to override default behavior on a spell level:
 
 {{{
 TMPFS=off
@@ -288,6 +290,8 @@ Manages [[http://ccache.samba.org/|ccache]] (compiler cache) ability on a spell 
 {{{
 CCACHE=on
 }}}
+
+**Note:** you shouldn't normally set this variable. Use the global setting in sorcery [[Sorcery/Feature menu|feature menu]] instead.
 
 **REJECT**
 
