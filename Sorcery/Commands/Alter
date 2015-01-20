@@ -1,0 +1,5 @@
+= Alter command =
+
+{{{alter}}} is a command-line tool to change [[Spell|spells]] after they have been installed. Among others, this can fix problems with running {{{cleanse --fix}}} with md5sum checking on.
+
+**Note:** {{{alter}}} is still very unstable. It is **not** recommended to use {{{alter}}} on a production system.
