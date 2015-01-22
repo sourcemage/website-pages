@@ -1,0 +1,77 @@
+= USB drive Install Guide =
+
+With many users either not having a disc drive, small netbooks for example, and others not wanting to bother with one, the best option is usually a usb drive for an install. Below is a simple guide on creating a usb boot drive from the [[Download#head-1-1|SMGL ISO]].
+
+Most people recommend [[http://unetbootin.sourceforge.net/|Unetbootin]] for this, but it won't work out of the box for Source Mage. The reason for this is that Unetbootin only supports FAT filesystems, and the kernel found on the Source Mage ISO only has FAT available as a module. Unetbootin also has a tendency to be deadly slow //(≈90 minutes last time I tried with the 650MB amd64 image)//.
+
+For these reasons, we'll cover a method using [[http://www.syslinux.org/wiki/index.php/EXTLINUX|extlinux]]. I will not go into the details, as you're supposed to have some basic knowledge of GNU utilities. There is a [[http://ubuntuforums.org/showthread.php?t=740924|thread on UbuntuForums]] that also explains it.
+
+== Format your drive ==
+
+First we need to find our drive. The easiest way is to watch the output of {{{dmesg}}} command while plugging your stick, or check {{{/proc/partitions}}}.
+
+Then, assuming the drive is {{{/dev/sdb}}}, we'll create a clean partition table and a filesystem:
+
+**Note:** be careful, as we sometimes refer to the **drive** and sometimes to the **partition**.
+
+{{{
+# fdisk -cu /dev/sdb
+}}}
+
+then, in sequence, type some thing like:
+
+{{{
+o*n*p*1***t*83*a*1*w*
+}}}
+
+replacing each {{{*}}} with a powerful stroke on your {{{Enter}}} key. In particular, the partition you create must be marked as bootable. Read the //fdisk(8)// manual for more details.
+
+Then we create a filesystem on the first partition:
+
+{{{
+# mkfs.ext3 -L SMGL_ISO /dev/sdb1
+}}}
+
+== Mount your drives and copy the files ==
+
+Our ISO will be used as a source for the system installer, so we assume you've already downloaded it.
+
+{{{
+# mount /dev/sdb1 /mnt/tmp
+# mount -o loop smgl-*.iso /mnt/iso
+# cd !$
+# cp -rp * /mnt/tmp
+}}}
+
+== Make your stick bootable ==
+
+Find the {{{mbr.bin}}} given with the extlinux package, it can be located in {{{/usr/lib/extlinux/mbr.bin}}} or {{{/usr/share/syslinux/mbr.bin}}} or in other places.
+
+{{{
+# cat /usr/share/syslinux/mbr.bin > /dev/sdb
+# cd /mnt/tmp
+# mv isolinux/isolinux.cfg extlinux.conf
+# rm -r isolinux
+# extlinux -i .
+}}}
+
+== Unmount everything ==
+
+{{{
+# cd
+# umount /mnt/{iso,tmp}
+}}}
+
+== Install ==
+
+Plug your USB stick in whichever computer you want Source Mage installed on, turn it on, find a way to make it boot on USB (usually this is done via changing boot drive priorities in BIOS settings), and hit {{{Enter}}} at the {{{boot:}}} prompt.
+
+If it does not work, you might want to try this:
+
+{{{
+/boot/linux root=/dev/sda1 rootdelay=10
+}}}
+
+changing {{{sda1}}} with whatever value suits your system best. Specifying {{{rootdelay}}} should not be necessary, but it can't hurt (and 5 seconds should be enough).
+
+Follow instructions on screen or on the [[Install/ISO#head-1-2-1|ISO installation page]], and that's it!
