@@ -4,7 +4,39 @@
 
 Welcome to [[About|Source Mage GNU/Linux]] and congratulations on a succesful [[Install|install]]!
 
+Source Mage is a free and open source project founded on the principle of returning control back to System Administrators. \\ Our main project, Source Mage GNU/Linux, is an operating system distribution. 
+
 This is a brief introduction to Source Mage GNU/Linux //(SMGL)//. It will only cover those subjects required for basic use. For a more in-depth look, please see the manpages, current [[Docs|web-documentation]], and the [[Contact/Mailing Lists|mailing lists]]. You are also welcome to join our [[Contact/IRC|IRC]] channel [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[irc://irc.freenode.net|irc.freenode.net]], where you'll find active support for most of the time.
+
+=== Who's it for =
+
+System administrators, power-users and others who really want control over their systems and want to understand better how "things" work.
+
+=== A source-based distribution ===
+
+We are primarily "source-based" which means that our package installation directly compiles the source code on the user's machine. This is in contrast to traditional "binary" distributions that use pre-compiled packages. However, even though we are source-based, we are not a [[http://www.gentoo.org/|Gentoo]] clone (another source-based distribution you may have heard of). The similarities tend to end beyond the abstraction of "download and compile from source". You can read more about the differences at [[Comparison with Gentoo]].
+
+=== Our values ===
+
+Our core philosophies are based on software freedom and returning choice to the administrator, you can read more about our philosophy in our [[Social Contract]].
+
+As we only want to support free software, our main package collection (known as a "[[Grimoire|grimoire]]") contains exclusively open source software, which means any software in there is distributed under one of these licences listed [[http://opensource.org/licenses|here]]. No package included in the main grimoire requires a closed-source package to function. Of course our package management system itself, "[[Sorcery]]", is also GPL software. However, we also have a collection of non-free packages (the so-called "[[Grimoire/z-rejected|z-rejected]]" grimoire, containing packages such as [[http://www.java.com/|java]] binaries, or [[http://www.nvidia.com/drivers/|nvidia drivers]]), most of them up to date, even though we do not officially maintain them.
+
+To ensure an administrator oriented system, our packages are written with the intention of staying as close to upstream vendor's vision as possible. We avoid over-complicating things with additional, and often intrusive, scripting and padding many popular binary distro's include. You are the administrator and you know how
+best to deploy and configure software. We handle the installation.
+
+=== How we do it ===
+
+The package management core is first-tier, feature-complete, and well-designed. Packages are easy to write because of a rich set of libraries and interfaces into the package manager that is balanced with the need for simplicity for simple packages. It allows for a great ease in custom configuration for needy administrators and hackers
+of all kinds. The package management system and the packages are written entirely in [[http://www.gnu.org/software/bash/|bash]]. A common concern is that bash is slow. We beg to differ in that anything that runs too slow simply means we're doing it wrong. We have shown this time and time again.
+
+Additionnaly, the distribution is provided with an easy-to-use basic system installer from which administrators can not only install but rebuild to their specification. It is also possible to install from alternative methods, like from a [[Install/Chroot|chroot]]. We currently support **x86** and **x86_64** architectures. We support **ppc** as well, but it's getting less activity lately.
+
+=== Our community ===
+
+We have a strong and vibrant community of developers and users. We primarily congregate in [[Contact/IRC|IRC]] where everyone is welcome. We have been told we are one of the most friendly channel and we like to discuss a lot of things when not helping newcomers. We also frequently collaborate on our [[Contact/Mailing Lists|mailing lists]] and in our [[Bugs|bug-tracker]]. Our [[http://scmweb.sourcemage.org/|source code repository]] is freely viewable and modifiable. We welcome patches and guide them through peer review and compliance with our core principles and policies.
+
+If you're ready for GNU/Linux so advanced, it may as well be magic, then it's time you tried Source Mage GNU/Linux.
 
 == Basic terminology ==
 
@@ -13,7 +45,7 @@ The Source Mage tagline is: "**Linux so advanced, it may as well be magic.**". B
 Installing a spell is called "casting", and removing it is called "dispelling". Such terms are not only figures of speech, though: {{{cast}}} and {{{dispel}}} are also 
 the programs used to perform the said tasks.
 
-== Spells ==
+=== Spells ===
 
 A spell is simply a directory containing script files that are used for downloading, unpacking, configuring, compiling, and installing a program. The actual source is not included in the spell, but is downloaded directly from the program's own website.
 
@@ -21,7 +53,7 @@ Spells are stored in section directories inside the grimoire directories. The gr
 
 Different grimoires exist for different kinds of spells. The [[Grimoire/stable|stable]] and [[Grimoire/test|test]] grimoires contain spells for most programs. Non-Free and binary spells belong in the [[Grimoire/z-rejected|z-rejected]] and [[Grimoire/binary|binary]] grimoires respectively, and games belong in the [[Grimoire/games|games]] grimoire.
 
-== The Sorcery suite of scripts ==
+=== The Sorcery suite of scripts ===
 
 The Source Mage collection of system tools is called [[Sorcery]]. It contains [[Sorcery/Commands|utilities]] for different system management tasks whose names reflect SMGL's "magical" theme.
 
