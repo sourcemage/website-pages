@@ -16,6 +16,7 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 * [[Download|Download Source Mage]]
 * [[Install|Install Source Mage]]
 ** [[Install/ISO|Install from the ISO]]
+** [[Install/USB|Install from the USB flash drive]]
 ** [[Install/Chroot|Install from the chroot image]]
 
 == Using Source Mage ==
