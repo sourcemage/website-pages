@@ -40,7 +40,7 @@ Our ISO will be used as a source for the system installer, so we assume you've a
 # mount /dev/sdb1 /mnt/tmp
 # mount -o loop smgl-*.iso /mnt/iso
 # cd !$
-# cp -rp * /mnt/tmp
+# cp -a * /mnt/tmp
 }}}
 
 == Make your stick bootable ==
@@ -64,7 +64,7 @@ Find the {{{mbr.bin}}} given with the extlinux package, it can be located in {{{
 
 == Install ==
 
-Plug your USB stick in whichever computer you want Source Mage installed on, turn it on, find a way to make it boot on USB (usually this is done via changing boot drive priorities in BIOS settings), and hit {{{Enter}}} at the {{{boot:}}} prompt.
+Plug your USB stick in whichever computer you want Source Mage installed on, turn it on, find a way to make it boot off USB (usually this is done via changing boot drive priorities in BIOS settings), and hit {{{Enter}}} at the {{{boot:}}} prompt.
 
 If it does not work, you might want to try this:
 
