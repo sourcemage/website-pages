@@ -1,0 +1,81 @@
+= Comparison with Gentoo =
+
+One of the most frequently asked questions we get is "How do you compare to Gentoo?", or, less politely, "Aren't you just a Gentoo clone?". This is frankly a bit of an impossible question for us, since we don't really have anything to do with them and never have; quite a lot of our users and developers have never even used Gentoo. We certainly aren't a clone; the [[History|original]] Sorcerer Linux got started [[+download/linux-timeline.png|around 2000]], the same time Gentoo did, and was actually reviewed [[http://slashdot.org/linux/02/01/18/1319242.shtml|some places]] online before Gentoo was. The project fell into early management trouble and missed its first chance at the limelight, but it's debatable whether or not this was a bad thing in the long term.
+
+Regardless, this question gets asked enough that this page was created. For the most part we'll try to stick to philosophical differences; minute details change over time, and as noted most of us don't use Gentoo enough day-to-day to keep up with that. But it's our different philosophies that determine how those details change, so if you understand those differences you can decide which approach you like better and make up your own mind. With that in mind this doc probably serves reasonably well as a comparison of us vs. distros other than Gentoo, but they're the one people ask about the most.
+
+Note that of course any differences we discuss may well change over time, and in any case we're pretty much guaranteed to prefer the way we do it and spend more time talking about that. This isn't meant to be exhaustive, it's just meant to give a starting place from our perspective. Most of us would rather not say anything, but people ask, so we try to answer. Do your own research and decide what works best for you.
+
+== The same... ==
+
+=== Yes, we're source-based too ===
+
+The obvious similarity between both distributions is that the primary method of installing a package involves building it directly on the user's machine. This was one of the most obvious differences between these distributions and the existing state-of-the-art when they were first announced to the world, and it's what has left the most lasting impression on people, to the extent that this is basically the category we're all filed under: "source-based Linux distributions". That we both build from source is probably the main reason people assume we are all alike, but of course the fact we both build from source matters a lot less than how we do it, or why we do it, or what else we do. "Source-based distribution" sells short all the distributions that happen to fit that label, be they Source Mage or Gentoo or [[http://www.linuxfromscratch.org/lfs/|LFS]] or any others.
+
+=== The customer is always right ===
+
+A more important similarity between Source Mage and Gentoo is that we both build from source as a way to allow users and sysadmins to customize their installations and make sure they get the systems they want, no more and no less. This mostly gets reduced in the press to "optimized for your hardware and architecture", but beyond that we both claim to be distributions for people that care about not installing unnecessary dependencies and who are used to typing {{{./configure --help}}} and looking for interesting flags before compiling and installing things.
+
+== ...But different ==
+
+=== Global vs. local ===
+
+However, a major difference between Source Mage and Gentoo is found in the way we request and apply user preferences. Gentoo's approach emphasizes global settings, while allowing per-install package-level overrides. For example, an admin might place "GTK" in the system's {{{USE}}} flags, and this means that any package that can use "GTK" should do so. If an admin wants to install a package without using "GTK" after that, they have to override that per install; if they want that override to be persistent, they have to add it to the local {{{package.use}}} file. And if an admin wants to customize something that doesn't have a {{{USE}}} flag defined for it, it means editing the "ebuild".
+
+In contrast, Source Mage emphasizes per-package (and per-option) configuration. The default behaviour is to ask the admin during install what their choice is for every option a package supports, then store the answer for the next upgrade or rebuild. So every package that can use "GTK" will ask during the build, "Do you want to use GTK?", with the default answer being "yes" if GTK is currently installed on the system, and "no" otherwise. If an admin wants to change the default answer they can set a global default (similar to a global {{{USE}}} flag), but they'll still be asked and given the chance to override before the default applies. If a particular upstream option is not exposed by the package but is available in the package's {{{./configure}}} flags, the admin is able to specify this during the install as well, and it is automatically remembered for the next upgrade. More complex local modifications may yet require modifying the spell.
+
+=== Sensible vs. upstream defaults ===
+
+A related issue is our respective approaches to default configurations. Gentoo, like most other distributions, follows a policy of "sensible defaults". They provide default configurations for packages they install that fit their own ideas of how packages should be configured and function. They also apply various 3rd party patches to add extra features, options, etc.
+
+Source Mage, in contrast to this (and in contrast to most distributions other than LFS), follows a strict policy of preserving "upstream defaults". We guarantee our users that when they install one of our packages and accept the defaults, they will get the exact same thing they would have gotten if they'd downloaded it from upstream and followed the included install instructions. This doesn't mean we don't offer to apply feature patches or provide custom default configurations, but we don't apply patches without asking or change default configurations without asking, and the default answer is always "no". Period. If we don't like the way upstream does something by default, we will ask upstream to fix it; if they refuse, we don't fix it for them or our users (without making it optional). The only major established exception is that we will will change default install paths to match the [[http://www.linuxfoundation.org/collaborate/workgroups/lsb/fhs|FHS]] ([[http://www.pathname.com/fhs/|historical]]), so that packages can find their dependent libraries and everything doesn't just install to {{{/usr/local}}}. We may also patch where absolutely necessary to support a user's dependency selections or to fix a security vulnerability or compile-blocking bug, but in these cases we always use patches from the package's own upstream where possible.
+
+=== Multiple versions, masks, and QA ===
+
+Another area where we do things quite differently is the way we make different versions of upstream packages available, both in how we handle updates to new releases and how we do or don't make concurrent upstream versions available. The differences here are dramatic and nearly like comparing apples to antelopes, but we'll try.
+
+Gentoo makes multiple versions of upstream packages available to users inside a single release cycle of the primary portage tree. Some of these are "masked" because they aren't expected to update cleanly, and this keeps them out of automated updates until they are fixed and someone removes the mask, or users can override the masks manually.
+
+The Source Mage emphasis is on providing our users the latest release from upstream in immediate working order, just like they'd get if they installed it themselves. To achieve this we do regular releases of the stable package tree, QA tested as a unit. Since we don't interfere with packages before giving them to our users it's usually quite straightforward for us to provide our users the most current releases. However, we do recognize that people sometimes need an older version of a given package, and to support this we offer previous stable package tree releases users can install from alongside the current stable tree. Sorcery supports multiple concurrent trees by default and has tools to allow people to choose which tree to get a package from at install time. This way users can get previous package releases, along with their dependencies, in the context they were released and QA'ed. They can then make their own choices on how to mix-and-match versions and dependencies.
+
+Note, we do provide devel/git/etc. branches as options in the individual spells for packages that provide them, but the QA focus is on the branch that upstream labels "current recommended release", and this is always what is installed by default.
+
+=== Use what you want! ===
+
+We're fully aware our philosophy and approach doesn't appeal to everyone, and that's fine. If you like how Gentoo, or [[http://www.redhat.com/|RedHat]], or [[http://windows.microsoft.com/|Windows]] does it, you should just use those and have fun. We're a distribution for people who are tired of distributions making decisions for them and having to debug patch side effects and undo custom configurations. In much the same way that C provides an open wrapper around assembly language, we see ourselves as an open wrapper around LFS. We are the distribution for LFS users who are willing to let a package manager at least automate the "download and {{{./configure && make && make install}}}" part of the process, but not willing to lose any other control.
+
+If you're still interested, keep reading; if not, thanks for your interest, and have fun [[http://xkcd.com/|wherever you go next]].
+
+== Other distinctions ==
+
+There are several other "killer features" and the like that people seem to really like about Source Mage, including people who used to use Gentoo. We don't claim we're the only distro that has all of these, but quite a lot of our users that have used other distros tell us they prefer the way we do it.
+
+* [[Sorcery/Commands/Cleanse|Cleanse]]: Sorcery includes a system self-repair tool that is at least as impressive as the package manager itself, if not more so. This is not the place for a full discussion of cleanse, but in summary: this is a tool that is able to inspect all the packages installed on a system and fix any broken packages or irregularities. This is {{{fsck}}} for the installed packages, and it is every bit as reliable.
+
+* **Speed**: a common comment by former Gentoo users is "my Source Mage system compiles and runs things faster than Gentoo did". We honestly aren't sure what to make of this, since the same software compiled on the same system with the same optimizations should obviously run at the same speed, but people insist it's true. We do know that Sorcery is itself faster than portage; anyone who has ever fallen asleep waiting for an {{{emerge sync}}} to finish will be interested in hearing that our package manager developers have been known to spend weeks figuring out why a similar Sorcery operation was taking 30 seconds too long. Sorcery is optimized for speed; this is true despite (or because, depending on whom you ask) the fact it's written in [[http://www.gnu.org/software/bash/|bash]]. Another factor influencing at least the perception of speed is that Sorcery has always done upstream downloads in a non-blocking fashion; compiles run as soon as the needed sources are available, while other requested sources are downloaded in the background. Gentoo defaults to a blocking, serialized download and compile process, though this is reportedly being resolved.
+
+* **Bash vs. Python**: yes, Sorcery and its related tools are all written in bash, with minimal dependencies on [[http://www.gnu.org/software/coreutils/|coreutils]], [[http://www.gnu.org/software/sed/|sed]], [[http://www.gnu.org/software/grep/|grep]], etc. Keeping this consistent and simple is a design goal, so core system dependency creep is not allowed. People who love the UNIX way tend to see this as a feature, others see it as insanity. It works fine for us, and it definitely lowers the bar to entry for people who want to run Source Mage on minimal systems or read the source and tweak it themselves.
+
+* **Ease of local package customization**: continuing our focus on user preference, Source Mage makes it very easy to modify packages when that's necessary. All our package installer files are regular shell scripts, so anyone who knows shell should be able to make whatever they want happen. There is a robust [[Sorcery/libapi|shell function API]] available to interact with the package manager itself.
+
+* **Multiple tree support**: similar to [[https://www.debian.org/|Debian]], Source Mage provides default support for multiple package trees. Gentoo also provides this, with overlays and custom portage trees, but Source Mage's approach is arguably much more straightforward.
+
+* **Dependency handling**: our dependency resolution engine and support for pruning dependencies on uninstall is state-of-the-art and compares very favorably to other package managers. Combined with cleanse and Sorcery's user configuration options, we believe it's one of the most powerful around.
+
+* **Integrated compiler options**: Sorcery provides single checkbox support for distcc, ccache, tmpfs compiles, screen compiles, etc. We don't really track what other distros do here but people tell us we do it better than most.
+
+* **GPG/hash integration**: packages and new Source Mage component releases are always compared to a GPG signature or a strong hash. Many distributions are moving in this direction but Source Mage's support has been well ahead of the curve since its inception.
+
+* **Community**: we continually hear that our developer and user community is one of the friendliest to be found. People who are willing to RTFM and are interested in learning things will find the most value in talking to us or using our software, but we usually try to make everyone reasonably welcome and assume anyone is able to learn more than they know now. This is in some contrast to things said about the Gentoo community. Of course no community is perfect, and it's a fair argument the larger a community gets the more problems it will have. In addition we typically will let anyone who can write a patch and wants to try their hand become a developer and help out.
+
+== Where Gentoo wins ==
+
+There are some areas we'll freely admit Gentoo currently has the lead on us:
+
+* **Binary package support**: Source Mage does have a checkbox option to build a binary cache of all packages built, and these are routinely used to restore or repair package installs or to seed a new system. However, this remains one of the less developed parts of Sorcery and has known edge cases. We also don't currently support downloading from a binary package host directly, so if you need this you'll either need to use an NAS solution or transfer files manually.
+
+* **Number of packages**: they have a lot more than we do. However, we have the ones people are using the most, and if we don't have something you need it's completely trivial to add it. Any package with a standard autotools build can literally be automatically made into a package given only the tarball's download location. We have a special tool called [[Quill]] for that.
+
+* **Supported architectures**: they have us beat here, too. We're working on it. Come help.  :-)
+
+* **Docs**: Gentoo is famous for their docs. As a small distro, we hurt a lot here as well. The docs we have are good, but can be out of date or missing entirely.
