@@ -18,7 +18,7 @@ Then, assuming the drive is {{{/dev/sdb}}}, we'll create a clean partition table
 # fdisk -cu /dev/sdb
 }}}
 
-then, in sequence, type some thing like:
+then, in sequence, type something like:
 
 {{{
 o*n*p*1***t*83*a*1*w*
