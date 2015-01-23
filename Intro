@@ -1,10 +1,10 @@
 = New to Source Mage =
 
-== Introduction ==
-
 Welcome to [[About|Source Mage GNU/Linux]] and congratulations on a succesful [[Install|install]]!
 
-Source Mage is a free and open source project founded on the principle of returning control back to System Administrators. \\ Our main project, Source Mage GNU/Linux, is an operating system distribution. 
+Source Mage is a free and open source project founded on the principle of returning control back to System Administrators. \\ Our main project, Source Mage GNU/Linux, is an operating system distribution.
+
+== Introduction ==
 
 This is a brief introduction to Source Mage GNU/Linux //(SMGL)//. It will only cover those subjects required for basic use. For a more in-depth look, please see the manpages, current [[Docs|web-documentation]], and the [[Contact/Mailing Lists|mailing lists]]. You are also welcome to join our [[Contact/IRC|IRC]] channel [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[irc://irc.freenode.net|irc.freenode.net]], where you'll find active support for most of the time.
 
