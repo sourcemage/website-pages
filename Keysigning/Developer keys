@@ -63,7 +63,7 @@
 | [[http://subkeys.pgp.net:11371/pks/lookup?search=0x84317E6A&fingerprint=on&op=index|84317E6A]] | ##swoolley## | Seth Woolley | ##8C97 9818 F889 EDE3 B54C AAD6 E936 BF83 8431 7E6A## |
 | [[http://subkeys.pgp.net:11371/pks/lookup?search=0x6F507597&fingerprint=on&op=index|6F507597]] | ##Jucato## | Juan Carlos Torres | ##1E49 DB47 2052 27C8 D757 EAB1 E7E7 4F07 6F50 7597## |
 | [[http://subkeys.pgp.net:11371/pks/lookup?search=0x8E80FED1&fingerprint=on&op=index|668CB308]] | ##minozake## | Donald Johnson | ##F7D0 E859 F2CC EC7E B6A9  5C37 CD02 9D8E 668C B308## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x243070DA&fingerprint=on&op=index|243070DA]] | ##PyroBor## | Bor Kraljic | ##7F17 085E CC73 D9B5 77C4  EB81 9FE0 B049 386B 44FE## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x386B44FE&fingerprint=on&op=index|386B44FE]] | ##chp## | Peng Chang (Charles) | ##F3AA 9C17 347C 7234 6F11 E6C8 2467 52D6 2430 70DA## |
+| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x243070DA&fingerprint=on&op=index|243070DA]] | ##PyroBor## | Bor Kraljic | ##F3AA 9C17 347C 7234 6F11 E6C8 2467 52D6 2430 70DA## |
+| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x386B44FE&fingerprint=on&op=index|386B44FE]] | ##chp## | Peng Chang (Charles) | ##7F17 085E CC73 D9B5 77C4  EB81 9FE0 B049 386B 44FE## |
 
 As the links are to ##subkeys.pgp.net## which always throws you to a different server there might be some incompatibility or a 404 here and there but a retry after a few minutes should switch it again. The last working alias was http://keys.riverwillow.net.au:11371.
