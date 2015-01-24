@@ -7,7 +7,7 @@
 * The Mailing List used for voting is sm-discuss@lists.ibiblio.org.
 * A "Developer" in this policy is any General or Lead Developer, as defined by the [[Developers/Organization|Developer Organization]] document, who was a Developer at the time the given vote began (the time the call for nominations was made or the time a given motion was first proposed).
 * The terms "**MAY**", "**SHOULD**", "**MUST**", and "**MUST NOT**" when used in this Policy have the meanings assigned them in [[http://www.ietf.org/rfc/rfc2119.txt|RFC 2119]]. The term "**WILL**" is used to specify expectations for the voting process itself and the person(s) administering it. If a vote is not held in compliance with these "**WILL**" specifications, any Developer MAY move that the current vote be invalidated and started over. If the revote motion is seconded the current vote WILL be immediately suspended and the revote motion WILL proceed as an Issue Vote as described below. If the revote motion carries (on initial vote or veto) the current vote WILL be started over by the relevant Lead or their Assistant(s) within one week of the scheduled end of the revote motion vote.
-* All nominations, motions, seconds, votes, etc. MUST be GPG-signed by the Developer's GPG key as recorded at [[Keysigning/Developer keys|developer keys page]] to be valid.
+* All nominations, motions, seconds, votes, etc. MUST be GPG-signed by the Developer's GPG key as recorded at [[Keysigning/Developer keys|developer keys]] page to be valid.
 ----
 
 == Lead Developer votes ==
