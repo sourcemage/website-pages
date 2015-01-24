@@ -92,7 +92,7 @@ It's up to you to define "gating" for your spells.
 
 Keeping us informed of what you've found is more important than fixing everything yourself. If you run out of time someone else can pick up for you but only if they can tell what's going on.
 
-If you're already are running stable somewhere, you don't need to wait, just test with that. Otherwise, download the [[Grimoire/Release/Template#chroot-vm|chroot/vm]] image.
+If you're already running stable somewhere, you don't need to wait, just test with that. Otherwise, download the chroot/vm image.
 
 === Actions on list of supported spells ===
 
