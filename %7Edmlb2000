@@ -1,0 +1,38 @@
+= David Michael Leo Brown Jr. =
+
+**IRC nick(s):**
+
+dmlb2000 //(the initials to my name and the year I graduated high school)//
+
+**Things I like:**
+
+* Movies -- I've lost track of how many I have.
+* Airplanes -- Ever since I was a kid I've been nuts over airplanes :-)
+
+**Which editor do I like:**
+
+vim. vim is an IDE, right?
+
+**Which window manager do I like:**
+
+enlightenment 17 -- best window manager for someone with a laptop. I can't do without all the monitors on the button bar, and it's lighter than most other window managers.
+
+**My Toshiba Tectra:**
+
+The Tectra is one of Toshiba's business-style laptops. I got it new about September of 2004.
+
+Some Info on what's in it:
+
+| CPU | 1.4GHz pentium4m |
+| HD MEM | 40Gb |
+| Sys MEM | 1Gb |
+| WIFI | Intel Pro Wireless 2200 |
+| GFX | NVidia G-Force FX |
+
+I've had Source Mage working on my laptop since the day I got it. \\ I've had full support for all of the hardware including wireless since about late November 2004.
+
+I've also had really good luck at compile times with Source Mage (no distcc nor ccache):
+
+| time cast glibc (which included triggers of apr apr-util and util-linux) | 20m39s |
+| time cast mozilla | 42m53s |
+| time cast gtk+2 | 7m22s |
