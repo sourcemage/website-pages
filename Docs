@@ -48,6 +48,7 @@ This is the core webspace for the storage, browsing and editing of Source Mage r
 * [[Bugs|Bug-tracking system]]
 * [[Security format]] -- strict rules for posting information about vulnerabilities
 * Sorcery development:
+** [[Sorcery/Hacker's Handbook|Sorcery Hacker's Handbook]] -- essential guide for working on Sorcery
 ** [[Sorcery/libapi|libapi]] -- reference for sorcery functions which can be used in [[Spell|spells]]
 ** [[Sorcery/Roots|Root variables]] -- special variables allowing different scenarios with chroots and custom installs
 * [[Grimoire]] development:
