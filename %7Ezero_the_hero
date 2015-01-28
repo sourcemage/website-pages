@@ -1,0 +1,75 @@
+= Chris Brien =
+
+**IRC nick(s):** cbrien, zero_the_hero
+
+**Role in SMGL:** Code monkey
+
+**Age/Birthdate:** =now() - 19811228
+
+**Location/Country:** Scotland
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+I, like [[~flipsidejones|Ryan]], started using Linux about three or four years ago with Corel when it came free with a magazine. I'd heard a bit about it and this "Unix" thing, and I thought I should give it a shot. Although I had more success than Ryan -- I actually managed to install it -- it seemed rather pointless. I had no idea how to do anything, or even that you could do anything. And the [[http://lilo.alioth.debian.org/|lilo]] splash bitmap was ugly. So that actually put me off Linux for a while.
+
+I kept playing with Linuces on and off, trying several iterations of Red Hat until I found that Mandrake was actually usable, and that KDE2 was pretty. But still I felt it was better to work in Windows 2000. That changed the moment I had to start using Mac OS at work. Not because it was good, but because it so bad. I simply had to get another OS onto that machine, and Linux was the obvious choice. Since then, I've never looked back.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+Since Sorcerer (as it was then) originally got slashdotted. In VMWare at first, but natively later on. I had even approached Kyle about the possibility of creating a powerpc port about a fortnight before he went into hibernation, taking the distro with him...
+
+**What piqued your interest in SMGL initially?**
+
+RPM sucks. I'd never been able to get rpmdrake working and downloading and individually resolving dependencies was hateful. And then here was a distro that promised to get the sources from the people actually writing them so they were guaranteed to work, compile them itself, so they were guaranteed to work on your system, and automagically resolve dependencies so that the installation always went smoothly.
+
+That of course, and I loved the pun. And I'm a Tolkien/Pratchett/whatever fan.
+
+**What future do you personally see for SMGL?**
+
+Because we're a source-based distribution, there are no technical barriers for porting the system -- as long as the kernel people keep their end working we could be on any device that Linux (and possibly even Hurd or anything else) supports.
+
+I see SMGL becoming the 'de facto' Linux distro. If a package doesn't compile for SMGL, the package isn't available on Linux. This makes us encompass every other distro and then some. It also means that anyone wanting to write or test software can do so with absolute ease on SMGL because all the headers, libraries etc are there, and will be there on the end-users systems too.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I'm studying for a BSc honours in Computer Science at the Robert Gordon University in Aberdeen. Right now I'm on a one year work placement. Before uni I was Dux of my High School, and I scored the highest score possible on a Mensa IQ test. I failed to get into Cambridge by one grade in one subject.
+
+**Any personal messages for the Source Mage users out there?**
+
+It's not my fault! Honest!
+
+**What other OS programs/software have you worked on?**
+
+I got mentioned on the Mozilla progress page once. But I stopped hacking mozilla when they closed the bug titled "Tracking bug for Interesting bug reports" to Netscape employees only, and I realised that they aren't truly Open.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+I really should get round to learning emacs someday...
+
+**KDE or GNOME?**
+
+Gnome. It was KDE, just because of the antialiasing. But then I discovered how cool Nautilus is, and Gnome2 is sweet.
+
+**BSD or GPL?**
+
+Neither -- LGPL
+
+I don't like the way the GPL doesn't let others play unless they release all their stuff under the GPL. But then I don't like the way people can use BSD code without giving anything back. The LGPL avoids both issues.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Not through choice.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+Current: 1991 Ford Escort 1.4 \\ Dream: Nissan Skyline R34 GTR Vspec
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+I would, but I don't want to break the digicam.
