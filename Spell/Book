@@ -81,7 +81,7 @@ These are the other files:
 == Standards ==
 
 * General formatting rule: no tabs except in HISTORY, align '='s in DETAILS, and use newlines (for other formatting rules, check the appropriate spell file pages above).
-* [[Spell/Standards|Spell standards]] -- strict rules related to creating or updating spells, which help to avoid common mistakes.
+* [[Spell/Standards|Spell standards]] -- strict rules related to creating or updating spells, which help to avoid [[Grimoire/Common mistakes|common mistakes]].
 * [[Spell/Standards/Integrity|Integrity checking standards]] -- standards of integrity verification for upstream sources.
 * [[Spell/Deprecation|Spell deprecation process]] -- a guide to perform [[Spell|spell]] deprecation.
 * [[Spell/Multiversion|Multiversion spells]] -- the standard for spells with multiple versions.
