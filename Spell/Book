@@ -71,6 +71,7 @@ These are the other files:
 * [[Spell/Files/HISTORY|HISTORY]]
 * [[Spell/Files/PROVIDES|PROVIDES]]
 * [[Spell/Files/EXPORTS|EXPORTS]]
+* [[Spell/Files/SOLO|SOLO]]
 * services
 * {{{init.d}}} directory
 * {{{pam.d}}} directory
