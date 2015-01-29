@@ -1,0 +1,80 @@
+= Eric Laberge =
+
+**Homepage:** (not yet)
+
+**IRC nick(s):** DemonLord
+
+**Role in SMGL:** Section maintainer for utils.
+
+**Age/Birthdate:** now - may 16th 1981
+
+**Location/Country:** Chicoutimi, Québec, Canada
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+I began using Linux in October 1998, as a mean to share my internet connection to different PCs. I used Debian 2.0 (hamm) back then, installed from floppies on an old 386. I immediately fell in love with it, and installed it on my main PC nearly immediately after. I stuck to Debian until Mandrake 7.0, then followed Mandrake updates up to 8.2. By this time, I was teacher assistant since January 2001, giving networking classes using Linux, so I picked up a few tricks of my own and did a lot of troubleshooting.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+I've first installed SMGL when I got my laptop. According to my activity log, it was exactly on July 17th 2002.
+
+**What piqued your interest in SMGL initially?**
+
+I've read about Sorcerer on Slashdot.org, and downloaded the ISO. By the time I got my PC, Sorcerer was gone, so I looked for what happened to the project. Source Mage was the logical follow up, so I jumped on the SMGL bandwagon. Unlike many, I haven't even heard of Gentoo until much later. Gave it a try on a friend's SUN workstation (SMGL hadn't been ported to the architecture yet), and I disliked it, confirming my choice to stick with SMGL.
+
+What struck me at first was how easy it is to port new software to the distribution. A simple [[Spell/Files/DETAILS|DETAILS]] file with a bunch of "equals" and that's about it.
+
+**What future do you personally see for SMGL?**
+
+It'll grow as the most popular niche distribution thus creating a paradox. People will come to it for its simplicity and control, and it'll remain in the hands of people, creating strong community feelings. I wouldn't be surprised if it became the favorite distribution of Linus Torvalds himself ;-P
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+* Education:
+** 2003 - now -- Master degree, Computer Sciences, System specialization (virtual machines)
+** 2000 - 2002 -- Bachelor degree, Computer Sciences (Mathematics minor)
+
+* Skills:
+** Kick ass programmer / debugger
+** [[https://savannah.nongnu.org/users/DemonLord|My Savannah description]]
+** Did a lot of support and public relations
+
+**Any personal messages for the Source Mage users out there?**
+
+Don't give up, once it's installed, you'll fall in love with it!
+
+**What other OS programs/software have you worked on?**
+
+[[https://savannah.nongnu.org/projects/plex86/|Plex86 Virtual Machine]]
+
+== Flamewars ==
+
+**vi or emacs?**
+
+# nano
+# vi
+# kate
+
+**KDE or GNOME?**
+
+KDE
+
+**BSD or GPL?**
+
+Depends on the project. \\ The one I use the most is LGPL, though, as I'm mostly into development appliances.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Yes.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+I don't have a car right now, but I'd like a Dodge Viper.
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+Someday
