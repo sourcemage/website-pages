@@ -2,4 +2,4 @@
 
 High triggers magic.
 
-Checks every trigger in [[Spell/Files/TRIGGERS|TRIGGERS]] file. The default is to just display a triggering message and query if a user wants to execute it.
+Contains instructions to check every trigger in the [[Spell/Files/TRIGGERS|TRIGGERS]] file. The default is to just display a triggering message and query if a user wants to execute it.
