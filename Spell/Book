@@ -18,6 +18,7 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 * [[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] -- Provides the opportunity to use runtime registration of {{{on_cast}}} triggers.
 * [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] -- Used to make a spell depend on another spell with certain features enabled.
 * [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] -- Tells [[Sorcery]] whether or not the sub-dependee is providing the given sub-depends.
+* [[Spell/Files/TRIGGER_CHECK|TRIGGER_CHECK]] -- Used to inspect each trigger in a spell.
 
 (…Processing of the depended on spells…)
 
