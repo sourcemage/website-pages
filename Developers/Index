@@ -9,7 +9,7 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 ==Council of Elders (Lead Developers and Assistants)==
 
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
-| Arjan Bouter | Lead Developer, Windowmanagers Guru | ##abouter## | abouter@sourcemage.org |
+| Arjan Bouter | Lead Developer, windowmanagers Guru | ##abouter## | abouter@sourcemage.org |
 | David Kowis | Project Lead | ##BeepDog## | dkowis@sourcemage.org |
 | Eric Sandall | Lead Developer | ##sandalle## | sandalle@sourcemage.org |
 | Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | lynxlynxlynx@sourcemage.org |
@@ -17,6 +17,7 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 | Justin Boffemmyer | Lead Developer | ##flux_control## | flux@sourcemage.org |
 | Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | crypto@sourcemage.org |
 | Robin Cook | Lead Developer | ##CuZnDragon## | cuzndragon@sourcemage.org |
+| Treeve Jelbert | Lead Developer, database and telephony Guru | ##treeve## | treeve@sourcemage.org |
 | Vlad Glagolev | Grimoire Lead | ##Stealth## | stealth@sourcemage.org |
 
 ==Circle of Mages (General Developers)==
@@ -33,7 +34,6 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 | Sukneet Basuta | General Guru | ##Sukneet## | sukneet@sourcemage.org |
 | Thomas Orgis | General Guru | ##sobukus## | sobukus@sourcemage.org |
 | Tommy Boatman | General Guru | ##tboatman## | tboatman@sourcemage.org |
-| Treeve Jelbert | Database and Telephony Guru | ##treeve## | treeve@sourcemage.org |
 
 Grimoire sections //archive//, //cluster//, //devel//, //display//, //doc//, //gnu//, //i18n//, //java//, //kernels//, //libs//, //mobile//, //printer//, //security//, //shell-term-fm//, //telephony//, //utils// and //x11// are currently un-maintained but are mostly up to date. Many developers have project subscriptions for their particular spells and are walk in walk out positions. \\ Contact the [[mailto:grimoire@sourcemage.org|Grimoire Team Lead]] for more information.
 
