@@ -14,7 +14,7 @@
 
 **When did you first start using Linux and why?**
 
-In programming class my friend would wlaways talk about how much better linux was than windows, and I would always think to myself "dude shutup." Then later that year my friend said I should try it out. This was two years ago, and I started with rh7.3. Wasn't bad but the transition was slow as I was mostly in windows. Then I bought a new motherboard which had ethernet and thus redhat wasn't detecting it. I was determined to get it working, I spent literally 3 months talking to people and constantly recompiling the kernel, never having it work tho. Finally I switched to mandrake where at least my ethernet was detected. I talked to people, went through the pains of trying to recompile the kenrel and I learned a lot about linux in the process. Finally I started seeing why my kernels weren't working, and since I spent so much time in linux I was just stayed in linux. At that point I went from about half and half usage of windows/linux, then to 90% linux (windows only for games) and a few months ago I converted my desktop to pure linux!
+In programming class my friend would always talk about how much better linux was than windows, and I would always think to myself "dude shutup." Then later that year my friend said I should try it out. This was two years ago, and I started with rh7.3. Wasn't bad but the transition was slow as I was mostly in windows. Then I bought a new motherboard which had ethernet and thus redhat wasn't detecting it. I was determined to get it working, I spent literally 3 months talking to people and constantly recompiling the kernel, never having it work tho. Finally I switched to mandrake where at least my ethernet was detected. I talked to people, went through the pains of trying to recompile the kernel and I learned a lot about linux in the process. Finally I started seeing why my kernels weren't working, and since I spent so much time in linux I was just stayed in linux. At that point I went from about half and half usage of windows/linux, then to 90% linux (windows only for games) and a few months ago I converted my desktop to pure linux!
 
 **How long have you been using the [[About|SMGL]] distribution?**
 
@@ -48,7 +48,7 @@ None that have been really released publicly
 
 **vi or emacs?**
 
-I used to use purely vim untill SMGL, where the vim is quite annoying to deal with for various reasons so now I use emacs
+I used to use purely vim until SMGL, where the vim is quite annoying to deal with for various reasons so now I use emacs
 
 **KDE or GNOME?**
 
