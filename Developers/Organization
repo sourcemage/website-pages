@@ -11,7 +11,7 @@ Source Mage GNU/Linux contributors are organized into a team of **Lead Developer
 * Have the option to cast a non-binding vote in all other votes
 * Can be removed by a super majority vote of the **Lead Developers**
 * Can have a removal vote vetoed by a super majority vote of all **Developers**
-* Are automatically nominated and seconded for a removal vote after one year of inactivity (defined as no committed changes to any part of the project's source code or documentation repositories (including web sites))
+* Are automatically nominated and seconded for a removal vote after one year of inactivity (defined as no committed changes to any part of the project's source code or documentation repositories (including web sites) and/or no logged changes to any project servers)
 * Once someone is no longer considered a developer, their entry on the [[Developers]] page, all of their SCM accounts, @sourcemage.org mail aliases, sourcemage IRC cloak, and special #sourcemage IRC permissions (including permissions on other IRC channels related to the Project) must be removed
 ----
 
@@ -24,7 +24,7 @@ Source Mage GNU/Linux contributors are organized into a team of **Lead Developer
 * Can be removed as Leads by a super majority vote of the other **Lead Developers**
 * Can have a removal vote vetoed by a super majority vote of all **Developers**
 * Are automatically removed without vote or veto if they fail to cast any votes for two consecutive months or longer, provided there were at least two votes hold in that period
-* Are automatically nominated and seconded for a removal vote after six months of inactivity (defined as no committed changes to any part of the project's source code or documentation repositories (including web sites))
+* Are automatically nominated and seconded for a removal vote after six months of inactivity (defined as no committed changes to any part of the project's source code or documentation repositories (including web sites) and/or no logged changes to any project servers)
 * Revert to **General Developers** if removed
 ----
 
