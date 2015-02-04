@@ -28,12 +28,19 @@ This policy is applied to all official channels listed at [[Contact/IRC]]. \\ Co
 /msg chanserv ACCESS #sourcemage[-<channel>] ADD <irc nick> +f
 }}}
 
+or:
+
+{{{
+/msg chanserv ACCESS #sourcemage[-<channel>] ADD <irc nick> plead
+/msg chanserv ACCESS #sourcemage[-<channel>] ADD <irc nick> clead
+}}}
+
 == Component channels (#sourcemage-{cauldron,grimoire,sorcery,tome}) ==
 
 * The Component Lead should have all flags except for +F:
 
 {{{
-/msg chanserv ACCESS #sourcemage-<component> ADD <irc nick> +*
+/msg chanserv ACCESS #sourcemage-<component> ADD <irc nick> clead
 }}}
 
 * All other policy is at the discretion of the Component Lead
