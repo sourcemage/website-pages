@@ -80,7 +80,7 @@
 ** The Developer in question MUST NOT vote.
 ** Removal Votes require a super majority (greater than 2/3 of all binding votes cast) to pass.
 ** Exception to the above: Automatic Removal Votes (triggered by inactivity as specified in the [[Developers/Organization|Developer Organization]] document) automatically pass unless a simple majority (greater than 50% of all binding votes cast) vote against the removal.
-*** An Automatic Removal Vote vote must be proposed and seconded as per the Issue Voting Process, but no voting will take place unless a vote to keep the Developer is entered, then voting will proceed as normal.
+*** An Automatic Removal Vote MUST be proposed and seconded as per the Issue Voting Process, but no voting WILL take place unless a vote to keep the Developer is entered, then voting WILL proceed as normal.
 *** All General and Lead Developers (other than the Developer being voted upon) are counted as having voted unless a normal vote is required as described above.
 * Successful or failed removal votes MAY be vetoed by the entire group of Developers.
 * If an Automated Removal Vote fails, the Developer in question WILL be automatically nominated and seconded for a Removal Vote every six months they continue to be inactive.
