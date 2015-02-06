@@ -1,0 +1,120 @@
+= Vladimir Vydra =
+
+**IRC nick(s):** o4ek
+
+**Role in SMGL:** Section maintainer for shell-term-fm
+
+**Age/Birthdate:** 26
+
+**Location/Country:** Zilina, Slovakia (Half of year (winter) in: Paris, France :-)
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+9 years ago I was having, for the first time, access to PC which was connected 24/h to net. In a moment I become NET-dependent (to be honest -- I was spending much more time on IRCing and FTPing than studying :-). After short period I was having access to our faculty primary UnixWare server and from this time I'm persuade that for serious work the only suitable platform is Linux/Unix :-).
+
+My first Linux distro wich I personaly installed was Slackware (first install -- 8 years ago, now I don't remember exactly the version from wich I started up :-). After I was using RH, MDK.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+**What piqued your interest in SMGL initially?**
+
+In the January 2002 I was looking for some linux/unix distro which fulfil my needs (I was looking for something which is source based, with some cool pkg.sys., something where I can in some easy way change the configure/build parameters, etc....). My first idea was freebsd but before changing linux for unix I was looking at http://www.distrowatch.com where I found SGL -- and after installing it I was seeing that this is something for me :-)
+
+**What future do you personally see for SMGL?**
+
+For me the SMGL is the ideal distro for people which have some knowledge about linux and which "want the full power of Linux/PC". I use SMGL not only as desktop but also on 3 production machines (and in the 3 months we will build up an database cluster on which we will run SMGL :-)
+
+So personally I'm very satisfied with SMGL and I really recommend this cool distro to everybody :> .
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I graduate at Zilina's Technical University -- Informatics department, my thesis was: "Object oriented compiler of SQL language".
+
+I'm currently on the 3.year of my PhD study (my PhD. thesis is: Fulltext search in large text databases :-). In the same time I'm:
+
+* teaching at the University (courses like: Linux/Aix administration, Object oriented programming in Pascal/C++/Delphi, Neural Networks)
+* administering our faculty servers (3 SMGL, 3 RH, 2 MDK, 2 UnixWare (as co-admin :-)), 1 Aix boxes and also 5 Win2k "srv")
+* working as Project manager for one little enterprise (15 people).
+
+To tell something about my skills/career here is stripped cut && paste of last 2 accomplished projects from my CV:
+
+{{{
+ - "Fulltext/workflow document management system"
+    - Implementation of the document archive in heterogenous enviroment with fulltext searching and workflow capabilities
+    Responsibility: project manager     Software: Oracle 8i (Intermedia Text), Delphi, BC++,Kylix, Apache, LinkWorks
+    Resources: 10 peoples               duration: 2 years
+
+ - "Time scheduling/calendar management system"
+    - Calendar/Sheduling C/S management system (with PalmPilot conduits), build on top of the linkWorks
+    Responsibility: codder              Software: LinkWorks, Delphi, C++ Builder, M$VC++, HotSync
+    Resources: 5 peoples                duration: 1 years
+}}}
+
+...
+
+:-)))
+
+Known languages:
+
+|= Language =|= Description =|
+| Basic | was my first language -- on the 8bit Amstrad CP/M 128 "machine" :-) |
+| Asm | this was my "Hey ... I can do this" epoque :-) |
+| Pascal | the school necessity |
+| C/C++ | I was testing the Objects in Pascal and I was finding C++ and from this time I'm "C++ fan" :-) |
+| Delphi | My first job |
+| C++ Builder | My first big project :-) |
+| M$ VC++ | Huh ... some Palm conduits, vxd, ... mhmm ... |
+| Java/PHP | only for fun && Web stuff :-) |
+| Prolog | some misc Expert systems for school :-) |
+| Perl | work in progress .... :-) |
+
+**Any personal messages for the Source Mage users out there?**
+
+Try SMGL and you will never look up for some other lnx distro :-)
+
+**What other OS programs/software have you worked on?**
+
+OS:
+* CP/M :-)))
+* DOS, Win 3.1, Win95, Win98, WinME, Win2k (I will NEVER use WinXP !)
+* Linux (RH, MDK, Slackware, Debian), Unixware, FreeBSD, AIX :>
+* PalmOS
+
+Software:
+* programming: masm, BC++, TP, BP, Delphi, C++ Builder, Kylix, M$ VC++
+* RDBMS: Paradox, Oracle, DB2, Postgres, mysql
+* Document Management Systems: LinkWorks, Work Expeditor
+* Project management: Select Enterprise
+
+== Flamewars ==
+
+**vi or emacs?**
+
+vim :-)
+
+**KDE or GNOME?**
+
+wmaker :>
+
+**BSD or GPL?**
+
+BSD, but because I'm realyst I must say GPL.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Don't have time/opportunities to find girlfriend and get married :-)
+
+**What other hobbies?**
+
+Saxophone :-) (jazz is c001 :-))
+
+**What kind of car do you drive? Or what is your dream car?**
+
+Currently I have Skoda 120 (an very old car). \\ My dream car is Chevrolet Corvette ZX-2 in red color :-) (yes I know it's out dated :-))
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+If I release my foto everyone who will see it, will not be able to sleep :-)
