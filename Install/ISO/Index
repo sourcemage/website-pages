@@ -148,9 +148,9 @@ Now is the **perfect** time to do a rebuild of your system. Once you have booted
 
 * ensure that networking is up (run {{{ifconfig}}})
 * run {{{sorcery update}}} to update the sorcery scripts
-* run {{{scribe update && cast smgl-archspecs}}} to update the [[Spell|spell]] lists and tell [[Sorcery]] the latest list for supported CPU architectures
+* run {{{scribe update && cast smgl-archspecs}}} to update the spell-lists and tell [[Sorcery]] the latest list for supported CPU architectures
 * configure Sorcery (run {{{sorcery}}}, then go to **Options**)
-* update essential spells for compiling //(when gettext/glibc are updated to use your architecture specs)// by using the command (compile in order):
+* update essential [[Spell|spells]] for compiling //(when gettext/glibc are updated to use your architecture specs)// by using the command (compile in order):
 
 {{{
 # cast -c binutils gcc g++ gettext glibc
