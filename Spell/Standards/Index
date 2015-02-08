@@ -14,6 +14,7 @@ Another purpose of this document is to gather together info about everything tha
 * install man pages anywhere but in {{{/usr/share/man}}}
 * install info pages anywhere but in {{{/usr/share/info}}}
 * install files into {{{/usr/local}}}
+* have names matching lowercased providers in every [[Spell/Files/PROVIDES|PROVIDES]] file in the [[Codex]]
 * use {{{UPDATED}}} (see [[Spell/Files/DETAILS|DETAILS]] documentation which includes {{{PATCHLEVEL}}} and {{{SECURITY_PATCH}}})
 * use {{{uname}}}, {{{$HOST}}}, etc. to detect CPU arch, but {{{SMGL_ARCHSPECS[?]}}} (in transition periods don't forget to depend on "smgl-archspecs" spell)
 * modify any variable provided by [[Sorcery]] (excluding {{{OPTS}}} and only during [[Spell/Files/BUILD|BUILD]] and [[Spell/Files/INSTALL|INSTALL]])
