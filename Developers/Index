@@ -1,6 +1,6 @@
 =The Source Mage GNU/Linux Organizational Chart=
 
-We have **21** active developers, listed below.
+We have **17** active developers, listed below.
 
 If you're wondering how to [[Join|become]] a developer then please read the [[Contribution]] page.
 
@@ -9,14 +9,12 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 ==Council of Elders (Lead Developers and Assistants)==
 
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
-| Arjan Bouter | Lead Developer, windowmanagers Guru | ##abouter## | abouter@sourcemage.org |
 | David Kowis | Project Lead | ##BeepDog## | dkowis@sourcemage.org |
 | Eric Sandall | Lead Developer | ##sandalle## | sandalle@sourcemage.org |
 | Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | lynxlynxlynx@sourcemage.org |
 | Jeremy Blosser | Lead Developer | ##emrys## | jblosser@sourcemage.org |
 | Justin Boffemmyer | Lead Developer | ##flux_control## | flux@sourcemage.org |
 | Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | crypto@sourcemage.org |
-| Robin Cook | Lead Developer | ##CuZnDragon## | cuzndragon@sourcemage.org |
 | Treeve Jelbert | Lead Developer, database and telephony Guru | ##treeve## | treeve@sourcemage.org |
 | Vlad Glagolev | Grimoire Lead | ##Stealth## | stealth@sourcemage.org |
 
@@ -25,12 +23,10 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
 | Florian Franzmann | General Guru | ##{{{|beowulf|}}}## | beowulf@sourcemage.org |
 | Ismael Luceno | General Guru | ##ismaell##  | ismael@sourcemage.org |
-| Julien Rozo | General Guru | ##_kaze_## | julien@rozo.org |
 | Mark Bainter | General Guru | ##Shamgar## | mbainter@sourcemage.org |
 | Pavel Vinogradov | General Guru | ##public## | public@sourcemage.org |
 | Remko van der Vossen | General Guru | ##wich## | wich@sourcemage.org |
-| Robert Figura | General Guru | ##template## | template@sourcemage.org |
-| Seth Woolley | QA, Security and Sorcery Wizard | ##swoolley## | swoolley@sourcemage.org |
+| Robin Cook | General Guru | ##CuZnDragon## | cuzndragon@sourcemage.org |
 | Sukneet Basuta | General Guru | ##Sukneet## | sukneet@sourcemage.org |
 | Thomas Orgis | General Guru | ##sobukus## | sobukus@sourcemage.org |
 | Tommy Boatman | General Guru | ##tboatman## | tboatman@sourcemage.org |
