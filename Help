@@ -270,8 +270,8 @@ Link syntax:
 * [[Help|Markup details]]
 * [[Help#emphasis]]
 * [[Help#emphasis|Markup emphasis]]
-* [[path/filename.png]]
-* [[chapter_1/section_2#par3]]
+* [[Install/ISO/boot.png]]
+* [[Spell/Standards#export]] -- chapter_1/section_2#par3
 * [[#test]]
 * [[#test|On page link]]
 * [[#5|[5] ]] Footnote reference
@@ -288,8 +288,8 @@ Link syntax:
 * [[Help|Markup details]]
 * [[Help#emphasis]]
 * [[Help#emphasis|Markup emphasis]]
-* [[path/filename.png]] 
-* [[chapter_1/section_2#par3]] 
+* [[Install/ISO/boot.png]]
+* [[Spell/Standards#export]] -- chapter_1/section_2#par3
 * [[#test]]
 * [[#test|On page link]]
 * [[#5|[5] ]] Footnote reference
