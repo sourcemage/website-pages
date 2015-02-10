@@ -1,0 +1,35 @@
+= Grimoire definition =
+
+In the tradition of European magic, a "grimoire" is a sorcerer's book of spells, usually written in Latin. Our grimoire is also a book of spells, but it is written in [[http://www.gnu.org/software/bash/|bash]], and the "spells" are actually sets of instructions on how to download, compile, and install programs.
+
+Currently we provide the following grimoires ourselves; others may provide more:
+
+|= Grimoire =|= Description =|
+| [[Grimoire/stable|stable]] | a release cycle-controlled collection of spells that should be bug-free |
+| [[Grimoire/stable-rc|stable-rc]] | a release cycle-controlled collection of spells that is the next stable version release candidate |
+| [[Grimoire/test|test]] | a collection of spells that represents the bleeding edge; these versions compile for at least the developer that committed them, but may leave your system a smoldering ruin |
+| [[Grimoire/games|games]] | a collection of spells to install games, game servers and clients, etc. |
+| [[Grimoire/z-rejected|z-rejected]] | a collection of spells which are not included in the primary grimoires because of licensing or other issues. These are more or less supported, depending on individual interest and availability |
+| [[Grimoire/binary|binary]] | a collection of free (FSF-approved) software that are distributed in binary form, for example, binary versions of OpenOffice.org and Firefox |
+
+There are also [[Grimoire/personal|personal]] grimoires, where you can keep your own spells (or different versions of spells) locally and/or distribute them via HTTP, [[http://git-scm.com/|Git]], [[https://rsync.samba.org/|rsync]], etc.
+
+The grimoire by itself is just a reference; it becomes truly useful when you use the [[Sorcery]] [[Sorcery/Commands|command-set]] to retrieve a [[Spell|spell]] from the grimoire and implement ([[Sorcery/Commands/Cast|cast]]) it. For example, suppose you wanted to put xorg-server on a freshly installed Source Mage box. At the prompt say:
+
+{{{
+root@SMGL:~# cast xorg-server
+}}}
+
+The cast program examines the spell, prompts to install its dependencies, and the dependencies' dependencies (if any), then downloads the source code for all the various programs that will be installed.  Each one is built and installed auto-magically.
+
+The grimoire can also serve as a useful human reference as well, since each spell contains a lot of information about its program. A convenient way of looking through the grimoire is the command [[Sorcery/Commands/Gaze|gaze]], which has a great many options. One of the most useful is the command {{{gaze html}}}.
+
+Try this:
+
+{{{
+apuleius@magicbox:~# gaze html > ~/grimoire.html
+}}}
+
+This command takes the output of gaze html and writes it to the file "grimoire.html" in your home directory. The "grimoire.html" file can then be examined with any web browser. It is a list of all the spells in the grimoire, with the spell name, version, and a link to the program's web site for further information.
+
+Running the command {{{scribe update}}} (see [[Sorcery/Commands/Scribe|scribe]]) will download and install a fresh copy of the grimoire, containing updated spells.  You should probably run a scribe update at least once a week to keep the grimoire fresh, and you might want to run the {{{gaze html > ~/grimoire.html}}} command after each one to keep the html version up to date. An up-to-date html version of the three grimoires is available at http://codex.sourcemage.org/listing.html.

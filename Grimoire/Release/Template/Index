@@ -1,0 +1,137 @@
+= Stable grimoire release template =
+
+You can find the source code (including markup) of the page below [[Grimoire/Release/Template/Source|here]].
+----
+
+= Grimoire stable-<VERSION> release =
+
+The {{{-rc}}} branch for this release will be cut on **YYYY/MM/DD**. The target release date is **YYYY/MM/DD**.
+
+This release is being shepherded by **<YOUR NAME>** -- contact him with questions.
+
+{{#chroot-vm}}
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| n/a | n/a | n/a |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| autoconf | | | | | |
+| automake | | | | | |
+| basesystem | | | | | |
+| bash | | | | | |
+| bin86 | | | | | |
+| binutils | | | | | |
+| bison | | | | | |
+| btrfs-progs | | | | | |
+| bzip2 | | | | | |
+| ca-certificates | | | | | |
+| castfs | | | | | |
+| coreutils | | | | | |
+| cpio | | | | | |
+| cronie | | | | | |
+| dhcpcd | | | | | |
+| dialog | | | | | |
+| diffutils | | | | | |
+| dosfstools | | | | | |
+| e2fsprogs | | | | | |
+| file | | | | | |
+| findutils | | | | | |
+| flex | | | | | |
+| fuse | | | | | |
+| gawk | | | | | |
+| gcc | | | | | |
+| gdisk | | | | | |
+| gettext | | | | | |
+| glibc | | | | | |
+| gmp | | | | | |
+| gnupg | | | | | |
+| gperf | | | | | |
+| grep | | | | | |
+| groff | | | | | |
+| grub2 | | | | | |
+| gzip | | | | | |
+| iana-etc | | | | | |
+| ifupdown | | | | | |
+| init.d | | | | | |
+| installwatch | | | | | |
+| jfsutils | | | | | |
+| kbd | | | | | |
+| less | | | | | |
+| libidn | | | | | |
+| libmpc | | | | | |
+| libpcap | | | | | |
+| libtool | | | | | |
+| libusb | | | | | |
+| libusb-compat | | | | | |
+| lilo | | | | | |
+| linux | | | | | |
+| locale | | | | | |
+| lsscsi | | | | | |
+| lvm | | | | | |
+| lynx | | | | | |
+| m4 | | | | | |
+| mailx | | | | | |
+| make | | | | | |
+| man | | | | | |
+| man-pages | | | | | |
+| mdadm | | | | | |
+| metalog | | | | | |
+| minicom | | | | | |
+| module-init-tools | | | | | |
+| mpfr | | | | | |
+| nano | | | | | |
+| ncurses | | | | | |
+| netkit-base | | | | | |
+| netkit-ping | | | | | |
+| net-tools | | | | | |
+| openssh | | | | | |
+| openssl | | | | | |
+| parted | | | | | |
+| patch | | | | | |
+| pciutils | | | | | |
+| pcmciautils | | | | | |
+| pcre | | | | | |
+| perl | | | | | |
+| pkgconfig | | | | | |
+| popt | | | | | |
+| ppp | | | | | |
+| procps | | | | | |
+| readline | | | | | |
+| reiser4progs | | | | | |
+| reiserfsprogs | | | | | |
+| rp-pppoe | | | | | |
+| rsync | | | | | |
+| run-parts | | | | | |
+| sed | | | | | |
+| shadow | | | | | |
+| sharutils | | | | | |
+| simpleinit-msb | | | | | |
+| smgl-archspecs | | | | | |
+| smgl-fhs | | | | | |
+| sorcery-pubkeys | | | | | |
+| sysstat | | | | | |
+| tar | | | | | |
+| tcpdump | | | | | |
+| texinfo | | | | | |
+| traceroute | | | | | |
+| udev | | | | | |
+| unzip | | | | | |
+| usbutils | | | | | |
+| util-linux | | | | | |
+| vim | | | | | |
+| vile | | | | | |
+| wget | | | | | |
+| wireless_tools | | | | | |
+| wpa_supplicant | | | | | |
+| xfsprogs | | | | | |
+| xz-utils | | | | | |
+| zlib | | | | | |
+
+{{#extra}}
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| | | | | | |

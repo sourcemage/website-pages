@@ -1,0 +1,5 @@
+= Test grimoire =
+
+This is the main development [[Grimoire]], the Source Mage Team works in there. Any [[Spell|spell]] in the test grimoire has worked for at least the developer who submitted it, but is not guaranteed to be tested on different systems.
+
+The test grimoire is the most up to date grimoire. The spells here are being tested and they shouldn't totally break the system. After the spell has been found to be stable enough it then gets placed into the [[Grimoire/stable|stable]] grimoire.

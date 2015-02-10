@@ -1,0 +1,81 @@
+= Jon Svendsen =
+
+**IRC nick(s):** jsvendsen
+
+**Role in SMGL:** GNOME section maintainer, sporadic sorcery hacker and general nag
+
+**Age/Birthdate:** 23
+
+**Location/Country:** Bergen, Norway
+
+== Common ==
+
+I'm gonna merge 1, 2 and 3, since they would otherwise intermingle heavily.
+
+**When did you first start using Linux and why?** \\
+**How long have you been using the [[About|SMGL]] distribution?** \\
+**What piqued your interest in SMGL initially?**
+
+I'm ashamed to say I'm not a very long-time Linux/UNIX user. Except for witnessing/participating in a few (largely unsucessful) installation experiments, and using BSD dial-up shell access to the internet Back In The Day, I didn't have any UNIX experience at all until January 2001, when I started my computer science education, and the computer labs were wall-to-wall Solaris/Sparc. That suited me fine, however, since I was really starting to get interested in learning more about UNIX OS's.
+
+Shortly after that I picked up a spare computer and a $2 redhat CD, and lent a whole lot of books. Then I pulled the ISDN-card out of my windows desktop. After about two weeks the desktop was back on the internet, now routed through my very own linux server (for anyone who wonders, setting up ISDN in redhat 6.2 with zero unix experience is pain, weeping, and more pain).
+
+I was hooked. Limitations of diskspace and no money to get more kept me on windows until late in the summer of 2001, though. At that point I'd been looking around for something that would offer me something substantially "different" from what windows did. I wanted my computer back, and I wasn't about to just trade in one corporation telling me what to do with it for another. So one day, on freshmeat, I stumbled over an announcement for what I think was the second or third release of the "Sorcerer GNU/Linux Install/Rescue ISO9660". I checked it out and loved the idea to death. I had no fear of source code, and the minimalistic basic installation really scratched my itch. So I started reading news and lurking on mailing lists, soaking up information about what made the thing tick. A few weeks later I finally got the hardware I needed, and I made my move. I deliberately avoided asking for help while setting up the system, attempting to learn as much as possible.
+
+About a week later I revealed myself to the SGL mailing list and submitted the ~10 spells I'd written to get the system properly up and running. Some time later I chucked redhat from the server and put SGL on it instead. At this point I was by no means an expert in the use and administration of UNIX and Linux systems, of course, so I did what I normally do when in the company of people with a higher level of skill than myself; I faked it. This is a technique I've had much success with in many different areas. Most people are in fact far better teachers when they're not aware that they are teaching, and there's the added benefit that when people start expecting me to know how to do things, I better learn to do them prettydamnfast. I learned more about Linux on the desktop and on the server, about system administration and about package management, in the first few months of my work on SGL, than I've ever learned about any subject in a comparable amount of time at any point in my life.
+
+I put quite a bit of work into SGL after that (making the fall of 2001 an academical low for me), and when the distribution was chucked by it's creator in February 2002, I was in no mood to let that work go to waste, (also I wanted to continue using my distribution, damnit) so I decided to remain with the effort attempting to keep it running, rather than going somewhere else.
+
+**What future do you personally see for SMGL?**
+
+I see SMGL as a foundation that can be built into anything. The unique thing about it is that the same solid base can turn into an extremely fast and stable end-user desktop, or a headless server system, or anything in between, entirely based on the decisions of the administrator who sets it up. Regardless of whether you are setting up a bleeding edge system for your home, or forking off the base system to create servers, or a farm of 200 desktops for a university or an office building, SGML has the tools you need to do it. It's a beautiful thing.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I'm currently closing in on a bachelor-level degree in computer science, with some maths and psychology as side-dishes. Since I'm still a full time student I don't have any career to speak of. I've held several of the typical jobs designed to provide food (beer is food!) to students, such as driving paper routes, washing floors and working with networked embedded devices interfacing large databases (cash registers). Anyone who wants to give me a real job should feel free to speak up at this point.
+
+My main skill, as I see it, is my ability to learn. The ability to soak up large amounts of information is essential when trying to pass exams based on 48hrs of intensive studying, is of much use when remembering the version numbers and tweaks and quirks of hundreds of spells, and almost everywhere else. I find that i'm usually able to adapt quickly to most tasks i'm appointed to. I also like to think that i'm a fairly decent programmer, once I get going.
+
+I'm addicted to caffeine.
+
+**Any personal messages for the Source Mage users out there?**
+
+If you stuck with us through all the hard times we've been going through in the last few months, I'd like to say "Thanks!". If you didn't, I'd like to say "welcome back!", and if you're brand new I guess I'd stick with "welcome!". I'd readily admit that a large part of the reason I'm doing this is that I love the distribution and want it to be as good as possible for myself, but having users really makes it worth the hard work!
+
+It'll just get better from here.
+
+Oh, and rock on.
+
+**What other OS programs/software have you worked on?**
+
+I stuck with DOS for years after the rest of the world moved on, and loved every bit of it. It still stands out to me as the bad-ass mother of all operating systems. Raw access to everything, including kernel memory, and the system API is accessed through assembly language. Sweet. There were some dark years of windows, and now I'm all GNU/Linux.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+If I have to choose either, I choose vi. I like it a lot but have never had the time to spare to learn to use it properly. For all the little fiddly bits, i use nano. For programming, I've yet to find an editor that enhances my productivity as much as [[http://fte.sourceforge.net|FTE]]. Emacs is a beast. I want none of that.
+
+**KDE or GNOME?**
+
+Dude!
+
+**BSD or GPL?**
+
+It depends. I like the BSD license, and I'd love to live in the kind of free-love-and-happiness-for-all world where it would actually work. There's a war on though, and the GPL is a weapon designed to fight it. I think the GPL is a necessity to make proprietary vendors comprehend the when-we-say-free-we-mean-free concept.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+I have the normal mom/dad/two younger sisters family, but no spouse and no children. I also recently parted ways with my girlfriend of four years, so I'm fairly unattached at the moment.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+At the moment I don't drive, and don't really need to since I live in a city. When I dream, it's not about cars.
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+I'm actually not in the possesion of a single digitized photograph of myself. If this matter rectifies I'll let you know (otherwise, feel free to send me a scanner) ;-)
+
+Boy, this thing got REALLY LONG.

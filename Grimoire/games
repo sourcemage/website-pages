@@ -1,0 +1,15 @@
+= Games grimoire =
+
+This is a [[Grimoire]] which contains all of the games which have been submitted and added.
+
+Here are some notes describing specifics of [[Spell|spells]] in the games grimoire:
+
+* All games should install their binaries to: {{{/usr/games}}}
+* In case a game needs to have it's data in the same dir as the binary a symbolic link or a launcher script (preferred) should be used and the binary installed to {{{/usr/share/games/<gamedir>}}}
+* Game libs install to the normal directories
+* If a game has the ability to write a score file to {{{/var}}} then it should go to: {{{/var/games}}}. And the score file should be marked in volatiles and configs in the spell
+* All game related data should go to: {{{/usr/share/games/<gamedir>}}}
+* All game related files have ownership set as {{{root:games}}}
+* The permissions on all games and game related data should be:
+** 0750: binaries and directories
+** 0640: other files

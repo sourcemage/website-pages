@@ -1,0 +1,23 @@
+= IRC culture =
+
+This document describes how to go about getting help from IRC and notes on the general behavior expected from an IRC chat.
+
+== How to go about getting help from IRC ==
+
+* Read the config files first, they are often self-documenting.
+* Search manuals next
+** the standard unix-ish "man" command is often useful.
+** the standard gnu-ish "info" command is often quite detailed, comparable to BSD's good man commands.
+** see what other docs might be there (in Source Mage: {{{gaze install <spell> | grep doc}}})
+* Search the web if the online manuals are not good enough -- file a documentation bug with the author if you had to go this far.
+* Think about the problem with the knowledge of the above, even if you don't have the direct answer yet.
+* Lurk in the room for a while to become familiar with the pace and quality of answers to expect. Don't expect to be treated differently.
+* Feel free to ask questions after you've done the above. Be confident that discussion will lead to an enhancement, a bug being filed, some code being completed, or some other positive.
+
+== Regarding general behavior ==
+
+* General answers intend to guide.
+* Specific answers take a while to formulate, so hand-holding is not useful unless it directly leads to code contributions. Remember that most of the people answering questions are normally paid professionals in their field -- in-depth help and consultations are best had through private payment if you want a quality answer. Also consider a local consultant before utilizing a remote individual if it's a general question.
+* Developers automatically get better help than anybody else. They've committed to the project and are likely to hang around, sharing their knowledge.
+* Those who lurk for a while are also more likely to get better help, as are those who try to help others in situations simpler than their own problems. Quantity and Quality will both be considered. Remember that IRC tends towards a meritocracy, though help is usually at first given (consistently needy individuals will often be ignored).
+* Humor is allowed by those who give help or are contributing in some fashion. Humor by those asking for help, especially directed at those helping is not well tolerated. Bans and moderation are very rare, because people will stop responding to trolls such that trolls often find no reason to stay.

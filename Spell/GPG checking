@@ -1,0 +1,163 @@
+= GPG checking =
+
+== What is GPG signing? ==
+
+[[https://www.gnupg.org/|GPG]] uses well known public keys and matching private keys known only to the vendor. When the vendor posts a tarball, they provide a signature along with it. This signature is created with the private key and tarball. A user may verify the tarball using the signature and the vendors public key. In [[Spell|spells]] we replace the traditional {{{MD5[n]}}} mechanism with one where a public key and signature is specified.
+
+== Files the gurus need ==
+
+Okay, so we've got these three files:
+
+# Tarball: There isn't anything different about this file than any other spell. This is the same source tarball that you would normally download to get the source.
+# Public Key: This file can be in several forms. They may offer the public key as a {{{.gpg}}} public keyring or the other common form is ASCII armored text.
+# Signature file: This is usually the same name as the tarball with a {{{.asc}}}, {{{.sign}}} or {{{.sig}}} extention. There may be other extensions not mentioned here. If in doubt, download the file and call file on it to make sure it's the correct type.
+
+== What happens to the spells? ==
+
+=== Where the files go ===
+
+# The tarball: The source tarball is looked for in {{{SOURCE_CACHE}}}.
+# Public GPG key: Put this file in one of the following directories: {{{SPELL_DIRECTORY}}}, {{{SECTION_DIRECTORY}}}, {{{GRIMOIRE}}}. The first dir where this file exists is the file used.
+# The signature file: Specify this file using a {{{SOURCE2}}} and {{{SOURCE2_URL}}} pointing at the vendor supplied signature if it exists, otherwise you'll be making your own (see [[#guru-spells|Guru signed spells]] section below) and then add the signature file to the spell directory.
+
+=== Changes in DETAILS ===
+
+Remove all references to the {{{MD5}}} array and replace it with {{{SOURCEn_GPG}}} in [[Spell/Files/DETAILS|DETAILS]].
+
+Definition: {{{SOURCEn_GPG="<public-keyring-file>:<signature-file>"}}}
+
+For example:
+{{{
+           SPELL=linux-wlan-ng
+         VERSION=0.2.1-pre26
+          SOURCE=$SPELL-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$SPELL-$VERSION
+   SOURCE_URL[0]=ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/$SOURCE
+        WEB_SITE=http://www.linux-wlan.org/
+          MD5[0]=3c150c6139f61f76ca9875b0d2de6445
+}}}
+
+would become (vendor signed spell)
+
+{{{
+           SPELL=linux-wlan-ng
+         VERSION=0.2.1-pre26
+          SOURCE=$SPELL-$VERSION.tar.bz2
+         SOURCE2=${SOURCE}.asc
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$SPELL-$VERSION
+      SOURCE_URL=ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/$SOURCE
+     SOURCE2_URL=${SOURCE_URL}.asc
+  SOURCE2_IGNORE=signature
+        WEB_SITE=http://www.linux-wlan.org/
+      SOURCE_GPG="linux-wlan.gpg:${SOURCE}.asc"
+}}}
+
+=== Changes in PRE_BUILD ===
+
+If you have a [[Spell/Files/PRE_BUILD|PRE_BUILD]] file, replace all calls to {{{unpack}}} with calls to {{{unpack_file}}}. For example:
+
+{{{
+mk_source_dir "$SOURCE_DIRECTORY" &&
+unpack $SOURCE ${MD5[0]}
+}}}
+
+would become
+
+{{{
+mk_source_dir $SOURCE_DIRECTORY &&
+unpack_file ${SOURCE}
+}}}
+----
+
+== Vendor signed spells ==
+
+Not all vendors have public keys, and not all vendors like to advertise their public keys. If they have the signature files for their tarballs, there is a good chance they have a public key and are willing to share it.
+
+Vendor public keys can be in several forms. They may offer it as a {{{.gpg}}} public keyring, in which case just add it to the spell directory. The other common form is ASCII armored text, in which case you will need to convert it to binary form, then add it to the spell directory. Here is David Brown's ASCII armored public key:
+
+{{{
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+mQGiBELBCJIRBADWq0GaChC10brGje9pL5YUNY1NuP0L3c8Hj9AolD38r3aELpTf
+C2XiOfFeBtvzboaqCFMsE+qg++wucnKXF62lltpj5ntPMJxZZYPJ23hiOg2s+Azp
+z3Y5VfOptwbkZ/9YmLv2Dt3KjETsJiwn4bpTOQFx80pXu6PF1CJHHO6V5wCghbSA
+gNAKxBdxUUnsBWWdEHPSC30EAIQ7+LQrXlT0OyEklVW9MNvkE6gobPnT6Zewcfiu
+8Fou1zdIsIYtyNlblxf04uz6jAtmD7qYM85OVmWnW2G+L7U70rG53+nhPMitfkA0
+u5p7S7FdvfP23aqyhzUm9HA9nW0C/BqccYWVgkvLcBfo5sFt8EOybQTaq7rN+/Q+
+AunEBACJb+9GnLqlVXsnI8U5ijOwWtbLxu5fzeZp8E7QZgJMLP08E4koyuLkk4o+
++tGvlKDoicOVbymtugnKmKXy1HZcZzATJ3xOSD9ykWnHp4rFnP8/bDcLw0HCZEhz
+8u/Qb1hF7PcQ5oE+sbNMVyUg/MJjKuU4DM3fps5OBaZnjZ31Q7QhRGF2aWQgQnJv
+d24gPGRtbGIyMDAwQGV4Y2l0ZS5jb20+iF4EExECAB4FAkLBCJICGwMGCwkIBwMC
+AxUCAwMWAgECHgECF4AACgkQH9z9Ce12Z36ETQCfftVDW9SzdGKhpzafUeCdF44s
+MFwAnR8H4zdwc/ytrhYxEGsoKDI0yLs5uQINBELBCJ0QCADP5Dv4lMd4QZtagej3
+KlQKxhWG1E7uKoqaH+TZJcIrcMTzbkOv1zNLJTA1bhtyUA6Z2N613esA0SyE3OLd
+9UIej4sBgFB+f0t4E72KQGi2DRAUvNXDfql3dND0O4rrtMFhYgR0lpsI6udztHXg
++XBT5b+GbuXyv/WxuVD+zXcYyVroEJbnRSjuxHCy1UL5xdUDxHh7m3IS9/SWayWd
+sl1dEPU0InFF2Qp2H2bUhAT6c34qqXmQ00Xb8D/4HnKmnBtXLtmxBiUO/Z3WHcQp
+41cJpIGD93Mr9DMlpadnky5BZHs3AIvGQv8M5xdNBMSp0F1yMoi9xtm1I5RR/U/h
+kztLAAMGB/9UlVJ33DVIMlpFwXBiSLIEDZIQPABDn5dEp1jndu9qoHiMUrSCXOVN
+n5VTI6IKlsRHf4I9YvAGQnEj0q5fxBJ2nVnkXGu6AyjvRISfdn2KGVZnQVHIhbc1
+kcEQmLvOCacNr5kVuxhBrJl3vUussrRGefczKnoYcOD8MzcFeQrGvN6mEsT21wmj
+sQHqzpqat3+CVIFczCMessVMv72deHJrctupEQx2qKwufREyZMLt66DrVNU7p7Zq
+zwZLzM1qcu2Zg7QcGoqiGW8zfa4pInTs/aKBUuouWmFUZgbu/lGxkbQ2jJhbQNQI
+r0uE2Qd89Q2cd3iI566GoQqpLXiEJ+5DiEkEGBECAAkFAkLBCJ0CGwwACgkQH9z9
+Ce12Z34f/gCfcYPana4+xvMXlPhFWTdVxkDAkbMAn1kfHNiMY+Ll9NSieDaFMqTS
+Ah/j
+=+yvq
+-----END PGP PUBLIC KEY BLOCK-----
+}}}
+
+To generate a public key from ASCII armored text simply do:
+
+{{{
+# gpg --no-default-keyring --keyring <name-of-new-gpg-file> --import <optional-file>
+}}}
+
+**Warning:** the name of the new gpg file can include a path, if the path is relative to {{{./}}} or absolute the file will be made there otherwise the new gpg keyring is made relative to {{{~/.gnupg}}} directory. Also {{{<optional-file>}}} is usually where the keys for the signed tarball are for example the "apache" spell uses a file called {{{KEYS}}} so it will be {{{--import KEYS}}} to import all of their public keys to a GPG file.
+
+**Note:** if the optional import file isn't given then it will start reading from {{{stdin}}}, also the {{{--import}}} should be the last argument in the list or it will try to import the file {{{--no-default-keyring}}}.
+----
+
+== Guru signed spells ==
+
+{{#guru-spells}} For a guru signed spell, in short, you are the vendor. It is the guru's responsibility to make sure the tarball is safe for people to use.
+
+=== Generate your private and public keys ===
+
+{{{
+$ gpg --gen-key
+}}}
+
+Please note that the key you are going to generate must be a {{{RSA}}} key, otherwise you will not be able to use the higher bit hashes such as {{{SHA512}}}. For the other settings, the defaults are usually satisfactory.
+
+**Warnings:**
+* The passphrase chosen should not be forgotten. This is just as valuable as your users password. You should treat it as such.
+* Generating keys for your root user is not recommended. This should be done as a user.
+
+=== Add your public key to the 'gurus.gpg' keyring ===
+
+{{{
+$ gpg --export --armor <key-id> | gpg --no-default-keyring --keyring <full-or-relative-path-to-gurus.gpg-keyring> --import
+}}}
+
+**Notes:**
+* This does modify the {{{gurus.gpg}}} file so you should open the file for edit and make sure you integrate it to test along with the spell you signed.
+* If you will be limiting your GPG signing to a specific section you can add/create the section gpg keyring and put the keyring in the section.
+* The {{{<key-id>}}} is the GPG ID you want imported into the keyring. If you do not specify an ID then every key in your keyring will be imported into the new keyring.
+
+=== Signing the tarball ===
+
+{{{
+$ gpg --detach-sign <path-to-tarball>
+}}}
+
+This will generate a file with the same name as the tarball appended with {{{.sig}}}. This is the signature file that you would have to download with the vendor signed file. You should either pull this signature file from online somewhere with a {{{SOURCE2}}} and {{{SOURCE2_URL}}} or add this file to the spell directory.
+
+To use {{{SHA512}}} and a non-default key use:
+
+{{{
+$ gpg --default-key KEY --digest-algo SHA512 --detach-sign <path-to-tarball>
+}}}
+
+**Note:** This doesn't have to be done as a user, but you will have to tell GPG where the public and private GPG files are.

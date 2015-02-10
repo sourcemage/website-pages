@@ -1,0 +1,178 @@
+= ISO Install Guide =
+
+Installing Source Mage is quite easy. In no time at all, you will be able to boot into a base system on which you can start building your dream environment. Without building a new kernel the install process only takes about 20 minutes.
+
+This installation guide is a sort of walkthrough of the different steps and options of the Source Mage installer. Screenshots are provided to give an example of the interface and the options.
+----
+
+== Know thy computer ==
+
+As a preparatory step, it might be a good idea to take a good, hard look at your computer. Gather as much information as you can to help you not only in the installation, but it also getting to know more about your beloved machine. It will also be good to store this information for future reference.
+
+The most important pieces of information you need for the installation would be:
+
+* Processor (name, model, type)
+* Hard drive (type, capacity)
+* Network card (ethernet, wireless)
+* Internet connection (dial-up, DSL/cable, WiFi)
+
+Other pieces of information that might be needed at some point in time (like in compiling your own kernel):
+
+* Input devices (keyboard, mouse, Wacom)
+* Video card
+* Sound card
+* Monitor
+* Printer
+* Other peripherals and devices (Bluetooth, infrared, etc.)
+----
+
+== Download Source Mage ==
+
+The current version of Source Mage GNU/Linux for x86 is **0.10.0**. You can download the appropriate ISO from our [[Download|downloads]] page.
+
+You can also browse the [[Codex]] online on http://download.sourcemage.org/codex/listing.html to get a peek at the available packages.
+----
+
+=== Boot up ===
+
+The first and most important thing you need to do (besides putting the installer CD into your CD-ROM drive) is to setup the BIOS to boot from the CD-ROM drive. Once you boot up, you will be greeted with a short welcoming message and copyright information, as well as instructions for entering special kernel parameters. Most users at this point would just press {{{Enter}}} to boot.
+
+{{Install/ISO/boot.png}}
+----
+
+== How to use the Installer ==
+
+The Source Mage Installer is text-based and provides the step required to install a bootable Source Mage system. It is navigated by typing {{{next}}} after completion of the step's tasks. Other commands available are {{{prev}}}, {{{todo}}}, {{{jump}}} and {{{help}}}.
+
+Many of the steps are self-descriptive, so we will give just a few notes on them where necessary.
+----
+
+=== Install welcome ===
+
+{{Install/ISO/welcome.png}}
+----
+
+=== Partition disk ===
+
+{{Install/ISO/partition.png}}
+
+At this point you will have to decide how to partition the drive. The simplest is to use two partitions, one for the system and the other to be used as a swap partition.
+
+Depending on the file system you are using it may be important to have ///boot// on a separate partition. It is also useful to put ///home// on a separate partition so that the system can be reinstalled without touching the user files.
+----
+
+=== Format disk ===
+
+{{Install/ISO/format.png}}
+
+After you have decided how to partition your drive you will need to decide what file system to use. This is a very personal choice. The commands are provided in the instructions for //ext2//, //ext3//, //reiserfs//, //jfs// and //xfs//. Most would use ext3 which is very stable, provides journaling and holds up pretty well to errors and unintended system power-offs. Source Mage is all about choice and you can choose whichever you believe works best for your situation.
+----
+
+=== Mount partitions ===
+
+{{Install/ISO/mount.png}}
+----
+
+=== Select spells ===
+
+{{Install/ISO/spells.png}}
+{{Install/ISO/spells2.png}}
+{{Install/ISO/spells3.png}}
+{{Install/ISO/spells4.png}}
+----
+
+=== Install ===
+
+{{Install/ISO/install.png}}
+----
+
+=== Edit configuration files ===
+
+{{Install/ISO/config.png}}
+----
+
+=== Setup kernel ===
+
+{{Install/ISO/kernel.png}}
+
+* ISO kernel:
+
+{{Install/ISO/kernel-iso.png}}
+
+* Compile kernel:
+
+{{Install/ISO/kernel-compile.png}}
+----
+
+=== Setup boot loader ===
+
+**Note**: **lilo** and **grub2** //(not covered here)// are the only two options for **x86_64** out-of-the-box.
+
+{{Install/ISO/loader.png}}
+
+* Setup lilo:
+
+{{Install/ISO/loader-lilo.png}}
+
+* Setup grub:
+
+{{Install/ISO/loader-grub.png}}
+----
+
+=== User setup ===
+
+{{Install/ISO/user.png}}
+----
+
+=== Reboot ===
+
+{{Install/ISO/reboot.png}}
+
+//Exit! Done! Finito!//
+
+And now you're done! All that's left is to reboot into your freshly installed Source Mage system, setup your internet connection, connect to the Internet, and update your system.
+
+To setup networking you must create an interfaces file in {{{/etc/network}}} directory. \\ There is an example in {{{/usr/share/doc/ifupdown/examples/network-interfaces}}}.
+----
+
+{{#post-install}}
+== Post-install steps ==
+
+If you installed the "smgl-setup" man page (selected to be installed by default in the ISO), you should start with:
+
+{{{
+# man smgl-setup
+}}}
+
+Now is the **perfect** time to do a rebuild of your system. Once you have booted your new system, it's recommended to:
+
+* ensure that networking is up (run {{{ifconfig}}})
+* run {{{sorcery update}}} to update the sorcery scripts
+* run {{{scribe update && cast smgl-archspecs}}} to update the spell-lists and tell [[Sorcery]] the latest list for supported CPU architectures
+* configure Sorcery (run {{{sorcery}}}, then go to **Options**)
+* update essential [[Spell|spells]] for compiling //(when gettext/glibc are updated to use your architecture specs)// by using the command (compile in order):
+
+{{{
+# cast -c binutils gcc g++ gettext glibc
+}}}
+
+**Note:** due to circular dependency of spell "gmp" //(gcc depends on it)//, the command above may not be successful. In that case, you can temporarily disable casting "g++" with commands in following order:
+
+{{{
+# sorcery hold g++
+# cast -c binutils gcc
+# sorcery unhold g++
+# cast -c g++ gettext glibc
+}}}
+
+* run {{{sorcery rebuild}}} to build everything with your chosen optimizations
+
+Doing all of this will recompile your installed spells and optimize them for your processor. We **highly** recommend that you do this now, as it can speed up your system. \\ The longer you hold off, the more spells will be recompiled later on.
+
+Once again, to rebuild your system anytime, type:
+
+{{{
+# sorcery rebuild
+}}}
+
+//Welcome to Source Mage!//

@@ -1,0 +1,86 @@
+= Grimoire stable-0.7 release =
+
+The target release date is **2007/02/16**.
+
+This release is being shepherded by **Seth Woolley** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot-0.6 x86, extracts as 'smgl' | sandalle | [[http://lug.wsu.edu/~sandalle/smgl-stable-0.6.tar.bz2|smgl-stable-0.6.tar.bz2]] |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | lynx | | X | | part of non-gating bug: #12857, text-editor and pager provides |
+| bash | eekee | | X | | (note: bash didn't change since 0.6 --emrys) |
+| binutils | sandalle | | X | | |
+| bison | sandalle | | X | | |
+| bzip2 | ruskie | | X | | |
+| console-tools | tboatman | | X | | versions consistent across grimoires - no open bugs |
+| console-data | tboatman | | X | | same as console-tools |
+| coreutils | eekee | | X | | (this has changes since 0.6 but isn't a higher PATCHLEVEL so doesn't try to update --emrys) |
+| cpio | ruskie | | X | | |
+| dialog | afrayedknot | | X | | |
+| diffutils | CuZnDragon | | X | | No bugs found, compiles fine. |
+| e2fsprogs | sandalle | | X | | |
+| file | sandalle | | X | | Fine, excepting version difference at primary site |
+| findutils | sandalle | | X | | |
+| flex | sandalle | | X | | |
+| gawk | afrayedknot | | X | | |
+| gcc | sandalle | | X | | |
+| gettext | sandalle | | X | | |
+| glibc | lynx | | X | | nongating: glibc optionally depend on perl (Bug #12962)]] |
+| gnupg | ruskie | | X | | This works per-se but has a problem it lacks a trigger to be recast on curl upgrade -- did you notice i fixed this in test with commit [[http://scmweb.sourcemage.org/?p=smgl/grimoire.git;a=commit;h=1c2da056541d694c6df186fdc4db22e233a366ee]]? -iuso - yeah that fixed it |
+| grep | lejatorn | | X | | There is bug #12990 but can't reproduce it and doesn't seem gating to me. No problem besides that. |
+| grub | sandalle | | X | | Updates and installs fine, but has a potential issue with #12852 |
+| gzip | ruskie | | X | | |
+| iana-etc | sandalle | | X | | Bug #13075 non-gating |
+| init.d | emrys | | X | | |
+| installwatch | afrayedknot | | X | | |
+| less | sandalle | | X | | |
+| lilo | ruskie | | X | | Still builds and runs |
+| locale | lynx | | X | | nongating: #13485 |
+| kbd | lynx | | X | | |
+| m4 | sandalle | | X | | |
+| make | CuZnDragon | | X | | No bugs found, compiles fine. |
+| mktemp | sandalle | | X | | |
+| module-init-tools | sandalle | | X | | No changes, casts fine, but depends on udev (#13265, #13417) |
+| nano | sandalle | | X | | |
+| ncurses | p3pilot | | X | | #10004 Updated to 5.6. I think this bug is squashed, should be closed |
+| netconf | iuso | | X | | unfortunately i'm too busy with work to fix these, but they aren't serious enough to justify holding the release back. signing off. #10517, #11694. |
+| net-tools | sandalle | | X | | Bug #10207 and Bug #10746 are non-gating |
+| patch | CuZnDragon | | X | | No bugs found, compiles fine. |
+| perl | sandalle | | X | | Bug #10392, Bug #10493, and Bug #10731. None of these are regressions, but they do cause problems and are fixed and integrated |
+| procps | sandalle | | X | | casts fine, the only bug is the coreutils/util-linux one (resolved) |
+| readline | p3pilot | | X | | #8506, Bug is squashed, should be closed |
+| sed | sandalle | | X | | casts and upgrades ok |
+| shadow | sobukus | | X | | #8834 is now integrated, issue with INSTALL_ROOT is saved for future |
+| simpleinit-msb | sandalle | | X | | |
+| smgl-archspecs | sobukus | | X | | #13240 is close to being resolved by releasing 0.7.x with this stable |
+| smgl-fhs | lynx | | X | | Non-Gating #8653 (master bug) |
+| tar | ruskie | | X | | |
+| texinfo | sandalle | | X | | |
+| udev | iuso | | X | | fixed and integrated: #13417, #13500 |
+| unzip | ruskie | | X | | |
+| util-linux | lynx | | X | | casts fine, also tested with the kill fixes |
+| wget | afrayedknot | | X | | wget broke because of bug #13121. Still signed off because it should happen (argueably) rarely and it's not gonna be fixed soon anyway. |
+| zlib | sandalle | | X | | |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| apache2 | sandalle | | X | | We need to figure out how best to fix Bug #13295. This is gating. Another gating bug is #13510 (both are fixed and integrated) |
+| dermixd | sobukus | | X | | nothing new |
+| gaim | p3pilot | | X | | Fails missing depends xml-parser.expat. #13515, Fixed in test, integrated. |
+| ion3 | eekee | | X | | |
+| lighttpd | p3pilot | | X | | |
+| linux-pam | sobukus | | X | | |
+| mpg123 | sobukus | | X | | nothing new |
+| mutt | emrys | | | | need to get the devel branch up to current incl. security fixes -- punting, didn't have time to update patches |
+| pam_ldap | sobukus | | X | | nothing new |
+| php | p3pilot | | X | | |
+| pure-ftpd | lejatorn | | X | | init script was not installed, had to run 'telinit spellinstall' afterwards. No problem whatsoever besides that. |
+| sudo | emrys | | | | |
+| x3270 | tboatman | | X | | bugs #11220 and #13490 (gating/regression) fixed in test. Integrated to RC - thanks emrys! |
+| xfsprogs | sandalle | | X | | |

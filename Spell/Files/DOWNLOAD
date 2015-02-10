@@ -1,0 +1,61 @@
+= DOWNLOAD =
+
+The DOWNLOAD file is there for unique situations where acquiring the source cannot be done by the supported methods provided by [[Sorcery]].
+
+The following is an example of a [[Spell|spell]] that offers either a stable version or an svn version of the source. The file also handles updating the source tarball if the source cache already exists. However, you can pass the {{{-d}}} flag to [[Sorcery/Commands/Cast|cast]] and the source will be deleted and a new check out will be performed. Finally, it is always a good idea to return whether the download succeeded or not.
+
+Example DOWNLOAD file:
+
+{{{
+local success
+local source_url=${SOURCE_URL/smgl_svn:\/\//}
+message "${MESSAGE_COLOR}My *really* cool download handler${DEFAULT_COLOR}"
+if [[ "$SVN_CO" == "y" ]] ; then
+    if [[ $FORCE_DOWNLOAD ]] ; then
+        message "${MESSAGE_COLOR}removing old source force download${DEFAULT_COLOR}" &&
+        rm -f $SOURCE_CACHE/$SOURCE
+    fi
+    if [[ -f $SOURCE_CACHE/$SOURCE ]] ; then
+        message "${MESSAGE_COLOR}extracting old tarball in $TMP_DIR${DEFAULT_COLOR}" &&
+        cd $TMP_DIR &&
+        tar -xjf $SOURCE_CACHE/$SOURCE &&
+        cd ${SOURCE_DIRECTORY/$BUILD_DIRECTORY\//} &&
+        message "${MESSAGE_COLOR}running svn update${DEFAULT_COLOR}" &&
+        svn up &&
+        message "${MESSAGE_COLOR}creating source tarball${DEFAULT_COLOR}" &&
+        cd ../ &&
+        tar -cjf $SOURCE ${SOURCE_DIRECTORY/$BUILD_DIRECTORY\//} &&
+        mv $SOURCE $SOURCE_CACHE &&
+        success="Yeah!"
+    else
+        message "${MESSAGE_COLOR}creating new tarball${DEFAULT_COLOR}" &&
+        cd $TMP_DIR &&
+        mkdir ${SOURCE_DIRECTORY/$BUILD_DIRECTORY\//} &&
+        cd ${SOURCE_DIRECTORY/$BUILD_DIRECTORY\//} &&
+        message "${MESSAGE_COLOR}running svn checkout${DEFAULT_COLOR}" &&
+        svn co $source_url ./ &&
+        message "${MESSAGE_COLOR}creating source tarball${DEFAULT_COLOR}" &&
+        cd ../ &&
+        tar -cjf $SOURCE ${SOURCE_DIRECTORY/$BUILD_DIRECTORY\//} &&
+        mv $SOURCE $SOURCE_CACHE &&
+        success="Yeah!"
+    fi
+else
+    if [[ $FORCE_DOWNLOAD ]] ; then
+        message "${MESSAGE_COLOR}removing old sources${DEFAULT_COLOR}" &&
+        rm -f $SOURCE_CACHE/$SOURCE
+        rm -f $SOURCE_CACHE/$SOURCE2
+    fi
+    [ ! -f $SOURCE_CACHE/$SOURCE  ] && 
+    wget -O $SOURCE_CACHE/$SOURCE $SOURCE_URL
+    [ ! -f $SOURCE_CACHE/$SOURCE2 ] && 
+    wget -O $SOURCE_CACHE/$SOURCE2 $SOURCE2_URL
+    success="Yup!"
+fi
+
+if [[ -z $success ]] ; then
+    return 1
+else
+    return 0
+fi
+}}}

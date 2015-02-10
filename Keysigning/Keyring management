@@ -1,0 +1,46 @@
+= GPG keyring management =
+
+This document assumes that you're fairly good at using gnupg. All the commands will be precisely layed out and can be typed in almost verbatim, however, things like "how to find your GPG key ID" will not be described. For things like that the author recommends using [[http://google.com/|Google]] or the [[https://www.gnupg.org/gph/en/manual.html|gnupg handbook]].
+
+== Export your key ==
+
+First you must export the public key you're going to use (henceforth referred to as "your" key). It is fairly difficult for you to accidentally export the secret key, so don't worry about it too much. If you follow the steps in this guide, it'll be easy.
+
+{{{ 
+gpg --export <your-key-id> > mykey.gpg
+}}}
+
+Now we've got a binary form of your key. Source Mage's keyrings are stored in a binary format, so it will be easy to hook your key into the keyring.
+
+== Import your key into the desired keyring ==
+
+Here's where it can be a bit tricky. gnupg wants to use your keyrings in {{{~/.gpg/}}} but we don't want those to mingle with and potentially taint Source Mage's keyrings. It is very important that only the key we want to import gets into the keyring, because these are used to cryptographically verify tarballs and other important things. If rogue keys get in there, someone could potentially make a [[Grimoire]] where every spell is {{{rm -rf /*}}} and it'd show up as "valid".
+
+{{{
+gpg --no-default-keyring --keyring ./sorcery-devel.gpg --import-options import-clean,import-minimal --import mykey.gpg
+}}}
+
+Here we specify that we don't want to use the default keyring, which is important. Then we tell it which keyring we do want to use, in this case I'm using {{{sorcery-devel.gpg}}}. We then tell it which key to import. The specified keyring requires an absolute path. If one isn't given, then it creates {{{~/.gpg/sorcery-devel.gpg}}}, which isn't very useful.
+
+Flags {{{--import-options import-clean,import-minimal}}} make sure that we're only going to import the key specified. To quote the man page, for the lazy:
+
+{{{
+clean
+       Compact (by removing all signatures except  the  selfsig)
+       any  user  ID  that is no longer usable (e.g. revoked, or
+       expired). Then, remove any signatures that are not usable
+       by  the  trust  calculations.  Specifically, this removes
+       any signature that does not validate, any signature  that
+       is  superseded  by a later signature, revoked signatures,
+       and signatures issued by keys that are not present on the
+       keyring.
+
+minimize
+       Make  the key as small as possible. This removes all sig-
+       natures from each user ID  except  for  the  most  recent
+       self-signature.
+}}}
+
+Basically we remove all the cruft from the key that we don't care about. Don't worry, it's all still up on a keyserver, so if you've made a mistake, you can {{{--recv-keys}}} it back anyway.
+
+W00t! You've successfully added your key to a keyring! Way to go!

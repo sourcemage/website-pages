@@ -1,0 +1,47 @@
+= Spell standards =
+
+This page is for listing standards. It can be used as reference material for creating and editing [[Spell|spells]]. You should check here before copying some neat trick from an older spell.
+
+Another purpose of this document is to gather together info about everything that needs to be removed from/changed in the [[Grimoire|grimoires]]. Therefore when adding an entry, you should include some data about how often the //no-no// in question still appears in the grimoire(s).
+
+== Things spells should not do ==
+
+* contain tabs anywhere else than [[Spell/Files/HISTORY|HISTORY]] (and even there only)
+* call {{{exit}}}. Use {{{return 1}}} when aborting from a spell
+* [[#export|export variables]]
+* query the user anywhere else but in [[Spell/Files/CONFIGURE|CONFIGURE]], [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]], [[Spell/Files/DEPENDS|DEPENDS]] (only as necessary), or rarely in [[Spell/Files/PREPARE|PREPARE]] -- modify {{{Makefile}}}s if you have to
+* do downloading anywhere else but in [[Spell/Files/DOWNLOAD|DOWNLOAD]] for specific download instructions
+* install man pages anywhere but in {{{/usr/share/man}}}
+* install info pages anywhere but in {{{/usr/share/info}}}
+* install files into {{{/usr/local}}}
+* have names matching lowercased providers in any [[Spell/Files/PROVIDES|PROVIDES]] file in the [[Codex]]
+* use {{{UPDATED}}} (see [[Spell/Files/DETAILS|DETAILS]] documentation which includes {{{PATCHLEVEL}}} and {{{SECURITY_PATCH}}})
+* use {{{uname}}}, {{{$HOST}}}, etc. to detect CPU arch, but {{{SMGL_ARCHSPECS[?]}}} (in transition periods don't forget to depend on "smgl-archspecs" spell)
+* modify any variable provided by [[Sorcery]] (excluding {{{OPTS}}} and only during [[Spell/Files/BUILD|BUILD]] and [[Spell/Files/INSTALL|INSTALL]])
+* use a variable in a spell that is not declared //local//, //persistent//, or is explicitly provided by sorcery (all temporary variables should be //local//)
+* fail from a spell file when a non-fatal error occurs (for example, many spells call install-info in [[Spell/Files/POST_REMOVE|POST_REMOVE]])
+* use {{{STAGED_INSTALL="off"}}} without first consulting the Sorcery Team
+* use relative paths to find files in the section or grimoire
+* refer to files in another section
+* install to the system outside of INSTALL, [[Spell/Files/POST_INSTALL|POST_INSTALL]], [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]], [[Spell/Files/TRANSFER|TRANSFER]] or [[Spell/Files/FINAL|FINAL]]
+* mismatch the spell's directory name and {{{$SPELL}}}
+* do anything time consuming in DETAILS
+* write to {{{$SPELL_CONFIG}}} directly (use {{{config_*}}}, {{{query*}}}, persistent variables)
+* use {{{MAKE_NJOBS}}} in DETAILS to overwrite {{{-j}}} for {{{make}}}. use {{{make_single}}} and {{{make_normal}}} instead
+* use other than POSIX-compliant shell code in {{{profile.d}}} scripts
+* have spaces or colons in {{{VERSION}}}, {{{SPELL}}}, dependency flags and some others
+* use sub_dependencies to pick a specific version (this should be done by forking a spell and naming it appropriately then depending on it)
+* have syntax errors :-)
+
+unlikely errors:
+
+* {{{persistent_add}}} any non-conditional variable present in DETAILS (e.g., {{{VERSION}}})
+* {{{persistent_add}}} any variable provided by sorcery
+* modify {{{IFS}}}
+* use [[Grimoire/API|build API]] 1
+
+{{#export}} **Note:** exporting variables in spells should be avoided, as sorcery makes no guarantee that they will be around in another file. Therefore even if it works, it works by accident and may break in the future. There might be some cases where compiling a program successfully requires an {{{export <variable>=<value>}}}, but for spells' internal operation it is **never** allowed. Use CONFIGURE and persistent variables instead. Also note that exporting important environmental variables can break other spells in queue.
+
+== Integrity checking ==
+
+See source [[Spell/Standards/Integrity|integrity checking standards]] for more information.

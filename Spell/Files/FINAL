@@ -1,0 +1,5 @@
+= FINAL =
+
+Often used to display some important follow-up action that the sys-admin may need to take. \\ Also used to clean up special build directories or other cruft needed during the [[Sorcery/Commands/Cast|cast]].
+
+You use it if you really need to do something while [[Sorcery]] isn't looking.

@@ -1,0 +1,59 @@
+= Casey Harkins =
+
+**IRC nick(s):** charkins
+
+**Role in SMGL:** Random things
+
+**Age/Birthdate:** 25 (as of August 2003)
+
+**Location/Country:** Madison, WI USA
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+I started using Linux (Slackware 96, w/ 2.0 kernel and XFree86 3.1.2) in the fall of 1996 to have a better development environment. I've been using it almost exclusively since.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+I started right at the time of the great divide of Sorcery (early 2002). I followed both lunar penguin and the new sorcery (now smgl) for a week or so, and decided to use smgl.
+
+**What piqued your interest in SMGL initially?**
+
+There was an article posted on Slashdot about Sorcery. I guess the idea of having everything built from scratch on my machine was what initially hooked me. After installing it, it was the simplicity that kept me hooked.
+
+**What future do you personally see for SMGL?**
+
+World domination of course. I see a great potential for SMGL to be used for creating and managing fine tuned installations for organizations. I switched the majority of our user machines at work from Windows to Linux back in 2001. We have roughly 20 user machines and 6 servers between 2 offices and 4 remote locations, all running SMGL. I had used [[http://www.redhat.com|other]], [[http://www.mandriva.com|distributions]] before, but found myself often working backwords to remove unnecessary software and constantly fighting their configuration tools. Improving SMGL functionality in this niche is my primary goal for my SMGL work. Fulfilling this goal will require work on the iso, some sorcery hacking and other pieces here and there.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I started college at the [[http://www.uwlax.edu/|University of Wisconsin - La Crosse]] in the fall of 1996 and transferred to the [[http://www.wisc.edu/|Univeristy of Wisconsin - Madison]] in the spring of 1999. I am majoring in [[http://www.cs.wisc.edu/|Computer Science]] and was a coordinator for a brief period at the [[http://www.upl.cs.wisc.edu/|UPL]]. As of May 2003, I need only 2nd and 3rd semesters of Spanish left to graduate. Unfortunately, my job has consumed much of my time, and I'm slowly finishing those last two classes through coorespondance.
+
+**What other OS programs/software have you worked on?**
+
+The largest piece of software I worked on was a sales force automation program I wrote for my employer. It will be getting a complete re-write soon, and hopefully portions of it will be open sourced. This project required me to do some development with the OpenOffice sdk as well. I've written a few WindowMaker dockapps, but only [[http://wmappl.sourceforge.net/|one of which]] was ever released to the public. Contributed small patches here and there and written lots of code just to write some code.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+vim
+
+**KDE or GNOME?**
+
+I have been using [[http://www.windowmaker.org|WindowMaker]] since 1996. I have no need for any of the bells and whistles either offer. I pretty much stick to xterm, mozilla, gaim, lostirc or xchat, rox, gv, mplayer, OpenOffice and the command line for everything else.
+
+**BSD or GPL?**
+
+GPL
+
+== Strictly personal ==
+
+**What kind of car do you drive? Or what is your dream car?**
+
+I bought a Civic Hybrid in November 2003. My dream car is a Dolorian (with the flux capacitor of course).
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+Soon.

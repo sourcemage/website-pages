@@ -1,0 +1,33 @@
+= Codex =
+
+The Codex is the collection of [[Grimoire|grimoires]] used in Source Mage. \\ You can view the latest Codex at http://codex.sourcemage.org.
+
+== Managing grimoires ==
+
+All of the official grimoires can be added or removed by using the [[Sorcery/Commands/Scribe|scribe]] command, which defaults to prepending to the newly added grimoire in index.
+
+For example, to add the [[Grimoire/test|test]] and [[Grimoire/games|games]] grimoires and remove the [[Grimoire/stable|stable]] grimoire, you would do the following:
+
+{{{
+# scribe add games
+# scribe add test
+# scribe remove stable
+}}}
+
+That would then give you a codex index (view with {{{scribe index}}}) like this:
+
+{{{
+Codex Listing
+-------------
+
+ [0] : test : /var/lib/sorcery/codex/test
+ [1] : games : /var/lib/sorcery/codex/games
+}}}
+
+The main Source Mage grimoires are also available via [[http://rsync.samba.org/|rsync]] by running a command like:
+
+{{{
+scribe add games from rsync://download.sourcemage.org::codex/games
+}}}
+
+Grimoire tarballs are generated and published on http://codex.sourcemage.org every 6 hours: \\ at 0, 6, 12 and 18 hours EST ([[http://www.wikipedia.org/wiki/Time_zone|EST]] Eastern Standard Time = [[http://www.wikipedia.org/wiki/Coordinated_Universal_Time|UTC]] Coordinated Universal Time - 5h).

@@ -1,0 +1,81 @@
+= Grimoire stable-0.11 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/06/01**. The target release date is **2007/06/15**.
+
+This release is being shepherded by **Juuso Alasuutari** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot 0.10 x86 | sandalle | [[http://download.sourcemage.org/cauldron/image/official/smgl-stable-0.10-basesystem-x86.tar.bz2|smgl-stable-0.10-basesystem-x86.tar.bz2]] ([[http://download.sourcemage.org/cauldron/image/official/smgl-stable-0.10-basesystem-x86.tar.bz2.asc|sig]]) |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | X (lynx) | #12857 half fixed... what PAGERS do we have to offer? not gating |
+| bash | p3pilot | X | X | X (sandalle) | no bugs found |
+| binutils | sandalle | X | X | | no bugs found |
+| bison | iuso | X | X | X (sandalle) | no open bugs |
+| bzip2 | iuso | X | X | X (sandalle) | no open bugs |
+| console-tools | iuso | X | X | X (sandalle) | #13803 was resolved WORKSFORME, we're clear here |
+| console-data | iuso | X | X | X (sandalle) | no bugs found |
+| coreutils | sandalle | X | X | X (lynx) | no bugs found |
+| cpio | iuso | X | X | X (lynx) | no bugs found |
+| device-mapper | iuso | X | X | | no bugs found |
+| dhcpcd | iuso | X | | X (sandalle) | #11614 about dhcpcd on the ISO - Please comment! |
+| dialog | sandalle | X | X | X (lynx) | no bugs found |
+| diffutils | sandalle | X | X | | no bugs found |
+| e2fsprogs | sandalle | X | X | | no bugs found |
+| elvis | sandalle | X | X | | no bugs found |
+| file | | X | | X (lynx) | so many hits for "file", but no bug filed for file |
+| findutils | | X | | X (lynx) | no bugs found |
+| flex | iuso | X | X | | no bugs found |
+| gawk | iuso | X | X | | no bugs found |
+| g++ | sandalle | X | X | | #10645 with distcc; #13595 with INSTALL_ROOT |
+| gcc | sandalle | X | X | | #9667, #10645, #11701, #12810, #13595, #13778 (not all about "the" gcc, though) |
+| gettext | iuso | X | X | | no bugs found |
+| glibc | sandalle | X | X | | 7 direct hits, mostly about cross compilation; not gating, I suppose... |
+| gnupg | sandalle | X | X | | just #9666 on SPARC |
+| grep | sandalle | X | X | | no bugs found |
+| grub | | X | | X (sandalle) | #11474 is still there... |
+| gzip | sandalle | X | X | X (lynx) | no bugs found |
+| iana-etc | lynx | X | X | | #13075 fixed |
+| init.d | | X | | X (sandalle) | #8198 Can we settle the mountall.sh? Same thing: #13450, #9177; #13363 FIXED in -rc; other bugs are enhancements |
+| installwatch | iuso | X | X | | no bugs found |
+| jed | iuso | X | X | | no bugs found |
+| jfsutils | sandalle | X | X | | no bugs found |
+| kbd | sandalle | X | X | | no relevant bugs |
+| less | sandalle | X | X | X (lynx) | no bugs found |
+| lilo | iuso | X | X | | #8191 is now closed |
+| locale | sandalle | X | X | | no bugs found |
+| m4 | iuso | X | X | | no bugs found |
+| make | iuso | X | X | | no bugs found |
+| mktemp | iuso | X | X | | no bugs found |
+| module-init-tools | sandalle | X | X | X (lynx) | no bugs found |
+| nano | sandalle | X | X | X (lynx) | no bugs found |
+| ncurses | sandalle | X | X | | #13654 still not closed... but serious; #13731 fixed |
+| netconf | sandalle | X | X | | #10517 and #11694 |
+| net-tools | sandalle | X | X | X (lynx) | #10297 and #10746 and #13823 (regression) |
+| patch | iuso | X | X | | no bugs found |
+| perl | iuso | X | X | | no direct bugs found |
+| procps | sobukus | X | X | | no bugs |
+| readline | p3pilot | X | X | X (lynx) | #8506 more about the practice of delete-before-install... and OLD |
+| reiserfsprogs | iuso | X | X | | no bugs found |
+| sed | iuso | X | X | | no bugs found |
+| shadow | sobukus | X | X | | #13505 with debate and a test branch nobody is interested in and #13601 where one has to check upstream's status; won't call either gating |
+| simpleinit-msb | iuso | X | X | | no bugs found |
+| smgl-archspecs | sobukus | X | X | | no open bugs, no changes |
+| smgl-fhs | sandalle | X | X | | #11747, #13112, #13354, #13777 |
+| tar | sobukus | X | X | | no bugs |
+| texinfo | sandalle | X | X | | no bugs found |
+| udev | sandalle | X | X | X (lynx) | #12700 and #12739 |
+| unzip | sobukus | X | X | | no bugs |
+| util-linux | iuso | X | X | | no bugs found |
+| vim | sandalle | X | X | | no bugs found |
+| wget | sandalle | X | X | | no bugs found |
+| xfsprogs | sandalle | X | X | | no bugs found |
+| zlib | sandalle | X | X | | no bugs found |
+
+== Extra spells ==
+
+None

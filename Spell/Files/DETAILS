@@ -1,0 +1,335 @@
+= DETAILS =
+
+The DETAILS file is used to contain the information about the application that the [[Spell|spell]] is for.
+
+Example of a typical DETAILS file:
+
+{{{
+           SPELL=foo
+         VERSION=001
+          SOURCE=${SPELL}-${VERSION}.tar.bz2
+         SOURCE2=${SOURCE}.asc
+   SOURCE_URL[0]=http://example.com/dir/misc/${SOURCE}
+   SOURCE_URL[1]=http://backup.example.com/dir/misc/${SOURCE}
+  SOURCE2_URL[0]=http://example.com/dir/misc/${SOURCE2}
+  SOURCE2_URL[1]=http://backup.example.com/dir/misc/${SOURCE2}
+  SOURCE2_IGNORE=signature
+      SOURCE_GPG="name.gpg:${SOURCE2}:VERIFIED_UPSTREAM_KEY"
+SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
+        WEB_SITE=http://www.example.com
+         ENTERED=20100610
+      LICENSE[0]=GPL
+      PATCHLEVEL=1 # Optional if 0
+  SECURITY_PATCH=0 # Optional if 0
+        KEYWORDS="example keywords"
+           SHORT="this is a one-line brief description"
+cat << EOF
+Description that is wrapped to 80 columns or less.
+EOF
+}}}
+----
+
+== Variables ==
+
+**SPELL**
+
+This specifies the name of the spell you are creating. It must be lower case (we let the developers of the application choose the way they'd like it spelled).
+
+{{{
+SPELL="xzgv"
+}}}
+
+**VERSION**
+
+This specifies the current version number of the application in question. Please be exact.
+
+{{{
+VERSION="0.7"
+}}}
+
+**SOURCE**
+
+Specifies the name of the source file of the application. Must be the full name not including any path information.
+
+{{{
+SOURCE="${SPELL}-${VERSION}.tar.gz"
+}}}
+
+**SOURCEn**
+
+Specifies the names of additional source files for the application. The numbering starts with "2".
+
+{{{
+SOURCE2="xzgv-addons.tar.gz"
+}}}
+
+**SOURCE_DIRECTORY**
+
+Used to specify the location where the source will be unpacked. You must pay special attention to the naming of the directory when unpacking the source file (i.e. if the subdirectory is {{{${SPELL}-${VERSION}}}}, or perhaps just {{{${SPELL}}}}, etc.). {{{${BUILD_DIRECTORY}}}} is a special variable which is set by the sorcery tools to allow you to not have to worry about where sorcery will unpack the source to, currently sorcery uses {{{/usr/src}}} to begin the unpacking of the application's source.
+
+{{{
+SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
+}}}
+
+**SOURCEn_DIRECTORY**
+
+Used to specify the location for multiple source directories where 'n' is a positive integer.
+
+{{{
+SOURCE2_DIRECTORY="${BUILD_DIRECTORY}/x509-${VERSION2}-${SPELL}-${VERSION}"
+}}}
+
+**SOURCE_URL[*]**
+
+An array where you specify as many targets of where to download the source from. Must specify the full path (including filename) of the application source, so it is known where to download the spell from. Incrementing the number in the []'s will add additional entries, attempted in numerical order.
+
+{{{
+SOURCE_URL[0]=http://xzgv.browser.org/${SOURCE}
+}}}
+
+**SOURCEn_URL[*]**
+
+Arrays specifying the download links for additional {{{SOURCEn}}} entries. The numbering starts with "2" (i.e. {{{SOURCE2_URL}}}).
+
+{{{
+SOURCE2_URL[0]=http://xzgv.browser.org/${SOURCE2}
+}}}
+
+You can use special global variables already pre-defined by [[Sorcery]], e.g. URL for [[http://sourceforge.net/|SourceForge]] project:
+
+{{{
+SOURCE_URL[0]=${SOURCEFORGE_URL}/${SPELL}/${SOURCE}
+}}}
+
+**SOURCE_HINTS/SOURCEn_HINTS**
+
+Special hints for [[Sorcery/Commands/Summon|summon]], so sources can be downloaded without error. Possible values currently include:
+* {{{old_svn_compat}}} -- maintain compatibility with original [[http://subversion.apache.org/|Subversion]] URL format (needed for {{{SOURCE_URL}}}s that use {{{http://}}} instead of {{{svn://}}})
+* {{{no-check-certificate}}} -- disable certificate checking for HTTPS transfers (useful for self-signed certificates on upstream download locations)
+
+{{{
+SOURCE_HINTS="no-check-certificate"
+SOURCE2_HINTS="no-check-certificate"
+}}}
+
+**FORCE_DOWNLOAD**
+
+When set to 'on', the source will be downloaded by sorcery, regardless of it being present in the spool directory.
+
+{{{
+FORCE_DOWNLOAD=on
+FORCE_DOWNLOAD[2]=on # for SOURCE2 not SOURCE[2]!
+FORCE_DOWNLOAD[n]=on # for SOURCEn not SOURCE[n]!
+}}}
+
+**ACTIVE_FTP**
+
+Set to 'on' if the spell's sources are on FTP servers that are not accessible in passive FTP mode.
+
+{{{
+ACTIVE_FTP=on
+}}}
+
+**SOURCE_HASH/SOURCEn_HASH**
+
+The hash of the source file. Consists of {{{<algorithm>:<hash>:<verification level>}}}. The algorithm we currently use is sha512. Verification level can be either {{{WORKS_FOR_ME}}} (no verification done) or other verification levels listed in source [[Spell/Standards/Integrity|integrity checking standards]].
+
+The second form is for multiple hash verifications, where 'n' is a positive integer.
+
+{{{
+SOURCE_HASH=sha512:cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e:UPSTREAM_HASH
+}}}
+
+**SOURCE_GPG/SOURCEn_GPG**
+
+A signature used to verify the source file. Consists of {{{<key file>:<signature file>:<verification level>}}}. The key file has to exist in either the spell, the section or the grimoire the spell is in. The signature should be in the spell or downloaded by the spell. Verification levels are listed in source [[Spell/Standards/Integrity|integrity checking standards]]. See [[Spell/GPG checking|Spell GPG checking]] for details about how to generate a key.
+
+The second form is for multiple source verifications, there 'n' is a positive integer.
+
+{{{
+SOURCE_GPG="gurus.gpg:${SOURCE}.sig:WORKS_FOR_ME"
+}}}
+
+**SOURCE_IGNORE/SOURCEn_IGNORE**
+
+This can be used instead of {{{SOURCE_GPG}}} or {{{SOURCE_HASH}}} to tell sorcery not to check the file. The content of this variable states the reason why it shouldn't be checked. It can be one of:
+* //signature// -- the source is an upstream GPG signature
+* //unversioned// -- the source changes without changing its filename
+* //volatile// -- the source is downloaded from a version control system like CVS, Subversion, Git or Mercurial
+
+{{{
+SOURCE2_IGNORE=signature
+}}}
+
+**WEB_SITE**
+
+Used to document the applications "official" website (if there is one).
+
+{{{
+WEB_SITE=http://xzgv.browser.org/
+}}}
+
+**ENTERED**
+
+This is a numerical string indicating the date this spell was "officially" created. Set this to the day you submit the spell for approval.
+
+{{{
+ENTERED=20020406
+}}}
+
+**PATCHLEVEL**
+
+The number of revisions a spell has gone through without changing {{{VERSION}}}. This defaults to "0" if ommited. Any change to a spell that should trigger a rebuild on all systems using that spell should have {{{PATCHLEVEL}}} updated. On a {{{VERSION}}} change {{{PATCHLEVEL}}} should be removed.
+
+{{{
+PATCHLEVEL=2
+}}}
+
+**SECURITY_PATCH**
+
+The number of security related spell changes or version updates the spell has gone through. This number is used by {{{sorcery queue-security}}} to determine what spells need to be rebuilt for security reasons.
+
+{{{
+SECURITY_PATCH=3
+}}}
+
+**Note:** {{{SECURITY_PATCH}}} must never be reset.
+
+**LICENSE[*]**
+
+Specifies the licenses this application has been released under. Please use the acronym where applicable. The array elements correspond to the different source files in the same way as the MD5 array elements.
+
+{{{
+LICENSE[0]=GPL
+LICENSE[1]=FDL
+}}}
+
+**KEYWORDS**
+
+A list of lowercased generic single-word descriptions of a package for easier search.
+
+{{{
+KEYWORDS="python www"
+}}}
+
+**SHORT**
+
+A brief description of the spell. What it is, it's purpose etc. Used primarily by the [[Sorcery/Commands/Gaze|gaze]] command of the [[Sorcery/Commands|sorcery tools]].
+
+**Note:** the entire phrase should fit on one line in the DETAILS file, including the spacing for {{{SHORT=}}}.
+
+{{{
+SHORT="GTK+/Imlib-based picture viewer for X"
+}}}
+
+**DOCS**
+
+Optional tag used to override the implicit {{{DOCS}}} variable to change what docs are installed. Only copies files, for dirs use {{{DOC_DIRS}}} instead.
+
+{{{
+DOCS="README* FAQ* CHAN* DOC* SETUP LICENSE COPYING NEWS *rc"
+DOCS="README* BUGS NEWS COPYING data/COPYING.* docs/example.lircrc"
+DOCS="$DOCS etc/*.conf"
+}}}
+
+**DOC_DIRS**
+
+Optional tag used to override the implicit {{{DOC_DIRS}}} variable to change what doc dirs are installed. Only copies dirs and their contents.
+
+{{{
+DOC_DIRS="doc* conf"
+}}}
+
+**GATHER_DOCS**
+
+Used to enable or disable gathering of docs defined in {{{DOCS}}} and {{{DOC_DIRS}}} (both can be pre-defined in {{{/etc/sorcery/config}}}).
+
+{{{
+GATHER_DOCS="off"
+}}}
+
+**ARCHIVE**
+
+This forces the enabling or disabling to archive a spell. The option is either "on" or "off". This should be set to "off" when the spell is a binary install. \\ Otherwise, this should remain untouched, as this is a variable set by user's preferences.
+
+{{{
+ARCHIVE="off"
+}}}
+
+**STAGED_INSTALL**
+
+This one is used to turn off [[Stage root|stage root]] install managed by [[castfs]]. The default is 'on' when "castfs" is installed.
+
+{{{
+STAGED_INSTALL=off
+}}}
+
+**Note:** you shouldn't normally set this variable.
+
+**TMPFS**
+
+Attempt to compile entirely in RAM. This also modifies {{{mk_source_dir}}} function, which can be used in [[Spell/Files/PRE_BUILD|PRE_BUILD]] later to create {{{${SOURCE_DIRECTORY}}}} with specified size in tmpfs //(file system stored in volatile memory)//. You need one more argument for the size. Usually it's a global option, but can be used in DETAILS to override default behavior on a spell level:
+
+{{{
+TMPFS=off
+}}}
+
+But if it's turned on, PRE_BUILD can look like this:
+
+{{{
+# requires 3 gigabytes to unpack sources
+mk_source_dir "${SOURCE_DIRECTORY}" 3g &&
+cd "${SOURCE_DIRECTORY}" &&
+unpack_file
+}}}
+
+**CCACHE**
+
+Manages [[http://ccache.samba.org/|ccache]] (compiler cache) ability on a spell level. This allows to cache the initial compilation of a spell so that upgrading the spell later on will be much faster.
+
+{{{
+CCACHE=on
+}}}
+
+**Note:** you shouldn't normally set this variable. Use the global setting in sorcery [[Sorcery/Feature menu|feature menu]] instead.
+
+**REJECT**
+
+This is a short description of why a spell was rejected. This should be present for spells in [[Grimoire/z-rejected|z-rejected]] grimoire.
+
+{{{
+REJECT="has licensing issues"
+}}}
+----
+
+After all of the entries have been made for the DETAILS file. The last thing should be the long description for this spell. Used to give a more lengthy description of what this spell is and it's common uses etc. The description must be aligned to 80 characters (no line should exceed the 80th character).
+
+{{{
+cat << EOF
+xzgv is a GTK+/Imlib-based picture viewer for X, which supports most popular
+image formats. It provides a thumbnail-based file selector, and allows panning
+and fit-to-window methods of viewing. It has mouse support as well, but can be
+used solely from the keyboard.
+EOF
+}}}
+----
+
+== Deprecated variables ==
+
+**UPDATED**
+
+This is a numerical string indicating the date this spell was last changed. Used as a reference for the sorcery scripts to know if a spell has been updated (this forces a recompile so only update for non-version updates that need a recompile; version updates and non-recompile-needed changes should not touch this variable).
+
+{{{
+UPDATED=20020406
+}}}
+
+**Note:** This is still supported, but shouldn't be used anymore. Instead use {{{PATCHLEVEL}}} or {{{SECURITY_PATCH}}} as applicable.
+
+**DISTCC_HOSTS**
+
+[[Distributed compilation]] setting.
+
+If for some reason the spell can't be compiled with the help of "distcc" (and it isn't just a {{{make -jN}}} bug), use {{{DISABLE_DISTCC=yes}}} to disable it.
+
+**Note:** try to avoid this, but otherwise it sets {{{DISTCC}}} to "on" or "off", though it may work only //some// of the time: if you used "ccache" in addition to "distcc", "distcc" wouldn't get disabled.

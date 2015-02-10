@@ -1,0 +1,86 @@
+= Zoran Constantinescu Fülöp =
+
+**Homepage:** http://www.idi.ntnu.no/~zoran
+
+**IRC nick(s):** zoran
+
+**Role in SMGL:** Section maintainer for cluster
+
+**Age/Birthdate:** 28
+
+**Location/Country:** Trondheim, Norway
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+First contact with Linux was in 1994. Ever tried to install a 60-floppy distro on a 486/33!? It is great fun! Took some time though, 3 floppies were broken. It was a Slackware distro. Why Linux? I think it helps to learn a great deal about computers. I'm still learning since then :-) I used mostly Slackware since then, but also tried different other ones: SuSE, Debian, RedHat, Mandrake. Didn't fit very well to my expectations.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+Almost five months, from January. Well, it was Sorcerer first, then SMGL. I was looking for a better Linux distro for our new 29xPC cluster, one more up to date. And since I needed anyway to compile a lot of packages, SGL looked the excellent choice. After spelling, casting a little bit, I couldn't resist... now I have SGL running on about 40 computers around :-) [large scale assimilation!?]
+
+**What piqued your interest in SMGL initially?**
+
+Source + spells. (I had some hard time with rpm) \\ Freedom to choose what/how/where/why/when to install.
+
+**What future do you personally see for SMGL?**
+
+Great future!
+
+I think is one of the best distros out there (or better said: 'the one distro' :-). Source based packages give a lot of power and flexibility for any kind of installation. It's true that right now is mostly for the professional users, but that might/will change in the future...
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+Graduated at the "Politehnica" University in Bucharest, Romania with a diplomat engineer degree in computer science (a sort of Master's degree). Worked as programmer, software engineer, consultant, project manager for different companies during and after the studies. I'm now in the third year as a doctoral student in computer science. Trying to combine large scale scientific visualization with distributed computing.
+
+**Any personal messages for the Source Mage users out there?**
+
+Keep it going! And share the experience with others... don't forget some spells from time to time (of course, if you are brave enough).
+
+**What other OS programs/software have you worked on?**
+
+Developing:
+
+* Open Source:
+** qadpz -- multi-platform distributed computing
+* Open Source (project manager and developer):
+** htdig -- adding sql support for storage
+** UnixVision -- a port of the TurboVision interface to Unix
+** some small hacks (when I had problems)
+* Commercial:
+** a bunch of software projects
+
+Using:
+* Almost any computer/OS between an old ZX-Spectrum and a Cray, prefer open source software (also commercial ones, but must be really good).
+
+== Flamewars ==
+
+**vi or emacs?**
+
+emacs for programming. \\
+vi for debugging and everything else.
+
+**KDE or GNOME?**
+
+KDE right now, but planning to spend some time GNOMEing.
+
+**BSD or GPL?**
+
+Prefer GPL -- keeps the source open.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Not married, no kids, no time.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+Don't really like cars, not even in dreams. Spending time with a bike now.
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+Brave, hmm. I'll see what I can do...
+
+--zoran

@@ -1,0 +1,47 @@
+=Contact via Internet Relay Chat (IRC)=
+
+Please note that IRC can be a low-traffic means of communication. There is active discussion periodically, but if asking for help, it could be a while before somebody answers, especially if most of the developers are on their sleepy time. Be patient and aware of [[IRC culture]].
+
+==IRC network==
+
+[[http://www.freenode.net|Freenode]] ([[irc://irc.freenode.net|irc.freenode.net]])
+
+===Channels===
+
+====Primary Channels====
+
+* [[irc://irc.freenode.net/#sourcemage|#sourcemage]] -- General IRC channel, all things Source Mage ([[http://ircstats.sourcemage.org/sourcemage.html|channel statistics]] ([[http://ircstats.sourcemage.ru/sourcemage.html|DNS mirror]])).
+* [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]] -- Source Mage administrative channel. Meetings are held here.
+
+====Project Components====
+
+* [[irc://irc.freenode.net/#sourcemage-cauldron|#sourcemage-cauldron]] -- Cauldron discussion (ISO Installer).
+* [[irc://irc.freenode.net/#sourcemage-grimoire|#sourcemage-grimoire]] -- A meeting place for the Grimoire Team members.
+* [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]] -- All things sorcery related.
+* [[irc://irc.freenode.net/#sourcemage-tome|#sourcemage-tome]] -- A meeting place for the Tome Team members.
+
+====On-Topic Spam/Dump====
+
+* [[irc://irc.freenode.net/#sourcemage-commits|#sourcemage-commits]] -- Source Code Management commit messages.
+* [[irc://irc.freenode.net/#sourcemage-dump|#sourcemage-dump]] -- Flood channel (for pasting code and output).
+
+====Other On-Topic====
+
+* [[irc://irc.freenode.net/#sourcemage-keysigning|#sourcemage-keysigning]] -- Security Team PGP/GPG keysigning room.
+* [[irc://irc.freenode.net/#sourcemage-quality|#sourcemage-quality]] -- For the discussion of all things relating to QA.
+* [[irc://irc.freenode.net/#sourcemage-security|#sourcemage-security]] -- A place to contact us and chat about security issues.
+* [[irc://irc.freenode.net/#sourcemage-nosystemd|#sourcemage-nosystemd]] -- Channel dedicated to systemd avoidance in Source Mage.
+
+====Non-English====
+
+* [[irc://irc.freenode.net/#sourcemagede|#sourcemagede]] -- German users.
+* [[irc://irc.freenode.net/#sourcemagefr|#sourcemagefr]] -- French users.
+* [[irc://irc.freenode.net/#sourcemageja|#sourcemageja]] -- Japanese users.
+* [[irc://irc.freenode.net/#sourcemagept|#sourcemagept]] -- Portuguese users.
+* [[irc://irc.freenode.net/#sourcemageru|#sourcemageru]] -- Russian users.
+* [[irc://irc.freenode.net/#sourcemagees|#sourcemagees]] -- Spanish users.
+
+====Off-Topic====
+
+* [[irc://irc.freenode.net/#sourcemage-fun|#sourcemage-fun]] -- Games and such.
+* [[irc://irc.freenode.net/#sourcemage-politics|#sourcemage-politics]] -- Where we send you when you start ranting about politics.

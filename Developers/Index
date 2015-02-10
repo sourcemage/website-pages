@@ -1,0 +1,39 @@
+=The Source Mage GNU/Linux Organizational Chart=
+
+We have **17** active developers, listed below.
+
+If you're wondering how to [[Join|become]] a developer then please read the [[Contribution]] page.
+
+See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Developer Organization]].
+
+==Council of Elders (Lead Developers and Assistants)==
+
+|= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
+| David Kowis | Project Lead | ##BeepDog## | dkowis@sourcemage.org |
+| Eric Sandall | Lead Developer | ##sandalle## | sandalle@sourcemage.org |
+| Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | lynxlynxlynx@sourcemage.org |
+| Jeremy Blosser | Lead Developer | ##emrys## | jblosser@sourcemage.org |
+| Justin Boffemmyer | Lead Developer | ##flux_control## | flux@sourcemage.org |
+| Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | crypto@sourcemage.org |
+| Treeve Jelbert | Lead Developer, database and telephony Guru | ##treeve## | treeve@sourcemage.org |
+| Vlad Glagolev | Grimoire Lead | ##Stealth## | stealth@sourcemage.org |
+
+==Circle of Mages (General Developers)==
+
+|= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
+| Florian Franzmann | General Guru | ##{{{|beowulf|}}}## | beowulf@sourcemage.org |
+| Ismael Luceno | General Guru | ##ismaell##  | ismael@sourcemage.org |
+| Mark Bainter | General Guru | ##Shamgar## | mbainter@sourcemage.org |
+| Pavel Vinogradov | General Guru | ##public## | public@sourcemage.org |
+| Remko van der Vossen | General Guru | ##wich## | wich@sourcemage.org |
+| Robin Cook | General Guru | ##CuZnDragon## | cuzndragon@sourcemage.org |
+| Sukneet Basuta | General Guru | ##Sukneet## | sukneet@sourcemage.org |
+| Thomas Orgis | General Guru | ##sobukus## | sobukus@sourcemage.org |
+| Tommy Boatman | General Guru | ##tboatman## | tboatman@sourcemage.org |
+
+Grimoire sections //archive//, //cluster//, //devel//, //display//, //doc//, //gnu//, //i18n//, //java//, //kernels//, //libs//, //mobile//, //printer//, //security//, //shell-term-fm//, //telephony//, //utils// and //x11// are currently un-maintained but are mostly up to date. Many developers have project subscriptions for their particular spells and are walk in walk out positions. \\ Contact the [[mailto:grimoire@sourcemage.org|Grimoire Team Lead]] for more information.
+
+For more detailed information about every developer see the [[Authors]].
+----
+
+[[Developers/Hall of Fame|Hall of Fame]] is dedicated to past developers.

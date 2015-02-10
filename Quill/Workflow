@@ -1,0 +1,418 @@
+= Simple workflow example with Quill and Git =
+
+Here's an example of how to do Source Mage development //(the lynx way)//. We'll do a [[Grimoire|grimoire]] update and use [[Quill]] to make things easier, consistent and less error-prone. The procedure for other parts of the project would be similar.
+
+We'll update [[http://www.imagemagick.org/|ImageMagick]] ("imagemagick" [[Spell|spell]]) to the latest release (they do it once per week or even more often).
+
+== Starting fresh ==
+
+To avoid duplicate work and conflicts, we first need to make sure our repository is up-to-date.
+
+{{{
+$ git pull origin
+...
+}}}
+
+== Updating the spell ==
+
+Now we're ready to update the spell. I'll manually break the quill output for clarity.
+
+{{{
+$ quill -u imagemagick
+Welcome to Source Mage GNU/Linux quill - a spell creator and updater script.
+-----------------------------------------------------------------------------
+This makes an immediately useable spell from some minor data or
+updates an exsisting one..
+-----------------------------------------------------------------------------
+The spell will be put into a grimoire/section you define(if you choose to)
+and a tar.bz2 file will be created in /home/navaden/.sourcemage/spells.
+-----------------------------------------------------------------------------
+All lists should be space delimited(dependencies and optional dependencies)
+-----------------------------------------------------------------------------
+Do you want to copy the spell from someplace?
+        (0)  The grimoire
+        (1)  QUILL_GIT_DIR
+
+Which one do you want? [0] 1
+Done.
+
+What do you want to do?
+        (0)  Update the spell to a newer version
+        (1)  Add arbitrary HISTORY entries
+        (2)  Increment/add PATCHLEVEL or SECURITY_PATCH
+        (3)  Switch to upstream gpg verification
+        (4)  --NOOP--
+        (5)  --NOOP--
+        (6)  --NOOP--
+        (7)  --NOOP--
+        (8)  --NOOP--
+        (9)  Copy it here from the grimoire or QUILL_GIT_DIR
+        (a)  Copy it under QUILL_GIT_DIR
+        (b)  Copy it back to the grimoire
+        (c)  Try it out
+        (d)  Quit
+
+Which one do you want? [d] 0
+
+
+Current relevant version(s): 6.3.9-7
+Do you want to update 6.3.9-7? [y]
+
+Please enter the new version:
+6.3.9-8
+Checking source urls (this may take a while) ...
+SOURCE_URL[0] is ok!
+SOURCE_URL[1] is ok!
+SOURCE_URL[2] is ok!
+SOURCE_URL[3] is ok!
+
+Summoning ...
+Downloading source file ImageMagick-6.3.9-8.tar.bz2
+--2008-03-23 15:39:01--  ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-6.3.9-8.tar.bz2
+           => `ImageMagick-6.3.9-8.tar.bz2'
+Resolving ftp.imagemagick.org... 64.128.80.106
+Connecting to ftp.imagemagick.org|64.128.80.106|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD /pub/ImageMagick ... done.
+==> SIZE ImageMagick-6.3.9-8.tar.bz2 ... 8832688
+==> PASV ... done.    ==> RETR ImageMagick-6.3.9-8.tar.bz2 ... done.
+Length: 8832688 (8.4M)
+
+100%[====================================================================>] 8,832,688    122K/s   in 73s
+
+2008-03-23 15:40:18 (117 KB/s) - `ImageMagick-6.3.9-8.tar.bz2' saved [8832688]
+
+
+Updating HISTORY ...
+Done.
+}}}
+
+Quill did the core of the work for us and now it is time for some minor considerations. Is this release a security release (does it fix a vulnerability, etc.)?
+
+{{{
+Do you want to increment SECURITY_PATCH? [n]
+}}}
+
+Now it is time to implement the verification for the spell sources. ImageMagick is guru-gpg-signed, but we could change it to the simpler hash verification.
+
+{{{
+SOURCE_GPG=gurus.gpg:ImageMagick-6.3.9-7.tar.bz2.sig:WORKS_FOR_ME
+Do you want to replace SOURCE_GPG with a hash? [n]
+}}}
+
+But we don't, so it asks us to sign the new sources and remove the old signature:
+
+{{{
+You need a passphrase to unlock the secret key for
+user: "Jaka Kranjc (Source Mage) <smgl@lynxlynx.info>"
+1024-bit RSA key, ID CD17761B, created 2006-04-28
+
+gpg: writing to `/home/navaden/.sourcemage/spells/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig'
+gpg: RSA/SHA512 signature from: "CD17761B Jaka Kranjc (Source Mage) <smgl@lynxlynx.info>"
+
+rm: remove regular file `ImageMagick-6.3.9-7.tar.bz2.sig'? y
+}}}
+
+Then it asks us if we want to review the update, where it would fire up our {{{$EDITOR}}} on the spell files. We're not interested since diffs are easier to review and we'll do that with Git later.
+
+{{{
+Do you want to review the update or add custom modifications? [y] n
+
+Done with updating the spell!
+}}}
+
+That's it! 
+
+== Copying the spell back ==
+
+Almost. The spell is updated, but it isn't in any grimoire or git repository, so we need to copy it back. And back to both:
+* the grimoire: so we can test the update
+* the repository: so we can review, hack and submit it
+
+{{{
+What do you want to do?
+        (0)  Update the spell to a newer version
+        (1)  Add arbitrary HISTORY entries
+        (2)  Increment/add PATCHLEVEL or SECURITY_PATCH
+        (3)  Switch to upstream gpg verification
+        (4)  --NOOP--
+        (5)  --NOOP--
+        (6)  --NOOP--
+        (7)  --NOOP--
+        (8)  --NOOP--
+        (9)  Copy it here from the grimoire or QUILL_GIT_DIR
+        (a)  Copy it under QUILL_GIT_DIR
+        (b)  Copy it back to the grimoire
+        (c)  Try it out
+        (d)  Quit
+
+Which one do you want? [d] a
+Copying spell into /home/navaden/sorcery/main-grim/graphics/imagemagick ...
+Copying succeded.
+
+What do you want to do?
+        (0)  Update the spell to a newer version
+        (1)  Add arbitrary HISTORY entries
+        (2)  Increment/add PATCHLEVEL or SECURITY_PATCH
+        (3)  Switch to upstream gpg verification
+        (4)  --NOOP--
+        (5)  --NOOP--
+        (6)  --NOOP--
+        (7)  --NOOP--
+        (8)  --NOOP--
+        (9)  Copy it here from the grimoire or QUILL_GIT_DIR
+        (a)  Copy it under QUILL_GIT_DIR
+        (b)  Copy it back to the grimoire
+        (c)  Try it out
+        (d)  Quit
+
+Which one do you want? [d] b
+Copying spell into /var/lib/sorcery/codex/test/graphics/imagemagick ...
+Copying succeded.
+}}}
+
+== Testing the update ==
+
+Now let's test the update:
+
+{{{
+What do you want to do?
+        (0)  Update the spell to a newer version
+        (1)  Add arbitrary HISTORY entries
+        (2)  Increment/add PATCHLEVEL or SECURITY_PATCH
+        (3)  Switch to upstream gpg verification
+        (4)  --NOOP--
+        (5)  --NOOP--
+        (6)  --NOOP--
+        (7)  --NOOP--
+        (8)  --NOOP--
+        (9)  Copy it here from the grimoire or QUILL_GIT_DIR
+        (a)  Copy it under QUILL_GIT_DIR
+        (b)  Copy it back to the grimoire
+        (c)  Try it out
+        (d)  Quit
+
+Which one do you want? [d] c
+Do you want to cast -r? (possibly needed for multiversion spells) [n]
+
+Computing previously installed dependencies...
+imagemagick preparing environment...
+imagemagick checking dependencies...
+
+...
+
+Finished processing install requests.
+
+Spells installed successfully:
+------------------------------
+imagemagick
+}}}
+
+Yipee, it [[Sorcery/Commands/Cast|cast]] fine. That's a pretty good, but unconclusive sign that the update is OK.
+
+== Git ==
+
+We can now exit quill and focus on Git. It can be restarted without losing your work (just choose not to copy the spell at the start). Alternatively you can just switch to another term.
+
+{{{
+What do you want to do?
+        (0)  Update the spell to a newer version
+        (1)  Add arbitrary HISTORY entries
+        (2)  Increment/add PATCHLEVEL or SECURITY_PATCH
+        (3)  Switch to upstream gpg verification
+        (4)  --NOOP--
+        (5)  --NOOP--
+        (6)  --NOOP--
+        (7)  --NOOP--
+        (8)  --NOOP--
+        (9)  Copy it here from the grimoire or QUILL_GIT_DIR
+        (a)  Copy it under QUILL_GIT_DIR
+        (b)  Copy it back to the grimoire
+        (c)  Try it out
+        (d)  Quit
+
+Which one do you want? [d]
+
+$
+}}}
+
+Let's see what the update changed:
+
+{{{
+$ git diff
+diff --git a/graphics/imagemagick/DETAILS b/graphics/imagemagick/DETAILS
+index 86e2022..f10f159 100755
+--- a/graphics/imagemagick/DETAILS
++++ b/graphics/imagemagick/DETAILS
+@@ -1,5 +1,5 @@
+            SPELL=imagemagick
+-         VERSION=6.3.9-7
++         VERSION=6.3.9-8
+   SECURITY_PATCH=1
+           SOURCE=ImageMagick-${VERSION}.tar.bz2
+ SOURCE_DIRECTORY=${BUILD_DIRECTORY}/ImageMagick-${VERSION/-*/}
+diff --git a/graphics/imagemagick/HISTORY b/graphics/imagemagick/HISTORY
+index 8b7f1bb..a488fc4 100644
+--- a/graphics/imagemagick/HISTORY
++++ b/graphics/imagemagick/HISTORY
+@@ -1,3 +1,6 @@
++2008-03-23 Jaka Kranjc <lynxlynxlynx@sourcemage.org>
++       * DETAILS: updated spell to 6.3.9-8
++
+ 2008-03-14 George Sherwood <george@beernabeer.com>
+        * DETAILS: Updated to version 6.3.9-7
+
+diff --git a/graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig b/graphics/imagemagick/ImageMagick-6.3.9-7.
+deleted file mode 100644
+index 7f557c5..0000000
+Binary files a/graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig and /dev/null differ
+}}}
+
+While {{{git diff}}} showed the differences in the text files, it couldn't for the binary ones -- the signatures. So it is good practice to check the state of the repo with {{{git status}}} (this will be displayed when you try to commit too):
+
+{{{
+$ git status
+# On branch master
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#
+#       modified:   graphics/imagemagick/DETAILS
+#       modified:   graphics/imagemagick/HISTORY
+#       deleted:    graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig
+no changes added to commit (use "git add" and/or "git commit -a")
+
+}}}
+
+Notice how the new signature is untracked, unknown to Git. We must introduce the two before we can commit it:
+
+{{{
+$ git add graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig
+#
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#
+#       modified:   graphics/imagemagick/DETAILS
+#       modified:   graphics/imagemagick/HISTORY
+#       deleted:    graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig
+}}}
+
+Now the file is added to git repository and ready for commit. There is more than one way of doing commits in Git, see [[Git guide]]. The quickest way here (as we don't have any other changes) is with:
+
+{{{
+$ git commit -a # which fires up an editor with the following content
+
+# Please enter the commit message for your changes.
+# (Comment lines starting with '#' will not be included)
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#   modified:   graphics/imagemagick/DETAILS
+#   modified:   graphics/imagemagick/HISTORY
+#   deleted:    graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig
+#   new file:   graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig
+}}}
+
+We can see all the relevant files and changes will be committed, so we can continue. The standard commit message consists of the spell name (or file name for other parts) and a short description of what the changeset does. Here a copy from [[Spell/Files/HISTORY|HISTORY]] will do -- {{{imagemagick: Updated to version 6.3.9-8}}}. \\ Save the file in your editor and quit it.
+
+{{{
+Created commit 239a076: imagemagick: Updated to version 6.3.9-8
+ 4 files changed, 4 insertions(+), 1 deletions(-)
+ delete mode 100644 graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig
+ create mode 100644 graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig
+$
+}}}
+
+== Commit review ==
+
+That's it. We can check that really everything was done with another {{{git status}}}:
+
+{{{
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+}}}
+
+But more importantly, we **always** need to check what the commit contains. For that we can use {{{git show}}} or when there's more than one commit, {{{git log -p}}}:
+
+{{{
+$ git show
+commit 239a0761af8ba9ccfa3926414e6604dca6b936f1
+Author: Jaka Kranjc <lynxlynxlynx@sourcemage.org>
+Date:   Sun Mar 23 16:26:52 2008 +0100
+
+    imagemagick: Updated to version 6.3.9-8
+
+diff --git a/graphics/imagemagick/DETAILS b/graphics/imagemagick/DETAILS
+index 86e2022..f10f159 100755
+--- a/graphics/imagemagick/DETAILS
++++ b/graphics/imagemagick/DETAILS
+@@ -1,5 +1,5 @@
+            SPELL=imagemagick
+-         VERSION=6.3.9-7
++         VERSION=6.3.9-8
+   SECURITY_PATCH=1
+           SOURCE=ImageMagick-${VERSION}.tar.bz2
+ SOURCE_DIRECTORY=${BUILD_DIRECTORY}/ImageMagick-${VERSION/-*/}
+diff --git a/graphics/imagemagick/HISTORY b/graphics/imagemagick/HISTORY
+index 8b7f1bb..a488fc4 100644
+--- a/graphics/imagemagick/HISTORY
++++ b/graphics/imagemagick/HISTORY
+@@ -1,3 +1,6 @@
++2008-03-23 Jaka Kranjc <lynxlynxlynx@sourcemage.org>
++       * DETAILS: updated spell to 6.3.9-8
++
+ 2008-03-14 George Sherwood <george@beernabeer.com>
+        * DETAILS: Updated to version 6.3.9-7
+
+diff --git a/graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig b/graphics/imagemagick/ImageMagick-6.3.9-7.
+deleted file mode 100644
+index 7f557c5..0000000
+Binary files a/graphics/imagemagick/ImageMagick-6.3.9-7.tar.bz2.sig and /dev/null differ
+diff --git a/graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig b/graphics/imagemagick/ImageMagick-6.3.9-8.
+new file mode 100644
+index 0000000..b3f504d
+Binary files /dev/null and b/graphics/imagemagick/ImageMagick-6.3.9-8.tar.bz2.sig differ
+}}}
+
+The output looks fine, so we can send it to others.
+
+== Pushing it upstream ==
+
+We can blindly try to push it, but if someone has updated the repository since we last updated our copy, that will fail. So we'll play it safe and first do that update. As per the guide, we can do that with {{{git pull}}}:
+
+{{{
+$ git pull
+remote: Generating pack...
+remote: Done counting 673 objects.
+
+...
+
+ create mode 100644 x11/conky/conky-1.5.0.tar.gz.sig
+ create mode 100755 x11/xscreensaver/PRE_BUILD
+ create mode 100644 x11/xscreensaver/demo-Gtk.patch
+}}}
+
+Now let's send it already, before someone else does and makes us pull again:
+
+{{{
+$ git push
+}}}
+
+That's it! :-)
+
+== What if the update fails? ==
+
+If the update fails, copy it to your git repository as usual, hack it there and then select {{{(9)  Copy it here from the grimoire or QUILL_GIT_DIR}}} (selecting Git) in quill to copy it to quill, then copy it to the grimoire //(b)// and recast //(c)//. Repeat until you make the sucker bow before your persistence.

@@ -1,0 +1,67 @@
+= Wyatt Draggoo =
+
+**IRC nick(s):** wyatt, phraktyl
+
+**Role in SMGL:** Writing new installer.
+
+**Age/Birthdate:** 27
+
+**Location/Country:** Orange County, CA, USA
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+I'd been an OS/2 user for several years at the time, but was always interested in trying new things. A friend of mine gave me a copy of the newest RedHat out at the time: 5.2. I was hooked.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+I've been using it since early 2002. I'd been using various other distros, RedHat, Mandrake, SuSE, Debian, and Slackware among them, but they all had their own problems. My biggest complaints were the dependencies on their own packages. For instance, a new version of XFree86 came out with accelerated support for my graphics card at the time (ATI maybe? Don't recall). So, I promptly downloaded the source code and installed it. And had to use the {{{-f}}} option of every single package that depended on X after that. Kind of defeats the purpose of using a package manager...
+
+**What piqued your interest in SMGL initially?**
+
+Probably it's (mostly) self-healing nature. In general, when a library is updated, everything linked to that library is updated to use the new version. Automagically. Of course, there have been slight problems with this in the pase (*cough* "db4" *cough*) but in general, it works very well.
+
+**What future do you personally see for SMGL?**
+
+Good Things(TM). Although we have some issues to work out (we *really* need to keep on top of our Grimoire source URLs, etc.) I think it's a great distro, and one I will continue to use.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I'm currently a Solaris Administrator for Northrop Grumman, and work on the Ground-based Missile Defense system. Any more than that, and I'd have to kill you. :-)
+
+**Any personal messages for the Source Mage users out there?**
+
+Be patient. We're a young distro, and still have bumpy times ahead. We'll get there.
+
+**What other OS programs/software have you worked on?**
+
+I ran OS/2 for a long time, play with the various Windows distros for Samba client purposes, have been a Solaris administrator for about 8 years, and even have a Mac at the house.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+vi. And not that vim crap, either. I'm talking about the vi that hasn't changed in 30 years. With 1 undo level. And no code highlighting. Don't even get me started on Elvis...
+
+**KDE or GNOME?**
+
+If I'm forced between the two, I prefer GNOME. But on my desktops at home, I use PWM because it's very lightweight, fast, and does what I need it to do: manage my windows.
+
+**BSD or GPL?**
+
+I see the merits of both. All code I write for myself will be release GPL, though.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+I've been married for almost 5 years, and have a 15 month old son Eli.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+Up until it was totalled a month ago, I drove an '85 505 Peugeot Turbo. Dammit. Now I've got my sights on an '03 SVT Focus.
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+##=:-O##

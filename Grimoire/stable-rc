@@ -1,0 +1,5 @@
+= Stable-rc grimoire =
+
+This [[Grimoire]] is the release candidate for the next stable. This means that it should be quite stable, but is still undergoing some testing before it's declared stable.
+
+When a new [[Grimoire/stable|stable]] grimoire gets released, the current [[Grimoire/test|test]] becomes stable-rc. Then that grimoire is tested and enhanced continuously until the next stable release.

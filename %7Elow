@@ -1,0 +1,78 @@
+= Laurent Wandrebeck =
+
+**IRC nick(s):** low
+
+**Role in SMGL:** General guru, too busy these days to do anything but testing. Was windowmanagers section guru a while ago.
+
+**Age/Birthdate:** 27
+
+**Location/Country:** Lille, in France
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+In october 98, a french magazine came up with Slackware 3.5 on CD. Already fed up with MS thingies, I decided to take a look at something different. After several installations, (some unsuccessfull, due to a small hard drive in these times) and many many docs reading, I fell in love with GNU/Linux, and GPL.
+
+Since then, I kept running it as much as possible. As I'm no longer a video games player, Slackware provided programs for all my needs.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+First line of {{{/var/log/sorcery/activity}}} shows:
+
+{{{
+20020213        cast    linux   2.4.17  success
+}}}
+
+Never reinstalled since :-). It was still Sorcerer GNU/Linux, and Kyle was still maintaining it. Then Lunar fork appeared, I had then no reason to use the fork. Then Kyle left, and I kept using the "official" resurrection.
+
+**What piqued your interest in SMGL initially?**
+
+Hmmm to me SMGL appears like an easy to install and optimised LFS. I'm some kind of optimisation fanatic. Moreover, the installation process was quite easy, and I like having on my disc the only apps I use.
+
+**What future do you personally see for SMGL?**
+
+As I'm not clairvoyant, I would say the best possible (more user base, happy road to 1.0 version). One of the best for customisation, suitable for workstations and servers.
+
+Up to now (at least for me), high end compilation has proven it is stable (more than two months uptimes). So it will take some time to stabilize the grimoire, and main parts of the distrib (sorcery, gaze and such), then there will be source magers all over the world :-D
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+A level were turned to economics and social, but I was already fond of computers for years. After the A level, I turned to IT studies (IT HAD) giving an analyst programmer diploma), followed by a specialisation in internet/intranet administration and development for a year.
+
+**Any personal messages for the Source Mage users out there?**
+
+If you were able to install and use SMGL, don't hesitate, contribute ! Any help is welcome. (doc writing, translations)
+
+**What other OS programs/software have you worked on?**
+
+MS-DOS 5, 6.x. MS Win 3.x, 9x, 2000, XP. Solaris, HP/UX, Irix. I've also tried several GNU/Linux distributions (rh, mdk, debian, slackware (the one I've used for the longest time)). as I can't bear rpms and such, I by far prefer compiling by hand.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+midnight commander :-)
+
+**KDE or GNOME?**
+
+WindowMaker for 4 years, now XFCE 4.
+
+**BSD or GPL?**
+
+GPL. free softs used by companies to make money is for me non sense.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+My parents, living in Dunkirk, the remaining family has left north of France to go to the south. I live with my girlfriend in Lille.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+I don't have money to buy a car now, but hope to be able to buy one soon (something running will be by far sufficient). dream car ? errrr, let's say peugeot 406 coupée.
+(see http://www.406coupe.ch/official/index.html)
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+errr checking if I got one on my box... \\ well I've got one but I wouldn't like to be responsible for an international wave of screen explosions =).

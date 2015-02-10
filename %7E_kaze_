@@ -1,0 +1,77 @@
+= Julien Rozo =
+
+**Homepage:** http://www.kazekami.org
+
+**IRC nick(s):** _kaze_
+
+**Role in SMGL:** spell developer
+
+**Age/Birthdate:** 26
+
+**Location/Country:** France
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+During my first year in [[http://www.iutnantes.univ-nantes.fr/65315998/0/fiche___pagelibre/|Nantes Technological Institute (fr)]], I followed Unix and Linux courses : mainly an initiation to Linux, using Bash and Gnome. As I've already heard of Linux many times during years before (it was in year 2000), I thought it was the right time for me to switch from Windows to Linux. The first distribution I used was Mandrake Linux 7.0 (now known as Mandriva Linux), before going through RedHat Linux 7.2 to Fedora Core 1.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+My very first installation of SMGL was in the summer of 2003. My second installation was 2 days later, after totally screwing up the first one :-) Since then, I use SMGL as the only installed OS at home, and as the main Linux distribution at work (including my workstation too), alongside with Ubuntu installations (which I was forced to do).
+
+**What piqued your interest in SMGL initially?**
+
+I was bored of RedHat and the tons of dependencies required for one application, and Debian packages versions were too retarded for me (I love bleeding edge features :-)). So Gentoo looked like a good choice for installing only the software I need, with the latest versions I want. As Gentoo installation is a real pain, I quickly looked for another source based distribution, and the most mature with Gentoo seemed to be SMGL. I have no regret :-)
+
+**What future do you personally see for SMGL?**
+
+I'd like SMGL to be less confidential, i.e. more widely spread and used. And I'd like a more integrated documentation project: today there are docs on the wiki, on the web site, and on GIT and sometimes docs on the same subject are in two or three locations.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+Since 1/1/2003, I work for [[http://www.kosmos.fr/|Kosmos]], a French software editor, based in Nantes, France. We provide 3 different proprietary CMS and web portal solutions, following the kind of project we work on : K-Portal as a generic tool and the basis of the other two; K-Sup for French Universities and Grandes Ecoles; and K-d'école for secondary education.
+
+I work on two identified tasks (and many hidden ones :-)) : Web developer for the three CMS (using Java, JSP, xHTML, CSS and Javascript) and Sysadmin (administration of internal servers, and advices to clients to administrate their web servers). We have 5 internal servers, all running SMGL with test grimoire. My workstation runs SMGL too, and my iBook G4 runs SMGL sometimes.
+
+I'm graduated in Computer Sciences from the Nantes Technological Institute. I followed this grade mainly because I love to learn how things work and how they can be improved, and I like to "translate" one's needs in computer stuff to technological realization.
+
+**Any personal messages for the Source Mage users out there?**
+
+For SMGL developers, keep up the good work ! for SMGL users, don't be shy : join us on #sourcemage, report as many bugs as possible, etc... For users who hesitate to use SMGL : give it a try, it's quite simple to install and to use for a source based distribution
+
+**What other OS programs/software have you worked on?**
+
+For the moment, the only software I worked on and which are widely distributed are the CMS saled by my company.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+vim, more by habit than anything else. I never tried emacs, and have no plan to for the moment.
+
+**KDE or GNOME?**
+
+KDE for sure ! I have many personal difficulties to understand how to use Gnome, even if I think it's a great desktop environment :-)
+
+**BSD or GPL?**
+
+I'd rather say "BSD and GPL" : as each one has its pros and cons, both seem necessary to me in the software world of today
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Absolutely ! a father, a mother, no brother and no sister, but a beautiful girlfriend sharing my day-by-day world :-)
+
+**What other hobbies?**
+
+Amateur photography : you can see the best shots on my web site. I also love to watch Formula 1 races, and listen to music all day long : Queens of the Stone Age, Metallica, Foo Fighters, 30 Seconds to Mars, Björk, Jamiroquai, etc...
+
+**What kind of car do you drive? Or what is your dream car?**
+
+Since october 2007, I drive a brand new Toyota Auris! w00t !
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+I'll provide one as soon as I take a {r,d}ecent self portrait

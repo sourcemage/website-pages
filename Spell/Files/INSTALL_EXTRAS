@@ -1,0 +1,9 @@
+= INSTALL_EXTRAS =
+
+This file installs configuration files and documentation for a [[Spell|spell]]. It stops [[installwatch]] as well.
+
+Configuration files include:
+* {{{xinetd.d}}} directory
+* {{{init.d}}} directory
+* {{{pam.d}}} directory
+* {{{desktop}}} directory

@@ -1,0 +1,31 @@
+= Grimoire build API =
+
+A file named {{{API_VERSION}}} may exist at the [[Grimoire|grimoire]] level and/or the section level. In this file one variable may be defined: {{{BUILD_API}}}.
+
+This variable may be given the values '1' or '2'. To denote which build API the grimoire or section uses.
+
+In addition {{{BUILD_API}}} may also be defined in a [[Spell|spell]]'s [[Spell/Files/DETAILS|DETAILS]] file.
+
+{{{API_VERSION}}} file must have the executable bit set (so a {{{test -x}}} passes).
+
+The files are sourced in the following order:
+
+# {{{$GRIMOIRE/API_VERSION}}}
+# {{{$SECTION/API_VERSION}}}
+# {{{$SPELL/DETAILS}}}
+
+Thus the section level will override the grimoire level and the spell level will override the section and grimoire levels.
+
+If the {{{BUILD_API}}} variable is not defined the behavior defaults to it being defined as '2'.
+
+A quick rundown of what '1' and '2' mean:
+
+Build API 1:
+
+[[Spell/Files/PRE_BUILD|PRE_BUILD]] → [[Spell/Files/BUILD|BUILD]] → [[Spell/Files/POST_BUILD|POST_BUILD]] → [[Spell/Files/POST_INSTALL|POST_INSTALL]] → [[Spell/Files/TRIGGERS|TRIGGERS]]
+
+Build API 2:
+
+[[Spell/Files/PRE_BUILD|PRE_BUILD]] → [[Spell/Files/BUILD|BUILD]] → [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] → [[Spell/Files/INSTALL|INSTALL]] → [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]] → [[Spell/Files/POST_INSTALL|POST_INSTALL]] → [[Spell/Files/TRANSFER|TRANSFER]] → [[Spell/Files/FINAL|FINAL]] → [[Spell/Files/TRIGGERS|TRIGGERS]]
+
+**Note:** do not write spells in build API 1, use build API 2 instead!

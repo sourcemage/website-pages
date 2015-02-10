@@ -1,0 +1,36 @@
+= Cast command =
+
+In Source Mage, "casting spells" means installing programs. The [[Grimoire]] contains the list of [[Spell|spells]] one can cast.
+
+{{{cast}}} casts a program by:
+
+{{{
+cast <spell>
+}}}
+
+{{{cast}}} does rather more than simply install a program. The process can be broken down into four main steps:
+
+# Prepare: \\ {{{cast}}} prepares all the options before the compile and downloading begins. This way, user input is only needed at one stage and the system can be left alone. Spells should rarely ever need human input past this step. This step also houses dependency resolution.
+# Download: \\ depending on the settings, cast uses "wget" or "aria2" to download the source code of the program from its web site.
+# Compile: \\ by following the instructions defined in the spell and the configuration before the download step, the spell is compiled accordingly.
+# Install: \\ the spell also contains instructions about where to put the compiled files once the compilation phase is over. Logs documenting the installed files are kept in {{{/var/log/sorcery/install}}} by default. [[Sorcery/Commands/Dispel|Dispel]] needs this file to know what to delete.
+
+Dependencies come in four different flavors. There are **required**, **runtime**, **optional**, and **suggested** dependencies:
+* Required and runtime dependencies are automatically installed.
+* Required dependencies are usually compile-time dependencies compared to runtime dependencies which could be scheduled later than the dependee itself.
+* Optional dependencies enable new features and are compile-time dependencies.
+* Suggested dependencies are optional runtime dependencies that should not need the spell to be recompiled to use.
+
+A step not outlined above is the post-install step. Sometimes messages will be printed here or the need to install an example configuration file arises.
+
+Sometimes during the prepare step, there is a message that says:
+
+{{{
+<spell 1> triggers a cast_self on <spell 2>
+}}}
+
+This happens when a spell may use static linking of another spell, and cannot use features until it is recompiled.
+
+Sometimes a {{{check_self}}} will trigger. This may arise to a spell misbehaving or causing other problems to another spell. This {{{check_self}}} will fix the spell if there is a break.
+
+For options and more information see //cast(8)// manual page.

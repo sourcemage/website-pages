@@ -1,0 +1,18 @@
+= PRE_INSTALL =
+
+PRE_INSTALL is responsible for removing the old version of the [[Spell|spell]]. Overriding the default is only necessary in a very few special cases.
+
+Example:
+
+{{{
+# this is needed because save_libraries (in prepare_install) breaks because
+# valgrind has its own libpthread.so
+
+message "${MESSAGE_COLOR}Preparing to install ${SPELL_COLOR}${SPELL}${DEFAULT_COLOR}" &&
+
+lock_resources "libgrimoire" "install" &&
+
+if spell_ok valgrind; then
+  dispel --notriggers --nosustain "$SPELL"
+fi
+}}}

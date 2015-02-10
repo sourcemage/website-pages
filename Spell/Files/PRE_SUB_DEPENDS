@@ -1,0 +1,46 @@
+= PRE_SUB_DEPENDS =
+
+Part of the sub-depends specification is that [[Spell|spells]] must have a PRE_SUB_DEPENDS file, which tells [[Sorcery]] whether or not the sub-dependee is providing the given sub-depends or not. If the spell isn't providing the sub-dependency, or the file doesn't exist, sorcery must [[Sorcery/Commands/Cast|cast]] the sub-dependee. Unnecessary casts can be avoided with a proper PRE_SUB_DEPENDS file, this is regardless of prior dependency or sub-dependency history.
+
+Some rules are applied to this file:
+
+* PRE_SUB_DEPENDS is sourced in the same manner as [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] -- that is, once for each sub-dependency, with the variable {{{$THIS_SUB_DEPENDS}}} set to the sub-dependency currently in consideration (not sure about {{{$PROCESSED_SUB_DEPENDS}}}, but it would stand to reason).
+* PRE_SUB_DEPENDS should return {{{0}}} if the sub-dependency is already in effect, otherwise it should return {{{1}}}.
+* PRE_SUB_DEPENDS is sourced from the [[Spell/Tablet|tablet]], so make sure you add a [[Spell/Files/REPAIR|repair file]] for it.
+
+== Example usage in spells ==
+
+* "pygame" spell:
+
+{{{
+case $THIS_SUB_DEPENDS in
+  FONT)    is_depends_enabled $SPELL sdl_ttf   && return 0;;
+  IMAGE)   is_depends_enabled $SPELL sdl_image && return 0;;
+  MIXER)   is_depends_enabled $SPELL sdl_mixer && return 0;;
+  SMPEG)   is_depends_enabled $SPELL smpeg     && return 0;;
+  NUMERIC) is_depends_enabled $SPELL numeric   && return 0;;
+esac
+return 1
+}}}
+
+* "fxruby" spell:
+
+{{{
+case $THIS_SUB_DEPENDS in
+  fxscintilla) if is_depends_enabled $SPELL fxscintilla; then return 0; fi;;
+            *) return 1 ;;
+esac
+}}}
+
+* checking for an optional provider ("SSL" in this case):
+
+{{{
+case $THIS_SUB_DEPENDS in
+    SSL) if is_depends_enabled $SPELL $(get_spell_provider $SPELL SSL) || is_depends_enabled $SPELL gnutls; then
+         return 0
+         fi
+         ;;
+      *) echo "unknown sub_depends!" ;;
+esac
+return 1
+}}}

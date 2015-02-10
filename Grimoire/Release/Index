@@ -1,0 +1,106 @@
+= Grimoire release process =
+
+This page describes how [[Grimoire/stable|stable grimoire]] is updated regularly.
+
+== Branching ==
+
+**1.** On the 1st of each month, the grimoire version currently in the [[Grimoire/test|test]] (master) branch is branched to the next [[Grimoire/stable-rc|stable-rc]]:
+
+* {{{git checkout -b stable-rc-$STABLE_RC_VERSION master}}}
+* {{{sed -i 's/-test/-rc/' VERSION}}}
+* {{{git commit -m "VERSION: $(cat VERSION)" VERSION}}}
+* {{{git push origin stable-rc-$STABLE_RC_VERSION:refs/heads/stable-rc-$STABLE_RC_VERSION}}}
+
+**2.** At the same time, test gets its {{{VERSION}}} incremented as well; normally this means bumping the minor version; major version updates are at the discretion of the Grimoire Lead:
+
+* {{{git checkout master}}}
+* {{{sed -i 's/$OLD_TEST_VERSION/$NEW_TEST_VERSION/' VERSION}}}
+* {{{git commit -m "VERSION: $(cat VERSION)" VERSION}}}
+* {{{git push origin master}}}
+
+**3.** A new page is created for the new release by using [[Grimoire/Release/Template]] to make [[Grimoire/stable]]{{{/$STABLE_RC_VERSION}}} page.
+
+* For example the URL (related to root of the site) will look like this: {{{/Grimoire/stable/0.62}}}
+
+**4.** The release testing proceeds as described on the release page, with the following additions:
+
+* The target release date is the 15th of the month.
+* The {{{-rc}}} branch must be frozen for 72 hours before it can be released as stable. This means no new commits on this branch. Exceptions are security updates and any other commits which meet the criteria for an out of cycle stable update, since they are already in stable anyway.
+* Regardless of any updates run prior to the freeze, during the freeze period those who are able should run {{{sorcery system-update}}} and/or full rebuilds using the stable-rc candidate and note any remaining or newly introduced gating bugs.
+
+**5.** When the release is complete, the new stable is branched from stable-rc:
+
+* {{{git checkout -b stable-$STABLE_RC_VERSION origin/stable-rc-$STABLE_RC_VERSION}}}
+* {{{sed -i 's/-rc/-0/' VERSION}}}
+* {{{git commit -m "VERSION: $(cat VERSION)" VERSION}}}
+* {{{git push origin stable-$STABLE_RC_VERSION:refs/heads/stable-$STABLE_RC_VERSION}}}
+
+**6.** A release tag and tarball are generated as described in [[#tarball|tarball update]].
+
+**7.** After the release, any **fixed** bugs against this stable-rc or the previous stable need to be **closed**.
+
+**8.** If the new release is not done when the 1st of the next month arrives, that branch is abandoned and a new {{{-rc}}} is created and the process starts over.
+----
+
+{{#tarball}}
+== Tarball update ==
+
+This section described how to update a grimoire tarball.
+
+=== Pre-requisites ===
+
+**1.** Get a local grimoire checkout to push updates from; this should usually be different from the one you do work in, because the branch it's on will change behind your back and will usually not even be a real branch.
+
+**2.** Get the script at {{{distro.sourcemage.org:/usr/local/sbin/update-grimoire}}} and edit the top section with your local information (key ids, paths, etc.). If you are not using devel [[Sorcery]], be sure you have the latest {{{/usr/local/sbin/generate-grimoire-version-cache}}} in the same location as your {{{update-grimoire}}} script.
+
+**Note:** currently the stable key is shared (key ID **0xB6632F2E**), while stable-rc uses per-developer keys found in the {{{grimoire-stable-rc}}} keyring.
+
+=== Doing an update ===
+
+**1.** Verify the stable or stable-rc version at the top of the local {{{update-grimoire}}} script is current.
+
+--- //if updating stable only// ---
+
+**2.** In your normal edit grimoire:
+* {{{git checkout stable-$STABLE_VERSION}}}
+* Increment the "release" number in {{{VERSION}}} (the part after the {{{-}}})
+* {{{git commit -m "VERSION: $(cat VERSION)" VERSION}}}
+* {{{git tag -m "stable-$(cat VERSION)" -u $STABLE_KEYID "stable-$(cat VERSION)"}}}
+* {{{git push -v --tags ssh://scm.sourcemage.org/smgl/grimoire stable-$STABLE_VERSION:stable-$STABLE_VERSION}}}
+
+--- //end if updating stable only// ---
+
+**3.** {{{update-grimoire $GRIMOIRE}}}
+
+**4.** Follow the prompts.
+
+The newly uploaded tarball will show up on [[http://master.download.sourcemage.org]] at around 30 minutes past every 3 hours, US Central Time //(12:30, 3:30, 6:30, etc.)//. [[Mirrors]] will update from there on their own schedules.
+----
+
+== How to test ==
+
+# Pick some [[Spell|spells]] from the lists on [[Grimoire/stable]]{{{/$STABLE_RC_VERSION}}} release page and put your name in as the {{{Volunteer}}}. Optionally add some spells to the [[Grimoire/Release/Template#extra|Extra spells]] section, with your name as {{{Volunteer}}}.
+# For your spells, search [[Bugs|bug-tracker]] for any existing bugs. Decide which are gating and which aren't, and fill out the {{{Notes}}} column appropriately. Put an {{{X}}} in the {{{Searched}}} column so we know someone has done the search.
+# Get a machine with the current [[Grimoire/stable|stable]] on it: either your regular box or just a [[Grimoire/Release/Template#chroot-vm|chroot/vm]] image.
+# [[Sorcery/Commands/Cast|Cast]] your spells from stable if you don't have them already. If they won't install, ignore it and keep going.
+# Get stable-rc on that machine, either via {{{scribe add stable-rc}}} or just using the git branch directly.
+# Try updating your spells, or if they wouldn't install in stable try casting them directly from {{{-rc}}}.
+# Note any failures, issues, etc. in the {{{Notes}}} column. File bugs as necessary, noting which new issues are gating and which aren't.
+# Once the spell has cast for you without any gating problems, put an {{{X}}} in the {{{Signed-Off}}} column //(unless otherwise specified this applies to x86)//.
+
+It's up to you to define "gating" for your spells.
+
+Keeping us informed of what you've found is more important than fixing everything yourself. If you run out of time someone else can pick up for you but only if they can tell what's going on.
+
+If you're already running stable somewhere, you don't need to wait, just test with that. Otherwise, download the chroot/vm image.
+
+=== Actions on list of supported spells ===
+
+Place an {{{X}}} in the signed off column once you have signed off on the spell. If you happen to test a full system-upgrade, feel free to put an {{{X}}} and your nick in the {{{Alt Sign-Off}}} column for any spells that work for you.
+
+We release once all spells on the list have:
+
+# An {{{X}}} in the {{{Searched}}} column indicating someone has at least searched the [[Bugs|bug-tracker]] for known issues, even if they found nothing.
+# Sign-off by the volunteer owning that spell this release, **or** sign-off by someone in the {{{Alt Sign-Off}}} column **if** there are no gating bugs noted by the owner.
+
+Join the [[irc://irc.freenode.net/#sourcemage-grimoire|#sourcemage-grimoire]] on [[http://www.freenode.net|irc.freenode.net]] if you want to help or need help.

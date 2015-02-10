@@ -1,0 +1,10 @@
+= POST_REMOVE =
+
+POST_REMOVE is used to do any cleanup that might be necessary after a [[Spell|spell]] is [[Sorcery/Commands/Dispel|dispelled]].
+
+As an example, "lilo" leaves default bitmap image in {{{/boot}}} because it is a protected location:
+
+{{{
+# /boot is protected, we remove /boot/boot.bmp by hand
+rm -f "$INSTALL_ROOT/boot/boot.bmp"
+}}}

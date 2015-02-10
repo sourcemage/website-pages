@@ -1,0 +1,365 @@
+= Help on markup
+
+This site markup implements a large subset of the
+[[http://www.wikicreole.org/|Wiki Creole 1.0 standard]].
+
+Sections:
+[[#heading|Heading]],
+[[#emphasis|Emphasis]],
+[[#punctuation|Punctuation]],
+[[#paragraph|Paragraph]],
+[[#list|Lists]],
+[[#preformat|Preformat]],
+[[#syntax|Syntax]],
+[[#link|Links]],
+[[#image|Images]],
+[[#table|Tables]],
+[[#math|Math]].
+
+----
+{{#heading}}
+== Heading
+
+Headings have one or more '=', beginning in column 1.
+
+{{{#!text
+= Huge Heading (html h1)
+== Large Heading (html h2, nominal)
+=== Medium Heading (html h3, sub-sub-level)
+==== Small Heading (html h4, sub-sub-sub-level)
+===== Tiny Heading (html h5, minimum level supported)
+}}}
+
+= Huge Heading (html h1)
+== Large Heading (html h2, nominal)
+=== Medium Heading (html h3, sub-sub-level)
+==== Small Heading (html h4, sub-sub-sub-level)
+===== Tiny Heading (html h5, minimum level supported)
+
+----
+{{#emphasis}} {{#test}}
+== Emphasis
+
+Horizontal rules have four or more '-', beginning in column 1.
+
+{{{#!text
+Plain text.
+
+##Monospace markup##
+
+//Italic markup//
+
+**Bold markup**
+
+**//Bold italic markup//**
+
+//**Italic bold markup**//
+
+----
+Horizontal rule.
+}}}
+
+Plain text.
+
+##Monospace markup##
+
+//Italic markup//
+
+**Bold markup**
+
+**//Bold italic markup//**
+
+//**Italic bold markup**//
+
+----
+Horizontal rule.
+
+----
+{{#punctuation}}
+== Punctuation
+
+|=Markup          |=Results   |=Comment |
+|{{{Go...home}}}  |Go...home  |&hellip; |
+|{{{Go--home}}}   |Go--home   |&ndash;  |
+|{{{Go---home}}}  |Go---home  |&mdash;  |
+|{{{Go----home}}} |Go----home | &mdash;- |
+|{{{Go~home}}}    |Go~home    |&nbsp;   |
+|{{{Go\~home}}}   |Go\~home   |"~"      |
+|{{{Go~~home}}}   |Go~~home   |&sim;    |
+|{{{Go(C)home}}}  |Go(C)home  |&copy;   |
+|{{{Go-->home}}}  |Go-->home  |&rarr;   |
+|{{{Go<--home}}}  |Go<--home  |&larr;   |
+|{{{Go(R)home}}}  |Go(R)home  |&reg;    |
+|{{{Go(TM)home}}} |Go(TM)home |&trade;  |
+|{{{Go%%home}}}   |Go%%home   |&permil; |
+|{{{Go``home}}}   |Go``home   |&ldquo;  |
+|{{{Go''home}}}   |Go''home   |&rdquo;  |
+|{{{Go,,home}}}   |Go,,home   |&bdquo;  |
+
+----
+{{#paragraph}}
+== Paragraph
+
+{{{#!text
+Adjoining lines are concatenated and
+long lines are wrapped when rendered.
+Adjoining sentences become paragraphs.
+}}}
+
+Adjoining lines are concatenated and
+long lines are wrapped when rendered.
+Adjoining sentences become paragraphs.
+
+{{{#!text
+Force line breaks with\\two back slashes.
+}}}
+
+Force line breaks with\\two back slashes.
+
+----
+{{#list}}
+== Lists
+
+List item lines begin with one or more '*',
+followed by white space and text for the item.
+Sub-lists are controlled by the number of '*', not indentation.
+Indents are optional before the initial '*', but not recommended.
+If used, two blanks per sub-level are recommended for consistency.
+For numbered lists use '#' instead of '*'.
+
+{{{#!text
+Bullet list:
+* First item
+* Second item
+** Sub-item
+*** Sub-sub-item
+* Third item
+  ** Sub-item (leading white space is ignored)
+    *** Sub-sub-item (space improves readability)
+}}}
+
+Bullet list:
+* First item
+* Second item
+** Sub-item
+*** Sub-sub-item
+* Third item
+  ** Sub-item (leading white space is ignored)
+    *** Sub-sub-item (space improves readability)
+
+{{{#!text
+Numbered list:
+# First item
+# Second item
+## Sub-item
+### Sub-sub-item
+### Sub-sub-item-2
+## Sub-item-2
+# Third item
+  ## Sub-item (leading white space is ignored)
+    ### Sub-sub-item (space improves readability)
+}}}
+
+Numbered list:
+# First item
+# Second item
+## Sub-item
+### Sub-sub-item
+### Sub-sub-item-2
+## Sub-item-2
+# Third item
+  ## Sub-item (leading white space is ignored)
+    ### Sub-sub-item (space improves readability)
+
+----
+{{#preformat}}
+== Preformatted
+
+{{{#!text
+    Lines that begin with white space
+        are 'preformatted' (not joined),
+    unless they are '* items' in lists.
+}}}
+
+    Lines that begin with white space
+        are 'preformatted' (not joined),
+    unless they are '* items' in lists.
+
+{{{#!text
+> Joe: Block quote lines begin with one or more '>'.
+>> Bob: When are they typically used?
+>>> Joe: Conversation highlights mostly.
+}}}
+
+> Joe: Block quote lines begin with one or more '>'.
+>> Bob: When are they typically used?
+>>> Joe: Conversation highlights mostly.
+
+{{{#!text
+Inline **text** within {{{triple braces}}} use //monospace// font.
+All markup {{{**is** //ignored//}}} within the braces.
+}}}
+
+Inline **text** within {{{triple braces}}} use //monospace// font.
+All markup {{{**is** //ignored//}}} within the braces.
+
+{{{#!text
+{{{
+Blocks of text delimited by lines that begin and end
+with triple braces are preformatted and monospace.
+
+All markup **is** //ignored// within the block.
+Note: this "} }}" is a kludge for "}}}".
+} }}
+}}}
+
+{{{
+Blocks of text delimited by lines that begin and end
+with triple braces are preformatted and monospace.
+
+All markup **is** //ignored// within the block.
+Note: this "} }}" is a kludge for "}}}".
+}}}
+----
+{{#syntax}}
+== Syntax
+
+{{{#!text
+{{{#!text
+Syntax highlighting can be requested with
+the opening triple braces, i.e. "#!text".
+} }}
+}}}
+\\
+
+{{{#!text
+Syntax highlighting can be requested with
+the opening triple braces, i.e. "#!text".
+}}}
+\\
+
+Many languages and file formats are supported by
+[[http://pygments.org/docs/lexers/]]:
+
+\\
+{{{#!text
+{{{#!c
+/* "Hello World" written in C */
+#include <stdio.h>
+int main(int argc, char[]* argv)
+{ printf("Hello World\n"); return 0; }
+} }}
+}}}
+\\
+
+{{{#!c
+/* "Hello World" written in C */
+#include <stdio.h>
+int main(int argc, char[]* argv)
+{ printf("Hello World\n"); return 0; }
+}}}
+
+----
+{{#link}}
+== Links
+
+{{{#!text
+Link syntax:
+* [[Help]]
+* [[Help|Markup details]]
+* [[Help#emphasis]]
+* [[Help#emphasis|Markup emphasis]]
+* [[path/filename.png]]
+* [[chapter_1/section_2#par3]]
+* [[#test]]
+* [[#test|On page link]]
+* [[#5|[5] ]] Footnote reference
+* http://beta.sourcemage.ru
+* [[http://beta.sourcemage.ru]]
+* [[http://beta.sourcemage.ru|Source Mage]]
+* [[About|{{logo_big.png}}]]
+
+{{#5}} [5] Footnote anchor.
+}}}
+
+Link syntax:
+* [[Help]]
+* [[Help|Markup details]]
+* [[Help#emphasis]]
+* [[Help#emphasis|Markup emphasis]]
+* [[path/filename.png]] 
+* [[chapter_1/section_2#par3]] 
+* [[#test]]
+* [[#test|On page link]]
+* [[#5|[5] ]] Footnote reference
+* http://beta.sourcemage.ru
+* [[http://beta.sourcemage.ru]]
+* [[http://beta.sourcemage.ru|Source Mage]]
+* [[About|{{logo_big.png}}]]
+
+{{#5}} [5] Footnote anchor.
+
+----
+{{#image}}
+== Images
+
+{{{#!text
+Three logo variations
+{{logo_big.png}}
+{{logo_big.png|Logo}}
+[[http://beta.sourcemage.ru|{{logo_big.png}}]]
+rendered inline
+}}}
+----
+
+Three logo variations
+{{logo_big.png}}
+{{logo_big.png|Logo}}
+[[http://beta.sourcemage.ru|{{logo_big.png}}]]
+rendered inline.
+----
+{{#table}}
+== Tables
+
+//Don't// use tables for layout!
+
+{{{#!text
+|Headers |=Column A|=Column B|=Column C|
+|=Row 1  |Cell A1  |Cell B1  |Cell C1  |
+|=Row 2  |Cell A2  |Cell B2  |
+|=Row 3  |Cell A3  |Cell B3  |Cell C3  |
+}}}
+\\
+
+|Headers |=Column A|=Column B|=Column C|
+|=Row 1  |Cell A1  |Cell B1  |Cell C1  |
+|=Row 2  |Cell A2  |Cell B2  |
+|=Row 3  |Cell A3  |Cell B3  |Cell C3  |
+\\
+
+{{{#!text
+|=Line Hdr\\Break Hdr|=Column //A//|Italic //B//|=Column C|
+|Row 1 |Bold **A1**|Italic //B1//|Cell C1|
+|=Row 2|Line A2\\Break A2|  |Link [[#list|C2]]|
+|=Row 3|{{{A3= Bar}}}    |Bold **B3**|
+}}}
+\\
+
+|=Line Hdr\\Break Hdr|=Column //A//|Italic //B//|=Column C|
+|Row 1 |Bold **A1**|Italic //B1//|Cell C1|
+|=Row 2|Line A2\\Break A2|  |Link [[#list|C2]]|
+|=Row 3|{{{A3= Bar}}}    |Bold **B3**|
+
+----
+{{#math}}
+== Math
+
+This site doesn't render mathematical formulas all by itself, instead it displays images from an external service, such as http://mathtran.org (the default), [[http://www.forkosh.com/mimetex.html|mimeTeX]] or [[http://www.forkosh.dreamhost.com/source_mathtex.html|mathTeX]]. You can use LaTeX-like syntax, enclosed in double dollar signs {{{$$}}}. For example, you can write the famous Einstein--Pythagoras equation:
+
+{{{#!text
+$$E=m(a^2+b^2)$$
+}}}
+
+$$E=m(a^2+b^2)$$
+
+There is a [[http://sixthform.info/steve/wordpress/?p=59|list of LaTeX rendering services]].

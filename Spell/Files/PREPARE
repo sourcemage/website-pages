@@ -1,0 +1,22 @@
+= PREPARE =
+
+This script is run only during dependency resolution. It is sourced before any other [[Spell|spell]] script, i.e. before [[Spell/Files/DETAILS|DETAILS]] even. It is to be used in the rare case of scripting being needed in DETAILS.
+
+The following variables are available in PREPARE:
+
+|= Variable =|= Description/value =|
+| {{{SOURCE_CACHE}}} | the directory where the sources reside ({{{/var/spool/sorcery}}}) |
+| {{{SPELL_DIRECTORY}}} | the spell script directory in the [[Codex]] ({{{/path/to/<grimoire>/<section>/<spell>}}}) |
+| {{{SCRIPT_DIRECTORY}}} | the same as {{{${SPELL_DIRECTORY}}}} |
+| {{{SECTION_DIRECTORY}}} | {{{/path/to/<grimoire>/<section>}}} |
+| {{{GRIMOIRE}}} | {{{/path/to/<grimoire>}}} |
+
+For more info on these variables, check {{{/var/lib/sorcery/modules/libcodex}}}.
+
+Here's an example of PREPARE of "cherrypy" spell:
+
+{{{
+config_query_list BRANCH "which branch?" 3 2
+}}}
+
+An important usecase for PREPARE is in [[Spell/Multiversion|multiversion spells]].

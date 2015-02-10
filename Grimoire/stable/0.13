@@ -1,0 +1,90 @@
+= Grimoire stable-0.13 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/08/01**. The target release date is **2007/08/15**.
+
+This release is being shepherded by **Chris Dombroski** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot stable-0.12 | sandalle | [[http://download.sourcemage.org/image/official/smgl-stable-0.12-basesystem-x86.tar.bz2|smgl-stable-0.12-basesystem-x86.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.12-basesystem-x86.tar.bz2.sig|sig]]) |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | | | |
+| bash | sandalle | X | | X cdombroski | Rebuilt successfully |
+| binutils | sandalle | X | | X cdombroski | Rebuilt successfully |
+| bison | sandalle | X | | X cdombroski | Rebuilt successfully |
+| bzip2 | sandalle | X | | X cdombroski | Rebuilt successfully |
+| console-tools | sandalle | X | | X cdombroski | Rebuilt successfully |
+| console-data | sandalle | X | | X cdombroski | Rebuilt successfully |
+| coreutils | sandalle | X | | | |
+| cpio | sandalle | X | | X cdombroski | Rebuilt successfully |
+| device-mapper | sandalle | X | | | |
+| dhcpcd | sandalle | X | | X cdombroski | Rebuilt successfully |
+| dialog | sandalle | X | | X cdombroski | Rebuilt successfully |
+| diffutils | sandalle | X | | X cdombroski | Rebuilt successfully |
+| e2fsprogs | sandalle | X | X | X cdombroski, lejatorn | No bugs found |
+| elvis | sandalle | X | | X cdombroski | Rebuilt successfully |
+| file | sandalle | X | | X cdombroski | Rebuilt successfully |
+| findutils | sandalle | X | | X cdombroski | Rebuilt successfully |
+| flex | sandalle | X | | X cdombroski | Rebuilt successfully |
+| gawk | sandalle | X | | X cdombroski | Rebuilt successfully |
+| g++ | sandalle | X | | | |
+| gcc | sandalle | X | | X cdombroski | Rebuilt successfully |
+| gettext | sandalle | X | | | |
+| glibc | sandalle | X | | X cdombroski | Rebuilt successfully |
+| gnupg | sandalle | X | | | |
+| grep | lejatorn | X | X | X cdombroski | Rebuilt successfully |
+| grub | sandalle | X | | X cdombroski | Rebuilt successfully |
+| gzip | sandalle | X | | X cdombroski | Rebuilt successfully |
+| iana-etc | sandalle | X | | X cdombroski | Rebuilt successfully |
+| init.d | sandalle | X | | X cdombroski | Rebuilt successfully |
+| installwatch | sandalle | X | | X cdombroski | Rebuilt successfully |
+| jed | sandalle | X | | | |
+| jfsutils | sandalle | X | | | |
+| kbd | sandalle | X | | | |
+| less | sandalle | X | | X cdombroski | Rebuilt successfully |
+| lilo | sandalle | X | | | |
+| locale | sandalle | X | | X cdombroski | Rebuilt successfully |
+| m4 | sandalle | X | | X cdombroski, lejatorn | Upgraded to new version without error |
+| make | sandalle | X | | X cdombroski | Rebuilt successfully |
+| mktemp | sandalle | X | | X cdombroski | Rebuilt successfully |
+| module-init-tools | sandalle | X | | X cdombroski | Rebuilt successfully |
+| nano | sandalle | X | | | |
+| ncurses | sandalle | X | | X cdombroski | Rebuilt successfully |
+| netconf | sandalle | X | | X cdombroski | Rebuilt successfully |
+| net-tools | sandalle | X | | | |
+| patch | sandalle | X | | | |
+| perl | sandalle | X | | X cdombroski | Rebuilt successfully |
+| procps | sandalle | X | | | |
+| readline | sandalle | X | | X cdombroski | Rebuilt successfully |
+| reiserfsprogs | sandalle | X | X | | No bugs found |
+| sed | sandalle | X | | X cdombroski | Rebuilt successfully |
+| shadow | sandalle | X | | X cdombroski, lejatorn | Rebuilt successfully |
+| simpleinit-msb | sandalle | X | | X cdombroski | Rebuilt successfully |
+| smgl-archspecs | sandalle | X | | X cdombroski | Rebuilt successfully |
+| smgl-fhs | sandalle | X | | X cdombroski | Rebuilt successfully |
+| tar | sandalle | X | | X cdombroski | Rebuilt successfully |
+| texinfo | sandalle | X | | X cdombroski | Rebuilt successfully |
+| udev | sandalle | X | | X cdombroski | Rebuilt successfully |
+| unzip | sandalle | X | | X cdombroski | Rebuilt successfully |
+| util-linux | sandalle | X | | | FIXED Fails to compile during rebuild. fsck.cramfs.c:98: error: variably modified 'outbuffer' at file scope |
+| vim | sandalle | X | X | | No bugs found |
+| wget | lejatorn | X | X | X cdombroski | Rebuilt successfully |
+| xfsprogs | sandalle | X | X | | No bugs found |
+| zlib | sandalle | X | X | X cdombroski | No bugs found |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| autoconf | sandalle | X | | X cdombroski | Rebuilt successfully |
+| automake | sandalle | X | | X cdombroski | Rebuilt successfully |
+| lftp | lejatorn | | X | | |
+| libidn | | | | X cdombroski | Rebuilt successfully |
+| libtool | sandalle | X | X | | No bugs found |
+| libtunepimp | sandalle | X | | | FIXED Bug #13919 (fails with flac 1.2.0) is a regression, blocking -fixed in libtunepimp-0.5.3, but also needs new spell libofa |
+| pure-ftpd | lejatorn | | X | | |
+| slang | sandalle | X | | X cdombroski | Upgraded to new version without error |
+| sorcery-pubkeys | sandalle | X | | X cdombroski | Rebuilt successfully |

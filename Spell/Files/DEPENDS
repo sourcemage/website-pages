@@ -1,0 +1,152 @@
+= DEPENDS =
+
+The DEPENDS file is used to contain information about what this [[Spell|spell]] needs to compile, with optional ones for added compile-time or runtime options.
+
+== Spell dependencies ==
+
+This specifies the name of the spell which this spell requires to compile.
+
+The syntax is:
+
+{{{
+depends <spell> \
+        ["<config_if_set>"] \
+        ["<description>"] \
+        [<grimoire>]
+}}}
+
+Example (basic dependency):
+
+{{{
+depends zlib
+}}}
+
+Example (multiple dependencies):
+
+{{{
+depends zlib "--enable-compression" &&
+depends gtk+ "" "for the GUI"
+}}}
+
+== Runtime spell dependencies ==
+
+This specifies the name of the spell which this spell requires to run, but not to build.
+
+Example:
+
+{{{
+runtime_depends perl
+}}}
+
+== Optional dependencies ==
+
+This specifies the name of the spell which this spell can use to add features, along with the required ./configure parameters //(use {{{./configure --help}}} for this spell to find out what else you can add to it and what their options are)//.
+
+The syntax is:
+
+{{{
+optional_depends <spell> \
+                 "<config_if_set>" \
+                 "<config_if_unset>" \
+                 "descripion" \
+                 [<grimoire>]
+}}}
+
+Example:
+
+{{{
+optional_depends gtk+ \
+                 "--with-gtk+" \
+                 "--without-gtk+" \
+                 "to enable GTK+ widget support"
+}}}
+
+Example (multiple optional dependencies):
+
+{{{
+optional_depends gtk+ \
+                 "--with-gtk+" \
+                 "--without-gtk+" \
+                 "to enable GTK+ widget support" &&
+
+optional_depends sdl \
+                 "--with-sdl" \
+                 "--without-sdl" \
+                 "for Simple DirectMedia Layer support"
+}}}
+
+== Optional runtime spell dependencies ==
+
+This specifies the name of the spell which this spell can use at runtime, but does not need it to build. It is the runtime-only counterpart of {{{optional_depends}}} called {{{suggest_depends}}}.
+
+Example:
+
+{{{
+suggest_depends wine-gecko "" "" "for a standalone gecko for wine"
+}}}
+
+== Dependencies on providers ==
+
+This specifies the name of the provider which this spell requires to compile or run, optionally or not.
+
+Example:
+
+{{{
+depends MAIL-TRANSPORT-AGENT &&
+
+suggest_depends WEB-BROWSER "" "" "for browsing the html docs"
+}}}
+
+See [[Spell/Files/PROVIDES|PROVIDES]] for a listing of generic services provided by spells, and how to use them to make generic dependencies. \\ Only spells that can actually use **all** of the providers for a generic dependency are allowed to depend/optional_depend on that provider.
+
+== Cross-grimoire dependencies ==
+
+Cross-[[Grimoire|grimoire]] dependencies allow you to depend on a spell in a specific grimoire.
+
+Here is an example of how to use cross-grimoire depends:
+
+{{{
+depends JAVA "" "" z-rejected &&
+
+optional_depends libcg \
+                 "--enable-cg" \
+                 "--disable-cg" \
+                 "for nVIDIA's Computer Graphics library" \
+                 z-rejected
+}}}
+
+This package will depend on [[Grimoire/z-rejected|z-rejected]] for {{{JAVA}}}, and again depend on z-rejected if the user says 'y' to installing "libcg".
+
+Remember, do not use **TAB**s, but instead **SPACE**s for formatting. Also make sure that your last line does not have the {{{&&}}}, for there will be nothing after it to continue on, and you will have a syntax error when this file is read. And you always must provide at least {{{""}}} if you have further arguments or the ordering will be wrong.
+
+Correct example:
+
+{{{
+depends JAVA "" "" z-rejected &&
+
+optional_depends libcg \
+                 "" \
+                 "" \
+                 "for nVIDIA's Computer Graphics library" \
+                 z-rejected
+}}}
+
+== "Forced" dependencies ==
+
+{{{force_depends}}} is not a regular dependency function like the rest mentioned here. It is used to force a dependency to be rebuilt if possible. The dependency still has to be specified normally.
+
+For example, "g++" needs to be of the same version as "gcc" or it won't build:
+
+{{{
+depends gcc &&
+
+if [[ $VERSION != $(installed_version gcc) ]]; then
+  force_depends gcc
+fi
+}}}
+
+{{{force_depends}}} forces ordering and that's what helps most. "gcc" could've been recompiled later in the queue, but this spell needs the latest before its own build.
+
+== Sub-dependencies ==
+
+See [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] and [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] duo for more information on sub-dependencies.

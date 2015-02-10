@@ -1,0 +1,31 @@
+= REPAIR^* files =
+
+Repair files are used for replacing [[Spell|spell]] files or section/[[Grimoire|grimoire]] libraries in the [[Spell/Tablet|tablet]]. \\ They can exist in spell directories, section directories or the grimoire base.
+
+The format of the filename is: {{{REPAIR^ID^FILENAME}}}
+
+{{{FILENAME}}} can be anything, its not limited to spell files, you can replace a patch file if you really want to.
+
+{{{ID}}} can be one of the things below:
+
+* a spell's version
+* a spell's {{{UPDATED}}} field //(deprecated)//
+* the md5sum of {{{FILENAME}}}
+* the exact string 'none'
+* the exact string 'all'
+
+The first two are relatively straightforward, if {{{FILENAME}}} exists in the spell/section/grimoire directory and the spell's version or updated field matches {{{ID}}}, then the file is replaced. If the md5sum of the file in the tablet is the same as {{{ID}}} then the file is replaced (remember that there is a section/grimoire directory for each spell).
+
+If the file does NOT exist in the tablet, AND the value of {{{ID}}} is 'none' the file is added.
+
+If the value of {{{ID}}} is 'all' the file in the tablet is unconditionally replaced or added.
+
+So, you can replace any spell file, or section/grimoire library very easily now. It doesn't make a whole lot of sense to use the version or updated values for section and grimoire files, but they're there if you want it.
+
+An optimization is put in place such that if we are going to replace the file and the file's md5sum is the same as the repair file we skip the replace since the replace has presumably already been done.
+
+Cache files are not updated at this time.
+
+The entire tablet is scrubbed after each {{{scribe update}}}. {{{cleanse --tablet}}} will also do this. There is an additional option to {{{cleanse}}}, {{{--tablet_spell}}} which takes a single parameter as a spell name to scrub so you can quickly verify that things are working without scrubbing the entire tablet.
+
+Repair files don't apply to trigger registration, which is done during [[Sorcery/Commands/Cast|cast]], they repair files that will be executed at a later date. \\ So there is little point in repairing [[Spell/Files/TRIGGERS|TRIGGERS]], [[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] or [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]].

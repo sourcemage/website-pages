@@ -1,0 +1,21 @@
+= PRE_BUILD =
+
+The PRE_BUILD file is executed by [[Sorcery/Commands/Cast|cast]] before the [[Spell/Files/BUILD|BUILD]] file.
+
+Anything necessary to prepare the [[Spell|spell]] to be built should be done here, like patching or unpacking additional sources. Usually this is done by adding commands after {{{default_pre_build}}}, which unpacks the first source automatically:
+
+{{{
+default_pre_build &&
+cd "$SOURCE_DIRECTORY" &&
+unpack_file 2 &&
+
+patch -p0 < "$SPELL_DIRECTORY/gcc4.patch"
+}}}
+
+Another use for this file is for spells using badly packaged sources that don't unpack into a directory:
+
+{{{
+mk_source_dir "$SOURCE_DIRECTORY" &&
+cd "$SOURCE_DIRECTORY" &&
+unpack_file
+}}}

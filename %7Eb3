@@ -1,0 +1,75 @@
+= Sergey A. Lipnevich =
+
+**IRC nick(s):** b3
+
+**ICQ:** 113 570 490
+
+**Role in SMGL:** Section maintainer for collab, http, and php-pear
+
+**Age/Birthdate:** 26
+
+**Location/Country:** Belarus, Eastern Europe
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+Sometime late 2000, for general education about UNIX family of OSes. I used to be all-Microsoft guy.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+It caught my eye, most likely in Linux Weekly News, somewhere in late January 2002 as a source-based distribution. I remember two keypoints that won: a) I read in the lists or descriptions that many are using it on top of Linux From Scratch, which was what I was planning to master; b) I didn't know there are other source-based distributions ;-). My idea to use LFS was due to educational reasons again, to understand the guts of the system. But I quickly realized that I have almost the same total control of things with sorcery, and grimoire yanked any and all package management systems out of my head, because I despise of rpm. Simply put, it was love at first sight :-).
+
+**What piqued your interest in SMGL initially?**
+
+That was answered above.
+
+**What future do you personally see for SMGL?**
+
+I must admit I don't have a clear vision, but I believe that quantity of small improvements will transform into a new quality of a powerful, versatile, and robust server and (to a lesser degree) desktop Linux distro with.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+My name is Sergey Lipnevich, I'm from Belarus, Eastern Europe, working now in New York and New Jersey, USA. I live in Brooklyn, NY, but will most likely move somewhere to Middlessex county, NJ. I'm 25, in IT business since 1992, I started working as an application programmer in C, C++ and Pascal even before I went to my University. I hold a B.S. degree in Physics, Optics. I'm a Microsoft Certified Systems Engineer, and proud of the fact that in 1999 (or 8?) I took and passed five out of six exams (the first I passed in 1996) on the same day, without much preparation, being on a business trip to Moscow, Russia, so I'm 100% working knowledge as opposed to boot-camp trainees. I deployed or participated in deploying country-wide networks for Government and private business companies in my home country Belarus, and in Taiwan, R.O.C. I also worked in Belarus, Ukraine and Germany for SIEMENS partner company located in Minsk, Belarus, my sweet home city. I used to program DCOM stuff, distributed computing Microsoft way, and was excited about it. It's still a great powerful technology, somewhat overcomplicated by its creators.
+
+I also am a Sun Certified Programmer for Java 2 Platform (SCPJ), my position is called Senior Software Engineer. I work as a consultant, specializing on Java applications. Enterprise Java, distributed Java, desktop Java, all this exciting stuff ;-). No embedded Java though. But we'll be there. Java is a beautiful technology with numerous advantages and great standard library, liberating programmers from specific platform (better believe it), but it was born to the world in a hurry, prematurely, and without deep scientific backing, so in some aspects it sucks.
+
+Before 9/11 attack on the Towers I used to be a part-time Java instructor, some say I'm good at explaining and patient, but I don't like teaching people who know nothing and want to learn Java to get a $100K/week job tomorrow. I also can interview you on C++ and Java, so let me know when you're looking for your next job, I may conduct a sample interview for you. The business is somewhat slower now, so I don't do this very often.
+
+I supervise and mostly implement myself a project which would bring a power of Linux and freedom software to our team of software developers. SMGL is the platform of choice here ;-). After my first ever IT exam, 1996 on Windows 95, the lowest score I had was for "supporting" category. Since then I learned to appreciate a good support specialist and became one myself, but I don't enjoy doing it for technologies I don't consider challenging.
+
+**Any personal messages for the Source Mage users out there?**
+
+Guys and girls, wrap your brains around sorcery and grimoire, and remember: when you write your next big software thing or set up your next best Linux server, use SMGL! And don't forget to sell it to your boss and colleagues ;-)!
+
+**What other OS programs/software have you worked on?**
+
+Everything Microsoft, trust me when I say this software changed the industry in a good way before they started going really bad. Everything Java 2 SDK-related, everything Java 2 EE. My favorite application server is combination of JBoss and Tomcat 4. My favorite Java deficiency is not having a destructor while having a finally clause (and we're not talking about memory allocation, OK?). My favorite file systems are ReiserFS and tempfs where I can persist my EJBs without dumb caching, the latter thanks to SMGL. My favorite language is C++ for untamed power and thoughtful design, and especially for STL which I admire. I am full of respect to FSF and ASF for doing what they do for IT, and will promote them as I see fit.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+vi
+
+**KDE or GNOME?**
+
+xfce
+
+**BSD or GPL?**
+
+GPL, but with appreciation of BSD which gives companies rationale to contribute to OSS projects something that they don't consider too precious (or too dirty) to part with.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+My beautiful wife Anastasiya who is a psychology student going for her B.S. in June (good luck!). She's been admitted to Rutgers University in NJ for M.Ed. program in Counseling Psychology. She's going to counsel me when computers will damage my mind sufficiently, and you guys can line up too ;-), she's very bright and during her one semester in a private St. Francis College in Brooklyn (just to see how things are in the US) she was the top student ;-). She can provide psychological help to those speaking in English, Italian, Russian, Belarusian, and soon Spanish. Did I use all of my family-related space yet?
+
+**What kind of car do you drive? Or what is your dream car?**
+
+Old one, Chevy Lumine 1990, a blue mid-size sedan with 130 HP. Traffic is so bad at times here in Tristate area that I don't dream about cars, sorry :-).
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+I'll hold for now, but as soon as I make a nice one I'll post it.

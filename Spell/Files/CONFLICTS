@@ -1,0 +1,24 @@
+= CONFLICTS =
+
+This file lists other [[Spell|spells]] that conflict against the spell being installed.
+
+While this file is a normally extensible script, it must not output anything else but what the {{{conflicts}}} function calls would.
+
+Example:
+
+{{{
+conflicts freeglut
+}}}
+
+And for multiple conflicts:
+
+{{{
+conflicts freeglut &&
+conflicts openglut
+}}}
+
+Self-conflicts //(useful during [[Sorcery/Commands/Cast|cast]] when older libraries of a spell prevent from successful compile/linking phase)// should default to yes:
+
+{{{
+conflicts kdelibs y
+}}}

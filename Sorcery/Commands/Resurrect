@@ -1,0 +1,5 @@
+= Resurrect command =
+
+{{{resurrect}}} is used to install software packages from cache tarballs created by [[Sorcery/Commands/Cast|cast]].
+
+For options and more information see //resurrect(8)// manual page.

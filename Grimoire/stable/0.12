@@ -1,0 +1,87 @@
+= Grimoire stable-0.12 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/07/01**. The target release date is **2007/07/15**.
+
+This release is being shepherded by **Thomas Orgis** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot-0.11 x86 | sandalle | [[http://download.sourcemage.org/cauldron/image/official/smgl-stable-0.11-basesystem-x86.tar.bz2|smgl-stable-0.11-basesystem-x86.tar.bz2]] ([[http://download.sourcemage.org/cauldron/image/official/smgl-stable-0.11-basesystem-x86.tar.bz2.sig|sig]]) |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | X (lejatorn) | #12857, fixed in test TEXT-EDITOR/PAGER |
+| bash | p3pilot | | | X (sobukus) | |
+| binutils | sandalle | X | X | | no bugs found |
+| bison | sandalle | X | X | | no bugs found |
+| bzip2 | sandalle | X | X | | no bugs found |
+| console-tools | | X | | X (sobukus) | no bugs found |
+| console-data | | X | | X (sobukus) | no bugs found |
+| coreutils | sandalle | X | X | | no bugs found |
+| cpio | sandalle | X | X | | no bugs found |
+| device-mapper | | X | | X (sobukus) | no bugs found |
+| dhcpcd | sandalle | X | X | | #11614 (fixed in test) |
+| dialog | | X | | X (sobukus) | no bugs found |
+| diffutils | | X | | X (sobukus) | no bugs found |
+| e2fsprogs | sandalle | X | X | X (lejatorn) | no bugs found |
+| elvis | sandalle | X | X | | no bugs found |
+| file | | X | | X (sobukus) | no bugs found |
+| findutils | | X | | X (sobukus) | no bugs found |
+| flex | | X | | X (sobukus) | no bugs found |
+| gawk | | X | | X (sobukus) | no bugs found |
+| g++ | | X | | X (sobukus) | #13595 perhaps misconfiguration or sorcery problem? |
+| gcc | | X | | X (sobukus) | #9667 failure on SPARC... historic, #13778 -- just close it? |
+| gettext | | X | | X (sobukus) | no bugs found |
+| glibc | | X | | X (sobukus) | a little list, not gating, but it should be shorter next time: #8238, #8240, #8241, #8243, #8244, #9580, #12962 |
+| gnupg | sandalle | X | X | | #9666 on SPARC and old |
+| grep | lejatorn | X | X | | No problem whatsoever. |
+| grub | | X | | X (sobukus) | #11747 on x86_64... Very much non gating one can use lilo (dkowis) |
+| gzip | | X | | X (sobukus) | no bugs found |
+| iana-etc | | X | | X (sobukus) | no bugs found |
+| init.d | | X | | X (sobukus) | listing all of them again (also enhancement bugs), so we don't forget: #9177 (my favourite evergreen), #9417, #9419, #9420, #13196, #13363, #13381, #13450 |
+| installwatch | sandalle | X | X | | no bugs found |
+| jed | | X | | X (sobukus) | no bugs found |
+| jfsutils | sandalle | X | X | | no bugs found |
+| kbd | | X | | X (sobukus) | no bugs found |
+| less | | X | | X (lejatorn) | no bugs found |
+| lilo | | X | | X (sobukus) | no bugs found |
+| locale | | X | | X (sobukus) | no bugs found |
+| m4 | | X | | X (sobukus) | no bugs found |
+| make | | X | | X (sobukus) | no bugs found |
+| mktemp | | X | | X (sobukus) | no bugs found |
+| module-init-tools | sandalle | X | X | | no bugs found |
+| nano | | X | | X (sobukus) | no bugs found |
+| ncurses | | X | | X (sobukus) | #13654 the UTF-8 bomb |
+| netconf | | X | | X (sobukus) | #10517 (ifplugd enhancement) |
+| net-tools | | X | | X (sobukus) | #10207, #10746 |
+| patch | | X | | X (sobukus) | no bugs found |
+| perl | | X | | X (sobukus) | no bugs found |
+| procps | | X | | X (sobukus) | no bugs found |
+| readline | p3pilot | | | X (sobukus) | |
+| reiserfsprogs | sandalle | X | X | | no bugs found |
+| sed | sandalle | X | X | | no bugs found |
+| shadow | | X | | X (lejatorn) | There's still #13505 ... I almost forgot the devel-shadow branch I made with the fix a while ago, #13601 the pending update -- website alive? |
+| simpleinit-msb | sandalle | X | X | | no bugs found |
+| smgl-archspecs | | X | | X (sobukus) | no bugs found |
+| smgl-fhs | | X | | X (sobukus) | some bugs for relates issues: #11747, #13112, #13354, #13777 |
+| tar | | X | | X (lejatorn) | no bugs found |
+| texinfo | | X | | X (lejatorn) | no bugs found |
+| udev | | X | | X (lejatorn) | no bugs found |
+| unzip | | X | | X (sobukus) | no bugs found |
+| util-linux | | X | | X (sobukus) | no bugs found |
+| vim | | X | | X (sobukus) | no bugs found |
+| wget | lejatorn | X | X | | No problem whatsoever. |
+| xfsprogs | sandalle | X | X | | no bugs found |
+| zlib | sandalle | X | X | | no bugs found |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| libtool | sandalle | X | X | | No bugs found |
+| lighttpd | p3pilot | X | X | | |
+| php | p3pilot | X | X | | Bugs to look at: #13833, #13832 |
+| pidgin | p3pilot | X | X | | |
+| pure-ftpd | lejatorn | X | X | | No problem whatsoever. |
+| lftp | lejatorn | X | X | | No problem whatsoever. |

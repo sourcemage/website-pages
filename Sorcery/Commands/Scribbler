@@ -1,0 +1,50 @@
+= Multiple grimoires with Scribbler =
+
+The [[Sorcery]] tools allow you to have multiple [[Grimoire|grimoires]] in your [[Codex]]. Some grimoires, like [[Grimoire/games|games]] and [[Grimoire/z-rejected|z-rejected]], contain spells that aren't found in the standard [[Grimoire/test|test]] and [[Grimoire/stable|stable]] grimoires. However, if you have both test and stable in your codex, or some other spell exists in two grimoires in your codex, how does sorcery decide which grimoire to cast from?
+
+The grimoires you have installed are indexed, or numbered. When you cast a spell, sorcery searches the grimoires in their indexed order and uses the spell from the first grimoire it is found in. {{{scribe index}}} will list the grimoires in your codex in the order sorcery will search them:
+
+{{{
+ [0] : stable : /var/lib/sorcery/codex/stable
+ [1] : games : /var/lib/sorcery/codex/games
+ [2] : z-rejected : /var/lib/sorcery/codex/z-rejected
+ [3] : test : /var/lib/sorcery/codex/test
+}}}
+
+In this case, the only spells that will ever cast from test, are those that do not exist in any of the other grimoires. This could be useful if you want to try spells out that haven't been pulled into the stable grimoire yet. When they do get pulled into stable, sorcery will use the spell in the stable grimoire for all future updates.
+
+If you wanted to cast a spell from test, that also exists in stable, you can do this using a personal grimoire and the scribbler tool:
+
+{{{
+# scribbler add gaim test my-spells
+}}}
+
+Now you need to make sure that your personal grimoire is searched first. This can be done using:
+
+{{{
+# scribe swap <grimoire1> <grimoire2>
+}}}
+
+You can swap the grimoires around until you have the order you want. Otherwise, you can just edit {{{/etc/sorcery/local/grimoire}}} and change the numbers to the order you want. After moving grimoires around, you can use {{{scribe index}}} to check your ordering:
+
+{{{
+ [0] : my-spells : /home/casey/my-spells
+ [1] : stable : /var/lib/sorcery/codex/stable
+ [2] : games : /var/lib/sorcery/codex/games
+ [3] : z-rejected : /var/lib/sorcery/codex/z-rejected
+ [4] : test : /var/lib/sorcery/codex/test
+}}}
+
+Now, my personal grimoire "my-spells" will be searched first. Then stable, games, z-rejected and finally test. You can use {{{gaze versions gaim}}} to test if scribbler did its job. It will list all versions of "gaim" available in all grimoires:
+
+{{{
+  Grimoire    Section  Spell  Grimoire Version  Installed Version  
+  --------    -------  -----  ----------------  -----------------  
+  my-spells   chat-im  gaim   0.77              0.77               
+  stable      chat-im  gaim   0.76              -                  
+  games       -        -      -                 -                  
+  z-rejected  -        -      -                 -                  
+  test        chat-im  gaim   0.77              -                  
+}}}
+
+**Note:** if you have not already created your own grimoire, you will be presented with the opportunity to create one when you run {{{scribbler add gaim test my-spells}}}. However, it will end up with root privileges in {{{/var/lib/sorcery/codex/my-spells}}}, which might not be what you wanted.

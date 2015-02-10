@@ -1,0 +1,59 @@
+= Juuso Alasuutari =
+
+**IRC nick(s):** iuso
+
+**Role in SMGL:** General user, General Guru, general enthusiast.
+
+**Age/Birthdate:** 24 (born 1981/10/05)
+
+**Location/Country:** Tampere, Finland
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+I dabbled in Slackware when I was a teen back in the 1990's. The computer was a 486, and I mainly just wanted a working browser and IRC client. I did however do some kernel compiling, and I remember also having ideological background to my choice. Then I got carried away with other interests, and didn't return to Linux until the second half of 2005. The reason was simple: Microsoft had pissed me off the last time with yet another serious security flaw. So, when I got a new laptop in October, I had shown Windows XP the door in less than an hour from boot one.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+Since December 2005.
+
+**What piqued your interest in SMGL initially?**
+
+I first installed Kubuntu, but within less than two months I gave up on it. I found it hard to get stuff like wifi connections working, and started looking for other options. I quickly decided that I wanted a source-based distro, having a taste for optimizations. First I thought of Gentoo, but after looking at the installation manual... Let's just say I like my novels long and my tutorials less exhausting.
+
+What brought me to Source Mage was simply using [[http://www.linux.org/|linux.org's searchable distro guide]]. I decided SMGL would be worth trying, and from that moment on I was sold (in the GPL sense of the word, of course ;-)). And although my first three-four initial attempts at installation were unsuccesful, the kind help and patience of those on #sourcemage sealed my choice. I haven't regret it ever since.
+
+**What future do you personally see for SMGL?**
+
+I see a solid source-based distro, that neither attempts to read the users mind nor leaves him/her standing alone in a forest of config files armed only with $EDITOR. What's important to me is keeping Source Mage as the choice of the DIY-spirited admin, while also developing configuration and management tools to ease things for the rest of us. Tools can be a wonderful thing, as long as they're not shoved in your face.
+
+But although I often focus on ease-of-use and user interface issues, I also value a core system that works. And why not? Everything else is built upon it. As good as Sorcery already is, I'm looking forward to an even better one. It can be improved and optimized, and I hope I can contribute to this in some way.
+
+Last but not least, I hope to see our documentation improve. At the moment (2006-05) this is an issue I've personally been hearing criticism about from new users. With all the effort our developers put into Sorcery and the grimoires -- an effort which shows in their high quality as well -- there is of course less time for writing manuals. This is also something I want to help with.
+
+--- more coming later ---
+
+== Flamewars ==
+
+**vi or emacs?**
+
+Neither. I use nano and kedit.
+
+**KDE or GNOME?**
+
+KDE.
+
+**BSD or GPL?**
+
+GPL, because I believe in freedom of information. Albeit an ideological choice, GPL also has the laws of memetics on its side. A Free program has very little restrictions for copying, which makes it an aggressive replicator. The GPL meme is extremely beneficial for most memeplexes incorporating it.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Mother, father, and two younger brothers. I also have two dogs.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+I don't own a car, although I occasionally drive one. I try to minimize my ecological footprint, so my dream car is something that doesn't pollute too much. If hybrid bio methane vans or similar hippie devices ever hit the market, that's what you'll see me sitting in. :-)

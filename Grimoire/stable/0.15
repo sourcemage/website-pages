@@ -1,0 +1,84 @@
+= Grimoire stable-0.15 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/11/05**. The target release date is **2007/11/19**.
+
+This release is being shepherded by **Eric Sandall** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| stable-0.14 x86 | sandalle | [[http://download.sourcemage.org/image/official/smgl-stable-0.14-basesystem-x86.tar.bz2|smgl-stable-0.14-basesystem-x86.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.14-basesystem-x86.tar.bz2.sig|sig]]) |
+| stable-0.14 x86_64 | sandalle | [[http://download.sourcemage.org/image/official/smgl-stable-0.14-basesystem-x86_64.tar.bz2|smgl-stable-0.14-basesystem-x86_64.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.14-basesystem-x86_64.tar.bz2.sig|sig]]) |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | | |
+| bash | sandalle | X | X | | bug #13654 |
+| binutils | sandalle | X | X | | |
+| bison | sandalle | X | X | | |
+| bzip2 | sandalle | X | X | | |
+| console-tools | sandalle | X | X | | |
+| console-data | sandalle | X | X | | |
+| coreutils | sandalle | X | X | | |
+| cpio | sandalle | X | X | | |
+| device-mapper | sandalle | X | X | | |
+| dhcpcd | lynx | X | X | X lejatorn | |
+| dialog | sandalle | X | X | | |
+| diffutils | sandalle | X | X | | |
+| e2fsprogs | lynx | X | X | X lejatorn | |
+| elvis | sandalle | X | X | | |
+| file | sandalle | X | X | | |
+| findutils | sandalle | X | X | | |
+| flex | sandalle | X | X | | |
+| gawk | lynx | X | X | X lejatorn | |
+| g++ | sandalle | X |  | X lejatorn | bug #13595 |
+| gcc | sandalle | X | X | X lejatorn | |
+| gettext | sandalle | X | X | | |
+| glibc | lynx | X | X | X lejatorn | |
+| gnupg | sandalle | X | X | | |
+| grep | lejatorn | X | X | | |
+| grub | sandalle | X | X | | |
+| gzip | sandalle | X | X | | |
+| iana-etc | sandalle | X | X | | |
+| init.d | sandalle | X | X | | |
+| installwatch | sandalle | X | X | | bug #13873 |
+| jed | sandalle | X | X | | |
+| jfsutils | sandalle | X | X | | |
+| kbd | sandalle | X | X | | |
+| less | lynx | X | X | X lejatorn | |
+| lilo | sandalle | X | X | | |
+| locale | lynx | X | X | X lejatorn | |
+| m4 | sandalle | X | X | | |
+| make | sandalle | X | X | | |
+| mktemp | sandalle | X | X | | |
+| module-init-tools | lynx | X | X | X lejatorn | |
+| nano | sandalle | X | X | | |
+| ncurses | sandalle | X | X | | bug #13654 |
+| netconf | sandalle | X | X | | |
+| net-tools | sandalle | X | X | | |
+| patch | sandalle | X | X | | |
+| perl | sandalle | X | X | | |
+| procps | sandalle | X | X | | |
+| readline | sandalle | X | X | | |
+| reiserfsprogs | sandalle | X | X | | |
+| sed | sandalle | X | X | | |
+| shadow | sandalle | X | X | X lejatorn | bug #13505 |
+| simpleinit-msb | sandalle | X | X | | |
+| smgl-archspecs | sandalle | X | X | | |
+| smgl-fhs | sandalle | X | X | | |
+| tar | lynx | X | X | X lejatorn | |
+| texinfo | sandalle | X | X | | bug #14015 |
+| udev | lynx | X | X | X lejatorn | |
+| unzip | sandalle | X | X | | |
+| util-linux | lynx | X | X | X lejatorn | |
+| vim | sandalle | X | X | | |
+| wget | lejatorn | X | X | | |
+| xfsprogs | sandalle | X | X | | |
+| zlib | sandalle | X | X | | |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| lftp | lejatorn | | X | | |
+| pure-ftpd | lejatorn | | X | | |

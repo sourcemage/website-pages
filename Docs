@@ -1,0 +1,63 @@
+=Source Mage documentation =
+
+This is the core webspace for the storage, browsing and editing of Source Mage related documents and is fully editable by the [[Authors]].
+
+Before you start editing, please read the [[Help]] to understand syntax guidelines.
+
+== About Source Mage ==
+
+* [[History|Our history]]
+* [[Social Contract]]
+* [[Contact|Contact us]]
+* [[Glossary|Glossary of terms]]
+* [[Developers|Source Mage developers]]
+* [[Mirrors|Our mirrors]]
+
+== Installing Source Mage ==
+
+* [[Download|Download Source Mage]]
+* [[Install|Install Source Mage]]
+** [[Install/ISO|Install from the ISO]]
+** [[Install/USB|Install from the USB flash drive]]
+** [[Install/Chroot|Install from the chroot image]]
+
+== Using Source Mage ==
+
+* [[Intro]]
+* [[Sorcery]]
+** [[Sorcery/Commands/Sorcery|sorcery - the command]] -- manage sorcery options and [[Sorcery/Feature menu|features]]
+** [[Sorcery/Commands/Cast|cast]] -- install software
+** [[Sorcery/Commands/Dispel|dispel]] -- remove software
+** [[Sorcery/Commands/Gaze|gaze]] -- inspect software and system
+** [[Sorcery/Commands/Summon|summon]] -- download software sources
+** [[Sorcery/Commands/Scribe|scribe]] -- manage software collections
+** [[Sorcery/Commands/Cleanse|cleanse]] -- clean up the system from stale data
+** [[Sorcery/Commands/Scribbler|scribbler]] -- switch between multiple software collections or use them all at once
+* The [[Codex]]
+** [[Grimoire/stable|Stable grimoire]] -- production-ready environment
+** [[Grimoire/stable-rc|Stable-rc grimoire]] -- ready for testing upcoming stable
+** [[Grimoire/test|Test grimoire]] -- provides recent versions of programs
+** [[Grimoire/games|Games grimoire]] -- play your favorite games on Linux
+** [[Grimoire/z-rejected|Z-rejected grimoire]] -- use non-free blobs in your free system if you need to
+** [[Grimoire/personal|Personal grimoires]] -- use unofficial collections of software or create your own
+
+== Source Mage development ==
+
+* [[Needs|Our needs]]
+* [[Contribution|How to contribute]]
+* [[Join|Become]] a part of our [[Developers|Team]]
+* [[Keysigning]] guide for secure interactions
+* [[Bugs|Bug-tracking system]]
+* [[Security format]] -- strict rules for posting information about vulnerabilities
+* Sorcery development:
+** [[Sorcery/Book|Sorcery hacker's handbook]] -- essential guide for working on Sorcery
+** [[Sorcery/libapi|libapi]] -- reference for sorcery functions which can be used in [[Spell|spells]]
+** [[Sorcery/Roots|Root variables]] -- special variables allowing different scenarios with chroots and custom installs
+* [[Grimoire]] development:
+** [[Spell/Book|Spellbook]] -- reference material for making spells, contains a listing of each of the spell files, with information on the purpose of each file
+** [[Git guide]] -- a guide to using our grimoire repository
+** [[Grimoire/Release|Release process]] -- stable grimoire update procedure in details
+* [[Developers/Organization|Developer Organization]]:
+** [[Policy/Voting|Voting Policy]]
+** [[Policy/IRC|IRC Policy]]
+* [[Developers/Hall of Fame|Hall of Fame]] for past developers

@@ -1,0 +1,73 @@
+= Juan Carlos Torres =
+
+**IRC nick(s):** Jucato
+
+**Role in SMGL:** Tome Scribe
+
+**Age/Birthdate:** 25
+
+**Location/Country:** Laguna, Philippines
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+I started using GNU/Linux on January of 2006. It was actually the discovery of a free (as in beer) and open source 3D software ([[http://www.blender.org/|Blender]]) in 2005 that led me to research about a possible free and open alternative to Windows, which eventually led me to GNU/Linux. I won't be ashamed to admit that one, but not the only, reasons for switching back then was it's price. My other reason, which eventually supplanted that first one, is the freedom to configure it to my heart's delight, and even possibly code for it.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+{{{
+$ cat /etc/sourcemage-release
+Source Mage GNU/Linux 0.9.6.3 i486-pc-linux-gnu
+Installed from CD using installer v. 0.9.6.3 on Mon Oct 15 06:19:06 PHT 2007
+}}}
+
+**What piqued your interest in SMGL initially?**
+
+It was the magical theme that initially caught my attention, since I'm a fantasy/magic/RPG fan. Eventually, I learned that it used BASH for its package management, and that really added fuel to the fire. The "not immensely popular" and "small but active community" also made SMGL viable for me.
+
+**What future do you personally see for SMGL?**
+
+I do not see SMGL bursting into the distro scene in Ubuntu-like proportions, and I personally and selfishly prefer it that way (so maybe my prediction is colored by my preference?). That doesn't mean stagnation though. Sorcery and Grimoire are always growing, Justin "flux_control" Boffemmyer is on the verge of a Cauldron breakthrough, and the Tome team has been revived under the flag of Elisamuel "[[~ryuji|ryuji]]" Resto (cough). So I see a steady progress for SMGL. But who knows what crazy and exciting plans lurk in the minds of our mages?
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I'm a philosopher by education, but not totally by heart. My first love was really computers and programming, and that's where I'm desperately trying to steer my life. Unfortunately, my only real work experience since I graduated in 2004 is a 3-month stint in one of those outsourced call centers. Anyway, I'm currently taking up my second degree, Computer Science, so hopefully that would lead to a career change.
+
+As for my skills, I'm quite confident in my English skills (even if I'm not a native speaker) and I think I'm quite good at writing. I can do a bit of crude computer graphics, as well as do some desktop publishing/layouting or even web pages/sites. Dreaming to add "good programmer" to that list someday...
+
+**Any personal messages for the Source Mage users out there?**
+
+Persevere (when things don't go right). Don't be lazy (configure your system the way you like it). Learn and use the magic (learn how the system works and take advantage of it). But most of all, have fun!
+
+**What other OS programs/software have you worked on?**
+
+I've been a contributor to Kubuntu for more than a year, and I'm still currently and deeply involved in KDE, though not yet on the coding side.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+vi, but only because I learned it first. Trying to learn emacs at the moment, but the fingers get entangled quite a lot.
+
+**KDE or GNOME?**
+
+No contest. KDE.
+
+**BSD or GPL?**
+
+I don't really know...
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Not a family of my own. Still living with my mom. Wished I had a cat..
+
+**What other hobbies?**
+
+Anime and Tennis. A bit of drawing/graphics here and there. **Good** (MMO)RPG's
+
+**What kind of car do you drive? Or what is your dream car?**
+
+No car, no dream. I'd prefer a big bike if I had a choice.

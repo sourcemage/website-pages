@@ -1,0 +1,33 @@
+= Drop us a message on mailing lists =
+
+Before posting, please never forget about [[Netiquette]].
+
+== Mailing Lists @ ibiblio ==
+
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-admin|SM-Admin]] - **[Read Only]** A publically readable list for team member discussion.
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-announce|SM-Announce]] - **[Read Only]** The Source Mage GNU/Linux announce list, publically readable.
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-commit|SM-Commit]] - Code commit mailing list.
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-discuss|SM-Discuss]] - General discussion list for Source Mage GNU/Linux. Meant to mirror //SM-Admin// for non-team members (non-technical).
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-grimoire-bugs|SM-Grimoire-Bugs]] - **[Read Only]** list for grimoire bugs that need a wider audience of distribution, possibly for wider discussion.
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-security|SM-Security]] - Discuss Source Mage GNU/Linux security issues and keep watch on security bugs.
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-spell-submit|SM-Spell-Submit]] - A moderated list for receiving announcements about updated software from [[http://sourceforge.net|SourceForge]] and other sources.
+* [[http://lists.ibiblio.org/mailman/listinfo/sm-users|SM-Users]] - General discussion list for Source Mage GNU/Linux. A question and answer list (technical).
+
+== Gmane (NNTP) mailing list mirror ==
+
+* [[nntp://news.gmane.org/gmane.linux.sourcemage.announce|SM-Announce]]
+* [[nntp://news.gmane.org/gmane.linux.sourcemage.discuss|SM-Discuss]]
+* [[nntp://news.gmane.org/gmane.linux.sourcemage.grimoire-bugs|SM-Grimoire-Bugs]]
+* [[nntp://news.gmane.org/gmane.linux.sourcemage.security|SM-Security]]
+* [[nntp://news.gmane.org/gmane.linux.sourcemage.spell-submit|SM-Spell-Submit]]
+* [[nntp://news.gmane.org/gmane.linux.sourcemage.users|SM-Users]]
+
+== MarkMail mailing list mirror ==
+
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-admin|SM-Admin]]
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-announce|SM-Announce]]
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-discuss|SM-Discuss]]
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-grimoire-bugs|SM-Grimoire-Bugs]]
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-security|SM-Security]]
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-spell-submit|SM-Spell-Submit]]
+* [[http://markmail.org/search/list:org.ibiblio.lists.sm-users|SM-Users]]

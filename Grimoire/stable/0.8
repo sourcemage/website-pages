@@ -1,0 +1,87 @@
+= Grimoire stable-0.8 release =
+
+The {{{-rc}}} branch for this release will be cut on **2007/02/25**. The target release date is **2007/03/11**.
+
+This release is being shepherded by **George Sherwood** -- contact him with questions.
+
+== Getting the chroot/vm image ==
+
+|= Chroot/vm =|= Volunteer =|= Download =|
+| chroot-0.7 x86 (udev+console-tools) | emrys | [[http://download.sourcemage.org/image/official/smgl-stable-0.7-basesystem-x86.tar.bz2|smgl-stable-0.7-basesystem-x86.tar.bz2]] |
+
+== Basesystem spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| basesystem | sandalle | X | X | | Bug #12857, depending on less and nano (non-gating) |
+| bash | p3pilot | X | | X (emrys) | |
+| binutils | sandalle | X | X | | |
+| bison | sandalle | X | X | | |
+| bzip2 | ruskie | X | X | X (emrys) | |
+| console-tools | tboatman | X | X | | No version changes since pre Stable 0.6 |
+| console-data | tboatman | X | X | | No version changes since pre Stable 0.6 |
+| coreutils | sandalle | X | X | | Update to 6.7 Bug #13574 (non-gating) |
+| cpio | ruskie | X | X | X (emrys) | |
+| dialog | afrayedknot | X | | X (sandalle) | |
+| diffutils | sandalle | X | X | | |
+| e2fsprogs | sandalle | X | X | | |
+| elvis | emrys | X | X | X (emrys) | |
+| file | afrayedknot | X | | X (sandalle) | |
+| findutils | lynx | X | X | | |
+| flex | sandalle | X | X | | |
+| gawk | afrayedknot | X | | X (sandalle) | |
+| gcc | | X | | X (emrys) | gating: #13330 |
+| gettext | sandalle | X | X | | #13121 would be nice to have, sorcery issue |
+| glibc | sandalle | X | X | | Bug #8238, export CC, Bug #8240, LD symlink, Bug #8241, remove CROSS_INSTALL, Bug #8243, ldconfig breaks bi-arch, Bug #8244, GLIBC_ARCH wrong for cross-compile, Bug #9580, fails to compile on SPARC, Bug #13465, add libidn support, and Bug #12962, optionally depend on perl (all are non-gating) |
+| gnupg | sandalle | X | X | X (emrys) | SPARC bug #9666 (non-gating) |
+| grep | lejatorn | X | | X (sandalle) | #12990, failure to compile (unreproducable) |
+| grub | | X | X | | #12852, Graphics patch made optional. Integrated. |
+| gzip | ruskie | X | X | | |
+| iana-etc | | X | | X (sandalle) | #13075 |
+| init.d | emrys | X | X | X (emrys) | |
+| installwatch | sandalle | X | X | | |
+| jed | emrys | X | X | | no changes since last time, cast -c goes fine |
+| kbd | lynx | X | X | | |
+| less | lynx | X | X | | nongating: #12857 |
+| lilo | | X | | X (emrys) | #8191 is related, but for 64b |
+| locale | sandalle | X | X | | #13485 |
+| m4 | sandalle | X | X | | |
+| make | sandalle | X | X | | |
+| mktemp | sandalle | X | X | | |
+| module-init-tools | iuso | X | | X (emrys) | Gating bug #13446 is fixed in test and awaiting integration. Unfortunately I don't have time to investigate whether #8865 still applies; perhaps it should be declared non-gating for this release. |
+| nano | emrys | X | X | X (emrys) | |
+| ncurses | p3pilot | X | | X (sandalle) | #10004 Updated to 5.6 in stable .7 Closing this bug. |
+| netconf | | X | | X (p3pilot) | non gating: #10517, #11694 |
+| net-tools | | X | | X (emrys) | minor: #10173 |
+| patch | ruskie | X | X | | |
+| perl | sandalle | X | X | | |
+| procps | sandalle | X | X | | |
+| readline | p3pilot | X | | X (sandalle) | #8506 I think this can be closed. It does have some suggestions in it though |
+| sed | afrayedknot | X | | X (sandalle) | |
+| shadow | sobukus | X | X | X (sandalle) | #13505 is gating until the two/three requested commits are integrated, broken default group behaviour of useradd remains - an upstream bug that has to be fixed some time (I disagree that this should be gating; it's been around forever, and I'm not willing to approve this kind of integration to something this critical right before the release. Let it soak in test first. --emrys); OK, then I'll make my sign-off after the degating --- sobukus |
+| simpleinit-msb | emrys | X | X | X (emrys) | #13114 is fixed. #7876 is fixed. |
+| smgl-archspecs | sobukus | X | X | X (emrys) | no changes |
+| smgl-fhs | | X | | X (p3pilot) | non-gating: #11747, #13112, #13354 |
+| tar | ruskie | X | X | | |
+| texinfo | lynx | X | X | | |
+| udev | iuso | X | | X (sandalle) | Gating bug #13447 is fixed as soon as module-init-tools' fixed bug #13446 is integrated. Didn't have enough time for non-gating bugs #12700 and #12739 this round. |
+| unzip | ruskie | X | X | | |
+| util-linux | sandalle | X | X | | |
+| vim | sandalle | X | X | X (emrys) | |
+| wget | sandalle | X | X | | |
+| zlib | sandalle | X | X | | |
+
+== Extra spells ==
+
+|= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
+| autoconf | | X | | | fails using INSTALL_ROOT Bug #13594 |
+| automake | sandalle | X | X | | |
+| gaim | p3pilot | X | X | | #12617 fixed in test. Integrated. |
+| ion3 | eekee | X | X | | |
+| lighttpd | p3pilot | X | X | | |
+| pcsc-lite | sandalle | X | X | | Source not found (Bug #13591) |
+| php | p3pilot | X | X | | non-gating: #6659, #12762 |
+| pure-ftpd | lejatorn | X | X | | |
+| subversion | eekee | X | | | Dropping this, I'm not well enough to get it done, sorry. (eekee) Open bugs found: #6674, #10427, #12822. Also try building with apr-util & w/o Python, may find a new subdep. |
+| wpa_supplicant | iuso | X | | X (p3pilot) | Gating bug #13518 fixed in test, integrated. |
+| x3270 | tboatman | X | X | | All clean! |
+| xfsprogs | sandalle | X | X | | |

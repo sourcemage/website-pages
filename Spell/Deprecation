@@ -1,0 +1,41 @@
+= Spell deprecation process =
+
+== Why? ==
+
+Sometimes [[Spell|spells]] need to be removed in favor of other spells, e.g. when an application gets renamed. This should happen automatically for users that have the spell installed. Here's how to do this:
+
+If a spell simply doesn't build for a long time it should be just removed, otherwise the [[Sorcery/Commands/Cast|casting]] of the deprecated spell would remove it also for the people that still have a working install (built long ago).
+
+== How? ==
+
+**Note:** you can use [[Quill]] to deprecate, remove and rename spells. Run {{{quill -u <spell>}}} and use the deprecation menu options.
+
+Here is a low-level description of the process ("<old>" is the spell to be removed, "<new>" is the spell that replaces it):
+
+* create <old>/[[Spell/Files/PRE_BUILD|PRE_BUILD]], <old>/[[Spell/Files/BUILD|BUILD]] and <old>/[[Spell/Files/INSTALL|INSTALL]] containing only {{{true}}}
+* edit <old>/[[Spell/Files/DETAILS|DETAILS]] and comment out all {{{SOURCE}}}, {{{SOURCE_URL}}} and {{{SOURCE_HASH}}}/{{{SOURCE_GPG}}} lines
+* change the {{{PATCHLEVEL}}} field of <old>/DETAILS to <old>'s {{{PATCHLEVEL+1}}}
+* create <old>/[[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] with {{{up_trigger <old> dispel_self}}} and {{{up_trigger <new> cast_self}}}
+* add <new>/[[Spell/Files/CONFLICTS|CONFLICTS]] containing {{{conflicts <old> y}}}, the {{{y}}} makes sure the spell will cast without user intervention
+* put a comment into <old>/[[Spell/Files/HISTORY|HISTORY]] that the spell is deprecated and why //(e.g. "* Deprecated in favour of..." or "* Deprecated because...")//
+* if this was a spell rename, document that rename in the [[Grimoire/ChangeLog|grimoire ChangeLog]]
+* add {{{ARCHIVE=off}}} in <old>/DETAILS, so no useless caches are generated
+
+When this process is used, a user casting the deprecated <old> will get <new> installed, removing <old> in the process.
+
+If the old spell had [[Spell/Files/PROVIDES|PROVIDES]], don't delete it. Otherwise the spell changeover/removal will happen as soon as something that depends on the particular provider is cast. Keeping it is useful for people who have the old spell installed and don't want to switch to the new spell or in case of removal, that want to continue using the old spell (they have it installed from the times the spell was OK).
+
+**However**, this can cause trouble for the people that already switched the provider, since the queries will also show the old spell. So this should only be used for a grace period after the deprecation, let's say a week or a month. Users who want to keep the old spell and keep it as a provider are encouraged to copy it to a [[Grimoire/personal|local grimoire]] with [[Sorcery/Commands/Scribbler|scribbler]], readd the PROVIDES and run {{{scribe reindex}}} over that [[Grimoire|grimoire]].
+
+Change all the spells that depended in any way on the deprecated spell to either point to the new one or simply remove the depends if it isn't needed anymore.
+
+Deprecated spells should be removed from the [[Grimoire/test|test grimoire]] once the deprecation has made its way to [[Grimoire/stable|stable]].
+
+== What else? ==
+
+If the deprecation is a rename, and the old spell had some persistent variables from configuration settings ([[Spell/Files/CONFIGURE|CONFIGURE]] or [[Spell/Files/PREPARE|PREPARE]]), you should transfer those settings as defaults to the new spell. Basically, no user settings should be lost. \\ So how do you do that?
+
+* create <old>/[[Spell/Files/EXPORTS|EXPORTS]] and put all persistent variables you want to transfer in it, one variable name per line
+* create <old>/[[Spell/Files/REPAIR|REPAIR^none^EXPORTS]] with the exact same content (as the EXPORTS file gets read from the [[Spell/Tablet|tablet]])
+* use {{{persistent_read <old> OLD_VARIABLE VARIABLE_DEFAULT}}} in <new>/[[Spell/Files/PREPARE|PREPARE]] or <new>/CONFIGURE
+* use {{{${VARIABLE_DEFAULT:-new_default}}}} as default setting for the corresponding variable in the new spell

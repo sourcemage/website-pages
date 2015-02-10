@@ -1,0 +1,65 @@
+= Tony Smith =
+
+**Role in SMGL:** Test/stable branch maintainer
+
+**Age/Birthdate:** 35
+
+**Location/Country:** Hampshire, UK
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+Around 1997 I think. Red Hat 3.0.3 anyway. I'd just changed job and moved from a Unix haven (SunOS 4.1 mostly) to a mandatory Windows desktop. A friend introduced me to Linux and I've been using it ever since. Ditched Red Hat after 6.1 I think and moved to Mandrake. Ditched that for SMGL.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+About two years now (March '04) I think (since about 1 month before Kyle went walkabout).
+
+**What piqued your interest in SMGL initially?**
+
+Saw the distrowatch review and liked the idea of never having to go through a clumsy RPM upgrade again.
+
+**What future do you personally see for SMGL?**
+
+Could be very good. The IPO'd distro's are dying due to lack of revenue and dire business models and producing and maintaining an RPM based distro is not easy or cheap. SMGL is easy to maintain so we're likely to dodge a lot of the bullets that are taking out the competition.
+
+I think there's potentially an OEM future for SMGL too. If I were in the outsourcing trade, I'd use SMGL with a custom grimoire to auto-upgrade an entire organisations workstations on a rolling basis. Easy and reliable.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I've a B.Sc. in computer science from Leicester University. I worked for 6 years at Ingres doing technical support and training on the Ingres database. Most of that was on Unix boxen (all sorts), but some VMS too. I then helped port a huge telecoms application from VMS to Dec Unix (now Tru64) and HP/UX and did some C/C++ hacking too. Then I defected to Management and became a Technical Director for a while, but there were too many meetings and not enough hacking so two years ago I returned to my roots and joined Perforce as a support/development engineer.
+
+Skills? All kinds of stuff. We're a small shop so we all pitch in and do everything. I can code in C/C++/Perl/Ruby/sh/PHP/Java[Script] and a bunch of useless 4GL's, but C++ and Ruby are where the action is. I can cut a bit of Python too, but only while puking my guts out.
+
+**Any personal messages for the Source Mage users out there?**
+
+Happy updating!
+
+== Flamewars ==
+
+**vi or emacs?**
+
+Vim
+
+**KDE or GNOME?**
+
+KDE without a doubt. It's underpinned by a much better software architecture than GNOME and over the long term this means it will win out.
+
+**BSD or GPL?**
+
+GPL. Used to be BSD, but SCO changed all that. The GPL stands between me and the likes of SCO and I'm pleased to have it there.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+Yes, I'm married with a daughter who's nearly 3.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+I drive a Peugot 306. Nothing flash but it gets me to work and back. Dream car? Hey I'm a parent -- when I sleep I don't have time to dream :-)
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+Dream on!

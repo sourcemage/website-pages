@@ -1,0 +1,127 @@
+= SUB_DEPENDS =
+
+The SUB_DEPENDS file is used to make a [[Spell|spell]] depend on another spell with certain features enabled. \\ Sub-dependencies can be used in [[Spell/Files/DEPENDS|DEPENDS]], [[Spell/Files/CONFIGURE|CONFIGURE]] or SUB_DEPENDS.
+
+Example: spell "foo" needs spell "bar" with support for "qux".
+
+== Syntax in DEPENDS file ==
+
+In the "foo" spell's DEPENDS file, you'd just change the exsisting {{{depends}}}/{{{optional_depends}}} statements like:
+
+{{{
+depends -sub qux bar
+}}}
+
+or for more than one sub-depends target:
+
+{{{
+depends -sub "qux mux lux" bar
+}}}
+
+There is also an alternative syntax available:
+
+{{{
+depends bar && sub_depends bar qux
+depends bar && sub_depends bar qux && sub_depends bar mux && sub_depends bar lux
+}}}
+
+This one is more powerful and is meant to be used to resolve non-trivial cases (which the first syntax can't handle), like if one provider needs a sub-depends and the others don't. Note that {{{sub_depends}}} only takes one sub-depend target, so you need to use more of those calls if you need more special handlers.
+
+**Note:** optional depends need an additional {{{is_depends_enabled}}} check, so only the enabled ones trigger the sub-depends routines:
+
+{{{
+optional_depends -sub "apple" pie
+optional_depends pie && is_depends_enabled $SPELL pie && sub_depends pie apple
+}}}
+
+Sub-depending on a provider:
+
+{{{
+depends -sub FOOBAR X11-LIBS
+depends X11-LIBS && sub_depends $(get_spell_provider $SPELL X11-LIBS) FOOBAR
+}}}
+
+Example with providers that have a different implementation (different matching sub-depends) for the given sub-depends "goo". Some of the providers are even altruistic -- they provide what we need, even thought nobody requested it from them, in this case all the ones not specified ({{{*)}}}):
+
+{{{
+depends X11-LIBS &&
+case $(get_spell_provider $SPELL X11-LIBS) in
+     xorg) sub_depends xorg fooz ;;
+  xfree86) sub_depends xfree86 barz ;;
+        *) ;; # do nothing
+esac
+}}}
+
+**Note:** never call {{{sub_depends}}} without first explicitly depending on the providing spell. That is undefined behavior -- it could damage the system or spawn pink killer rabbits (no, you don't want that). It is OK to put just a {{{sub_depends}}} call in CONFIGURE if you already depend on that spell in DEPENDS.
+
+It is also acceptable to mix the two syntax, although I can't imagine why anyone would want to do it.
+
+== Syntax in SUB_DEPENDS file ==
+
+In the "bar" spell's SUB_DEPENDS file you'd say something like:
+
+{{{
+case $THIS_SUB_DEPENDS in
+qux) whatever it is you do to make bar build with qux support ;;
+mux) whatever it is you do to make bar build with mux support ;;
+lux) whatever it is you do to make bar build with lux support ;;
+*) echo unknown sub-depends!!! ; return 1 ;;
+esac
+}}}
+
+The SUB_DEPENDS file can do most of the normal spell activities: they may use the {{{persistent_add}}}/{{{persistent_remove}}} functions, {{{config_query}}} API, they may call {{{depends}}} or {{{optional_depends}}}, and can even request a sub-depends on another spell.
+----
+
+== Example usage in spells ==
+
+* "pygame" spell:
+
+{{{
+case "$THIS_SUB_DEPENDS" in
+  FONT)    depends sdl_ttf;;
+  IMAGE)   depends sdl_image;;
+  MIXER)   depends sdl_mixer;;
+  SMPEG)   depends smpeg;;
+  NUMERIC) depends numeric NUMERIC;;
+  *)       echo "bogus sub_depends: pygame $THIS_SUB_DEPENDS"; return 1;;
+esac
+}}}
+
+* "dbus" spell:
+
+{{{
+case $THIS_SUB_DEPENDS in
+PYTHON) echo "python bindings requested, forcing them."  &&
+        DBUS_PYREX="--enable-python"     &&
+        depends  glib2  '--enable-glib'  &&
+        depends  pyrex
+        ;;
+CSHARP) echo "mono bindings requested, forcing them."  &&
+        depends  mono  '--enable-mono'
+        ;;
+     *) echo "unknown sub-depends!"; return 1;;
+esac
+}}}
+
+* "fxruby" spell:
+{{{
+case $THIS_SUB_DEPENDS in
+  fxscintilla) depends fxscintilla "--with-fxscintilla-include=${INSTALL_ROOT}/usr/include/fxscintilla \
+                                    --with-fxscintilla-lib=${INSTALL_ROOT}/usr/lib" ;;
+            *) echo unknown sub-depends!!! ; return 1 ;;
+esac
+}}}
+
+* "gmp" spell:
+
+{{{
+case $THIS_SUB_DEPENDS in
+GMP_CXX) echo "C++ support requested, forcing it."  &&
+         depends  g++  '--enable-cxx'
+         ;;
+      *) echo "unknown sub-depends!"; return 1;;
+esac
+}}}
+----
+
+**Note:** don't forget to add a [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] file, these two **always** come in pairs.

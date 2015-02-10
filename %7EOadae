@@ -1,0 +1,81 @@
+= Jason Flatt =
+
+**IRC nick(s):** Oadae (mostly Oadae-away) (Just in case anyone's wondering, it's the initials of my kids.)
+
+**Role in SMGL:** Section maintainer for printer
+
+**Age/Birthdate:** 37
+
+**Location/Country:** Las Vegas, Nevada, USA
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+The very first time I installed Linux, was about 4 or 5 years ago when I installed Slackware to an EZDrive 135. I played with it off and on for a couple of weeks, but eventually left it alone. I played around with Linux, off and on, but it was just more of a hobby than anything else.
+
+In late 2000 or early 2001, I got tired of Microsoft and their marketing ways and determined that I was going to learn about Linux and the top distributions. I started installing various distributions and playing with them until I got a feel for what I liked and disliked about the various distros. I finally settled on RedHat 7.1. While I messed around in Linux quite a bit, I didn't really consider myself a Linux user until the summer of 2001 when I switched my e-mail client from a Windows-based client to a Linux-based client. Since then Linux has been my primary OS.
+
+The ultimate reason I switched is that I had determined that I was not going to let someone else tell me what I could and could not do with my computer, and that's where I saw Microsoft and Windows heading (if it's not there already.)
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+I started using Sorcerer back in mid January 2002. I had read the distrowatch review, and I was //very// interested. It sounded like it had many advantages that I wanted. By this time I had been using RedHat long enough to know that I had traded one sloth for another by switching from Windows. By all rights, I should not have been able to install it at that time, 'cause that's about the time the /. effect hit Sorcerer, but I was determined to get and install this distro. After a bit of poking, I was able to locate a little known and little used mirror of the Sorcerer tarball. I downloaded and installed the 20020118 ISO, and switched from Red Hat about three weeks later, to never look back.
+
+**What piqued your interest in SMGL initially?**
+
+I guess the two things that I most liked about Sorcerer were the ability to really pick and choose what I wanted installed or not, and the package management capabilities. I liked the other advantages as well, but I think those were the two biggies for me. I had the two extremes: RedHat and LFS, and Sorcerer seemed like a good compromise.
+
+**What future do you personally see for SMGL?**
+
+I think that Source Mage GNU/Linux is going to have a hill to climb during this year, because all of the momentum is toward Sorcerer <WHATEVER>/Linux. I believe that if the team can stay together and keep on a time line with a definite goal in mind, SMGL will come out as a clear leader in the Linux distribution world within the next year or two.
+
+I would really like it to be THE OS I install. The recent idea of themes (or whatever it was called) where I could take a single CD and use it to install a workstation or a SAMBA server or a Web server or whatever on any computer would be a really huge step in that direction.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+Hmmm, I started playing w/the TRS-80 Model I my dad bought for his business. Mostly games, but also programming in BASIC. I have been involved with computers in one facet or another since the late seventies, but mostly at a hobby level.
+
+I took a tour of a computer laboratory while I was in high school, and I was introduced to a mini-computer that was programmed with COBOL via punch cards. I determined at that time to become a veterinarian. :^) I never became a veterinarian, but I kept playing w/computers until I determined that what I really wanted to be was programmer.
+
+I have been working in the computer field for about 10 years, first as a software tester, now as a consultant. I have taught myself most of what I have learned and know, including in earning my CCNA and MCSE. I spent 1-2 years attempting to earn a degree in Computer Science, but I determined that I needed to pay my bills first, and not waste time and money failing classes because I didn't have time to study.  :^(
+
+**Any personal messages for the Source Mage users out there?**
+
+Keep up the fabulous work! We're going places! (Hmmm, what other cliches can I think of?) :^)
+
+**What other OS programs/software have you worked on?**
+
+Using (& tweaking) OSs: MS-DOS from 3 to 6, Windows from 3.1 to 2000, excluding ME. I installed a trial version of Minix on an XT, once. It was fun, but took too much work to boot up on two floppies, so it disappeared.
+
+Programming: some C and C++ for the two projects mentioned above, and a lot of personal stuff which has never seen the light of day. Also, database-based programs for clients -- mostly in Microsoft Access (I'm switching clients to Open Source and Web based solutions). I aspire to develop a program for my Handspring Visor which will allow me to better organize myself than the current software offerings do.
+
+Languages: BASIC, ForTran (the only university course I took), Pascal, C, C++, SQL, HTML, VBA and PERL. I'm currently learning PHP and BASH. Although I must admit that I haven't used ForTran since the university, Pascal in over 10 years, C or C++ in over 7 years, and I probably couldn't create a "Hello, World." program to save my life. I am pretty good at reading code, however, and figuring out what is going on -- even in languages I am unfamiliar with.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+It was vi until Kyle converted me to nano. I'm desparately trying to escape to something more powerful, but nano is like candy, quick and easy to get hooked on w/o a lot of substance. I've got the keystrokes embedded in my fingers now.
+
+**KDE or GNOME?**
+
+At version 2.2, KDE won my desktop. Before that I was pretty much undecided. We'll see if GNOME takes over in version 2.0.
+
+**BSD or GPL?**
+
+I don't necessarily totally agree w/either, but if I have to choose between the two, I'll choose GPL.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+I am married (for 14 years) to a midwife. I have 4 sons, ages 9, 7, 5 & 2. Oh, yeah, dad, mom, brother, sister and various other relatives.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+We are a two-Suburban-family (I can't stand mini-vans). I would like to own and drive a rodded out 1956 Chevrolet. I'm leaning toward a Two-Ten Beauville, because it would fit my whole family, but I'd probably settle for anything else in the time period. :^)
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+The only recent photo I have of myself is on my Costco card. :^)

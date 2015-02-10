@@ -1,0 +1,63 @@
+= Geoffrey Derber =
+
+**IRC nick(s):** Asha`man
+
+**Role in SMGL:** Section maintainer for z-rejected (on leave but will return)
+
+**Age/Birthdate:** 23
+
+**Location/Country:** San Antonio, TX. / USA (summer: Fort Worth, TX. / USA)
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+About 3 years ago for my programming classes. At the time I only used it in class, but I quickly became interested in getting it to run on my computer, but not because I wanted to learn linux though. I wanted to install it because I didn't like using telnet to work on the linux machines across campus, and I didn't want to walk across campus to do my homework. I ran into a problem though, with the distributions at the time having poor (well non-existant) support for a PCI controler card for my hard drives, so the installers wouldn't detect that I had a hard drive. It took until the RH 7.1 release to be able to do that. (I had tried various previous versions of RH and Caldera). That would have been about 1 year ago. For the first 3 months of having linux on my system, I didn't use it all that much, because that was last summer, and over the summer I used my system mainly for games, and I didn't know much about wine or have any linux games at the time. Then starting in the fall, I really began to use it, and I haven't looked back since.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+I've been using SMGL since March 2002. Since right after Spring Break this year. I first heard about it in January, and in fact, my cd was burned with the January 26 iso file. I had a little difficulty with the initial install. Basically my trouble came from lilo, so I ended up installing RH on another HD temporarily to install GRUB to get my initial boot to work.
+
+**What piqued your interest in SMGL initially?**
+
+Well, at the time, I felt I had reached a point where I had learned enough using RH that I was becoming really upset with the way the RPM system worked. I liked having my system completely up to date, and I felt like RPMs made it more difficult for me to do so. I just felt that I would have more control over the system than RH offered.
+
+**What future do you personally see for SMGL?**
+
+I see a great distro that puts the power and control back into the sys admins hands. One of the things I really like about this distro, and is why I think it will be around for a long while is the way the people came together to continue this distribution when it went through some tough times a couple of months ago.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I'm about to go into my senior year at Trinity University. I am a double major in Business Administration with a concentrition in Finance, and Computer Science. My degree when I graduate will be a BS in Business. As things currently are, I'm thinking very seriously about going into Health Administration after graduation, and work for a couple years before I go to grad school.
+
+**Any personal messages for the Source Mage users out there?**
+
+Have fun, SMGL is a distro that'll let you do whatever you want with your system.
+
+**What other OS programs/software have you worked on?**
+
+I've done some level editing for unreal tournament and Wheel of Time (great game btw, but I haven't gotten it to run in linux yet).
+
+== Flamewars ==
+
+**vi or emacs?**
+
+emacs
+
+**KDE or GNOME?**
+
+Gnome
+
+**BSD or GPL?**
+
+GPL
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+My Dad and my sister, then my step-mom and her kids. No family of my own yet.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+A car with 4 wheels and isn't powered by my feet on the pavement.

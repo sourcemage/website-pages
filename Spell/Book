@@ -1,0 +1,88 @@
+= Spell writing handbook =
+
+== Introduction ==
+
+This is a technical reference document.
+
+The [[#head-1-2|first]] part describes all of the files that are checked for in a [[Spell|spell]], their purpose, and documented attributes. \\ The [[#head-1-3|second]] part describes the standards we use in the [[Grimoire|grimoire]].
+----
+
+== Spell files ==
+
+These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execution order:
+
+* [[Spell/Files/PREPARE|PREPARE]] -- Useful for those rare times when the DETAILS file needs to be modified or the spell or package needs to be configured before the DETAILS file is executed.
+* [[Spell/Files/DETAILS|DETAILS]] -- Informational file, required for all spells.
+* [[Spell/Files/CONFIGURE|CONFIGURE]] -- Used to select and modify a package's compile time options.
+* [[Spell/Files/DEPENDS|DEPENDS]] -- Lists all other spells that are required or optionally required to be cast.
+* [[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] -- Provides the opportunity to use runtime registration of {{{on_cast}}} triggers.
+* [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] -- Used to make a spell depend on another spell with certain features enabled.
+* [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] -- Tells [[Sorcery]] whether or not the sub-dependee is providing the given sub-depends.
+* [[Spell/Files/TRIGGER_CHECK|TRIGGER_CHECK]] -- Used to inspect each trigger in a spell.
+
+(…Processing of the depended on spells…)
+
+(…DETAILS is run again…)
+
+* [[Spell/Files/CONFLICTS|CONFLICTS]]
+
+// --- [[Grimoire/API|Build API]] start --- //
+
+* [[Spell/Files/PRE_BUILD|PRE_BUILD]]
+* [[Spell/Files/BUILD|BUILD]]
+* [[Spell/Files/PRE_INSTALL|PRE_INSTALL]] (build API 2 only)
+* [[Spell/Files/INSTALL|INSTALL]] (build API 2 only)
+* [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]] (build API 2 only) / [[Spell/Files/POST_BUILD|POST_BUILD]] (build API 1 only)
+* [[Spell/Files/POST_INSTALL|POST_INSTALL]]
+* [[Spell/Files/TRANSFER|TRANSFER]] (build API 2 only)
+* [[Spell/Files/FINAL|FINAL]] (build API 2 only)
+* [[Spell/Files/TRIGGERS|TRIGGERS]]
+
+// --- Build API end --- //
+
+(…The triggered spells are cast now…)
+
+These are the files used during the [[Sorcery/Commands/Summon|download]], in their execution order:
+
+* [[Spell/Files/DOWNLOAD|DOWNLOAD]]
+
+These are the files used during a [[Sorcery/Commands/Dispel|dispel]], in their execution order:
+
+* [[Spell/Files/PRE_REMOVE|PRE_REMOVE]]
+* [[Spell/Files/POST_REMOVE|POST_REMOVE]]
+
+These are the files used during a [[Sorcery/Commands/Resurrect|resurrect]], in their execution order:
+
+* [[Spell/Files/PRE_RESURRECT|PRE_RESURRECT]]
+* [[Spell/Files/POST_RESURRECT|POST_RESURRECT]]
+
+These files are processed during a {{{scribe update}}}, {{{cleanse --tablet}}}, or {{{cleanse --tablet_spell}}}, in their execution order:
+
+* [[Spell/Files/REPAIR|REPAIR^* files]]
+
+These files are known as [[Spell/Files/Filters|spell filters]]:
+
+* excluded
+* protected
+* volatiles
+* configs
+
+These are the other files:
+
+* [[Spell/Files/HISTORY|HISTORY]]
+* [[Spell/Files/PROVIDES|PROVIDES]]
+* [[Spell/Files/EXPORTS|EXPORTS]]
+* [[Spell/Files/SOLO|SOLO]]
+* services
+* {{{init.d}}} directory
+* {{{pam.d}}} directory
+* {{{xinetd.d}}} directory
+* {{{desktop}}} directory
+
+== Standards ==
+
+* General formatting rule: no tabs except in HISTORY, align '='s in DETAILS, and use newlines (for other formatting rules, check the appropriate spell file pages above).
+* [[Spell/Standards|Spell standards]] -- strict rules related to creating or updating spells, which help to avoid [[Grimoire/Common mistakes|common mistakes]].
+* [[Spell/Standards/Integrity|Integrity checking standards]] -- standards of integrity verification for upstream sources.
+* [[Spell/Deprecation|Spell deprecation process]] -- a guide to perform [[Spell|spell]] deprecation.
+* [[Spell/Multiversion|Multiversion spells]] -- the standard for spells with multiple versions.

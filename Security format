@@ -1,0 +1,90 @@
+= Security format =
+
+When posting to sm-security@sourcemage.org for security vulnerabilities/exploits/disclosures your e-mail will need to be GPG-signed and consist of the following components:
+
+# Synopsis -- a summary of the vulnerability.
+# Background -- a description of the affected package(s).
+# Description -- a full description of the vulnerability (listing any CAN or CVE serial numbers).
+# Impact -- a description of what this vulnerability means for users of the package(s).
+# Workaround -- i.e. "There are no known workarounds at this time."
+# Affected packages -- which package(s) is affected and in which grimoire(s).
+# Resolution -- how to get this fix (e.g. update [[Grimoire|grimoires]] and recast a [[Spell|spell]]).
+# References -- any references used from above (including links to the CAN, CVE, etc. posts).
+
+== Example ==
+
+An example of the format can be found at [[http://article.gmane.org/gmane.linux.sourcemage.security/2|this post]]:
+
+{{{
+Synopsis
+========
+A number of vulnerabilities were discovered in OpenVPN that were fixed
+in the 2.0.1 release.
+
+Background
+==========
+OpenVPN is a full-featured SSL VPN solution which can accomodate a wide
+range of configurations.
+
+Description
+===========
+
+CAN-2005-2531:
+DoS attack against server when run with "verb 0" and without "tls-auth".
+If a client connection to the server fails certificate verification,
+the OpenSSL error queue is not properly flushed, which can result in
+another unrelated client instance on the server seeing the error and
+responding to it, resulting in disconnection of the unrelated client.
+
+CAN-2005-2532:
+DoS attack against server by authenticated client.
+This bug presents a potential DoS attack vector against the server which
+can only be initiated by a connected and authenticated client. If the
+client sends a packet which fails to decrypt on the server, the OpenSSL
+error queue is not properly flushed, which can result in another
+unrelated client instance on the server seeing the error and responding
+to it, resulting in disconnection of the unrelated client.
+
+CAN-2005-2533:
+DoS attack against server by authenticated client.
+A malicious client in "dev tap" ethernet bridging mode could
+theoretically flood the server with packets appearing to come from
+hundreds of thousands of different MAC addresses, causing the OpenVPN
+process to deplete system virtual memory as it expands its internal
+routing table. A --max-routes-per-client directive has been added
+(default=256) to limit the maximum number of routes in OpenVPN's
+internal routing table which can be associated with a given client.
+
+CAN-2005-2534
+DoS attack against server by authenticated client.
+If two or more client machines try to connect to the server at the same
+time via TCP, using the same client certificate, and when --duplicate-cn
+is not enabled on the server, a race condition can crash the server with
+"Assertion failed at mtcp.c:411".
+
+Affected packages
+=================
+openvpn in devel, test, stable-rc 0.2 and stable 0.1 grimoires is
+affected. This is now fixed in all grimoires.
+
+Resolution
+==========
+All openvpn users should upgrade to the latest available version:
+# scribe update
+# cast -c openvpn
+
+References
+==========
+[ 1 ] OpenVPN Changelog
+http://openvpn.net/changelog.html
+
+[ 2 ] Sourcemage Bug #9588
+http://bugs.sourcemage.org/show_bug.cgi?id=9588
+
+--
+Thomas Houssin
+
+Security Team Leader Source Mage GNU/Linux (http://www.sourcemage.org)
+Key fingerprint = 3CB8 3FC4 840D B272 E623 BCB8 54DB F4E3 4240 4C36
+http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x42404C36
+}}}

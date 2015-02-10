@@ -1,0 +1,74 @@
+= Dave Josephsen =
+
+**Homepage:** [[http://skeptech.org|here]]
+
+**IRC nick(s):** superdave, kingmaker
+
+**Role in SMGL:** Neophyte General Guru, er.. first class
+
+**Age/Birthdate:** 30 (born 1975/06/04)
+
+**Location/Country:** TX/USA
+
+== Common ==
+
+**When did you first start using Linux and why?**
+
+The first computer I knew well was the c64. Then it died. I worked professionally with Mac's for a while after that, then they looked like they were going to die, so I was casting about for a new home, and looked at Windows for a while. It just wasn't any fun you know? I think I first installed slackware somewhere around 1998? I never looked back.
+
+**How long have you been using the [[About|SMGL]] distribution?**
+
+Since December 2004?
+
+**What piqued your interest in SMGL initially?**
+
+I got a bit fed up with slack's package management system, and a friend introduced me to Mandrake. I liked RPM's and SRPM's, and I was working with linux in a professional capacity by that point. Then after a few years the boxes really started to rot. We had boxes with like 500+ days of uptime, and then an ssh exploit would hit. It's no fun getting openssl, and ssh rebuilt on an RPM based box that's three years old, so we started looking at source-based distros. I played with Gentoo for a while, and liked what I saw there. It's certainly less of a headache to admin groups of gentoo boxes, but IMO Gentoo still misses the point of why people would want source. The build system does too much work for you, USE vars don't give you enough configurability, and the ebuilds aren't exactly transparent. Sorry, I didn't mean to make this a Gentoo rant. Anyway, my buddy turned me on to SMGL, and the day after I had it installed I was writing my own spells. The build system is genius, so smart that it's just completely obvious. When I saw how it worked, I could only wonder why anyone had written any other kind of build system in the first place.
+
+**What future do you personally see for SMGL?**
+
+I hope SMGL just continues doing what it's doing, and ignores the people who will invariably tell them that they should move their build system to python or the language de-jur.
+
+**Tell us a little bit about yourself. Education/Career/Skills?**
+
+I joined the United States Fucking Marine Corps out of highschool, mainly to escape my parents. That worked well I haven't seen them since. I mostly played with machine guns until around 97, when I got out, married my wife, and got a real job. A buddy hooked me up with a job repairing Macintosh computers and apple printers (he knew how l33t I once was on c64). At the time I thought floppy disks were the big black things, and hard disks were the little blue hard plastic ones, but I learn quickly. From there I moved to IBM Global Services, then to Disney TV Animation. At some point we moved to Texas from California. I got a job here as a sysadmin, and mostly work with linux systems.. mail, cvs, apache, nagios, etc.. I program mostly in bash, perl, and C (in that order), and have a bunch of useless technical certifications, two MCSE's, CCNA, CCDA, CISSP. Oh, I wrote a [[http://www.usenix.org/events/lisa04/tech/blosser/blosser.pdf|paper]] on spam mitigation with this other [[~jblosser|dude]]. You should read it. It like.. won awards and stuff. Also this [[http://www.samag.com/articles/2005/0512/|article]] on Nagios for sysadmin magazine. I'm currently working as a syadmin for a super-cool little company in Dallas which does web services stuff, and writing a book on Nagios for Addison Wesley due out this winter. Oh, and I'm programming a video game called 'ZooDangle' for the tmobile sidekick cellphone.
+
+**Any personal messages for the Source Mage users out there?**
+
+# Technical certifications are useless, but machine guns are pretty cool.
+# If you disagree with Dan Bernstein, you're fucking wrong.
+
+**What other OS programs/software have you worked on?**
+
+I've submitted some patches to various gentoo ebuilds, wrote some User Interface code for the world forge project which never went anywhere, and submitted a patch to nagios' statusmap.cgi which does pretty staggering. I don't think they ever accepted it though heh.
+
+== Flamewars ==
+
+**vi or emacs?**
+
+I only use emacs when I need my text editor to run it's own operating system (which is to say: never).
+
+**KDE or GNOME?**
+
+I like enlightenment. It's highly configurable, stays the hell out of my way, and doesn't look like windows.
+
+**BSD or GPL?**
+
+I don't care, lets hack something.
+
+== Strictly personal ==
+
+**Do you have any family?**
+
+I have a beautiful wife and 5 cats.
+
+**What other hobbies?**
+
+guns, running, wardriving, paintball, electronics, reading (sci-fi, early american polsci, and pseudo science debunking are my three current kicks), and eating good food.
+
+**What kind of car do you drive? Or what is your dream car?**
+
+I drive a 4runner. If I was a dreaming man, I'd probably be dreaming of an international scout 2, or maybe a unimog.
+
+**Please attach a recent photograph of yourself -- if you're brave enough ;=)**
+
+Not today, maybe later...

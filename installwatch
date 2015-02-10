@@ -1,0 +1,5 @@
+= installwatch =
+
+installwatch is used by [[Sorcery]] to track changes during a [[Sorcery/Commands/Cast|cast]]. This is how we can easily [[Sorcery/Commands/Dispel|dispel]] things.
+
+It is replaced by our own [[castfs]], but some rare [[Spell|spells]] specifically disable it because of different reasons, therefore they can use only installwatch.
