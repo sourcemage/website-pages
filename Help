@@ -12,6 +12,7 @@ Sections:
 [[#preformat|Preformat]],
 [[#syntax|Syntax]],
 [[#link|Links]],
+[[#alias|Aliases]],
 [[#image|Images]],
 [[#table|Tables]],
 [[#math|Math]].
@@ -298,6 +299,24 @@ Link syntax:
 * [[About|{{logo_big.png}}]]
 
 {{#5}} [5] Footnote anchor.
+
+----
+{{#alias}}
+== Aliases
+
+To use aliases, create a page named "Alias" and put links into it like so:
+
+{{{
+[[AliasName|http://example.com/]]
+[[AnotherAlias|http://example.com/%s/foo]]
+}}}
+
+Then use the aliases like so:
+
+{{{
+[[:AliasName:bar|this links to http://example.com/bar]]
+[[:AnotherAlias:bar#baz|this goes to http://example.com/bar/foo#baz]]
+}}}
 
 ----
 {{#image}}
