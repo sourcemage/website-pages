@@ -277,7 +277,7 @@ Link syntax:
 * http://beta.sourcemage.ru
 * [[http://beta.sourcemage.ru]]
 * [[http://beta.sourcemage.ru|Source Mage]]
-* [[Home|{{logo_big.png}}]]
+* [[About|{{logo_big.png}}]]
 
 {{#5}} [5] Footnote anchor.
 }}}
@@ -295,7 +295,7 @@ Link syntax:
 * http://beta.sourcemage.ru
 * [[http://beta.sourcemage.ru]]
 * [[http://beta.sourcemage.ru|Source Mage]]
-* [[Home|{{logo_big.png}}]]
+* [[About|{{logo_big.png}}]]
 
 {{#5}} [5] Footnote anchor.
 
