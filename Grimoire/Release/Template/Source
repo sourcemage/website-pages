@@ -32,6 +32,7 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | diffutils | | | | | |
 | dosfstools | | | | | |
 | e2fsprogs | | | | | |
+| elvis | | | | | |
 | file | | | | | |
 | findutils | | | | | |
 | flex | | | | | |
@@ -52,9 +53,11 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | ifupdown | | | | | |
 | init.d | | | | | |
 | installwatch | | | | | |
+| iptables | | | | | |
 | jfsutils | | | | | |
 | kbd | | | | | |
 | less | | | | | |
+| libaal | | | | | |
 | libidn | | | | | |
 | libmpc | | | | | |
 | libpcap | | | | | |
@@ -68,7 +71,6 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | lvm | | | | | |
 | lynx | | | | | |
 | m4 | | | | | |
-| mailx | | | | | |
 | make | | | | | |
 | man | | | | | |
 | man-pages | | | | | |
@@ -106,7 +108,9 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | simpleinit-msb | | | | | |
 | smgl-archspecs | | | | | |
 | smgl-fhs | | | | | |
+| socat | | | | | |
 | sorcery-pubkeys | | | | | |
+| sysfsutils | | | | | |
 | sysstat | | | | | |
 | tar | | | | | |
 | tcpdump | | | | | |
@@ -116,8 +120,6 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | unzip | | | | | |
 | usbutils | | | | | |
 | util-linux | | | | | |
-| vim | | | | | |
-| vile | | | | | |
 | wget | | | | | |
 | wireless_tools | | | | | |
 | wpa_supplicant | | | | | |
