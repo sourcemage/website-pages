@@ -31,6 +31,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | diffutils | | | | | |
 | dosfstools | | | | | |
 | e2fsprogs | | | | | |
+| elvis | | | | | |
 | file | | | | | |
 | findutils | | | | | |
 | flex | | | | | |
@@ -117,8 +118,6 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | unzip | | | | | |
 | usbutils | | | | | |
 | util-linux | | | | | |
-| vim | | | | | |
-| vile | | | | | |
 | wget | | | | | |
 | wireless_tools | | | | | |
 | wpa_supplicant | | | | | |
