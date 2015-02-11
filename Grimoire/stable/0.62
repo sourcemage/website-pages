@@ -51,6 +51,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | ifupdown | | | | | |
 | init.d | | | | | |
 | installwatch | | | | | |
+| iptables | | | | | |
 | jfsutils | | | | | |
 | kbd | | | | | |
 | less | | | | | |
