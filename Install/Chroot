@@ -1,36 +1,40 @@
-=Chroot Install Guide=
+= Chroot Install Guide =
 
 Here's a complete guide to install Source Mage GNU/Linux using chroot tarballs.
 ----
 
-==What?==
+== What? ==
 
-Chroot image -- is a compressed archive of a live system. It contains everything you need to extract on your disk and start using Source Mage.
+Chroot image is a compressed archive of a live system. It contains everything you need to extract on your disk and start using Source Mage.
 
 Here we have a few official images to start with, which contain all the essential programs and libraries to boot from any modern hardware and specific networking setup (PPPoE, Wi-Fi, etc.).
-It is usually based on specific [[Grimoire|grimoire]] release, and inside our project is used for testing purposes and [[Grimoire/Release|grimoire release process]].
+
+It is usually based on the specific [[Grimoire|grimoire]] release, and inside our project is used for testing purposes and [[Grimoire/Release|grimoire release process]].
 ----
 
-==How?==
+== How? ==
 
-Chroot image is just an archive, so to make your system up and running, you need to boot from some LiveCD/LiveUSB/LiveLAN Linux-based media to partition your drive, extract image, install bootloader and configure some basic stuff like network interface, hostname, etc.
+Chroot image is just an archive, so to make your system up and running, you need to boot from some LiveCD/LiveUSB/LiveLAN Linux-based media to partition your drive, extract the image, install a bootloader and configure some basic stuff like network interface, hostname, etc.
+
 These steps will help you to do so in a proper order:
 
 **1. Get some bootable media**
 
-It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even ISO of [[http://www.ubuntu.com/download|Mathieu's favourite operating system ever]].
+It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even the ISO of [[~lejatorn|Mathieu's]] [[http://www.ubuntu.com/download|favourite operating system ever]].
 
 Personally I recommend [[http://www.slax.org/download.php|SLAX]] or [[http://www.archlinux.org/download/|Arch Netinstall Image]]. They support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Also [[https://downloads.archlinux.de/iso/archboo/|Archboot]] is perfect for booting via network (PXE).
+
 But, as told above, it can be any Linux boot media you'd like to use.
 
 **2. Boot it**
 
-Burn ISO image or {{{dd}}} prepared boot image to USB-key, or prepare TFTP-server to boot via network, and boot into its minimal environment.
+Burn the ISO image or {{{dd}}} a prepared boot image to your USB-key, or set up a TFTP-server to boot via network, and boot into its minimal environment.
 
 **3. Get chroot image**
 
-Almost all modern Linux distributions support network configuration and have download programs available when boot process is complete.
-So it's usually not a problem. Though if you don't have (or you know that you won't have Internet-connection inplace for some reason) such ability, you can put desired chroot image on USB-key, or CD/DVD disc.
+Almost all modern Linux distributions support network configuration and have download tools available when boot process is complete.
+
+So it's usually not a problem. Though if you don't have (or you know that you won't have Internet-connection inplace for some reason) such ability, you can put the desired chroot image on your USB-key or CD/DVD disc.
 
 The latest stable version is **20120510** (based on **0.60-stable** grimoire). You can download the appropriate chroot image from our [[Download|downloads]] page. 
 
@@ -45,7 +49,7 @@ Let's imagine there's no trouble with our Ethernet adapter, and we know how netw
 
 **4. Partition your drive**
 
-This is done mostly with fdisk and/or parted. Disk drives (SATA) are usually **/dev/sda**, **/dev/sdb**, etc., but that completely depends on hardware (for example it could be **/dev/cciss/c0d0** if you know what SMART RAID Controller is).
+This is done mostly with "fdisk" and/or "parted". Disk drives (SATA) are usually {{{/dev/sda}}}, {{{/dev/sdb}}}, etc., but that completely depends on hardware (for example it could be {{{/dev/cciss/c0d0}}} if you know what SMART RAID Controller is).
 
 More complex disk setup (RAID/LVM) is also fine, but out of the topic.
 
@@ -78,20 +82,20 @@ look at them:
 > p free
 }}}
 
-and quit parted:
+and quit "parted":
 
 {{{
 > quit
 #
 }}}
 
-then create filesystems on these partitions (in example below we use XFS for /):
+then create filesystems on these partitions (in example below we use XFS for {{{/}}}):
 
 {{{
 # mkfs.xfs -l internal,size=64m -d agcount=8 /dev/sda3
 }}}
 
-swap is organised with mkswap command:
+swap is organized with {{{mkswap}}} command:
 
 {{{
 # mkswap /dev/sda2
@@ -99,7 +103,7 @@ swap is organised with mkswap command:
 
 **5. Mount partitions**
 
-Now you're almost ready to extract Source Mage from chroot image. The last step before it is to mount partitions you've made in the previous step:
+Now you're almost ready to extract Source Mage from the chroot image. The last step before it is to mount partitions you've made in the previous step:
 
 {{{
 # mkdir /mnt/drive
@@ -115,7 +119,7 @@ Now you're almost ready to extract Source Mage from chroot image. The last step 
 
 **6. Extract from chroot**
 
-Finally, assuming you've downloaded x86_64 chroot image to writable /root directory, extract it to your future mainspace:
+Finally, assuming you've downloaded x86_64 chroot image to the writable {{{/root}}} directory, extract it to your forthcoming mainspace:
 
 {{{
 # cd /mnt/drive
@@ -149,12 +153,12 @@ Here are few final steps that were mentioned at the beginning of this guide.
 # passwd root
 }}}
 
-**NOTE: don't skip this substep. Root password in chroot images isn't installed. No, it doesn't mean you can login with empty password, it means you won't be able to login at all.**
+**NOTE: don't skip this substep. Root password in the chroot images isn't installed. No, it doesn't mean you can login with an empty password, it means you won't be able to login at all.**
 
 * Configure network and set hostname
 
-This is usually done with editing **/etc/network/interfaces** file. For more info see interfaces(5).
-For simple setups there's already a template where you only need to replace 'X'-values with real IPs of machine's primary address, netmask and default route.
+This is usually done with editing {{{/etc/network/interfaces}}} file. For more info see interfaces(5).
+For simple setups there's already a template where you only need to replace {{{X}}}-values with real IPs of the machine's primary address, netmask and default route. Do not forget to uncomment (remove preceding {{{#}}} symbols) the actual interface configuration lines.
 
 To set your hostname type this:
 
@@ -163,12 +167,13 @@ To set your hostname type this:
 # echo "yourdomain.tld" > /etc/defaultdomain
 }}}
 
-DNS servers are located in **/etc/resolv.conf** file.
+DNS servers are located in {{{/etc/resolv.conf}}} file.
+
 Chroot images use [[http://www.comodo.com/secure-dns/|Comodo's]] as primary and [[https://developers.google.com/speed/public-dns/|Google's]] as secondary DNS server. Feel free to use desired/own ones.
 
 * Set up static information about the filesystems
 
-Edit **/etc/fstab** file according to your disk setup in step №4:
+Edit {{{/etc/fstab}}} file according to your disk setup in step №4:
 
 {{{
 # nano /etc/fstab
@@ -180,19 +185,19 @@ If you prefer to keep your system minimal, you might want to compile your own ke
 You can do that just inside the chroot.
 
 There are 2 ways:
-# includes getting any desired image from http://www.kernel.org, extracting it to /usr/src (e.g.) and doing that by hand (via make menuconfig, make, make modules, copying bzImage, etc.)
+# includes getting any desired image from http://www.kernel.org, extracting it to {{{/usr/src}}} (e.g.) and doing that by hand (via {{{make menuconfig}}}, {{{make}}}, {{{make modules}}}, copying bzImage, etc.)
 # includes typing:
 
 {{{
 # cast -r linux
 }}}
 
-and following instructions in menus.
+and following instructions in the menus.
 
-* Install bootloader
+* Install a bootloader
 
 Chroot images come with 2 bootloaders: LILO and GRUB2. Feel free to use any.
-For example there's ready **/etc/lilo.conf**, where you only need to check 'root=' and 'boot=' values and install it to HDD:
+For example there's ready {{{/etc/lilo.conf}}}, where you only need to check for {{{root=}}} and {{{boot=}}} values and install it to your HDD:
 
 {{{
 # nano /etc/lilo.conf
@@ -209,16 +214,16 @@ If  you need to change it, type:
 # cast -r locale
 }}}
 
-select those you want, and then -- change **LANG** variable in **/etc/sysconfig/locale** file to the one you'd like to use.
+select those you want, and then -- change {{{LANG}}} variable in {{{/etc/sysconfig/locale}}} file to the one you'd like to use.
 
-By default timezone is set to UTC. To change it, you need to choose timezone file and symlink it with **/etc/localtime**.
+By default timezone is set to UTC. To change it, you need to choose timezone file and symlink it with {{{/etc/localtime}}}.
 For example to set GMT-4 timezone:
 
 {{{
 # ln -sf /usr/share/zoneinfo/Etc/GMT-4 /etc/localtime
 }}}
 
-All timezone files are located in **/usr/share/zoneinfo** directory.
+All timezone files are located in {{{/usr/share/zoneinfo}}} directory.
 
 * Get back to real environment
 
@@ -236,7 +241,7 @@ Now you're ready to boot into Source Mage GNU/Linux system, so type:
 # reboot
 }}}
 
-**Note:** don't forget to set HDD as a primary media in boot priority list of BIOS.
+**Note:** don't forget to set HDD as a primary media in the boot priority list of BIOS.
 
 **9. Continue on**
 
