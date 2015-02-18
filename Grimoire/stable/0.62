@@ -80,7 +80,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | minicom | | | | | |
 | module-init-tools | | | | | |
 | mpfr | | | | | |
-| nano | | | | | |
+| nano | stealth | | | | should use default configure flags (at least {{{--disable-wrapping}}}) |
 | ncurses | | | | | |
 | netkit-base | | | | | |
 | netkit-ping | | | | | |
@@ -104,7 +104,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | rsync | | | | | |
 | run-parts | | | | | |
 | sed | | | | | |
-| shadow | | | | | |
+| shadow | stealth | | | | patch default config at build time: md5 --> sha512 |
 | sharutils | | | | | |
 | simpleinit-msb | | | | | |
 | smgl-archspecs | | | | | |
