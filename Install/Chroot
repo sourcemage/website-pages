@@ -30,13 +30,13 @@ But, as told above, it can be any Linux boot media you'd like to use.
 
 Burn the ISO image or {{{dd}}} a prepared boot image to your USB-key, or set up a TFTP-server to boot via network, and boot into its minimal environment.
 
-**3. Get chroot image**
+**3. Get the chroot image**
 
 Almost all modern Linux distributions support network configuration and have download tools available when boot process is complete.
 
 So it's usually not a problem. Though if you don't have (or you know that you won't have Internet-connection inplace for some reason) such ability, you can put the desired chroot image on your USB-key or CD/DVD disc.
 
-The latest stable version is **20120510** (based on **0.60-stable** grimoire). You can download the appropriate chroot image from our [[Download|downloads]] page. 
+You can download the appropriate chroot image from our [[Download|downloads]] page; and we will use the one based on **0.60-stable** grimoire in the example below.
 
 Let's imagine there's no trouble with our Ethernet adapter, and we know how networking works in Linux on a very basic level:
 
