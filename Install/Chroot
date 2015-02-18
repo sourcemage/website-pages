@@ -169,7 +169,7 @@ To set your hostname type this:
 
 DNS servers are located in {{{/etc/resolv.conf}}} file.
 
-Chroot images use [[http://www.comodo.com/secure-dns/|Comodo's]] as primary and [[https://developers.google.com/speed/public-dns/|Google's]] as secondary DNS server. Feel free to use desired/own ones.
+Recent chroot images use [[http://www.neustar.biz/|Neustar's DNS Advantage]] (until **0.61-stable** it was [[http://www.comodo.com/secure-dns/|Comodo's Secure DNS]]) as primary and [[https://developers.google.com/speed/public-dns/|Google's]] as secondary DNS server. Feel free to use desired/own ones.
 
 * Set up static information about the filesystems
 
