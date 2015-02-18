@@ -7,7 +7,8 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 == Getting the chroot/vm image ==
 
 |= Chroot/vm =|= Volunteer =|= Download =|
-| n/a | n/a | n/a |
+| stable-0.61 i686 | stealth | [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2|smgl-stable-0.61-basesystem-i686.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2.sig|sig]]) |
+| stable-0.61 x86_64 | stealth | [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2|smgl-stable-0.61-basesystem-x86_64.tar.bz2]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2.sig|sig]]) |
 
 == Basesystem spells ==
 
