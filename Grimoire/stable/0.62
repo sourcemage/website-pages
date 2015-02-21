@@ -112,7 +112,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | socat | | | | | |
 | sorcery-pubkeys | | | | | |
 | sysfsutils | | | | | |
-| sysstat | | | | | |
+| sysstat | stealth | | | | has broken INSTALL file |
 | tar | | | | | |
 | tcpdump | | | | | |
 | texinfo | | | | | |
