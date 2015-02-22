@@ -25,6 +25,7 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | bzip2 | | | | | |
 | ca-certificates | | | | | |
 | castfs | | | | | |
+| check | | | | | |
 | coreutils | | | | | |
 | cpio | | | | | |
 | cronie | | | | | |
@@ -61,6 +62,7 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | libaal | | | | | |
 | libidn | | | | | |
 | libmpc | | | | | |
+| libnl | | | | | |
 | libpcap | | | | | |
 | libtool | | | | | |
 | libusb | | | | | |
@@ -117,6 +119,7 @@ This release is being shepherded by **<YOUR NAME>** -- contact him with question
 | tcpdump | | | | | |
 | texinfo | | | | | |
 | traceroute | | | | | |
+| tzdata | | | | | |
 | udev | | | | | |
 | unzip | | | | | |
 | usbutils | | | | | |
