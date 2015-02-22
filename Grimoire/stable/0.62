@@ -25,6 +25,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | bzip2 | | | | | |
 | ca-certificates | | | | | |
 | castfs | | | | | |
+| check | | | | | |
 | coreutils | | | | | |
 | cpio | | | | | |
 | cronie | | | | | |
@@ -61,6 +62,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | libaal | | | | | |
 | libidn | | | | | |
 | libmpc | | | | | |
+| libnl | | | | | |
 | libpcap | | | | | |
 | libtool | | | | | |
 | libusb | | | | | |
@@ -80,7 +82,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | minicom | | | | | |
 | module-init-tools | | | | | |
 | mpfr | | | | | |
-| nano | stealth | | | | should use default configure flags (at least {{{--disable-wrapping}}}) |
+| nano | stealth | | | | should use default configure flags (at least {{{--disable-wrapping}}}) in the next chroot |
 | ncurses | | | | | |
 | netkit-base | | | | | |
 | netkit-ping | | | | | |
@@ -104,7 +106,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | rsync | | | | | |
 | run-parts | | | | | |
 | sed | | | | | |
-| shadow | stealth | | | | patch default config at build time: md5 --> sha512 |
+| shadow | stealth | | | | patch default config at build time: md5 --> sha512 (fixed) |
 | sharutils | | | | | |
 | simpleinit-msb | | | | | |
 | smgl-archspecs | | | | | |
@@ -112,11 +114,12 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | socat | | | | | |
 | sorcery-pubkeys | | | | | |
 | sysfsutils | | | | | |
-| sysstat | stealth | | | | has broken INSTALL file |
+| sysstat | stealth | | | | has broken INSTALL file (fixed) |
 | tar | | | | | |
 | tcpdump | | | | | |
 | texinfo | | | | | |
 | traceroute | | | | | |
+| tzdata | | | | | |
 | udev | | | | | |
 | unzip | | | | | |
 | usbutils | | | | | |
