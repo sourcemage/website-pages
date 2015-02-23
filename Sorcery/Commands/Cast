@@ -33,4 +33,4 @@ This happens when a spell may use static linking of another spell, and cannot us
 
 Sometimes a {{{check_self}}} will trigger. This may arise to a spell misbehaving or causing other problems to another spell. This {{{check_self}}} will fix the spell if there is a break.
 
-For options and more information see //cast(8)// manual page.
+For a more detailed view on {{{cast}}} see the [[Sorcery/Commands/Cast/Components|cast components]] page. For options and more information see //cast(8)// manual page.
