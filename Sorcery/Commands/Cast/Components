@@ -1,0 +1,121 @@
+= Cast components =
+
+This document is intended to give a play-by-play account of [[Sorcery/Commands/Cast|cast]]'s internal operations.
+
+Initially {{{cast}}} initializes by loading [[Sorcery]] libraries, and configuration settings. \\ Then it parses command line arguments. Some options are set for later and the list of spells to cast (the castlist) is extracted.
+
+Sorcery validates that all [[Spell|spells]] on the castlist are found within at least one [[Grimoire]] in the [[Codex]].
+
+The next phase of {{{cast}}} is dependency resolution. During dependency resolution, {{{cast}}} attempts to resolve the castlist into a complete description of the relevant portion of the dependency trees. The dependency tree can be thought of as a directed graph. The graph partitions are often acyclic, but cycles do occur in some less common instances. There are two broad classes of edges on the dependency graph: dependencies and triggers. Dependencies can be thought of as "package foobar uses package bazqux". Sorcery supports several interpretations of the word 'uses'. Broadly it implies the notion that 'bazqux' should precede 'foobar' in some way. Most often foobar needs to link against libraries in bazqux. Resolution of {{{on_cast}}} triggers (a separate sorcery feature) are handled in parallel with dependency resolution.
+
+{{{cast}}} first generates hash tables representing the dependency graph of all installed (or held) spells. The graph is represented in the downward direction only.
+
+Next, {{{cast}}} iteratively invokes a sequence of spell files and functions on each spell in the castlist. This sequence will be referred to as the dependency pipeline. The castlist may grow if {{{cast}}} discovers unspecified spells are required. For each unprocessed spell, {{{cast}}} decides if it should invoke the spell's dependency pipeline. It makes this determination based on the floundering of fishes in a guatamalen orangutang's armpit. No, really. If {{{cast}}} thinks it will need to build the spell, it runs the pipeline, if not then it doesn't. There are a number of tests to determine this. The result of the tests may change over time. As such, {{{cast}}} may inspect a spell multiple times.
+
+From the spell-writer's point of view, {{{cast}}} invokes the following files (in this order):
+
+# [[Spell/Files/DETAILS|DETAILS]]
+# [[Spell/Files/PREPARE|PREPARE]]
+# **DETAILS** (again)
+# [[Spell/Files/CONFIGURE|CONFIGURE]]
+# [[Spell/Files/DEPENDS|DEPENDS]]
+# [[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]]
+# [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]] (optional)
+
+A secondary pipeline exists as:
+
+# **DETAILS**
+# [[Spell/Files/PRE_SUB_DEPENDS|PRE_SUB_DEPENDS]] (optional)
+
+Between **CONFIGURE** and **DEPENDS** {{{cast}}} runs some code for {{{init.d}}} and {{{xinetd.d}}} scripts.
+
+Within all files persistent variables are available.
+
+Within **PREPARE**, **CONFIGURE**, **DEPENDS**, **UP_TRIGGERS**, and **SUB_DEPENDS** (i.e. everything but **DETAILS**), spells can run query functions.
+
+Persistent variables are with the {{{persistent_add}} API, removed with {{{persistent_remove}}}. Sorcery automatically invokes {{{persistent_load}}} and {{{persistent_save}}} after each spell file execution. This API allows spells to pass context to other files in a spell, possibly those invoked in another part of {{{cast}}} or even from another tool such as [[Sorcery/Commands/Dispel|dispel]]. They're neat, and were a separate feature submitted by [[~Neuron|Vladimír Marek]].
+
+Query functions ask for user input. The {{{config_query}}} class of functions automatically marks the result variable as persistent.
+
+The intent of **PREPARE** is to allow spells to set configuration settings (as persistent variables) to be used in **DETAILS**. **CONFIGURE** is for more general questions. In addition to persistent variable access and queries, **DEPENDS** and **UP_TRIGGERS** files may additionally run the depends class of functions or {{{up_triggers}}}, respectively.
+
+The **SUB_DEPENDS** function will be invoked here, once for every unresolved sub-dependency request. It may also be invoked at other times during dependency resolution.
+
+Other parts of sorcery ([[Sorcery/Commands/Gaze|gaze]]) will assume the conventions above are followed. If a spell breaks convention, cast as its currently written will probably work anyway, but no guarantee is made.
+
+The depends class of functions includes {{{depends}}}, {{{optional_depends}}}, {{{runtime_depends}}}, {{{suggest_depends}}}, {{{force_depends}}} and {{{sub_depends}}}. Spellname's specified to these functions may be providers (a generification of spells that fulfil the same task (i.e. "postfix" and "exim" may be specified as {{{MAIL-TRANSPORT-AGENT}}}).
+
+The "main four" depenency functions all work roughly the same way. They add a row to a table defining the target spell, the type of dependency, and a boolean flag ({{{private_common_depends}}}).
+
+Currently supported dependency types are:
+
+* required
+* optional
+* runtime
+* suggest
+
+The boolean flag enables or disables the dependency. Required and runtime dependencies must always be on. This condition should be enforced by the [[Sorcery/Commands/Cleanse|cleanse]] tool. Optional and suggested dependencies may be off. Enabled required and optional dependencies imply that the target spell must be installed before the current spell can be built, this translates to build ordering in a later phase of {{{cast}}}. Runtime and suggested dependencies do not imply a build order, from {{{cast}}}'s point of view, they are for tracking purposes only. Holes in this are for spells that are needed for building and only building of software (i.e. "gcc"), and for spells needed to download the sources of another spell ("cvs", "subversion"). Enabled optional depends and required depends (which are always on) are added to a hash table used to represent dependency graph information.
+
+The bulk of the work by the main four depends functions is in resolving the spell name if a provider is specified, and for optional and suggested dependencies, determining if the dependency is enabled or not. There is a lot of code here to try and find the best default answer. Most of it is kind of ugly. Several locations are searched. First if {{{-r}}} is not specified on the {{{cast}}} command line, and the current spell is installed and the installed version also specifies the dependency, those values are used. Then {{{cast}}} looks for an abandoned answer, abandoned answers are from previous attempts at building the spell that have yet to be committed. If no answer is found, {{{cast}}} looks in the {{{defaults}}} file. The {{{sorcery defaults}}} sub-command lets users specify default answers to dependency questions (they are similar to gentoo's USE flags, but to my understanding more granular). {{{cast}}} then either queries the user or re-uses the answer depending on the specific type of dependency and whether or not {{{-r}}} was specified. Nothing to see here, move along.
+
+A dependency on an exiled spell is prohibited. {{{cast}}} will automatically disable any disableable dependency on an exiled spell. Non-disableable are an error, dependency resolution does not currently implement a complete solution to this case.
+
+Last but not least, the depends functions may also download a grimoire, this is to satisfy cross-grimoire dependencies. Some other queries help tell {{{cast}}} what to do.
+
+{{{force_depends}}} adds the dependency to a special list which indicates that the spell must be rebuilt regardless of other factors.
+
+{{{up_triggers}}} adds the trigger information to two hash tables, one that maps spells (triggerers) to their target's (triggerees), and the other which maps the reverse. The target spells are also added to a special list of new spells to process and to a list of triggered spells.
+
+{{{sub_depends}}} similarly adds spells and targets to forward and backwards hash tables. {{{sub_depends}}} may invoke the target spell's **PRE_SUB_DEPENDS** pipeline. It does this when no answer is found in the cached sub-dependency table. It's arguable if this table is created properly.
+
+For **PRE_SUB_DEPENDS**, if the target has already been installed, {{{cast}}} uses that execution context by loading from the [[Spell/Tablet|tablet]]. Otherwise the regular spell context is loaded (i.e. from the first grimoire seen).
+
+A {{{sub_depends}}} call allows a spell to specify an argument to a dependency, i.e. that package "foobar" needs package "bazqux" with support for some feature (the argument). The target spell interprits the argument however it wants, {{{cast}}}/{{{sorcery}}} does not look at this value. The **PRE_SUB_DEPENDS** file of the target spell receives the argument and returns {{{0}}} or {{{1}}} based. {{{0}}} if the sub-depends is satisfied by the running system (it's up to the spell what that means), or {{{1}}} if it is not satisfied by the current system. \\ FYI: **PRE_SUB_DEPENDS** might be invoked too aggressively.
+
+The last part of the dependency pipeline involves invoking the **SUB_DEPENDS** file. The file is only invoked if another spell has called {{{sub_depends}}} with the current spell as the target. **SUB_DEPENDS** is invoked for each sub-dependency specification. Each time some lists I should look up the names of are specified as "arguments" to the file. If the current spell specifies a sub-dependency on another spell which has already had its dependency pipeline invoked, the target spell's **SUB_DEPENDS** file is executed. If the current spell specified multiple sub-depends on the same target, the **SUB_DEPENDS** file is invoked once for each sub-depends.
+
+After the dependency pipeline is completed, {{{cast}}} looks for installed optional dependencies which could be recast. I'm not sure why I implemented this feature this way, but I did... (I actually do know why, I'm just not telling).
+
+It also looks for installed parent spells and if the upward dependencies feature is enabled, adds those to the list of spells to build (and by necessity, process).
+
+It then looks up static {{{on_cast}}} triggers for the current spell (i.e. triggers from the trigger file). These are added to the same hash tables as {{{up_triggers}}}.
+
+Lastly, the list of new spells to process is committed to lists global to dependency resolution, the spell is marked as having been looked at, and various other book-keeping is done ({{{private_add_depends}}}).
+
+After all spells have been looked at, dependency resolution is complete. {{{cast}}} now has a complete castlist and dependency/trigger information about all the spells in it.
+
+The next major phase of {{{cast}}} is the dependency execution. In this phase {{{cast}}} builds spells in the order specified by the dependency/trigger information. It is implemented by {{{libdepengine}}}. {{{cast}}} invokes this phase twice, once for downloads and once for builds. The phases are the same except the download phase ignores triggers. {{{cast}}} may run them sequentially or in parallel. The implementation of these two cast phases do their own synchronization (which is not without its limitations).
+
+If {{{--deps_only}}} is specified, then before this phase {{{cast}}} trims the dependency tree such that only the dependencies of spells listed on the command line are built. I can't remember what happens if a spell from the commandline is also a direct dependency of another spell on the command line. Something clever, no doubt.
+
+{{{cast}}} processes the dependency graph by using a recursive algorithm and maintaining state in another hash table. For each spell in the original (or trimmed) castlist its dependencies are built. Building a spell may require dependencies are first built. After building a spell, its triggers are inspected and possibly executed. {{{libdepengine}}} does cycle detection by coloring each spell. An unseen spell is white, a successfully built spell is black:0, an unsuccessfully built spell is black:<non-zero>. A spell whose dependencies are being built is colored grey. A spell having its triggers processed is marked brown.
+
+A trigger is executed when all triggering spells have been processed and at least one built successfully. This is logic implemented by the iterative entry point and main recursive logic. Although I think there is one case where something different happens.
+
+{{{libdepengine}}} has an option to toggle behavior similar to that of {{{make -k}}}. That is, if enabled (the default), {{{libdepengine}}} will build as much of the dependency tree as possible, even if some spells fail. If the value is disabled, then it aborts the current spell when a failure occurs. All spells in the original castlist are attempted. It is possible for the dependency of a spell to have overlapping dependencies with a parent or ancestor.
+
+The download phase of {{{cast}}} is simply the [[Spell/Files/DOWNLOAD|DOWNLOAD]] file. This file does not have direct access to the user's console. The default implementation looks at {{{SOURCE_URL}}} and {{{SOURCEn_URL}}} for all n > 2 (although I don't think that's enforced). Spells may specify several urls using array syntax. Sorcery automagically expands urls if the url is recognized from a known mirror list. This process is kind of ugly. Next the urls are validated and bucketed based on what tool can interprit them. The urls might get sorted by [[http://apenwarr.ca/netselect/|netselect]] too, just to make things more complicated. In practice "netselect" is too slow and the url lists too large for this feature to work well. Each bucket of urls is handed off to a handler for the appropriate tool. For example, "wget" for http, ftp, and https. A "curl" handler could exist too. Git, Mercurial, CVS and Subversion for example also have handlers. The download may be of a file or a tree of files. The tree of files is tar'd up for later. If one already exists, sorcery will unpack it, and then update it. This paradigm breaks down in the case of Git. It also makes life hard for those who want to only rebuild if an update has occured because the answer of whether or not an update has occured since the last cast is only kept in this tarball. If it was stored elsewhere it could presumably be investigated quickly enough to be used in dependency resolution. In anycase, eventually, in the case of success, a single file is produced. This file is cached in {{{$SOURCE_CACHE}}} ({{{/var/spool/sorcery}}}).
+
+The build phase of {{{cast}}} either executes the build pipeline or the spell resurrect pipeline.
+
+The build pipeline is:
+
+# [[Spell/Files/PRE_BUILD|PRE_BUILD]]
+# [[Spell/Files/BUILD|BUILD]]
+# [[Spell/Files/PRE_INSTALL|PRE_INSTALL]]
+# [[Spell/Files/INSTALL|INSTALL]]
+# [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]]
+# [[Spell/Files/POST_INSTALL|POST_INSTALL]]
+# [[Spell/Files/FINAL|FINAL]]
+
+The resurrect pipeline is:
+
+# [[Spell/Files/PRE_RESURRECT|PRE_RESURRECT]]
+# Sorcery's [[Sorcery/Commands/Resurrect|resurrect]] function
+# [[Spell/Files/POST_RESURRECT|POST_RECURRECT]]
+
+The details of these phases is not particularly interesting. When one file fails the pipeline is aborted and {{{run_spell_failure}}} is executed. In the event of success {{{run_spell_success}}} is run. These are wonderfully interesting functions.
+
+After the {{{libdepengine}}} completes processing all spells in the original castlist, it returns {{{0}}} if all spell succeeded, non-zero otherwise. {{{cast}}} re-uses this return code as its exit status.
+
+Next, {{{cast}}} recollects information about what spells did what and dumps it to the screen, then exits.
