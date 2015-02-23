@@ -33,7 +33,7 @@ Within all files persistent variables are available.
 
 Within **PREPARE**, **CONFIGURE**, **DEPENDS**, **UP_TRIGGERS**, and **SUB_DEPENDS** (i.e. everything but **DETAILS**), spells can run query functions.
 
-Persistent variables are with the {{{persistent_add}} API, removed with {{{persistent_remove}}}. Sorcery automatically invokes {{{persistent_load}}} and {{{persistent_save}}} after each spell file execution. This API allows spells to pass context to other files in a spell, possibly those invoked in another part of {{{cast}}} or even from another tool such as [[Sorcery/Commands/Dispel|dispel]]. They're neat, and were a separate feature submitted by [[~Neuron|Vladimír Marek]].
+Persistent variables are with the {{{persistent_add}}} API, removed with {{{persistent_remove}}}. Sorcery automatically invokes {{{persistent_load}}} and {{{persistent_save}}} after each spell file execution. This API allows spells to pass context to other files in a spell, possibly those invoked in another part of {{{cast}}} or even from another tool such as [[Sorcery/Commands/Dispel|dispel]]. They're neat, and were a separate feature submitted by [[~Neuron|Vladimír Marek]].
 
 Query functions ask for user input. The {{{config_query}}} class of functions automatically marks the result variable as persistent.
 
