@@ -24,8 +24,6 @@ And this command will do to the same for our ISO images at [[http://download.sou
 $ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-x86(i486).iso.bz2" "/var/ftp/sourcemage/iso"
 }}}
 
-The most popular are //HTTP// and //FTP// mirrors. But you can provide BitTorrent files and seed them on open torrent trackers like [[http://linuxtracker.org/|Linuxtracker]] as well.
-
 Here's an example of partial mirroring for the most important parts of Source Mage put into one crontab file:
 
 {{{
