@@ -20,7 +20,7 @@ The grimoire by itself is just a reference; it becomes truly useful when you use
 root@SMGL:~# cast xorg-server
 }}}
 
-The cast program examines the spell, prompts to install its dependencies, and the dependencies' dependencies (if any), then downloads the source code for all the various programs that will be installed.  Each one is built and installed auto-magically.
+The cast program examines the spell, prompts to install its dependencies, and the dependencies' dependencies (if any), then downloads the source code for all the various programs that will be installed. Each one is built and installed automagically.
 
 The grimoire can also serve as a useful human reference as well, since each spell contains a lot of information about its program. A convenient way of looking through the grimoire is the command [[Sorcery/Commands/Gaze|gaze]], which has a great many options. One of the most useful is the command {{{gaze html}}}.
 
@@ -30,6 +30,6 @@ Try this:
 apuleius@magicbox:~# gaze html > ~/grimoire.html
 }}}
 
-This command takes the output of gaze html and writes it to the file "grimoire.html" in your home directory. The "grimoire.html" file can then be examined with any web browser. It is a list of all the spells in the grimoire, with the spell name, version, and a link to the program's web site for further information.
+This command takes the output of gaze html and writes it to the file {{{grimoire.html}}} in your home directory. The {{{grimoire.html}}} file can then be examined with any web browser. It is a list of all the spells in the grimoire, with the spell name, version, and a link to the program's web site for further information.
 
 Running the command {{{scribe update}}} (see [[Sorcery/Commands/Scribe|scribe]]) will download and install a fresh copy of the grimoire, containing updated spells.  You should probably run a scribe update at least once a week to keep the grimoire fresh, and you might want to run the {{{gaze html > ~/grimoire.html}}} command after each one to keep the html version up to date. An up-to-date html version of the three grimoires is available at http://codex.sourcemage.org/listing.html.
