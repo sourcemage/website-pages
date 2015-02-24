@@ -58,7 +58,7 @@ The Project Lead (PL) is responsible for the following:
 * Promote Source Mage GNU/Linux to news organizations, magazines, and websites
 * Maintain the [[Roadmap]]
 * Forward appropriate Team announcements to the proper channels
-* Maintain contacts with popular news sites that accept our announcements ([[http://distrowatch.com|DistroWatch]], [[http://www.osnews.com|OSNews]], [[http://slashdot.org|Slashdot]], magazines, etc.)
+* Maintain contacts with popular news sites that accept our announcements ([[http://distrowatch.com|DistroWatch]], [[http://www.osnews.com|OSNews]], [[http://slashdot.org|Slashdot]], [[http://lwn.net|LWN]], magazines, etc.)
 * Announce team releases (Sorcery and Cauldron mainly) to news sites
 * Work with the Tome Team to keep our website "schnazzy"
 
@@ -84,8 +84,8 @@ The Grimoire Lead (GL) will be responsible for the following:
 * Organize groups to test grimoires, ISOs, Sorcery, and documentation accuracy
 * Keep abreast of security issues and make sure Source Mage GNU/Linux is not vulnerable
 * Monitor or subscribe to at least these mailing lists (security@sourcemage.org should be already subscribed to them):
-** [[http://seclists.org/|seclists.org]]
-** [[http://www.openwall.com/lists/oss-security/|oss-security @ openwall]]
+** [[http://seclists.org/fulldisclosure/|fulldisclosure @ seclists.org]]
+** [[http://www.openwall.com/lists/oss-security/|oss-security @ openwall.com]]
 
 ===Cauldron Lead===
 
