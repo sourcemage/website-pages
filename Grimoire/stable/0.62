@@ -13,124 +13,124 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 == Basesystem spells ==
 
 |= Spell =|= Volunteer =|= Searched =|= Sign-Off =|= Alt Sign-Off =|= Notes =|
-| autoconf | | | | | |
-| automake | | | | | |
-| basesystem | | | | | |
-| bash | | | | | |
-| bc | | | | | |
-| bin86 | | | | | |
-| binutils | | | | | |
-| bison | | | | | |
-| btrfs-progs | | | | | |
-| bzip2 | | | | | |
-| ca-certificates | | | | | |
-| castfs | | | | | |
-| check | | | | | |
-| coreutils | | | | | |
-| cpio | | | | | |
-| cronie | | | | | |
-| dhcpcd | | | | | |
-| dialog | | | | | |
-| diffutils | | | | | |
-| dosfstools | | | | | |
-| e2fsprogs | | | | | |
-| elvis | | | | | |
-| file | | | | | |
-| findutils | | | | | |
-| flex | | | | | |
-| fuse | | | | | |
-| gawk | | | | | |
-| gcc | | | | | |
-| gdisk | | | | | |
-| gettext | | | | | |
-| glibc | | | | | |
-| gmp | | | | | |
-| gnupg | | | | | |
-| gperf | | | | | |
-| grep | | | | | |
-| groff | | | | | |
-| grub2 | | | | | |
-| gzip | | | | | |
-| iana-etc | | | | | |
-| ifupdown | | | | | |
-| init.d | | | | | |
-| installwatch | | | | | |
-| iptables | | | | | |
-| jfsutils | | | | | |
-| kbd | | | | | |
-| less | | | | | |
-| libaal | | | | | |
-| libidn | | | | | |
-| libmpc | | | | | |
-| libnl | | | | | |
-| libpcap | | | | | |
-| libtool | | | | | |
-| libusb | | | | | |
-| libusb-compat | | | | | |
-| lilo | | | | | |
-| linux | | | | | |
-| locale | | | | | |
-| lsscsi | | | | | |
-| lvm | | | | | |
-| lynx | | | | | |
-| lzo | | | | | |
-| m4 | | | | | |
-| make | | | | | |
-| man | | | | | |
-| man-pages | | | | | |
-| mdadm | | | | | |
-| metalog | | | | | |
-| minicom | | | | | |
-| module-init-tools | | | | | |
-| mpfr | | | | | |
-| nano | stealth | | | | should use default configure flags (at least {{{--disable-wrapping}}}) in the next chroot |
-| ncurses | | | | | |
-| netkit-base | | | | | |
-| netkit-ping | | | | | |
-| net-tools | | | | | |
-| openssh | | | | | |
-| openssl | | | | | |
-| parted | | | | | |
-| patch | | | | | |
-| pciutils | | | | | |
-| pcmciautils | | | | | |
-| pcre | | | | | |
-| perl | | | | | |
-| pkgconfig | | | | | |
-| popt | | | | | |
-| ppp | | | | | |
-| procps | | | | | |
-| readline | | | | | |
-| reiser4progs | | | | | |
-| reiserfsprogs | | | | | |
-| rp-pppoe | | | | | |
-| rsync | | | | | |
-| run-parts | | | | | |
-| sed | | | | | |
-| shadow | stealth | | | | patch default config at build time: md5 --> sha512 (fixed) |
-| sharutils | | | | | |
-| simpleinit-msb | | | | | |
-| smgl-archspecs | | | | | |
-| smgl-fhs | | | | | |
-| socat | | | | | |
-| sorcery-pubkeys | | | | | |
-| sysfsutils | | | | | |
-| sysstat | stealth | | | | has broken INSTALL file (fixed) |
-| tar | | | | | |
-| tcpdump | | | | | |
-| texinfo | | | | | |
-| traceroute | | | | | |
-| tzdata | | | | | |
-| udev | | | | | |
-| unzip | | | | | |
-| usbutils | | | | | |
-| util-linux | | | | | |
-| wget | | | | | |
-| wireless_tools | | | | | |
-| wpa_supplicant | | | | | |
-| xfsprogs | | | | | |
-| xz-utils | | | | | |
-| zlib | | | | | |
+| autoconf | stealth | X | X | | |
+| automake | stealth | X | X | | |
+| basesystem | stealth | X | X | | |
+| bash | stealth | X | X | | |
+| bc | stealth | X | X | | |
+| bin86 | stealth | X | X | | |
+| binutils | stealth | X | X | | |
+| bison | stealth | X | X | | |
+| btrfs-progs | stealth | X | X | | |
+| bzip2 | stealth | X | X | | |
+| ca-certificates | stealth | X | X | | |
+| castfs | stealth | X | X | | |
+| check | stealth | X | X | | |
+| coreutils | stealth | X | X | | |
+| cpio | stealth | X | X | | |
+| cronie | stealth | X | X | | |
+| dhcpcd | stealth | X | X | | |
+| dialog | stealth | X | X | | |
+| diffutils | stealth | X | X | | |
+| dosfstools | stealth | X | X | | |
+| e2fsprogs | stealth | X | X | | |
+| elvis | stealth | X | X | | |
+| file | stealth | X | X | | |
+| findutils | stealth | X | X | | |
+| flex | stealth | X | X | | |
+| fuse | stealth | X | X | | sometimes it [[http://lists.ibiblio.org/pipermail/sm-discuss/2015-February/021915.html|fails]] on rebuild, I believe due to castfs interconnection |
+| gawk | stealth | X | X | | |
+| gcc | stealth | X | X | | |
+| gdisk | stealth | X | X | | |
+| gettext | stealth | X | X | | |
+| glibc | stealth | X | X | | |
+| gmp | stealth | X | X | | |
+| gnupg | stealth | X | X | | |
+| gperf | stealth | X | X | | |
+| grep | stealth | X | X | | |
+| groff | stealth | X | X | | |
+| grub2 | stealth | X | X | | |
+| gzip | stealth | X | X | | |
+| iana-etc | stealth | X | X | | |
+| ifupdown | stealth | X | X | | |
+| init.d | stealth | X | X | | |
+| installwatch | stealth | X | X | | |
+| iptables | stealth | X | X | | |
+| jfsutils | stealth | X | X | | |
+| kbd | stealth | X | X | | |
+| less | stealth | X | X | | |
+| libaal | stealth | X | X | | |
+| libidn | stealth | X | X | | |
+| libmpc | stealth | X | X | | |
+| libnl | stealth | X | X | | |
+| libpcap | stealth | X | X | | |
+| libtool | stealth | X | X | | |
+| libusb | stealth | X | X | | |
+| libusb-compat | stealth | X | X | | |
+| lilo | stealth | X | X | | |
+| linux | stealth | X | X | | |
+| locale | stealth | X | X | | |
+| lsscsi | stealth | X | X | | |
+| lvm | stealth | X | X | | |
+| lynx | stealth | X | X | | |
+| lzo | stealth | X | X | | |
+| m4 | stealth | X | X | | |
+| make | stealth | X | X | | |
+| man | stealth | X | X | | |
+| man-pages | stealth | X | X | | |
+| mdadm | stealth | X | X | | |
+| metalog | stealth | X | X | | |
+| minicom | stealth | X | X | | |
+| module-init-tools | stealth | X | X | | |
+| mpfr | stealth | X | X | | |
+| nano | stealth | X | X | | should use default configure flags (at least {{{--disable-wrapping}}}) in the next chroot |
+| ncurses | stealth | X | X | | |
+| netkit-base | stealth | X | X | | |
+| netkit-ping | stealth | X | X | | |
+| net-tools | stealth | X | X | | |
+| openssh | stealth | X | X | | |
+| openssl | stealth | X | X | | |
+| parted | stealth | X | X | | |
+| patch | stealth | X | X | | |
+| pciutils | stealth | X | X | | |
+| pcmciautils | stealth | X | X | | |
+| pcre | stealth | X | X | | |
+| perl | stealth | X | X | | |
+| pkgconfig | stealth | X | X | | |
+| popt | stealth | X | X | | |
+| ppp | stealth | X | X | | |
+| procps | stealth | X | X | | |
+| readline | stealth | X | X | | |
+| reiser4progs | stealth | X | X | | |
+| reiserfsprogs | stealth | X | X | | |
+| rp-pppoe | stealth | X | X | | |
+| rsync | stealth | X | X | | |
+| run-parts | stealth | X | X | | |
+| sed | stealth | X | X | | |
+| shadow | stealth | X | X | | patch default config at build time: md5 --> sha512 (fixed) |
+| sharutils | stealth | X | X | | |
+| simpleinit-msb | stealth | X | X | | |
+| smgl-archspecs | stealth | X | X | | |
+| smgl-fhs | stealth | X | X | | |
+| socat | stealth | X | X | | |
+| sorcery-pubkeys | stealth | X | X | | |
+| sysfsutils | stealth | X | X | | |
+| sysstat | stealth | X | X | | has broken INSTALL file (fixed) |
+| tar | stealth | X | X | | |
+| tcpdump | stealth | X | X | | |
+| texinfo | stealth | X | X | | |
+| traceroute | stealth | X | X | | |
+| tzdata | stealth | X | X | | |
+| udev | stealth | X | X | | |
+| unzip | stealth | X | X | | |
+| usbutils | stealth | X | X | | |
+| util-linux | stealth | X | X | | |
+| wget | stealth | X | X | | |
+| wireless_tools | stealth | X | X | | |
+| wpa_supplicant | stealth | X | X | | |
+| xfsprogs | stealth | X | X | | |
+| xz-utils | stealth | X | X | | |
+| zlib | stealth | X | X | | |
 
 == Extra spells ==
 
