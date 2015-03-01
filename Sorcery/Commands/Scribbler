@@ -1,6 +1,6 @@
 = Multiple grimoires with Scribbler =
 
-The [[Sorcery]] tools allow you to have multiple [[Grimoire|grimoires]] in your [[Codex]]. Some grimoires, like [[Grimoire/games|games]] and [[Grimoire/z-rejected|z-rejected]], contain spells that aren't found in the standard [[Grimoire/test|test]] and [[Grimoire/stable|stable]] grimoires. However, if you have both test and stable in your codex, or some other spell exists in two grimoires in your codex, how does sorcery decide which grimoire to cast from?
+The [[Sorcery]] tools allow you to have multiple [[Grimoire|grimoires]] in your [[Codex]]. Some grimoires, like [[Grimoire/games|games]] and [[Grimoire/z-rejected|z-rejected]], contain [[Spell|spells]] that aren't found in the standard [[Grimoire/test|test]] and [[Grimoire/stable|stable]] grimoires. However, if you have both test and stable in your codex, or some other spell exists in two grimoires in your codex, how does sorcery decide which grimoire to [[Sorcery/Commands/Cast|cast]] from?
 
 The grimoires you have installed are indexed, or numbered. When you cast a spell, sorcery searches the grimoires in their indexed order and uses the spell from the first grimoire it is found in. {{{scribe index}}} will list the grimoires in your codex in the order sorcery will search them:
 
