@@ -34,6 +34,7 @@ This page describes how [[Grimoire/stable|stable grimoire]] is updated regularly
 * {{{sed -i 's/-rc/-0/' VERSION}}}
 * {{{git commit -m "VERSION: $(cat VERSION)" VERSION}}}
 * {{{git push origin stable-$STABLE_RC_VERSION:refs/heads/stable-$STABLE_RC_VERSION}}}
+* {{{git branch --set-upstream-to "origin/stable-$STABLE_RC_VERSION"}}}
 
 **6.** A release tag and tarball are generated as described in [[#tarball|tarball update]].
 
