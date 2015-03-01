@@ -25,7 +25,7 @@ When this process is used, a user casting the deprecated <old> will get <new> in
 
 If the old spell had [[Spell/Files/PROVIDES|PROVIDES]], don't delete it. Otherwise the spell changeover/removal will happen as soon as something that depends on the particular provider is cast. Keeping it is useful for people who have the old spell installed and don't want to switch to the new spell or in case of removal, that want to continue using the old spell (they have it installed from the times the spell was OK).
 
-**However**, this can cause trouble for the people that already switched the provider, since the queries will also show the old spell. So this should only be used for a grace period after the deprecation, let's say a week or a month. Users who want to keep the old spell and keep it as a provider are encouraged to copy it to a [[Grimoire/personal|local grimoire]] with [[Sorcery/Commands/Scribbler|scribbler]], readd the **PROVIDES** file and run {{{scribe reindex}}} over that [[Grimoire|grimoire]].
+**However**, this can cause trouble for the people that already switched the provider, since the queries will also show the old spell. So this should only be used for a grace period after the deprecation, let's say a week or a month. Users who want to keep the old spell and keep it as a provider are encouraged to copy it to a [[Grimoire/Personal|local grimoire]] with [[Sorcery/Commands/Scribbler|scribbler]], readd the **PROVIDES** file and run {{{scribe reindex}}} over that [[Grimoire|grimoire]].
 
 Change all the spells that depended in any way on the deprecated spell to either point to the new one or simply remove the depends if it isn't needed anymore.
 
