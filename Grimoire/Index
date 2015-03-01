@@ -2,7 +2,7 @@
 
 In the tradition of European magic, a "grimoire" is a sorcerer's book of spells, usually written in Latin. Our grimoire is also a book of spells, but it is written in [[http://www.gnu.org/software/bash/|bash]], and the "spells" are actually sets of instructions on how to download, compile, and install programs.
 
-Currently we provide the following grimoires ourselves; [[Grimoire/personal#developers|others]] may provide more:
+Currently we provide the following grimoires ourselves; [[Grimoire/Personal#developers|others]] may provide more:
 
 |= Grimoire =|= Description =|
 | [[Grimoire/stable|stable]] | a release cycle-controlled collection of spells that should be bug-free |
