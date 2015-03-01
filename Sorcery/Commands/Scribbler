@@ -13,7 +13,7 @@ The grimoires you have installed are indexed, or numbered. When you cast a spell
 
 In this case, the only spells that will ever cast from test, are those that do not exist in any of the other grimoires. This could be useful if you want to try spells out that haven't been pulled into the stable grimoire yet. When they do get pulled into stable, sorcery will use the spell in the stable grimoire for all future updates.
 
-If you wanted to cast a spell from test, that also exists in stable, you can do this using a personal grimoire and the scribbler tool:
+If you wanted to cast a spell from test, that also exists in stable, you can do this using a [[Grimoire/Personal|personal grimoire]] and the scribbler tool:
 
 {{{
 # scribbler add gaim test my-spells
