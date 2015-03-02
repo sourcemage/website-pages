@@ -11,7 +11,7 @@ The [[#head-1-2|first]] part describes all of the files that are checked for in 
 
 These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execution order:
 
-* [[Spell/Files/PREPARE|PREPARE]] -- Useful for those rare times when the DETAILS file needs to be modified or the spell or package needs to be configured before the DETAILS file is executed.
+* [[Spell/Files/PREPARE|PREPARE]] -- Useful for those rare times when the **DETAILS** file needs to be modified or the spell or package needs to be configured before the **DETAILS** file is executed.
 * [[Spell/Files/DETAILS|DETAILS]] -- Informational file, required for all spells.
 * [[Spell/Files/CONFIGURE|CONFIGURE]] -- Used to select and modify a package's compile time options.
 * [[Spell/Files/DEPENDS|DEPENDS]] -- Lists all other spells that are required or optionally required to be cast.
@@ -22,7 +22,7 @@ These are the files used during a [[Sorcery/Commands/Cast|cast]], in their execu
 
 (…Processing of the depended on spells…)
 
-(…DETAILS is run again…)
+(…**DETAILS** is run again…)
 
 * [[Spell/Files/CONFLICTS|CONFLICTS]]
 
@@ -81,7 +81,7 @@ These are the other files:
 
 == Standards ==
 
-* General formatting rule: no tabs except in HISTORY, align '='s in DETAILS, and use newlines (for other formatting rules, check the appropriate spell file pages above).
+* General formatting rule: no tabs except in **HISTORY**, align '='s in **DETAILS**, and use newlines (for other formatting rules, check the appropriate spell file pages above).
 * [[Spell/Standards|Spell standards]] -- strict rules related to creating or updating spells, which help to avoid [[Grimoire/Common mistakes|common mistakes]].
 * [[Spell/Standards/Integrity|Integrity checking standards]] -- standards of integrity verification for upstream sources.
 * [[Spell/Deprecation|Spell deprecation process]] -- a guide to perform [[Spell|spell]] deprecation.
