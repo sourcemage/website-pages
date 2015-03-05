@@ -3,3 +3,5 @@
 Required for the very rare cases, mostly for [[Spell|spells]] providing core system libraries or compilers.
 
 It's an empty file. If there, it prevents concurrent casting like a lock, all others will have to wait for this [[Sorcery/Commands/Cast|cast]] to finish.
+
+**Note:** that doesn't prevent other spells from [[Sorcery/Commands/Summon|summoning]] though.
