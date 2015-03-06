@@ -23,11 +23,11 @@ Another purpose of this document is to gather together info about everything tha
 * use {{{STAGED_INSTALL="off"}}} without first consulting the Sorcery Team
 * use relative paths to find files in the section or grimoire
 * refer to files in another section
-* install to the system outside of INSTALL, [[Spell/Files/POST_INSTALL|POST_INSTALL]], [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]], [[Spell/Files/TRANSFER|TRANSFER]] or [[Spell/Files/FINAL|FINAL]]
+* install to the system outside of **INSTALL**, [[Spell/Files/POST_INSTALL|POST_INSTALL]], [[Spell/Files/INSTALL_EXTRAS|INSTALL_EXTRAS]], [[Spell/Files/TRANSFER|TRANSFER]] or [[Spell/Files/FINAL|FINAL]]
 * mismatch the spell's directory name and {{{$SPELL}}}
-* do anything time consuming in DETAILS
+* do anything time consuming in **DETAILS**
 * write to {{{$SPELL_CONFIG}}} directly (use {{{config_*}}}, {{{query*}}}, persistent variables)
-* use {{{MAKE_NJOBS}}} in DETAILS to overwrite {{{-j}}} for {{{make}}}. use {{{make_single}}} and {{{make_normal}}} instead
+* use {{{MAKE_NJOBS}}} in **DETAILS** to overwrite {{{-j}}} for {{{make}}}. use {{{make_single}}} and {{{make_normal}}} instead
 * use other than POSIX-compliant shell code in {{{profile.d}}} scripts
 * have spaces or colons in {{{VERSION}}}, {{{SPELL}}}, dependency flags and some others
 * use sub_dependencies to pick a specific version (this should be done by forking a spell and naming it appropriately then depending on it)
@@ -35,12 +35,12 @@ Another purpose of this document is to gather together info about everything tha
 
 unlikely errors:
 
-* {{{persistent_add}}} any non-conditional variable present in DETAILS (e.g., {{{VERSION}}})
+* {{{persistent_add}}} any non-conditional variable present in **DETAILS** (e.g., {{{VERSION}}})
 * {{{persistent_add}}} any variable provided by sorcery
 * modify {{{IFS}}}
 * use [[Grimoire/API|build API]] 1
 
-{{#export}} **Note:** exporting variables in spells should be avoided, as sorcery makes no guarantee that they will be around in another file. Therefore even if it works, it works by accident and may break in the future. There might be some cases where compiling a program successfully requires an {{{export <variable>=<value>}}}, but for spells' internal operation it is **never** allowed. Use CONFIGURE and persistent variables instead. Also note that exporting important environmental variables can break other spells in queue.
+{{#export}} **Note:** exporting variables in spells should be avoided, as sorcery makes no guarantee that they will be around in another file. Therefore even if it works, it works by accident and may break in the future. There might be some cases where compiling a program successfully requires an {{{export <variable>=<value>}}}, but for spells' internal operation it is **never** allowed. Use **CONFIGURE** and persistent variables instead. Also note that exporting important environmental variables can break other spells in queue.
 
 == Integrity checking ==
 
