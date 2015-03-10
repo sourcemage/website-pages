@@ -1,70 +1,70 @@
 =Source Mage Developer keys=
 
 |= ID =|= IRC nick =|= Name =|= Fingerprint =|
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x79D4B14E&fingerprint=on&op=index|79D4B14E]] | ##abouter## | Arjan Bouter | ##94AD 3FD1 E259 67ED 632E 2B06 CFBE 1154 79D4 B14E## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x97906E44&fingerprint=on&op=index|97906E44]] | ##afrayedknot## | Andrew Stitt | ##76E4 728A 04EE 62B2 A09A 96D7 4D9E 239B D39B 096C## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x4860C671&fingerprint=on&op=index|4860C671]] | ##alley_cat## | Arwed von Merkatz | ##104E 3B35 1816 D95A 28A3 81D1 45FB B4DD 4860 C671## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xD5279A12&fingerprint=on&op=index|D5279A12]] | ##Asha`man## | Geoffrey Derber | ##A31B 49C3 3CE3 6AE5 265D B47B C523 6A4D D527 9A12## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x83B7BF2C&fingerprint=on&op=index|83B7BF2C]] | ##BearPerson## | Karsten Behrmann | ##4249 3C63 01ED 258E 3225 7247 024B 0A2E 83B7 BF2C## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x67A2E6FF&fingerprint=on&op=index|F74F2F6E]] | ##Belxjander## | Jeremy Kajikawa | ##C85A 9486 20EE 3F92 3F79  A4EE 08BE 34CD F74F 2F6E## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x44FAFADF&fingerprint=on&op=index|44FAFADF]] | ##cdombroski## | Chris Dombroski | ##9E6A 1E19 9F97 B6BB E80B 7435 9D44 3ED1 44FA FADF## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x386B44FE&fingerprint=on&op=index|386B44FE]] | ##chp## | Peng Chang (Charles) | ##7F17 085E CC73 D9B5 77C4  EB81 9FE0 B049 386B 44FE## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x3727526B&fingerprint=on&op=index|3727526B]] | ##cored## | Rafael George | ##A3FC 1B74 F8CC 2F6E E83A 497C F212 30E2 3727 526B## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x87C61B91&fingerprint=on&op=index|87C61B91]] | ##CuZnDragon## | Robin Cook | ##BB9F 1590 B113 1DE8 37CE 85E4 3C7D 6B31 87C6 1B91## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xBFE09CF3&fingerprint=on&op=index|BFE09CF3]] | ##DemonLord## | Eric Laberge | ##EE46 860B 6EB4 31D8 362D  8C8E D50D ED72 BFE0 9CF3## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x78D4B61C&fingerprint=on&op=index|78D4B61C]] | ##dinolinux## | Anton Brondz | ##9AD0 1887 798A DCCB B8A2 C579 8CEB 3D7B 78D4 B61C## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x70EB739B&fingerprint=on&op=index|70EB739B]] | ##dkowis## | David Kowis | ##98EC 7077 CB97 00A1 F2E7 3834 C9DF FAF4 70EB 739B## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x5D7656C5&fingerprint=on&op=index|5D7656C5]] | ##dmlb2000## | David Michael Leo Brown, Jr. | ##ED77 8EC2 EF65 7010 3BD1 294A DA53 9EE5 5D76 56C5## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x3327A9A5&fingerprint=on&op=index|3327A9A5]] | ##dufflebunk## | Paul Mahon | ##8209 F0D4 4477 6954 BE2B F283 D621 6396 3327 A9A5## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xBDD215EC&fingerprint=on&op=index|BDD215EC]] | ##eekee## | Ethan Grammatikidis | ##2C5C 6EE2 7F41 91F3 D118 9C9B 6F29 25A4 BDD2 15EC## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xF009764F&fingerprint=on&op=index|F009764F]] | ##emrys## | Jeremy Blosser | ##867D C269 21C2 7643 E9E3 6478 285D BEC5 F009 764F## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x47D55DB7&fingerprint=on&op=index|47D55DB7]] | ##e-type## | Pieter Lenaerts | ##F590 B58A BE3E EACE 78F4 8B2D AF31 A8A7 47D5 5DB7## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x1B5C6D58&fingerprint=on&op=index|1B5C6D58]] | ##ewomack## | Eric Womack | ##2838 866A E5F9 1719 05CC 8BF3 99AE 101B 1B5C 6D58## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x005096D5&fingerprint=on&op=index|005096D5]] | ##flux_control## | Justin Boffemmyer | ##D247 7C91 F758 6829 2895 0AC7 E565 ADFD 0050 96D5## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x5811D90C&fingerprint=on&op=index|5811D90C]] | ##ilj## | Ivan Lezhnjov, Jr. | ##2A52 5C8C 38BE C04F D8DE A169 19E2 E49A 5811 D90C## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x6319D895&fingerprint=on&op=index|6319D895]] | ##ismaell## | Ismael Luceno | ##D050 C4DA 0440 5CE2 7985 8413 350C 1228 6319 D895## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xB00895FD&fingerprint=on&op=index|B00895FD]] | ##iuso## | Juuso Alasuutari | ##41C2 5BE1 934A 2C27 8FE7 8BEA 43F4 CD41 B008 95FD## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xECC6B2C0&fingerprint=on&op=index|ECC6B2C0]] | ##johnnyi7## | John Harding | ##E960 D7DF 8581 470D 485E B06C 094F A06E ECC6 B2C0## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x6F507597&fingerprint=on&op=index|6F507597]] | ##Jucato## | Juan Carlos Torres | ##1E49 DB47 2052 27C8 D757 EAB1 E7E7 4F07 6F50 7597## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xCEFEFE6D&fingerprint=on&op=index|CEFEFE6D]] | ##_kaze_## | Julien Rozo | ##E053 64DD B98F E177 6EBC ED17 9B97 3884 CEFE FE6D## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x035E17AF&fingerprint=on&op=index|035E17AF]] | ##lace## | Ladislav Hagara | ##73BF FE1A 9E99 4A00 9AF0 5470 C4D7 7787 035E 17AF## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x1A4F3D49&fingerprint=on&op=index|1A4F3D49]] | ##lalo## | Fernando Martins | ##5103 581E 58E7 43BC 4D30 624A 73E3 6EB0 1A4F 3D49## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x683DE5F3&fingerprint=on&op=index|683DE5F3]] | ##lejatorn## | Mathieu Lonjaret | ##4324 5818 39AA 9545 95C6 09AF B0A4 DFEA 683D E5F3## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x26E20715&fingerprint=on&op=index|26E20715]] | ##linuxfan## | Dale E. Edmons | ##3E8D F1AD 6BF8 0E62 CC5C 0E29 8D92 42C9 26E2 0715## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xCD17761B&fingerprint=on&op=index|CD17761B]] | ##lynxlynxlynx## | Jaka Kranjc | ##7F93 2F01 872B 0EF0 67E8 24A1 2F43 485E CD17 761B## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xE549BC9F&fingerprint=on&op=index|E549BC9F]] | ##MaffooClock## | Matthew Clark | ##872A 4706 2952 076C 971C 39CD EEFC 0600 E549 BC9F## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x9885DB02&fingerprint=on&op=index|9885DB02]] | ##mar_s## | Martin Spitzbarth | ##7946 F2FE 0F13 7432 7F86 48A0 2E7E DC7B 9885 DB02## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x8E80FED1&fingerprint=on&op=index|668CB308]] | ##minozake## | Donald Johnson | ##F7D0 E859 F2CC EC7E B6A9  5C37 CD02 9D8E 668C B308## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x13CB2D1F&fingerprint=on&op=index|13CB2D1F]] | ##M_L## | Mathieu Lubrano | ##64B3 985B 8419 EA1B 33C2 8D50 1443 A4EA 13CB 2D1F## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x83DDA5B9&fingerprint=on&op=index|83DDA5B9]] | ##morfic## | Daniel Goller | ##FE8B 7D6D 21B5 DB32 7C18 464B F876 B270 83DD A5B9## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x81C0793E&fingerprint=on&op=index|81C0793E]] | ##novaburst## | Paul Beel | ##232C 661C A83C 2C33 7165 7C0B 2366 2D44 81C0 793E## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x1C3593C7&fingerprint=on&op=index|1C3593C7]] | ##Oadae## | Jason Flatt | ##2E76 CBD9 F859 FCB9 635C C5CD 9253 D819 1C35 93C7## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x480A83AD&fingerprint=on&op=index|480A83AD]] | ##p3pilot## | George Sherwood | ##2172 16DE 58BD E143 E64B 5928 9152 677E 480A 83AD## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x8FB46657&fingerprint=on&op=index|8FB46657]] | ##Phoul## | Colin Childs | ##4C2A 6372 0A1B 3EC2 67BC EB36 8993 CC5A 8FB4 6657## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xEBF6BC5B&fingerprint=on&op=index|EBF6BC5B]] | ##public## | Pavel Vinogradov | ##96B9 029A ED89 C11C CE0C 2FE5 2D53 5027 EBF6 BC5B## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xC071CCA0&fingerprint=on&op=index|C071CCA0]] | ##Puppet_Master## | Philippe Caseiro | ##4CB2 6251 A70A 6C2E 5700 7687 43CB 56B8 C071 CCA0## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x243070DA&fingerprint=on&op=index|243070DA]] | ##PyroBor## | Bor Kraljic | ##F3AA 9C17 347C 7234 6F11 E6C8 2467 52D6 2430 70DA## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xE5796C4D&fingerprint=on&op=index|E5796C4D]] | ##qnr## | Terry Ross | ##BE84 EC1D FC94 D97B 9063 AD15 0F38 193A E579 6C4D## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xE66D545A&fingerprint=on&op=index|E66D545A]] | ##quinq## | Quentin Rameau | ##0373 CB03 51DA 5D7F 5E9F  649C 2E03 71E9 E66D 545A## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xF4C1F89C&fingerprint=on&op=index|F4C1F89C]] | ##ruskie## | Andraž Levstik | ##6FF2 8F20 4C9D DB36 B5B6 F134 884D 72CC F4C1 F89C## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xDD7D88C2&fingerprint=on&op=index|DD7D88C2]] | ##rycee## | Robert Helgesson | ##9FF8 8BA5 8FA8 D38A FAB0 718D 1423 19E4 DD7D 88C2## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x18615F19&fingerprint=on&op=index|18615F19]] | ##ryuji## | Elisamuel Resto | ##B66D 1C2A E8EE B922 1D9C D98F D2D5 FB61 1861 5F19## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xA8EFDD61&fingerprint=on&op=index|A8EFDD61]] | ##sandalle## | Eric Sandall | ##FCFF 26A1 BE21 08F4 BB91 FAED 1D7B 7D74 A8EF DD61## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xA4DEA8E8&fingerprint=on&op=index|A4DEA8E8]] | ##Shamgar## | Mark Bainter | ##D10B 2C8C 6645 0874 7E8A 6752 7A80 6E3C CCC7 9E53## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xA12852FC&fingerprint=on&op=index|A12852FC]] | ##SilverSlayer## | David C. Haley | ##A9DE 59A5 33AA 9CD6 6C2C 6F14 4953 78E4 A128 52FC## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x60D5CAFE&fingerprint=on&op=index|60D5CAFE]] | ##sobukus## | Thomas Orgis | ##D021 FF8E CF4B E097 19D6  1A27 231C 4CBC 60D5 CAFE## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xEF5462EA&fingerprint=on&op=index|EF5462EA]] | ##sorrow## | Martin Ruderer | ##E0D3 9FE3 32A1 6063 DA4C 5093 262C 92C2 EF54 62EA## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x562C3225&fingerprint=on&op=index|562C3225]] | ##Stealth## | Vlad Glagolev | ##E818 7DE5 5F6F C19D B509 228A A980 B512 562C 3225## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x0B5C3506&fingerprint=on&op=index|0B5C3506]] | ##superdave## | Dave Josephsen | ##1D76 B3EA EA18 A94A 0141 9F39 3B7E D2C7 0B5C 3506## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x84317E6A&fingerprint=on&op=index|84317E6A]] | ##swoolley## | Seth Woolley | ##8C97 9818 F889 EDE3 B54C AAD6 E936 BF83 8431 7E6A## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x2E8A8C83&fingerprint=on&op=index|2E8A8C83]] | ##tboatman## | Tommy Boatman | ##18D7 83EE DEF9 B3E8 7274 8748 BAFB BA1D 2E8A 8C83## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xE1C5ABF5&fingerprint=on&op=index|E1C5ABF5]] | ##template## | Robert Figura | ##98FA 2918 9222 F16D C947 5D73 47B1 8B44 E1C5 ABF5## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xA17729BE&fingerprint=on&op=index|A17729BE]] | ##treeve## | Treeve Jelbert | ##0908 820D DA87 7F9C AD7B F7FF EE82 88A7 A177 29BE## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xC0EBAB09&fingerprint=on&op=index|C0EBAB09]] | ##Tritol## | Lubomir Blaha | ##7C6E D057 B735 01AA CC04 7BE9 7D7C DF4D C0EB AB09## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x5A947CE4&fingerprint=on&op=index|5A947CE4]] | ##Unet## | Kevin Dahan | ##052D DA69 61EB 4BD9 A13A 20C5 0082 CD67 5A94 7CE4## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x2C92FA36&fingerprint=on&op=index|2C92FA36]] | ##vlaaad## | Flavien Bridault | ##3B45 20D7 6BEC C8A5 BBF1 A9D0 85E5 3D08 2C92 FA36## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0xABCF84A4&fingerprint=on&op=index|ABCF84A4]] | ##W0rf## | Wolfgang Scheicher | ##D2AB 9C36 31FF CD2D D2AA 9A5F C3B0 A0F9 ABCF 84A4## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x1CCF3307&fingerprint=on&op=index|1CCF3307]] | ##wich## | Remko van der Vossen | ##E86A 69C4 8542 DA21 BA4D CCC9 42CF 3F36 1CCF 3307## |
-| [[http://subkeys.pgp.net:11371/pks/lookup?search=0x484C0438&fingerprint=on&op=index|484C0438]] | ##xb3## | Sergey Lipnevich | ##454A DFCD 025F 5A1F 1220 4CEB 3208 E2A2 484C 0438## |
+| [[:Keyserver_PGP:79D4B14E|79D4B14E]] | ##abouter## | Arjan Bouter | ##94AD 3FD1 E259 67ED 632E 2B06 CFBE 1154 79D4 B14E## |
+| [[:Keyserver_PGP:0x97906E44|97906E44]] | ##afrayedknot## | Andrew Stitt | ##76E4 728A 04EE 62B2 A09A 96D7 4D9E 239B D39B 096C## |
+| [[:Keyserver_PGP:0x4860C671|4860C671]] | ##alley_cat## | Arwed von Merkatz | ##104E 3B35 1816 D95A 28A3 81D1 45FB B4DD 4860 C671## |
+| [[:Keyserver_PGP:0xD5279A12|D5279A12]] | ##Asha`man## | Geoffrey Derber | ##A31B 49C3 3CE3 6AE5 265D B47B C523 6A4D D527 9A12## |
+| [[:Keyserver_PGP:0x83B7BF2C|83B7BF2C]] | ##BearPerson## | Karsten Behrmann | ##4249 3C63 01ED 258E 3225 7247 024B 0A2E 83B7 BF2C## |
+| [[:Keyserver_PGP:0x67A2E6FF|F74F2F6E]] | ##Belxjander## | Jeremy Kajikawa | ##C85A 9486 20EE 3F92 3F79 A4EE 08BE 34CD F74F 2F6E## |
+| [[:Keyserver_PGP:0x44FAFADF|44FAFADF]] | ##cdombroski## | Chris Dombroski | ##9E6A 1E19 9F97 B6BB E80B 7435 9D44 3ED1 44FA FADF## |
+| [[:Keyserver_PGP:0x386B44FE|386B44FE]] | ##chp## | Peng Chang (Charles) | ##7F17 085E CC73 D9B5 77C4 EB81 9FE0 B049 386B 44FE## |
+| [[:Keyserver_PGP:0x3727526B|3727526B]] | ##cored## | Rafael George | ##A3FC 1B74 F8CC 2F6E E83A 497C F212 30E2 3727 526B## |
+| [[:Keyserver_PGP:0x87C61B91|87C61B91]] | ##CuZnDragon## | Robin Cook | ##BB9F 1590 B113 1DE8 37CE 85E4 3C7D 6B31 87C6 1B91## |
+| [[:Keyserver_PGP:0xBFE09CF3|BFE09CF3]] | ##DemonLord## | Eric Laberge | ##EE46 860B 6EB4 31D8 362D 8C8E D50D ED72 BFE0 9CF3## |
+| [[:Keyserver_PGP:0x78D4B61C|78D4B61C]] | ##dinolinux## | Anton Brondz | ##9AD0 1887 798A DCCB B8A2 C579 8CEB 3D7B 78D4 B61C## |
+| [[:Keyserver_PGP:0x70EB739B|70EB739B]] | ##dkowis## | David Kowis | ##98EC 7077 CB97 00A1 F2E7 3834 C9DF FAF4 70EB 739B## |
+| [[:Keyserver_PGP:0x5D7656C5|5D7656C5]] | ##dmlb2000## | David Michael Leo Brown, Jr. | ##ED77 8EC2 EF65 7010 3BD1 294A DA53 9EE5 5D76 56C5## |
+| [[:Keyserver_PGP:0x3327A9A5|3327A9A5]] | ##dufflebunk## | Paul Mahon | ##8209 F0D4 4477 6954 BE2B F283 D621 6396 3327 A9A5## |
+| [[:Keyserver_PGP:0xBDD215EC|BDD215EC]] | ##eekee## | Ethan Grammatikidis | ##2C5C 6EE2 7F41 91F3 D118 9C9B 6F29 25A4 BDD2 15EC## |
+| [[:Keyserver_PGP:0xF009764F|F009764F]] | ##emrys## | Jeremy Blosser | ##867D C269 21C2 7643 E9E3 6478 285D BEC5 F009 764F## |
+| [[:Keyserver_PGP:0x47D55DB7|47D55DB7]] | ##e-type## | Pieter Lenaerts | ##F590 B58A BE3E EACE 78F4 8B2D AF31 A8A7 47D5 5DB7## |
+| [[:Keyserver_PGP:0x1B5C6D58|1B5C6D58]] | ##ewomack## | Eric Womack | ##2838 866A E5F9 1719 05CC 8BF3 99AE 101B 1B5C 6D58## |
+| [[:Keyserver_PGP:0x005096D5|005096D5]] | ##flux_control## | Justin Boffemmyer | ##D247 7C91 F758 6829 2895 0AC7 E565 ADFD 0050 96D5## |
+| [[:Keyserver_PGP:0x5811D90C|5811D90C]] | ##ilj## | Ivan Lezhnjov, Jr. | ##2A52 5C8C 38BE C04F D8DE A169 19E2 E49A 5811 D90C## |
+| [[:Keyserver_PGP:0x6319D895|6319D895]] | ##ismaell## | Ismael Luceno | ##D050 C4DA 0440 5CE2 7985 8413 350C 1228 6319 D895## |
+| [[:Keyserver_PGP:0xB00895FD|B00895FD]] | ##iuso## | Juuso Alasuutari | ##41C2 5BE1 934A 2C27 8FE7 8BEA 43F4 CD41 B008 95FD## |
+| [[:Keyserver_PGP:0xECC6B2C0|ECC6B2C0]] | ##johnnyi7## | John Harding | ##E960 D7DF 8581 470D 485E B06C 094F A06E ECC6 B2C0## |
+| [[:Keyserver_PGP:0x6F507597|6F507597]] | ##Jucato## | Juan Carlos Torres | ##1E49 DB47 2052 27C8 D757 EAB1 E7E7 4F07 6F50 7597## |
+| [[:Keyserver_PGP:0xCEFEFE6D|CEFEFE6D]] | ##_kaze_## | Julien Rozo | ##E053 64DD B98F E177 6EBC ED17 9B97 3884 CEFE FE6D## |
+| [[:Keyserver_PGP:0x035E17AF|035E17AF]] | ##lace## | Ladislav Hagara | ##73BF FE1A 9E99 4A00 9AF0 5470 C4D7 7787 035E 17AF## |
+| [[:Keyserver_PGP:0x1A4F3D49|1A4F3D49]] | ##lalo## | Fernando Martins | ##5103 581E 58E7 43BC 4D30 624A 73E3 6EB0 1A4F 3D49## |
+| [[:Keyserver_PGP:0x683DE5F3|683DE5F3]] | ##lejatorn## | Mathieu Lonjaret | ##4324 5818 39AA 9545 95C6 09AF B0A4 DFEA 683D E5F3## |
+| [[:Keyserver_PGP:0x26E20715|26E20715]] | ##linuxfan## | Dale E. Edmons | ##3E8D F1AD 6BF8 0E62 CC5C 0E29 8D92 42C9 26E2 0715## |
+| [[:Keyserver_PGP:0xCD17761B|CD17761B]] | ##lynxlynxlynx## | Jaka Kranjc | ##7F93 2F01 872B 0EF0 67E8 24A1 2F43 485E CD17 761B## |
+| [[:Keyserver_PGP:0xE549BC9F|E549BC9F]] | ##MaffooClock## | Matthew Clark | ##872A 4706 2952 076C 971C 39CD EEFC 0600 E549 BC9F## |
+| [[:Keyserver_PGP:0x9885DB02|9885DB02]] | ##mar_s## | Martin Spitzbarth | ##7946 F2FE 0F13 7432 7F86 48A0 2E7E DC7B 9885 DB02## |
+| [[:Keyserver_PGP:0x8E80FED1|668CB308]] | ##minozake## | Donald Johnson | ##F7D0 E859 F2CC EC7E B6A9 5C37 CD02 9D8E 668C B308## |
+| [[:Keyserver_PGP:0x13CB2D1F|13CB2D1F]] | ##M_L## | Mathieu Lubrano | ##64B3 985B 8419 EA1B 33C2 8D50 1443 A4EA 13CB 2D1F## |
+| [[:Keyserver_PGP:0x83DDA5B9|83DDA5B9]] | ##morfic## | Daniel Goller | ##FE8B 7D6D 21B5 DB32 7C18 464B F876 B270 83DD A5B9## |
+| [[:Keyserver_PGP:0x81C0793E|81C0793E]] | ##novaburst## | Paul Beel | ##232C 661C A83C 2C33 7165 7C0B 2366 2D44 81C0 793E## |
+| [[:Keyserver_PGP:0x1C3593C7|1C3593C7]] | ##Oadae## | Jason Flatt | ##2E76 CBD9 F859 FCB9 635C C5CD 9253 D819 1C35 93C7## |
+| [[:Keyserver_PGP:0x480A83AD|480A83AD]] | ##p3pilot## | George Sherwood | ##2172 16DE 58BD E143 E64B 5928 9152 677E 480A 83AD## |
+| [[:Keyserver_PGP:0x8FB46657|8FB46657]] | ##Phoul## | Colin Childs | ##4C2A 6372 0A1B 3EC2 67BC EB36 8993 CC5A 8FB4 6657## |
+| [[:Keyserver_PGP:0xEBF6BC5B|EBF6BC5B]] | ##public## | Pavel Vinogradov | ##96B9 029A ED89 C11C CE0C 2FE5 2D53 5027 EBF6 BC5B## |
+| [[:Keyserver_PGP:0xC071CCA0|C071CCA0]] | ##Puppet_Master## | Philippe Caseiro | ##4CB2 6251 A70A 6C2E 5700 7687 43CB 56B8 C071 CCA0## |
+| [[:Keyserver_PGP:0x243070DA|243070DA]] | ##PyroBor## | Bor Kraljic | ##F3AA 9C17 347C 7234 6F11 E6C8 2467 52D6 2430 70DA## |
+| [[:Keyserver_PGP:0xE5796C4D|E5796C4D]] | ##qnr## | Terry Ross | ##BE84 EC1D FC94 D97B 9063 AD15 0F38 193A E579 6C4D## |
+| [[:Keyserver_PGP:0xE66D545A|E66D545A]] | ##quinq## | Quentin Rameau | ##0373 CB03 51DA 5D7F 5E9F 649C 2E03 71E9 E66D 545A## |
+| [[:Keyserver_PGP:0xF4C1F89C|F4C1F89C]] | ##ruskie## | Andraž Levstik | ##6FF2 8F20 4C9D DB36 B5B6 F134 884D 72CC F4C1 F89C## |
+| [[:Keyserver_PGP:0xDD7D88C2|DD7D88C2]] | ##rycee## | Robert Helgesson | ##9FF8 8BA5 8FA8 D38A FAB0 718D 1423 19E4 DD7D 88C2## |
+| [[:Keyserver_PGP:0x18615F19|18615F19]] | ##ryuji## | Elisamuel Resto | ##B66D 1C2A E8EE B922 1D9C D98F D2D5 FB61 1861 5F19## |
+| [[:Keyserver_PGP:0xA8EFDD61|A8EFDD61]] | ##sandalle## | Eric Sandall | ##FCFF 26A1 BE21 08F4 BB91 FAED 1D7B 7D74 A8EF DD61## |
+| [[:Keyserver_PGP:0xA4DEA8E8|A4DEA8E8]] | ##Shamgar## | Mark Bainter | ##D10B 2C8C 6645 0874 7E8A 6752 7A80 6E3C CCC7 9E53## |
+| [[:Keyserver_PGP:0xA12852FC|A12852FC]] | ##SilverSlayer## | David C. Haley | ##A9DE 59A5 33AA 9CD6 6C2C 6F14 4953 78E4 A128 52FC## |
+| [[:Keyserver_PGP:0x60D5CAFE|60D5CAFE]] | ##sobukus## | Thomas Orgis | ##D021 FF8E CF4B E097 19D6 1A27 231C 4CBC 60D5 CAFE## |
+| [[:Keyserver_PGP:0xEF5462EA|EF5462EA]] | ##sorrow## | Martin Ruderer | ##E0D3 9FE3 32A1 6063 DA4C 5093 262C 92C2 EF54 62EA## |
+| [[:Keyserver_PGP:0x562C3225|562C3225]] | ##Stealth## | Vlad Glagolev | ##E818 7DE5 5F6F C19D B509 228A A980 B512 562C 3225## |
+| [[:Keyserver_PGP:0x0B5C3506|0B5C3506]] | ##superdave## | Dave Josephsen | ##1D76 B3EA EA18 A94A 0141 9F39 3B7E D2C7 0B5C 3506## |
+| [[:Keyserver_PGP:0x84317E6A|84317E6A]] | ##swoolley## | Seth Woolley | ##8C97 9818 F889 EDE3 B54C AAD6 E936 BF83 8431 7E6A## |
+| [[:Keyserver_PGP:0x2E8A8C83|2E8A8C83]] | ##tboatman## | Tommy Boatman | ##18D7 83EE DEF9 B3E8 7274 8748 BAFB BA1D 2E8A 8C83## |
+| [[:Keyserver_PGP:0xE1C5ABF5|E1C5ABF5]] | ##template## | Robert Figura | ##98FA 2918 9222 F16D C947 5D73 47B1 8B44 E1C5 ABF5## |
+| [[:Keyserver_PGP:0xA17729BE|A17729BE]] | ##treeve## | Treeve Jelbert | ##0908 820D DA87 7F9C AD7B F7FF EE82 88A7 A177 29BE## |
+| [[:Keyserver_PGP:0xC0EBAB09|C0EBAB09]] | ##Tritol## | Lubomir Blaha | ##7C6E D057 B735 01AA CC04 7BE9 7D7C DF4D C0EB AB09## |
+| [[:Keyserver_PGP:0x5A947CE4|5A947CE4]] | ##Unet## | Kevin Dahan | ##052D DA69 61EB 4BD9 A13A 20C5 0082 CD67 5A94 7CE4## |
+| [[:Keyserver_PGP:0x2C92FA36|2C92FA36]] | ##vlaaad## | Flavien Bridault | ##3B45 20D7 6BEC C8A5 BBF1 A9D0 85E5 3D08 2C92 FA36## |
+| [[:Keyserver_PGP:0xABCF84A4|ABCF84A4]] | ##W0rf## | Wolfgang Scheicher | ##D2AB 9C36 31FF CD2D D2AA 9A5F C3B0 A0F9 ABCF 84A4## |
+| [[:Keyserver_PGP:0x1CCF3307|1CCF3307]] | ##wich## | Remko van der Vossen | ##E86A 69C4 8542 DA21 BA4D CCC9 42CF 3F36 1CCF 3307## |
+| [[:Keyserver_PGP:0x484C0438|484C0438]] | ##xb3## | Sergey Lipnevich | ##454A DFCD 025F 5A1F 1220 4CEB 3208 E2A2 484C 0438## |
 
 As the links are to ##subkeys.pgp.net## which always throws you to a different server there might be some incompatibility or a 404 here and there but a retry after a few minutes should switch it again. The last working alias was http://keys.riverwillow.net.au:11371.
