@@ -70,7 +70,7 @@ and reindex all spells in it:
 
 **Note:** you need to do this every time you add/remove any spell to/from it.
 
-Since now {{{cast acpid}}} will [[Sorcery/Commands/Cast|cast]] "acpid" from your new "craft" grimoire. You can modify the spell (i.e. change version and update checksum to downgrade or upgrade it), add or remove configure flags and so on. Take a look at our [[Spell/Book|Spellbook]] for more information.
+Since now {{{cast acpid}}} will [[Sorcery/Commands/Cast|cast]] "acpid" from your new "craft" grimoire. You can modify the spell (i.e. change version and update checksum to downgrade or upgrade it), add or remove configure flags and so on. Take a look at our [[Spell/Book|Spellbook]] for more information about spell-writing.
 
 == Alternative way with Scribbler ==
 
