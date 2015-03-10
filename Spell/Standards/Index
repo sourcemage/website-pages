@@ -6,7 +6,7 @@ Another purpose of this document is to gather together info about everything tha
 
 == Things spells should not do ==
 
-* contain tabs anywhere else than [[Spell/Files/HISTORY|HISTORY]] (and even there only)
+* contain tabs anywhere else than in [[Spell/Files/HISTORY|HISTORY]] (and even there only)
 * call {{{exit}}}. Use {{{return 1}}} when aborting from a spell
 * [[#export|export variables]]
 * query the user anywhere else but in [[Spell/Files/CONFIGURE|CONFIGURE]], [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]], [[Spell/Files/DEPENDS|DEPENDS]] (only as necessary), or rarely in [[Spell/Files/PREPARE|PREPARE]] -- modify {{{Makefile}}}s if you have to
