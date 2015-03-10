@@ -1,12 +1,12 @@
 = PROVIDES =
 
-The PROVIDES file is used to contain information about what generic dependencies a [[Spell|spell]] provides.
+The **PROVIDES** file is used to contain information about what generic dependencies a [[Spell|spell]] provides.
 
 The format of this file is a simple list of uppercase provider names, separated by newlines.
 
 For instance, [[http://www.exim.org/|exim]], [[http://www.postfix.org/|postfix]] and [[http://www.sendmail.org/|sendmail]] are mailer daemons, so they provide {{{MAIL-TRANSPORT-AGENT}}}.
 
-Example from mozilla:
+Example from the spell "mozilla":
 
 {{{
 MOZILLA-BROWSER
