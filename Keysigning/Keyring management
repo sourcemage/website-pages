@@ -1,6 +1,6 @@
 = GPG keyring management =
 
-This document assumes that you're fairly good at using gnupg. All the commands will be precisely layed out and can be typed in almost verbatim, however, things like "how to find your GPG key ID" will not be described. For things like that the author recommends using [[http://google.com/|Google]] or the [[https://www.gnupg.org/gph/en/manual.html|gnupg handbook]].
+This document assumes that you're fairly good at using [[https://www.gnupg.org|GnuPG]]. All the commands will be precisely layed out and can be typed in almost verbatim, however, things like "how to find your GPG key ID" will not be described. For things like that the author recommends using [[http://google.com|Google]] or the [[https://www.gnupg.org/gph/en/manual.html|GnuPG handbook]].
 
 == Export your key ==
 
@@ -14,7 +14,7 @@ Now we've got a binary form of your key. Source Mage's keyrings are stored in a 
 
 == Import your key into the desired keyring ==
 
-Here's where it can be a bit tricky. gnupg wants to use your keyrings in {{{~/.gpg/}}} but we don't want those to mingle with and potentially taint Source Mage's keyrings. It is very important that only the key we want to import gets into the keyring, because these are used to cryptographically verify tarballs and other important things. If rogue keys get in there, someone could potentially make a [[Grimoire]] where every spell is {{{rm -rf /*}}} and it'd show up as "valid".
+Here's where it can be a bit tricky. GnuPG wants to use your keyrings in {{{~/.gpg/}}} but we don't want those to mingle with and potentially taint Source Mage's keyrings. It is very important that only the key we want to import gets into the keyring, because these are used to cryptographically verify tarballs and other important things. If rogue keys get in there, someone could potentially make a [[Grimoire]] where every [[Spell|spell]] is {{{rm -rf /*}}} and it'd show up as "valid".
 
 {{{
 gpg --no-default-keyring --keyring ./sorcery-devel.gpg --import-options import-clean,import-minimal --import mykey.gpg
