@@ -105,7 +105,7 @@
 
 Currently, [[http://lists.ibiblio.org/pipermail/sm-discuss/2006-May/014536.html|probst]] function is used to generate and/or verify hashes of votes.
 
-The source code written by Seth Woolley is below:
+The source code written by [[~swoolley|Seth Woolley]] is below:
 
 {{{
 probst() {
