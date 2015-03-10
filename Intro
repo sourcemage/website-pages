@@ -40,7 +40,7 @@ If you're ready for GNU/Linux so advanced, it may as well be magic, then it's ti
 
 == Basic terminology ==
 
-The Source Mage tagline is: "**Linux so advanced, it may as well be magic.**". Basic terminology is similarily magic-oriented. Program packages are called [[Spell|spells]], and a collection of spells is called a [[Grimoire]]. All installed grimoires likewise make up the [[Codex]].
+The Source Mage tagline is: "**Linux so advanced, it may as well be magic.**". Basic terminology is similarily [[Magic idiom|magic-oriented]]. Program packages are called [[Spell|spells]], and a collection of spells is called a [[Grimoire]]. All installed grimoires likewise make up the [[Codex]].
 
 Installing a spell is called "casting", and removing it is called "dispelling". Such terms are not only figures of speech, though: {{{cast}}} and {{{dispel}}} are also 
 the programs used to perform the said tasks.
