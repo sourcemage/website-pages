@@ -36,7 +36,7 @@ $ gpg --recv-keys --keyserver subkeys.pgp.net 84317E6A
 $ gpg --fingerprint 84317E6A
 }}}
 
-Now you have swoolley's ID and public key to verify everyone else who's been signed.
+Now you have [[~swoolley|swoolley's]] ID and public key to verify everyone else who's been signed.
 
 Send your key(s) to ##subkeys.pgp.net##:
 
