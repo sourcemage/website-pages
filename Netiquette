@@ -1,13 +1,13 @@
 = Netiquette =
 
-These are general guidelines for posting to our lists, please use them.
+These are general guidelines for posting to [[Contact/Mailing Lists|our lists]], please use them.
 
-# When replying to a post, only include the list in the TO, and not any of the other posters, since receiving duplicates only takes more of our time.
+# When replying to a post, only include the list in the {{{To}}}, and not any of the other posters, since receiving duplicates only takes more of our time.
 # Refrain from verbally abusing anyone (physical violence is still okay).
 # Accept that a short, no frills response isn't a rude one. It is a busy person still trying to be helpful without wasting their time explaining things you might be reasonably expected to already know.
-# When referring to URLs, use the reference notation ([0], [1], etc.) and post the references at the bottom of your e-mail, corresponding to the number used.
+# When referring to URLs, use the reference notation ({{{[0]}}}, {{{[1]}}}, etc.) and post the references at the bottom of your e-mail, corresponding to the number used.
 # Do not post the same message to multiple lists, cross-posting is annoying and fragments the discussion. Announcements are fine for cross-posting.
 # Do not request immediate help from anyone on the list (either on- or off-list), as this is all volunteer work and we owe you nothing. If you want immediate help, feel free to pay someone for help, otherwise, be happy with what you receive.
-# SMGL is an excellent platform for learning to manage a Linux installation, although many basic *nix commands are assumed knowledge. A helpful response might tell you to use a tool you are unfamiliar with, don't rant at the poster for being unhelpful or elitist, be willing to spend your own time to learn the basic tools.
+# [[About|SMGL]] is an excellent platform for learning to manage a Linux installation, although many basic *nix commands are assumed knowledge. A helpful response might tell you to use a tool you are unfamiliar with, don't rant at the poster for being unhelpful or elitist, be willing to spend your own time to learn the basic tools.
 # Research your problem (and include any relevant references you found) when asking for help. We may not help someone who hasn't done any work to solve the problem on their own. The lists are not a lazy-mans substitute for the man pages, the info pages or a web search engine.
 # Do feel free to discuss shortcoming and suggest solutions on the appropriate lists.
