@@ -86,6 +86,11 @@ span.author {
 span.ctl {
     float: right;
 }
+span.modified {
+    color: #777;
+    float: left;
+    cursor: default;
+}
 p.copy {
     margin: 0 10px;
 }
