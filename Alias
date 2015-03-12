@@ -1,3 +1,17 @@
 = URL aliases =
 
+Here are the lists of aliases to shorten and simplify links.
+
+== Mailing lists ==
+
+* [[List_ibiblio|http://lists.ibiblio.org/mailman/listinfo/]]
+* [[List_MarkMail|http://markmail.org/search/list:org.ibiblio.lists.]]
+* [[List_Gmane|http://news.gmane.org/gmane.linux.sourcemage.]]
+
+== Network news ==
+
+* [[News_Gmane|nntp://news.gmane.org/gmane.linux.sourcemage.]]
+
+== Key servers ==
+
 * [[Keyserver_PGP|http://subkeys.pgp.net:11371/pks/lookup?search=%s&fingerprint=on&op=index]]
