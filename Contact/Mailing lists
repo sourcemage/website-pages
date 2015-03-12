@@ -1,0 +1,25 @@
+= Drop us a message on mailing lists =
+
+Before posting, please never forget about [[Netiquette]].
+
+== Mailing lists @ ibiblio ==
+
+* [[:List_ibiblio:sm-admin|SM-Admin]] -- **[Read Only]** A publically readable list for team member discussion.
+* [[:List_ibiblio:sm-announce|SM-Announce]] -- **[Read Only]** The Source Mage GNU/Linux announce list, publically readable.
+* [[:List_ibiblio:sm-commit|SM-Commit]] -- Code commit mailing list.
+* [[:List_ibiblio:sm-discuss|SM-Discuss]] -- General discussion list for Source Mage GNU/Linux. Meant to mirror **SM-Admin** for non-team members (non-technical).
+* [[:List_ibiblio:sm-grimoire-bugs|SM-Grimoire-Bugs]] -- **[Read Only]** list for grimoire bugs that need a wider audience of distribution, possibly for wider discussion.
+* [[:List_ibiblio:sm-security|SM-Security]] -- Discuss Source Mage GNU/Linux security issues and keep watch on [[Security format|security bugs]].
+* [[:List_ibiblio:sm-spell-submit|SM-Spell-Submit]] -- A moderated list for receiving announcements about updated software from [[http://sourceforge.net|SourceForge]] and other sources.
+* [[:List_ibiblio:sm-users|SM-Users]] -- General discussion list for Source Mage GNU/Linux. A question and answer list (technical).
+
+== Mailing lists mirrors ==
+
+|= List##{{{|}}}##Mirror =|= MarkMail =|= Gmane (HTTP) =|= Gmane (NNTP) =|
+| ##SM-Admin## | [[:List_MarkMail:sm-admin|SM-Admin]] | -- | -- |
+| ##SM-Announce## | [[:List_MarkMail:sm-announce|SM-Announce]] | [[:List_Gmane:announce|Announce]] | [[:News_Gmane:announce|Announce]] |
+| ##SM-Discuss## | [[:List_MarkMail:sm-discuss|SM-Discuss]] | [[:List_Gmane:discuss|Discuss]] | [[:News_Gmane:discuss|Discuss]] |
+| ##SM-Grimoire-Bugs## | [[:List_MarkMail:sm-grimoire-bugs|SM-Grimoire-Bugs]] | [[:List_Gmane:grimoire-bugs|Grimoire-Bugs]] | [[:News_Gmane:grimoire-bugs|Grimoire-Bugs]] |
+| ##SM-Security## | [[:List_MarkMail:sm-security|SM-Security]] | [[:List_Gmane:security|Security]] | [[:News_Gmane:security|Security]] |
+| ##SM-Spell-Submit## | [[:List_MarkMail:sm-spell-submit|SM-Spell-Submit]] | [[:List_Gmane:spell-submit|Spell-Submit]] | [[:News_Gmane:spell-submit|Spell-Submit]] |
+| ##SM-Users## | [[:List_MarkMail:sm-users|SM-Users]] | [[:List_Gmane:user|User]] | [[:News_Gmane:user|User]] |
