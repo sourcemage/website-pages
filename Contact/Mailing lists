@@ -18,6 +18,7 @@ Before posting, please never forget about [[Netiquette]].
 |= List##{{{|}}}##Mirror =|= MarkMail =|= Gmane (HTTP) =|= Gmane (NNTP) =|
 | ##SM-Admin## | [[:List_MarkMail:sm-admin|SM-Admin]] | -- | -- |
 | ##SM-Announce## | [[:List_MarkMail:sm-announce|SM-Announce]] | [[:List_Gmane:announce|Announce]] | [[:News_Gmane:announce|Announce]] |
+| ##SM-Commit## | [[:List_MarkMail:sm-commit|SM-Commit]] | -- | -- |
 | ##SM-Discuss## | [[:List_MarkMail:sm-discuss|SM-Discuss]] | [[:List_Gmane:discuss|Discuss]] | [[:News_Gmane:discuss|Discuss]] |
 | ##SM-Grimoire-Bugs## | [[:List_MarkMail:sm-grimoire-bugs|SM-Grimoire-Bugs]] | [[:List_Gmane:grimoire-bugs|Grimoire-Bugs]] | [[:News_Gmane:grimoire-bugs|Grimoire-Bugs]] |
 | ##SM-Security## | [[:List_MarkMail:sm-security|SM-Security]] | [[:List_Gmane:security|Security]] | [[:News_Gmane:security|Security]] |
