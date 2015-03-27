@@ -1,5 +1,5 @@
 = castfs =
 
-castfs is a [[http://fuse.sourceforge.net/|fuse filesystem]] written in C and is used for capturing filesystem calls for your root filesystem and staging any modifications or additions to the root filesystem.
+castfs is a [[http://fuse.sourceforge.net/|fuse filesystem]] written in C and is used for capturing filesystem calls for your root filesystem and [[Stage root|staging]] any modifications or additions to the root filesystem.
 
 The main purpose for this filesystem is to be able to invoke the filesystem in the Source Mage package manager ([[Sorcery]]) to install packages without blowing over files in your main system. However, there maybe other uses in the future.
