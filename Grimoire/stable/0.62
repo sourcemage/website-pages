@@ -38,7 +38,7 @@ This release is being shepherded by **Vlad Glagolev** -- contact him with questi
 | file | stealth | X | X | sobukus (x86_64) | |
 | findutils | stealth | X | X | sobukus (x86_64) | |
 | flex | stealth | X | X | sobukus (x86_64) | |
-| fuse | stealth | X | X | sobukus (x86_64) | sometimes it [[http://lists.ibiblio.org/pipermail/sm-discuss/2015-February/021915.html|fails]] on rebuild, I believe due to castfs interconnection |
+| fuse | stealth | X | X | sobukus (x86_64) | sometimes it [[http://lists.ibiblio.org/pipermail/sm-discuss/2015-February/021915.html|fails]] on rebuild, I believe due to castfs interconnection (hopefully fixed in castfs 0.6.2) |
 | gawk | stealth | X | X | sobukus (x86_64) | |
 | gcc | stealth | X | X | sobukus (x86_64) | |
 | gdisk | stealth | X | X | sobukus (x86_64) | |
