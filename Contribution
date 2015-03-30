@@ -44,7 +44,7 @@ Here is a list of requirements/duties if you're thinking of contributing to Sour
 * Submit fixes through our Source Code Management (SCM) system
 * Communicate with their team members
 * Communicate with other Team Leads
-* Subscribe to and read all SCM commits by all developers (//[[http://scmweb.sourcemage.org|scmweb.sourcemage.org]] is an alternative that may be easier to read than email//)
+* Subscribe to and read all SCM commits by all developers //([[http://scmweb.sourcemage.org|scmweb.sourcemage.org]] is an alternative that may be easier to read than email)//
 * Hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]]) and [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
 * Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
 
