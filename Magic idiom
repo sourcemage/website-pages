@@ -1,5 +1,7 @@
 = Magic idiom =
 
+//"Any sufficiently advanced technology is indistinguishable from magic."// -- Arthur C. Clarke
+
 We are often asked about our choice of a "magical" theme for our project components, commands, etc. \\ Common phrasings include "What's with all this magic stuff?" and "Is Source Mage the distro for Harry Potter fans?".
 
 It is a little odd to us that Un*x users and administrators would be confused by or have a problem with this terminology. Un*x systems have a [[http://www.catb.org/jargon/html/D/daemon.html|long]] [[http://www.gnu.org/graphics/gnu-head-sm.jpg|history]] of using [[http://www.catb.org/jargon/html/B/biff.html|light-hearted]] [[http://www.catb.org/jargon/html/A/avatar.html|terms]] for commands and concepts, [[http://www.catb.org/jargon/html/D/deep-magic.html|particularly]] [[http://www.catb.org/jargon/html/B/black-magic.html|magical]] [[http://www.catb.org/jargon/html/A/automagically.html|ones]]. The name "Unix" itself is [[http://www.catb.org/jargon/html/U/Unix.html|a pun, not an acronym]], whether the trademark lawyers want to remember this or not. We certainly weren't the first to talk about UN*X "gurus" and "wizards", and Gary Overacre's [[unix-magic.jpg|iconic poster depicting a "Unix Wizard"]] was classic before many of the current crop of Linux users were born.
