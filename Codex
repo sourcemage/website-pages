@@ -30,4 +30,20 @@ The main Source Mage grimoires are also available via [[http://rsync.samba.org/|
 scribe add games from rsync://download.sourcemage.org::codex/games
 }}}
 
+They are available via [[http://git-scm.com|Git]] too:
+
+{{{
+scribe add test.git from git://download.sourcemage.org/smgl/grimoire.git
+}}}
+
+Moreover, you can checkout specific branch of it and track the development tree via {{{scribe update}}} on a regular basis:
+
+{{{
+scribe add stable.git from git://download.sourcemage.org/smgl/grimoire.git:stable.git:stable-0.62
+}}}
+
+**Note:** 2 values for the grimoire name must be the same for this command //("stable.git" here)//
+
 Grimoire tarballs are generated and published on http://codex.sourcemage.org every 6 hours: \\ at 0, 6, 12 and 18 hours EST ([[http://www.wikipedia.org/wiki/Time_zone|EST]] Eastern Standard Time = [[http://www.wikipedia.org/wiki/Coordinated_Universal_Time|UTC]] Coordinated Universal Time - 5h).
+
+Rsync and git locations are synchronized every hour at 00.
