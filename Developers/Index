@@ -9,27 +9,27 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 ==Council of Elders (Lead Developers and Assistants)==
 
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
-| David Kowis | Project Lead | ##BeepDog## | dkowis@sourcemage.org |
-| Eric Sandall | Lead Developer | ##sandalle## | sandalle@sourcemage.org |
-| Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | lynxlynxlynx@sourcemage.org |
-| Jeremy Blosser | Lead Developer | ##emrys## | jblosser@sourcemage.org |
-| Justin Boffemmyer | Lead Developer | ##flux_control## | flux@sourcemage.org |
-| Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | crypto@sourcemage.org |
-| Treeve Jelbert | Lead Developer, database and telephony Guru | ##treeve## | treeve@sourcemage.org |
-| Vlad Glagolev | Grimoire Lead | ##Stealth## | stealth@sourcemage.org |
+| David Kowis | Project Lead | ##BeepDog## | {{:Mage:ZGtvd2lzQHNvdXJjZW1hZ2Uub3Jn}} |
+| Eric Sandall | Lead Developer | ##sandalle## | {{:Mage:c2FuZGFsbGVAc291cmNlbWFnZS5vcmc=}} |
+| Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | {{:Mage:bHlueGx5bnhseW54QHNvdXJjZW1hZ2Uub3Jn}} |
+| Jeremy Blosser | Lead Developer | ##emrys## | {{:Mage:amJsb3NzZXJAc291cmNlbWFnZS5vcmc=}} |
+| Justin Boffemmyer | Lead Developer | ##flux_control## | {{:Mage:Zmx1eEBzb3VyY2VtYWdlLm9yZw==}} |
+| Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | {{:Mage:Y3J5cHRvQHNvdXJjZW1hZ2Uub3Jn}} |
+| Treeve Jelbert | Lead Developer, database and telephony Guru | ##treeve## | {{:Mage:dHJlZXZlQHNvdXJjZW1hZ2Uub3Jn}} |
+| Vlad Glagolev | Grimoire Lead | ##Stealth## | {{:Mage:c3RlYWx0aEBzb3VyY2VtYWdlLm9yZw==}} |
 
 ==Circle of Mages (General Developers)==
 
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
-| Florian Franzmann | General Guru | ##{{{|beowulf|}}}## | beowulf@sourcemage.org |
-| Ismael Luceno | General Guru | ##ismaell##  | ismael@sourcemage.org |
-| Mark Bainter | General Guru | ##Shamgar## | mbainter@sourcemage.org |
-| Pavel Vinogradov | General Guru | ##public## | public@sourcemage.org |
-| Remko van der Vossen | General Guru | ##wich## | wich@sourcemage.org |
-| Robin Cook | General Guru | ##CuZnDragon## | cuzndragon@sourcemage.org |
-| Sukneet Basuta | General Guru | ##Sukneet## | sukneet@sourcemage.org |
-| Thomas Orgis | General Guru | ##sobukus## | sobukus@sourcemage.org |
-| Tommy Boatman | General Guru | ##tboatman## | tboatman@sourcemage.org |
+| Florian Franzmann | General Guru | ##{{{|beowulf|}}}## | {{:Mage:YmVvd3VsZkBzb3VyY2VtYWdlLm9yZw==}} |
+| Ismael Luceno | General Guru | ##ismaell##  | {{:Mage:aXNtYWVsQHNvdXJjZW1hZ2Uub3Jn}} |
+| Mark Bainter | General Guru | ##Shamgar## | {{:Mage:bWJhaW50ZXJAc291cmNlbWFnZS5vcmc=}} |
+| Pavel Vinogradov | General Guru | ##public## | {{:Mage:cHVibGljQHNvdXJjZW1hZ2Uub3Jn}} |
+| Remko van der Vossen | General Guru | ##wich## | {{:Mage:d2ljaEBzb3VyY2VtYWdlLm9yZw==}} |
+| Robin Cook | General Guru | ##CuZnDragon## | {{:Mage:Y3V6bmRyYWdvbkBzb3VyY2VtYWdlLm9yZw==}} |
+| Sukneet Basuta | General Guru | ##Sukneet## | {{:Mage:c3VrbmVldEBzb3VyY2VtYWdlLm9yZw==}} |
+| Thomas Orgis | General Guru | ##sobukus## | {{:Mage:c29idWt1c0Bzb3VyY2VtYWdlLm9yZw==}} |
+| Tommy Boatman | General Guru | ##tboatman## | {{:Mage:dGJvYXRtYW5Ac291cmNlbWFnZS5vcmc=}} |
 
 [[Grimoire]] sections //archive//, //cluster//, //devel//, //display//, //doc//, //gnu//, //i18n//, //java//, //kernels//, //libs//, //mobile//, //printer//, //security//, //shell-term-fm//, //telephony//, //utils// and //x11// are currently un-maintained but are mostly up to date. Many developers have project subscriptions for their particular spells and are walk in walk out positions. \\ Contact the [[mailto:grimoire@sourcemage.org|Grimoire Team Lead]] for more information.
 
