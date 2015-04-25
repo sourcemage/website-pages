@@ -20,7 +20,7 @@ These steps will help you to do so in a proper order:
 
 **1. Get some bootable media**
 
-It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even the ISO of [[~lejatorn|Mathieu's]] [[http://www.ubuntu.com/download|favourite operating system ever]].
+It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even the ISO of the [[http://www.ubuntu.com/download|operating system]] [[http://granivo.re|Mathieu]] prefers.
 
 Personally I recommend [[http://www.slax.org/download.php|SLAX]] or [[http://www.archlinux.org/download/|Arch Netinstall Image]]. They support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Also [[https://downloads.archlinux.de/iso/archboo/|Archboot]] is perfect for booting via network (PXE).
 
