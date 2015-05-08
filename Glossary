@@ -106,7 +106,7 @@ Sorcery command to inspect, clean, and repair broken systems.
 
 [[Sorcery/Commands/Confmeld|Confmeld]]
 
-Sorcery command to merge staged configuration files into the system.
+Sorcery command to merge [[Stage|staged]] configuration files into the system.
 
 [[Sorcery/Commands/Dispel|Dispel]]
 
