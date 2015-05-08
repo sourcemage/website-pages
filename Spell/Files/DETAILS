@@ -258,7 +258,7 @@ ARCHIVE="off"
 
 **STAGED_INSTALL**
 
-This one is used to turn off [[Stage root|stage root]] install managed by [[castfs]]. The default is 'on' when "castfs" is installed.
+This one is used to turn off [[Stage|stage root]] install managed by [[castfs]]. The default is 'on' when "castfs" is installed.
 
 {{{
 STAGED_INSTALL=off
