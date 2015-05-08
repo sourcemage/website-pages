@@ -1,5 +1,5 @@
 = Confmeld command =
 
-{{{confmeld}}} is a command-line tool for the (semi)automatical merging of staged configuration files. [[Spell|Spells]] will not install newer versions during [[Sorcery/Commands/Cast|cast]], but stage them in {{{/var/state/sorcery/staged_configs}}}.
+{{{confmeld}}} is a command-line tool for the (semi)automatical merging of [[Stage|staged]] configuration files. [[Spell|Spells]] will not install newer versions during [[Sorcery/Commands/Cast|cast]], but stage them in {{{/var/state/sorcery/staged_configs}}}.
 
 At the end, confmeld will resolve the simple upgrade cases and ask for the rest. The user will have the choice to either leave the old file intact or install the new one over. Two similar choices will additionally backup the respective file. To facilitate the decision, confmeld can also show the difference between the two files (an unified diff).
