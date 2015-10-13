@@ -37,6 +37,27 @@ For installation instructions, please see the [[Install]] page.
 * [RU] Stealth Zone ([[http://sourcemage.ru/image/|HTTP]], [[ftp://ftp.stealth.zone/sourcemage/image/|FTP]])
 ----
 
+== Source Mage Docker images ==
+
+These images are based on our chroot images. To use them, simply do the following:
+
+{{{
+$ docker run -it --privileged vaygr/sourcemage
+}}}
+
+or
+
+{{{
+$ docker run -it --privileged vaygr/sourcemage:0.61
+}}}
+
+**Notes:**
+
+* you need the "--privileged" flag for access to {{{/dev/fuse}}} device within a container and proper functioning of [[castfs]]
+* {{{0.61}}} indicates the grimoire version this image is based on, otherwise latest will be pulled
+
+----
+
 == Codex ==
 
 * The current [[Grimoire/stable|stable grimoire]] is [[http://download.sourcemage.org/codex/stable-0.62.tar.bz2|0.62]] ([[http://download.sourcemage.org/codex/stable-0.62.tar.bz2.asc|GPG]])
