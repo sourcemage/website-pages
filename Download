@@ -42,13 +42,13 @@ For installation instructions, please see the [[Install]] page.
 These images are based on our chroot images. To use them, simply do the following:
 
 {{{
-$ docker run -it --privileged vaygr/sourcemage
+$ docker run -it --privileged sourcemage
 }}}
 
 or
 
 {{{
-$ docker run -it --privileged vaygr/sourcemage:0.61
+$ docker run -it --privileged sourcemage:0.61
 }}}
 
 **Notes:**
