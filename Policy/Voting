@@ -128,4 +128,4 @@ If your messages are not clear signed, but are detached/mime signed then you run
 
 This isn't intended to prevent snooping on clearsigned messages. If you want that, please clearsign your vote, then encrypt it. This is important that you do this **in two steps** instead of "together" for now because there's now way to "decrypt" just a message and not its signature if they were done together with GPG (using the {{{gpg}}} command-line tool) and doing it in two steps makes it so the auditors don't have to use the session key given by vote counter to them to decrypt the single message. He can simply keep the decrypted messages together and sign+encrypt them over to the auditors as one unit. If you miss this part, he'll probably just ask you to resend it so he can properly send you a hash.
 
-**Note:** for the function above you will need "pgpdump" utility which you can get by running {{{cast pgpdump}}} on SMGL system.
+**Note:** for the function above you will need [[http://www.mew.org/~kazu/proj/pgpdump/en/|pgpdump]] utility which you can get by running {{{cast pgpdump}}} on SMGL system.
