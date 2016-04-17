@@ -5,7 +5,13 @@ In Source Mage, "casting spells" means installing programs. The [[Grimoire]] con
 {{{cast}}} casts a program by:
 
 {{{
-cast <spell>
+# cast <spell>
+}}}
+
+Multiple spells can be cast like so:
+
+{{{
+# cast <spell 1> <spell 2> <spell 3> ... <spell N>
 }}}
 
 {{{cast}}} does rather more than simply install a program. The process can be broken down into four main steps:
