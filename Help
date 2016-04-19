@@ -275,9 +275,9 @@ Link syntax:
 * [[#test]]
 * [[#test|On page link]]
 * [[#5|[5] ]] Footnote reference
-* http://beta.sourcemage.ru
-* [[http://beta.sourcemage.ru]]
-* [[http://beta.sourcemage.ru|Source Mage]]
+* http://www.sourcemage.org
+* [[http://www.sourcemage.org]]
+* [[http://www.sourcemage.org|Source Mage]]
 * [[About|{{logo_big.png}}]]
 
 {{#5}} [5] Footnote anchor.
@@ -293,9 +293,9 @@ Link syntax:
 * [[#test]]
 * [[#test|On page link]]
 * [[#5|[5] ]] Footnote reference
-* http://beta.sourcemage.ru
-* [[http://beta.sourcemage.ru]]
-* [[http://beta.sourcemage.ru|Source Mage]]
+* http://www.sourcemage.org
+* [[http://www.sourcemage.org]]
+* [[http://www.sourcemage.org|Source Mage]]
 * [[About|{{logo_big.png}}]]
 
 {{#5}} [5] Footnote anchor.
@@ -326,7 +326,7 @@ Then use the aliases like so:
 Three logo variations
 {{logo_big.png}}
 {{logo_big.png|Logo}}
-[[http://beta.sourcemage.ru|{{logo_big.png}}]]
+[[http://www.sourcemage.org|{{logo_big.png}}]]
 rendered inline
 }}}
 ----
@@ -334,7 +334,7 @@ rendered inline
 Three logo variations
 {{logo_big.png}}
 {{logo_big.png|Logo}}
-[[http://beta.sourcemage.ru|{{logo_big.png}}]]
+[[http://www.sourcemage.org|{{logo_big.png}}]]
 rendered inline.
 ----
 {{#table}}
