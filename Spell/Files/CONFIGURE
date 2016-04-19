@@ -1,6 +1,6 @@
 = CONFIGURE =
 
-The CONFIGURE script is sourced during a [[Sorcery/Commands/Cast|cast]], after [[Spell/Files/DETAILS|DETAILS]] and before [[Spell/Files/DEPENDS|DEPENDS]] and [[Spell/Files/CONFLICTS|CONFLICTS]]. It is used to take care of more complex [[Spell|spells]] for which extra information must be gathered and stored. This can be needed when there are optional ./configure switches that don't require any extra spells, or for doing extra things in the [[Spell/Files/BUILD|BUILD]] script. The query can be made in the CONFIGURE and then the flags stored can be used in any of the spell scripts.
+The CONFIGURE script is sourced during a [[Sorcery/Commands/Cast|cast]], after [[Spell/Files/DETAILS|DETAILS]] and before [[Spell/Files/DEPENDS|DEPENDS]] and [[Spell/Files/CONFLICTS|CONFLICTS]]. It is used to take care of more complex [[Spell|spells]] for which extra information must be gathered and stored. This can be needed when there are optional ./configure switches that don't require any extra spells, or for doing extra things in the [[Spell/Files/BUILD|BUILD]] script. The query can be made in the **CONFIGURE** and then the flags stored can be used in any of the spell scripts.
 
 == Persistence ==
 
@@ -49,9 +49,9 @@ For more examples and functions look into {{{/var/lib/sorcery/modules/libapi}}}
 
 == Passing the options to BUILD ==
 
-In order to make actual use of user specified options via listed above {{{config_query*}}} functions in CONFIGURE file we have to pass the saved values of the variables to a spell BUILD file. This is done by declaring a custom variable in CONFIGURE file and then specifying this variable name in BUILD file. \\ The following example shows what is required to be done:
+In order to make actual use of user specified options via listed above {{{config_query*}}} functions in **CONFIGURE** file we have to pass the saved values of the variables to a spell **BUILD** file. This is done by declaring a custom variable in **CONFIGURE** file and then specifying this variable name in **BUILD** file. \\ The following example shows what is required to be done:
 
-Example, irssi spell -- CONFIGURE file:
+Example, "irssi" spell -- **CONFIGURE** file:
 
 {{{
 config_query_option IRSSI_OPTS "build with irssi-bot" n \
@@ -61,15 +61,15 @@ config_query_option IRSSI_OPTS \
         "--with-proxy" "--without-proxy"
 }}}
 
-{{{IRSSI_OPTS}}} is the custom variable that stores answers a user gives us, e.g. {{{--with-bot}}} or {{{--without-bot}}}. We then need to create a BUILD file and put in there the stored user answers this way:
+{{{IRSSI_OPTS}}} is the custom variable that stores answers a user gives us, e.g. {{{--with-bot}}} or {{{--without-bot}}}. We then need to create a **BUILD** file and put in there the stored user answers this way:
 
-Example, irssi spell -- BUILD file:
+Example, "irssi" spell -- **BUILD** file:
 
 {{{
 OPTS="$IRSSI_OPTS $OPTS" &&
 default_build
 }}}
 
-{{{OPTS=""}}} contains both {{{$IRSSI_OPTS}}}, a custom variable that we declared in CONFIGURE file, and a mandatory {{{$OPTS}}} variable that is **always expected to be placed after** all of the custom variables. {{{$OPTS}}} is an internal sorcery variable holding some common flags and the ones from the dependencies.
+{{{OPTS=""}}} contains both {{{$IRSSI_OPTS}}}, a custom variable that we declared in **CONFIGURE** file, and a mandatory {{{$OPTS}}} variable that is **always expected to be placed after** all of the custom variables. {{{$OPTS}}} is an internal sorcery variable holding some common flags and the ones from the dependencies.
 
 The scenario described above provides a method that lets us ask a user some configuration related questions, obtain and store answers and then be able to apply changes to a spell configuration according to a user's instructions.
