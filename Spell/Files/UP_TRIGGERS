@@ -1,7 +1,7 @@
 = UP_TRIGGERS =
 
-UP_TRIGGERS is a [[Spell|spell]] file run during the dependency resolution phase of [[Sorcery/Commands/Cast|cast]]. It is run after [[Spell/Files/DEPENDS|DEPENDS]] and before [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]], so persistent variables and user queries are available in this context.
+**UP_TRIGGERS** is a [[Spell|spell]] file run during the dependency resolution phase of [[Sorcery/Commands/Cast|cast]]. It is run after [[Spell/Files/DEPENDS|DEPENDS]] and before [[Spell/Files/SUB_DEPENDS|SUB_DEPENDS]], so persistent variables and user queries are available in this context.
 
-UP_TRIGGERS provides spell-writers the opportunity to use [[Sorcery|sorcery]]'s {{{up_trigger}}} function, which allows runtime registration of {{{on_cast}}} triggers.
+**UP_TRIGGERS** provides spell-writers the opportunity to use [[Sorcery|sorcery]]'s {{{up_trigger}}} function, which allows runtime registration of {{{on_cast}}} triggers.
 
 The {{{up_trigger}}} function has two parameters: the 'target' spell to run the trigger on, and what trigger 'action' to run. When a spell calls {{{up_trigger}}}, sorcery registers the request where it will later be used by the build phase of cast. After the spell is built, cast will subsequently execute the trigger action. If multiple target/action pairs exist, no build order is specifically enforced by sorcery.
