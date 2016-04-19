@@ -1,8 +1,8 @@
 = DETAILS =
 
-The DETAILS file is used to contain the information about the application that the [[Spell|spell]] is for.
+The **DETAILS** file is used to contain the information about the application that the [[Spell|spell]] is for.
 
-Example of a typical DETAILS file:
+Example of a typical **DETAILS** file:
 
 {{{
            SPELL=foo
@@ -268,13 +268,13 @@ STAGED_INSTALL=off
 
 **TMPFS**
 
-Attempt to compile entirely in RAM. This also modifies {{{mk_source_dir}}} function, which can be used in [[Spell/Files/PRE_BUILD|PRE_BUILD]] later to create {{{${SOURCE_DIRECTORY}}}} with specified size in tmpfs //(file system stored in volatile memory)//. You need one more argument for the size. Usually it's a global option, but can be used in DETAILS to override default behavior on a spell level:
+Attempt to compile entirely in RAM. This also modifies {{{mk_source_dir}}} function, which can be used in [[Spell/Files/PRE_BUILD|PRE_BUILD]] later to create {{{${SOURCE_DIRECTORY}}}} with specified size in tmpfs //(file system stored in volatile memory)//. You need one more argument for the size. Usually it's a global option, but can be used in **DETAILS** to override default behavior on a spell level:
 
 {{{
 TMPFS=off
 }}}
 
-But if it's turned on, PRE_BUILD can look like this:
+But if it's turned on, **PRE_BUILD** can look like this:
 
 {{{
 # requires 3 gigabytes to unpack sources
@@ -302,7 +302,7 @@ REJECT="has licensing issues"
 }}}
 ----
 
-After all of the entries have been made for the DETAILS file. The last thing should be the long description for this spell. Used to give a more lengthy description of what this spell is and it's common uses etc. The description must be aligned to 80 characters (no line should exceed the 80th character).
+After all of the entries have been made for the **DETAILS** file. The last thing should be the long description for this spell. Used to give a more lengthy description of what this spell is and it's common uses etc. The description must be aligned to 80 characters (no line should exceed the 80th character).
 
 {{{
 cat << EOF
