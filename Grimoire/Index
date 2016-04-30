@@ -5,8 +5,8 @@ In the tradition of European magic, a "grimoire" is a sorcerer's book of spells,
 Currently we provide the following grimoires ourselves; [[Grimoire/Personal#developers|others]] may provide more:
 
 |= Grimoire =|= Description =|
-| [[Grimoire/stable|stable]] | a release cycle-controlled collection of spells that should be bug-free |
-| [[Grimoire/stable-rc|stable-rc]] | a release cycle-controlled collection of spells that is the next stable version release candidate |
+| [[Grimoire/stable|stable]] | a [[Grimoire/Release|release cycle-controlled]] collection of spells that should be bug-free |
+| [[Grimoire/stable-rc|stable-rc]] | a **release cycle-controlled** collection of spells that is the next stable version release candidate |
 | [[Grimoire/test|test]] | a collection of spells that represents the bleeding edge; these versions compile for at least the developer that committed them, but may leave your system a smoldering ruin |
 | [[Grimoire/games|games]] | a collection of spells to install games, game servers and clients, etc. |
 | [[Grimoire/z-rejected|z-rejected]] | a collection of spells which are not included in the primary grimoires because of licensing or other issues. These are more or less supported, depending on individual interest and availability |
