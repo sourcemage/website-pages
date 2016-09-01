@@ -83,7 +83,8 @@ $ docker run -it sourcemage:0.61
 * The current [[Grimoire/stable-rc|stable-rc grimoire]] is [[http://download.sourcemage.org/codex/stable-rc-0.62.tar.bz2|0.62]] ([[http://download.sourcemage.org/codex/stable-rc-0.62.tar.bz2.asc|GPG]])
 ** Release date: **20150223**
 
-[[http://codex.sourcemage.org]] -- current [[Codex]] listing
+* [[http://codex.sourcemage.org]] -- current [[Codex]] listing
+* [[https://github.com/sourcemage]] -- [[https://github.com|GitHub]] mirror, not limited to grimoires
 ----
 
 == Everything and anything ==
