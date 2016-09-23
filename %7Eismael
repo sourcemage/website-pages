@@ -5,10 +5,12 @@ IRC nick: ismaell
 == My Work
 === Other Projects
 * [[http://iodev.co.uk/mutt-patches/|Mutt]]
+** [[https://github.com/ismaell/mutt-acct|mutt-acct]] --- Convenient account management for Mutt
 * [[https://github.com/git/git/commits?author=ismaell|Git]]
-* [[https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Ismael+Luceno|Linux]]
+* [[https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Ismael+Luceno|Linux Kernel]]
 * [[https://cgit.freedesktop.org/xkeyboard-config/log/?qt=author&q=Ismael+Luceno|xkeyboard-config]]
 * [[invisible-island.net/mawk/CHANGES.html|MAWK]]
+* [[https://github.com/bluecherrydvr/solo6x10/commits?author=ismaell|solo6x10 driver]]
 
 === Source Mage
 * [[http://scmweb.sourcemage.org/?p=smgl%2Fsorcery.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Sorcery]]
