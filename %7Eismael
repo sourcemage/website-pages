@@ -1,6 +1,6 @@
 = Ismael Luceno
 == Contact information
-|=IRC nick: | ##ismaell##
+|=Freenode IRC nick: | ##ismaell##
 |=E-mail:   | {{:Mage:aXNtYWVsQHNvdXJjZW1hZ2Uub3Jn}}
 |=Location: | [[#head-1-2-1|404 Not Found]]
 
@@ -15,18 +15,7 @@ I've been living in the following cities:
 === 404 Not Found
 I've not found my place in the world yet...
 
-== My Work
-=== Other Projects
-* [[http://iodev.co.uk/mutt-patches/|Mutt patches]]
-** [[https://github.com/ismaell/mutt-acct|mutt-acct]] --- Convenient account management for Mutt
-* [[https://github.com/git/git/commits?author=ismaell|Git]]
-* [[https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Ismael+Luceno|Linux Kernel]]
-* [[https://cgit.freedesktop.org/xkeyboard-config/log/?qt=author&q=Ismael+Luceno|xkeyboard-config]]
-* [[http://invisible-island.net/mawk/CHANGES.html|MAWK]]
-* [[https://github.com/bluecherrydvr/solo6x10/commits?author=ismaell|solo6x10 driver]]
-* [[https://git.busybox.net/uClibc/log/?qt=author&q=Ismael+Luceno|µClibc]]
-* [[https://git.busybox.net/buildroot/log/?qt=author&q=Ismael+Luceno|Buildroot]]
-
+== Contributions
 === Source Mage
 * [[http://scmweb.sourcemage.org/?p=smgl%2Fsorcery.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Sorcery]]
 * [[http://scmweb.sourcemage.org/?p=smgl%2Fmisc%2Fquill.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Quill]]
@@ -38,9 +27,21 @@ I've not found my place in the world yet...
 ** [[https://github.com/ismaell/smgl-sorcery-fts|Full-Text-Search for Sorcery]]
 ** [[https://github.com/ismaell/smgl-spell-parser|spell-parser]] --- DETAILS file parser
 
+=== Other Projects
+* [[http://iodev.co.uk/mutt-patches/|Mutt patches]]
+** [[https://github.com/ismaell/mutt-acct|mutt-acct]] --- Convenient account management for Mutt
+* [[https://github.com/git/git/commits?author=ismaell|Git]]
+* [[https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Ismael+Luceno|Linux Kernel]]
+* [[https://cgit.freedesktop.org/xkeyboard-config/log/?qt=author&q=Ismael+Luceno|xkeyboard-config]]
+* [[http://invisible-island.net/mawk/CHANGES.html|MAWK]]
+* [[https://github.com/bluecherrydvr/solo6x10/commits?author=ismaell|solo6x10 driver]]
+* [[https://git.busybox.net/uClibc/log/?qt=author&q=Ismael+Luceno|µClibc]]
+* [[https://git.busybox.net/buildroot/log/?qt=author&q=Ismael+Luceno|Buildroot]]
+
 == Profiles on the Web
 === Personal
 |=Github:             | https://github.com/ismaell
+
 === Job sites
 |=StackOverflow Jobs: | https://stackoverflow.com/cv/ismael
 |=XING:               | https://www.xing.com/profile/Ismael_Luceno
