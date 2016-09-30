@@ -67,4 +67,4 @@
 | [[:Keyserver_PGP:0x1CCF3307|1CCF3307]] | ##wich## | Remko van der Vossen | ##E86A 69C4 8542 DA21 BA4D CCC9 42CF 3F36 1CCF 3307## |
 | [[:Keyserver_PGP:0x484C0438|484C0438]] | ##xb3## | Sergey Lipnevich | ##454A DFCD 025F 5A1F 1220 4CEB 3208 E2A2 484C 0438## |
 
-As the links are to ##subkeys.pgp.net## which always throws you to a different server there might be some incompatibility or a 404 here and there but a retry after a few minutes should switch it again. The last working alias was http://keys.riverwillow.net.au:11371.
+As the links are to //subkeys.pgp.net// which always throws you to a different server there might be some incompatibility or a 404 here and there but a retry after a few minutes should switch it again. The last working alias was http://keys.riverwillow.net.au:11371.
