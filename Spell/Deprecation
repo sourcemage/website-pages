@@ -18,7 +18,7 @@ Here is a low-level description of the process ("<old>" is the spell to be remov
 * create <old>/[[Spell/Files/UP_TRIGGERS|UP_TRIGGERS]] with {{{up_trigger <old> dispel_self}}} and {{{up_trigger <new> cast_self}}}
 * add <new>/[[Spell/Files/CONFLICTS|CONFLICTS]] containing {{{conflicts <old> y}}}, the {{{y}}} makes sure the spell will cast without user intervention
 * put a comment into <old>/[[Spell/Files/HISTORY|HISTORY]] that the spell is deprecated and why //(e.g. "* Deprecated in favour of..." or "* Deprecated because...")//
-* if this was a spell rename, document that rename in the [[Grimoire/ChangeLog|grimoire ChangeLog]]
+* whether the spell is being renamed or deprecated, document the change in the [[Grimoire/ChangeLog|grimoire ChangeLog]]
 * add {{{ARCHIVE=off}}} and {{{GATHER_DOCS=off}}} in <old>/**DETAILS**, so no useless caches are generated and a warning about missing source directory is avoided
 
 When this process is used, a user casting the deprecated <old> will get <new> installed, removing <old> in the process.
