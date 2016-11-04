@@ -2,7 +2,7 @@
 
 libapi contains the functions [[Sorcery]] exposes for the [[Spell|spell]] scribes. They are free to use any of the aforementioned functions in this file, no more, no less. Requests for exposing more of the sorcery internals should be forwarded to The Sorcery Team.
 
-[[http://lynxlynx.info/smgl/var.lib.sorcery.modules.libapi.html|View libapi online]] (note that only libapi is shown) or read the source of {{{/var/lib/sorcery/modules/libapi}}} in your own Source Mage system.
+[[http://docs.sourcemage.org/var.lib.sorcery.modules.libapi.html|View libapi online]] (note that only libapi is shown) or read the source of {{{/var/lib/sorcery/modules/libapi}}} in your own Source Mage system.
 
 For a complete sorcery API overview and a working, crossreferenced libapi, you will need our [[bashdoc]]. Do the following to install it on SMGL system:
 
