@@ -1,0 +1,200 @@
+= Source Mage init system design =
+
+== Introduction ==
+
+Since our start, we have had two different attempts made to 'patch' our init scripts system. The last attempt was a copy of the RedHat init scripts and a half try to adhere to the [[http://refspecs.linuxfoundation.org/lsb.shtml|LSB]] [[http://refspecs.linuxfoundation.org/LSB_1.3.0/gLSB/gLSB/sysinit.html|init script standards]].
+
+As of this writing, we have taken it upon ourselves to design, document and create a valid, easy to use, easy to understand, as close to LSB init script standards as is sensible and final Source Mage GNU/Linux init scripts system solution.
+
+When possible we have used other free software components, ideas and knowledge to make this all possible.
+
+== Why not LSB compatible? ==
+
+After reading the LSB standards docs on init scripts there are several conclusions that we have come to. They are rather open ended, trying to provide an environment that is both flexible and restricted. Sometimes they go into excruciating details about things like exit codes and then say nothing about how to handle other aspects of the init script system.
+
+We have taken a look at the [[http://www.safe-mbox.com/~rgooch/linux/boot-scripts/|Linux Boot Scripts]] concept and have come to the conclusion that the script dependency handling described in that document is more convenient and less complex than the system described in LSB. This will allow us to keep the Source Mage GNU/Linux init system as simple as possible.
+
+We will try to apply the various LSB init scripts standards when we deem them to be functional and applicable. In all other cases we have chosen the route of simplicity and understandability.
+
+== Init script names ==
+
+The script names must primarily follow the [[http://www.lanana.org/lsbreg/init/init.txt|LANANA assigned list]]. If a spell requires a differently named init script then the name must be prefixed with {{{smgl-}}} and have no {{{.sh}}} suffix. An init script for the spell "agt" would for example be named "smgl-agt".
+
+== Init script programming ==
+
+Many parts in this section falls outside LSB specified behavior, much of it is plain incompatible with LSB.
+
+=== Actions ===
+
+Init scripts must at the very least support the {{{start}}} and {{{stop}}} actions. The other actions which are specified in LSB are not required but strongly recommended.
+
+An action (if supplied) must be defined to function as required in LSB.
+
+=== Exit codes ===
+
+Exit codes should follow the LSB as far as possible, however the only absolutely required exit codes are zero on successful start or stop, and non zero on failure.
+
+=== Special variables ===
+
+These are variables that can/must be defined in an init script. The variables must be defined at the top of the script, before {{{smgl_init}}} is sourced.
+
+Variables marked {{{*}}} are mandatory.\\
+Variables marked {{{+}}} are only useful when auto init is used.
+
+|= Variable |= Example |= Notes |
+| {{{PROGRAM}}}+ | {{{PROGRAM=/usr/sbin/atd}}} | - This variable must be set to the **full path** to the program which is to be run by the init script.\\ - If this variable isn't defined or is defined to be an empty string then the wrapper script assumes the init script wishes to do all initialization manually. The {{{auto_init}}} script is **not** sourced in this case. The {{{smgl_functions}}} script is still available however.\\ - The program must return directly after execution. |
+| {{{ARGS}}}+ | {{{ARGS="--daemon"}}} | - Defines arguments which should be passed to the program at start. |
+| {{{NAME}}}+ | {{{NAME="Apache web server"}}} | - The default text printed when utilizing {{{auto_init}}} uses the program name, {{{basename $PROGRAM}}}. This can be overridden by setting the {{{NAME}}} variable. For example, when the script start the following text is printed: {{{Starting $NAME...}}}.
+| {{{RUNLEVEL}}}* | {{{RUNLEVEL=3}}} | - Must be set to {{{S}}}, {{{s}}} or a number between 1 and 6. This character defines at which runlevel the script should be started.\\ - This variable is not used directly by the scripts it is rather intended for the script installer so that the script can be placed in the right directory. Simplest way to get this number is to run the script through some sort of text processor, such as [[https://www.gnu.org/software/sed/|sed]].
+| {{{ESSENTIAL}}} | {{{ESSENTIAL=yes}}} | - If a script with this variable defined exits with a non zero exit code then the rest of the init process will be halted. This is used for scripts that are absolutely essential for the computer to function normally. The script for mounting filesystems is an example of an essential script.\\ - If undefined then {{{ESSENTIAL=no}}} is assumed.
+| {{{NEEDS}}} | {{{NEEDS="cups +syslog"}}} | - List of scripts and facilities that must be running before the script can start properly. Any item prefixed with a {{{+}}} is considered a facility.\\ - In the example the cups daemon and a syslog daemon must be running before the script can start.\\ The need program (from simpleinit-msb) should never have to be run directly. In some cases it might be advantageous to though.
+| {{{PROVIDES}}} | {{{PROVIDES=syslog}}} | - Is set to the facility provided by the script.\\ - A script may only provide a single facility. |
+
+=== Auto init ===
+
+This is a system which takes advantage of the similar way many daemons are started. When enabled it checks which argument was passed to the init script, if the argument was one of: {{{start}}}, {{{stop}}}, {{{restart}}}, {{{reload}}}, {{{force-reload}}} and {{{status}}} then the {{{PROGRAM}}} variable is used to execute the action.
+
+An example with the "at" daemon:
+
+{{{
+#!/bin/bash
+
+PROGRAM=/usr/sbin/atd
+RUNLEVEL=3
+
+. /etc/init.d/smgl_init
+}}}
+
+The above code as all that is needed to make "atd" start, stop, restart and so on.
+
+It is possible for an init script to overload the behavior of the different actions by providing a function with the same name as the action being overloaded:
+
+{{{
+#!/bin/bash
+
+PROGRAM=/usr/sbin/atd
+RUNLEVEL=3
+
+. /etc/init.d/smgl_init
+
+start() {
+  # insert special handling of the start action here
+}
+}}}
+
+**NOTE**: overloading action {{{force-reload}}} is done by the function {{{force_reload}}}.
+
+If, in an overloaded function, there is a need to call the similarly named function in {{{auto_init}}} then a {{{_}}} char can be prepended to the function name. For example, to call the default {{{start}}} function run {{{_start}}}.
+
+The auto init system should provide init script authors with a simple way to produce good init scripts.
+
+It is important to note that it is possible to disable auto init by not defining the {{{PROGRAM}}} variable or set it to an empty value.
+
+=== Configuration ===
+
+Configuring the behavior of an init script is done by sourcing an appropriately named file from the {{{/etc/sysconfig}}} directory. A user should never be forced to modify the actual script.
+
+The name of the file should be closely related to the name of the script which is using the file, ideally exactly the same (except ending in {{{.conf}}} when put in the {{{init.d}}} directory of the spell, so an init script for "thttpd" would be configured by {{{thttpd.conf}}}, which would then be installed as {{{/etc/sysconfig/thttpd}}}.
+
+The file may, even though it is sourced and executed by bash, only contain variable definitions of the type {{{variable_name=variable_content}}} and comments. The variable name is recommended to contain only uppercase letters.
+
+A variable should ideally be accompanied by a descriptive comment. This comment must be located immediately before the actual variable.
+
+The config file must be divided into sections separated by an empty line. This is to facilitate merging of new options to existing config files.
+
+Examples:
+
+* Valid
+
+{{{
+# This comment describes the variable below
+VARIABLE="This is a default value"
+
+VARIABLE_WITHOUT_COMMENT="Notice that there is an empty line above"
+}}}
+
+
+* Invalid:
+
+{{{
+# This comment describes the variable below, but is considered invalid
+# since there is an empty line first.
+
+VARIABLE="This is a default value"
+VARIABLE_WITHOUT_COMMENT="Notice that there is no empty line above"
+}}}
+
+=== Suspending an init script ===
+
+A script may need to be started in for example runlevel **3** but stop again in runlevel **4** and above. This is handled by creating an extra script which stops the main script when started and starts the main script when stopped.
+
+The name of such a script is recomended to be: {{{smgl-suspend-<name of script to be suspended>}}}.
+
+For example look at the {{{smgl-suspend-single}}} script which can be found in the "init.d" spell.
+
+== Facilities ==
+
+Several spells might provide the same functionality, for example both "sysklogd" and "syslog-ng" provide {{{syslog}}} facilities. If the user have both installed and wish to prefer one over the other then the {{{facilities}}} file should be used.
+
+This file contains a list of variables which are named after the different facilities available. The variables must be set to a string matching one of the scripts providing a facility, when a facility is requested then that script is used. If a variable line is empty then the it is assumed that no program provides that facility.
+
+If the line says {{{syslog=syslog-ng}}} then "syslog-ng" is used when the {{{syslog}}} facility is requested.
+
+== Runlevels ==
+
+As described in LSB with some differences described below.
+
+The runlevels **0** and **6** do not exist. If a script must be run at system shutdown then place it in the **S** runlevel and make it **only** return with a zero exit code when starting. At shutdown the script will be run with the {{{stop}}} argument. Don't forget to set up proper dependencies for the script.
+
+A number of convenient extra runlevels are defined:
+
+* **single**: an alias for runlevel **1**
+* **rescue**: allows the user to log in without running any other scripts
+* **default**: an alias for the default runlevel as defined in {{{/etc/sysconfig/init}}}
+
+== Installing an init script ==
+
+Installing a particular script is done by looking at the {{{RUNLEVEL}}} variable which is defined in it. The script is then copied into {{{/etc/init.d/runlevels/%$RUNLEVEL}}}.
+
+A script might potentially be accompanied by a configuration file which should be placed in {{{/etc/sysconfig}}}. If an earlier copy of the config file then new config options will be merged into it.
+
+{{{RUNLEVEL=s}}} and {{{RUNLEVEL=S}}} are both valid and considered identical, care must be taken so scripts are placed in {{{/etc/init.d/runlevels/%S}}} in both cases.
+
+== Making backups ==
+
+Init scripts are not required to keep any sort of flag to signify when the last update was done.
+
+To determine if two init script versions differ some outside tool should be used. The "cmp" program is recommended.
+
+Making a backup of the original is recommended when installing a different version of a script.
+
+If backups are placed alongside the original script in any of the {{{/etc/init.d/runlevels/%*}}} directories then the backup file may not be executable, to prohibit execution of the file.
+
+== Telinit ==
+
+The "telinit" program is used to for example switch runlevels or manually executing init scripts:
+
+* Switch to runlevel **3**:
+
+{{{
+# telinit switch 3
+}}}
+
+* Stop the "xinetd" daemon:
+
+{{{
+# telinit run xinetd stop
+}}}
+
+== Files and directories ==
+
+This is a list of special files which are introduced in Source Mage.
+
+|= File/directory |= Notes |
+| {{{/etc/init.d/}}} | - **No** init script should be placed in this directory, only scripts which are part of the init system. |
+| {{{/etc/init.d/auto_init}}} | - Provides the auto init functionality which allows many scripts to be simplified significantly.\\ - Should never be sourced directly by init scripts |
+| {{{/etc/sysconfig/facilities}}} | - Describes facilities and allows customization of facility execution. |
+| {{{/etc/init.d/smgl_functions}}} | - Provides a number of convenient functions. Basically the same as the {{{functions}}} file in the current system.\\ - Should never be sourced directly by init scripts |
+| {{{/etc/init.d/rc}}} | - Master control script, schedules script execution and generally keeps an eye on the boot process. |
+| {{{/etc/init.d/smgl_init}}} | - This script sets up the environment for an init script. This is the only file a script needs to source to be given the needed functionality.\\ - Variables should be set **before** sourcing this file.
+| {{{/etc/init.d/runlevels/%*}}} | - When installing an init script it should be placed in the appropriate directory for the runlevel requested in the {{{RUNLEVEL}}} variable.\\ - Runlevels can also be defined as scripts, for examples see the "init.d" spell. |
