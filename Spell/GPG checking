@@ -116,7 +116,10 @@ To generate a public key from ASCII armored text simply do:
 
 **Warning:** the name of the new gpg file can include a path, if the path is relative to {{{./}}} or absolute the file will be made there otherwise the new gpg keyring is made relative to {{{~/.gnupg}}} directory. Also {{{<optional-file>}}} is usually where the keys for the signed tarball are for example the "apache" spell uses a file called {{{KEYS}}} so it will be {{{--import KEYS}}} to import all of their public keys to a GPG file.
 
-**Note:** if the optional import file isn't given then it will start reading from {{{stdin}}}, also the {{{--import}}} should be the last argument in the list or it will try to import the file {{{--no-default-keyring}}}.
+**Notes:**
+
+* if the optional import file isn't given then it will start reading from {{{stdin}}}, also the {{{--import}}} should be the last argument in the list or it will try to import the file {{{--no-default-keyring}}}
+* some of the keys might be pretty old (e.g. pre-1997), so make sure you use the {{{--allow-weak-digest-algos}}} flag in that case, otherwise {{{gpg}}} will reject importing such keys
 ----
 
 == Guru signed spells ==
