@@ -4,17 +4,6 @@
 |=E-mail:   | {{:Mage:aXNtYWVsQHNvdXJjZW1hZ2Uub3Jn}}
 |=Location: | [[#head-1-2-1|404 Not Found]]
 
-== Places
-I've been living in the following cities:
-* [[https://en.wikipedia.org/wiki/Paso_de_Carrasco|Paso de Carrasco, Uruguay]] (until 2011)
-* [[https://en.wikipedia.org/wiki/Buenos_Aires|Buenos Aires, Argentina]] (2011-2012)
-* [[https://en.wikipedia.org/wiki/Concordia,_Entre_R%C3%ADos|Concordia, ER, Argentina]] (2012-2015)
-* [[https://en.wikipedia.org/wiki/S%C3%A3o_Paulo|São Paulo, Brasil]] (2015-2016)
-* Somewhere... not yet decided... (2017)
-
-=== 404 Not Found
-I've not found my place in the world yet...
-
 == Contributions
 === Source Mage
 * [[http://scmweb.sourcemage.org/?p=smgl%2Fsorcery.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Sorcery]]
@@ -25,7 +14,7 @@ I've not found my place in the world yet...
 * Not yet merged
 ** [[https://github.com/ismaell/smgl-misc-tools|Misc. tools]]
 ** [[https://github.com/ismaell/smgl-sorcery-fts|Full-Text-Search for Sorcery]]
-** [[https://github.com/ismaell/smgl-spell-parser|spell-parser]] --- DETAILS file parser
+** [[http://git.iodev.co.uk/smgl/spell-parser.git/|spell-parser]] --- DETAILS file parser
 
 === Other Projects
 * [[http://iodev.co.uk/mutt-patches/|Mutt patches]]
