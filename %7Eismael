@@ -3,18 +3,27 @@
 |=Freenode IRC nick: | ##ismaell##
 |=E-mail:   | {{:Mage:aXNtYWVsQHNvdXJjZW1hZ2Uub3Jn}}
 |=Location: | 404 - Not Found
+=== Personal websites
+|=Main website:         | http://iodev.co.uk/
+|=Source code:        | http://git.iodev.co.uk/
+|=Stuff on Github:    | https://github.com/ismaell
+=== Job sites
+|=StackOverflow Jobs: | https://stackoverflow.com/cv/ismael
+|=XING:               | https://www.xing.com/profile/Ismael_Luceno
+|=LinkedIn:           | https://www.linkedin.com/in/ismaell/en
+|=
 
 == Contributions
 === Source Mage
 * [[http://scmweb.sourcemage.org/?p=smgl%2Fsorcery.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Sorcery]]
 * [[http://scmweb.sourcemage.org/?p=smgl%2Fmisc%2Fquill.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Quill]]
+* [[http://git.iodev.co.uk/ismael/smgl/experiments/|Stuff not yet merged]]
+** Misc. tools
+** Full-Text-Search support for Sorcery
+** DETAILS file parser in AWK
 * Packages
 ** [[http://scmweb.sourcemage.org/?p=smgl%2Fgrimoire%2Fgames.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Games Grimoire]]
 ** [[http://scmweb.sourcemage.org/?p=smgl%2Fgrimoire.git&a=search&h=HEAD&st=author&s=Ismael+Luceno|Main Grimoire]]
-* Not yet merged
-** [[http://git.iodev.co.uk/smgl/misc-tools.git/|Misc. tools]]
-** [[http://git.iodev.co.uk/smgl/full-text-search.git/|Full-Text-Search for Sorcery]]
-** [[http://git.iodev.co.uk/smgl/spell-parser.git/|spell-parser]] --- DETAILS file parser
 
 === Other Projects
 * [[https://github.com/git/git/commits?author=ismaell|Git]]
@@ -32,15 +41,3 @@
 * German (beginner, working on it!)
 * Portuguese
 * Spanish
-
-== Profiles on the Web
-=== Personal
-|=My website:         | http://iodev.co.uk/
-|=Source code:        | http://git.iodev.co.uk/
-|=Stuff on Github:    | https://github.com/ismaell
-
-=== Job sites
-|=StackOverflow Jobs: | https://stackoverflow.com/cv/ismael
-|=XING:               | https://www.xing.com/profile/Ismael_Luceno
-|=LinkedIn:           | https://www.linkedin.com/in/ismaell/en
-|=
