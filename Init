@@ -12,7 +12,7 @@ When possible we have used other free software components, ideas and knowledge t
 
 After reading the LSB standards docs on init scripts there are several conclusions that we have come to. They are rather open ended, trying to provide an environment that is both flexible and restricted. Sometimes they go into excruciating details about things like exit codes and then say nothing about how to handle other aspects of the init script system.
 
-We have taken a look at the [[http://www.safe-mbox.com/~rgooch/linux/boot-scripts/|Linux Boot Scripts]] concept and have come to the conclusion that the script dependency handling described in that document is more convenient and less complex than the system described in LSB. This will allow us to keep the Source Mage GNU/Linux init system as simple as possible.
+We have taken a look at the [[http://www.safe-mbox.com/~rgooch/linux/boot-scripts/|Linux Boot Scripts]] ([[lbs.pdf|mirror]]) concept and have come to the conclusion that the script dependency handling described in that document is more convenient and less complex than the system described in LSB. This will allow us to keep the Source Mage GNU/Linux init system as simple as possible.
 
 We will try to apply the various LSB init scripts standards when we deem them to be functional and applicable. In all other cases we have chosen the route of simplicity and understandability.
 
