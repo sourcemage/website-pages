@@ -4,18 +4,15 @@
 
 * [[http://sourcemage.us/]] -- USA, NJ
 
-== Active ==
+== General ==
 
-* [[http://download.sourcemage.org/|Main download mirror / USA, TX (HTTP)]]: CT -- GMT-6 (CST) in winter and GMT-5 (CDT) in summer
-* [[http://mirror.belltower.us/sourcemage/|USA, NJ (HTTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
-* [[ftp://mirror.belltower.us/sourcemage/|USA, NJ (FTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
-* [[http://smgl.sobukus.de/|Germany (HTTP)]]: CET -- GMT+1 in winter and GMT+2 in summer
-----
+|= Mirror =|= Location =|= Timezone =|= URL(s) =|= IPv6 =|
+| **download.sourcemage.org (redirector)** | USA, TX | CT | [[http://download.sourcemage.org/|HTTP]] | No |
+| **smgl.sobukus.de** | Germany | CET | [[http://smgl.sobukus.de/|HTTP]], [[https://smgl.sobukus.de/|HTTPS]] | Yes |
+| **mirror.belltower.us** | USA, NJ | ET | [[http://mirror.belltower.us/sourcemage/|HTTP]], [[https://mirror.belltower.us/sourcemage/|HTTPS]], [[ftp://mirror.belltower.us/sourcemage/|FTP]] | Yes |
 
-== Stale ==
+\\
 
-* [[http://ftp.gtlib.gatech.edu/pub/sourcemage/|USA, GA (HTTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
-* [[ftp://ftp.gtlib.gatech.edu/pub/sourcemage/|USA, GA (FTP)]]: ET -- GMT-5 (EST) in winter and GMT-4 (EDT) in summer
 ----
 
 == Becoming a mirror ==
