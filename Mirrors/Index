@@ -8,7 +8,7 @@
 
 |= Mirror =|= Location =|= Timezone =|= URL(s) =|= IPv6 =|
 | **download.sourcemage.org (redirector)** | USA, TX | CT | [[http://download.sourcemage.org/|HTTP]] | No |
-| **smgl.sobukus.de** | Germany | CET | [[http://smgl.sobukus.de/|HTTP]], [[https://smgl.sobukus.de/|HTTPS]] | Yes |
+| **mirror.sobukus.de** | Germany | CET | [[http://mirror.sobukus.de/files/sourcemage/|HTTP]], [[https://mirror.sobukus.de/files/sourcemage/|HTTPS]] | Yes |
 | **mirror.belltower.us** | USA, NJ | ET | [[http://mirror.belltower.us/sourcemage/|HTTP]], [[https://mirror.belltower.us/sourcemage/|HTTPS]], [[ftp://mirror.belltower.us/sourcemage/|FTP]] | Yes |
 
 \\
