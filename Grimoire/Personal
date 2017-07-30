@@ -81,7 +81,7 @@ You can also manage spells between grimoires with a [[Sorcery/Commands/Scribbler
 == Grimoires from developers ==
 
 |= Provider =|= Name =|= Type =|= Description =|= Use =|
-| [[~stealth]] | Prototype | rsync | Missing spells from the stable grimoire and some spells' prototypes which will go into test when ready | {{{scribe add prototype from rsync://rsync.stealth.zone::codex/prototype/}}} |
+| [[~stealth]] | Prototype | rsync | Missing spells from the stable grimoire and some spells' prototypes which will go into test when ready | {{{scribe add prototype from rsync://rsync.vaygr.net::codex/prototype/}}} |
 | [[~PyroBor]] | [[https://github.com/PyroBor/pyrogrimoire/wiki|pyrogrimoire]] | git | Personal grimoire of PyroBor (collection of spells that are not available in official grimoire) | {{{scribe add pyrogrimoire from git://github.com/PyroBor/pyrogrimoire.git}}} |
 | [[~Belxjander]] | [[https://code.google.com/p/belxjandershadow/|Shadows]] | git | -- | {{{scribe add shadows from git_http://code.google.com/p/belxjandershadow/}}} |
 | [[~Belxjander]] | [[https://code.google.com/p/belxjandervampire/|Vampire]] | git | Cross Development Toolkits | {{{scribe add vampire from git_http://code.google.com/p/belxjandervampire/}}} |
