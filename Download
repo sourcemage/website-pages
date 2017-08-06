@@ -34,9 +34,11 @@ For other ISO versions, please visit [[http://download.sourcemage.org/iso/|ISO d
 
 == Source Mage chroot images ==
 
-=== x86_64 ===
+===Important Note===
 
-**Note:** The stable grimoire is pretty old, we are working on a smooth upgrade from stable 0.62 to a future 0.63 version but there are many ABI incompatibilities to overcome. If you intend to run your system with the test grimoire anyway, you will be a lot better off using the test chroot tarball, otherwise you have a lot of painful ABI incompatible changes to overcome.
+**The stable grimoire is pretty old, we are working on a smooth upgrade from stable 0.62 to a future 0.63 version but there are many ABI incompatibilities to overcome. If you intend to run your system with the test grimoire anyway, you will be a lot better off using the test chroot image, otherwise you have a lot of painful ABI incompatible changes to overcome manually.**
+
+=== x86_64 ===
 
 * The current **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.62-10-basesystem-x86_64.tar.xz|0.62]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.62-10-basesystem-x86_64.tar.xz.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.62-10-basesystem-x86_64.tar.xz.sha512|SHA-512]]):
 ** Kernel version: **N/A**
