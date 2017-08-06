@@ -34,18 +34,6 @@ For other ISO versions, please visit [[http://download.sourcemage.org/iso/|ISO d
 
 == Source Mage chroot images ==
 
-=== x86 ===
-
-* The current **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz.sig|GPG]]):
-** Kernel version: **3.4.51**
-** Release date: **20150217**
-* The previous **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2|0.60]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz.sig|GPG]]):
-** Kernel version: **3.0.0**
-** Release date: **20120510**
-* The current **stable-rc** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz.sig|GPG]]):
-** Kernel version: **3.0.31**
-** Release date: **20120517**
-
 === x86_64 ===
 
 * The current **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.xz.sig|GPG]]):
@@ -55,6 +43,18 @@ For other ISO versions, please visit [[http://download.sourcemage.org/iso/|ISO d
 ** Kernel version: **3.0.0**
 ** Release date: **20120510**
 * The current **stable-rc** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz.sig|GPG]]):
+** Kernel version: **3.0.31**
+** Release date: **20120517**
+
+=== x86 ===
+
+* The current **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz.sig|GPG]]):
+** Kernel version: **3.4.51**
+** Release date: **20150217**
+* The previous **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2|0.60]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-i686.tar.xz.sig|GPG]]):
+** Kernel version: **3.0.0**
+** Release date: **20120510**
+* The current **stable-rc** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz.sig|GPG]]):
 ** Kernel version: **3.0.31**
 ** Release date: **20120517**
 
