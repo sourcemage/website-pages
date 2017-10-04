@@ -15,6 +15,7 @@ For installation instructions, please see the [[Install]] page.
 * The current **devel** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz|0.11.0-20151218]] ([[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz.sig|GPG]], [[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz.md5|MD5]]):
 ** Kernel version: **4.1.14**
 ** Release date: **20151218**
+** **DO NOT USE THIS VERSION, IT IS FOR TESTING ONLY (IT DOES NOT YIELD A WORKING INSTALL) !!!**
 
 === i686 ===
 * The current **test** Source Mage i686 ISO is [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2|0.10.0]] ([[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.sig|GPG]], [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.md5|MD5]]):
