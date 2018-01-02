@@ -22,7 +22,7 @@ These steps will help you to do so in a proper order:
 
 It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even the ISO of the [[http://www.ubuntu.com/download|operating system]] [[http://granivo.re|Mathieu]] prefers.
 
-Personally I recommend [[http://www.slax.org/download.php|SLAX]], [[https://crux.nu/Main/Download|CRUX]] or [[https://alpinelinux.org/downloads/|Alpine Linux]]. They support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Also [[https://downloads.archlinux.de/iso/archboot/|Archboot]] is perfect for booting via network (PXE).
+Personally I recommend [[https://devuan.org/index.html#download|Devuan]], [[https://crux.nu/Main/Download|CRUX]] or [[https://alpinelinux.org/downloads/|Alpine Linux]]. They support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Also [[https://downloads.archlinux.de/iso/archboot/|Archboot]] is perfect for booting via network (PXE).
 
 But, as told above, it can be any Linux boot media you'd like to use.
 
