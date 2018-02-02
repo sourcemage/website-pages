@@ -7,3 +7,5 @@ Configuration files include:
 * {{{init.d}}} directory
 * {{{pam.d}}} directory
 * {{{desktop}}} directory
+
+**Warning:** when [[Stage|staging]] is used, keep in mind that destination folders/files must not conflict with those from the [[Spell/Files/INSTALL|INSTALL]] phase, otherwise they will be discarded.
