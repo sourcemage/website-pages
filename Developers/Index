@@ -1,6 +1,6 @@
 =The Source Mage GNU/Linux Organizational Chart=
 
-We have **17** active developers, listed below.
+We have **18** active developers, listed below.
 
 If you're wondering how to [[Join|become]] a developer then please read the [[Contribution]] page.
 
@@ -9,6 +9,7 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 ==Council of Elders (Lead Developers and Assistants)==
 
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
+| Arjan Bouter | Lead Developer, windowmanagers guru and enthrall maintainer | ##abouter## | {{:Mage:YWJvdXRlckBzb3VyY2VtYWdlLm9yZw==}} |
 | Eric Sandall | Lead Developer | ##sandalle## | {{:Mage:c2FuZGFsbGVAc291cmNlbWFnZS5vcmc=}} |
 | Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | {{:Mage:bHlueGx5bnhseW54QHNvdXJjZW1hZ2Uub3Jn}} |
 | Jeremy Blosser | Lead Developer | ##emrys## | {{:Mage:amJsb3NzZXJAc291cmNlbWFnZS5vcmc=}} |
