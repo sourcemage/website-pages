@@ -1,6 +1,6 @@
 =The Source Mage GNU/Linux Organizational Chart=
 
-We have **18** active developers, listed below.
+We have **11** active developers, listed below.
 
 If you're wondering how to [[Join|become]] a developer then please read the [[Contribution]] page.
 
@@ -9,12 +9,9 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 ==Council of Elders (Lead Developers and Assistants)==
 
 |= Name =|= Position/Section =|= IRC nick =|= E-mail address =|
-| Arjan Bouter | Lead Developer, windowmanagers guru and enthrall maintainer | ##abouter## | {{:Mage:YWJvdXRlckBzb3VyY2VtYWdlLm9yZw==}} |
 | Eric Sandall | Lead Developer | ##sandalle## | {{:Mage:c2FuZGFsbGVAc291cmNlbWFnZS5vcmc=}} |
-| Jaka Kranjc | Sorcery Lead | ##lynxlynxlynx## | {{:Mage:bHlueGx5bnhseW54QHNvdXJjZW1hZ2Uub3Jn}} |
 | Jeremy Blosser | Lead Developer | ##emrys## | {{:Mage:amJsb3NzZXJAc291cmNlbWFnZS5vcmc=}} |
 | Justin Boffemmyer | Cauldron Lead | ##flux_control## | {{:Mage:Zmx1eEBzb3VyY2VtYWdlLm9yZw==}} |
-| Ladislav Hagara | Lead Developer, security, crypto, and e Guru | ##lace## | {{:Mage:Y3J5cHRvQHNvdXJjZW1hZ2Uub3Jn}} |
 | Treeve Jelbert | Lead Developer, database and telephony Guru | ##treeve## | {{:Mage:dHJlZXZlQHNvdXJjZW1hZ2Uub3Jn}} |
 | Vlad Glagolev | Project Lead, Grimoire Lead | ##Stealth## | {{:Mage:c3RlYWx0aEBzb3VyY2VtYWdlLm9yZw==}} |
 
@@ -24,13 +21,9 @@ See also the [[Glossary|Source Mage Glossary]] and [[Developers/Organization|Dev
 | David C. Haley | General Guru | ##SilverSlayer## | {{:Mage:c2lsdmVyc2xheWVyQHNvdXJjZW1hZ2Uub3Jn}} |
 | Florian Franzmann | General Guru | ##{{{|beowulf|}}}## | {{:Mage:YmVvd3VsZkBzb3VyY2VtYWdlLm9yZw==}} |
 | Ismael Luceno | General Guru | ##ismaell##  | {{:Mage:aXNtYWVsQHNvdXJjZW1hZ2Uub3Jn}} |
-| Mark Bainter | General Guru | ##Shamgar## | {{:Mage:bWJhaW50ZXJAc291cmNlbWFnZS5vcmc=}} |
 | Pavel Vinogradov | General Guru | ##public## | {{:Mage:cHVibGljQHNvdXJjZW1hZ2Uub3Jn}} |
 | Remko van der Vossen | General Guru | ##wich## | {{:Mage:d2ljaEBzb3VyY2VtYWdlLm9yZw==}} |
-| Robin Cook | General Guru | ##CuZnDragon## | {{:Mage:Y3V6bmRyYWdvbkBzb3VyY2VtYWdlLm9yZw==}} |
-| Sukneet Basuta | General Guru | ##Sukneet## | {{:Mage:c3VrbmVldEBzb3VyY2VtYWdlLm9yZw==}} |
 | Thomas Orgis | General Guru | ##sobukus## | {{:Mage:c29idWt1c0Bzb3VyY2VtYWdlLm9yZw==}} |
-| Tommy Boatman | General Guru | ##tboatman## | {{:Mage:dGJvYXRtYW5Ac291cmNlbWFnZS5vcmc=}} |
 
 [[Grimoire]] sections //antivirus//, //archive//, //archive-libs//, //audio-creation//, //audio-drivers//, //audio-libs//, //audio-players//, //audio-plugins//, //audio-soft//, //chat-im//, //chat-libs//, //collab//, //compiz-fusion//, //desktop-themes//, //devel//, //display//, //doc//, //editors//, //education//, //fonts-tex//, //fonts-x11//, //gnome3-apps//, //gnome3-libs//, //gnu//, //gnustep-apps//, //gnustep-libs//, //graphics//, //graphics-libs//, //ham//, //haskell//, //http//, //i18n//, //java//, //kde4//, //kde4-apps//, //kde4-bindings//, //kde4-edu//, //kde4-graphics//, //kde4-look//, //kde4-multimedia//, //kde4-support//, //kernels//, //libs//, //lxde//, //mobile//, //news//, //odbc-drivers//, //php-pear//, //printer//, //qt5//, //ruby-raa//, //science//, //science-libs//, //security//, //security-libs//, //shell-term-fm//, //spelling//, //telephony//, //utils//, //video//, //video-libs//, //windowmanagers//, //wm-addons//, //x11//, //x11-libs//, //x11-toolkits//, //xorg-app//, //xorg-data//, //xorg-doc//, //xorg-driver//, //xorg-extras//, //xorg-font//, //xorg-lib//, //xorg-proto//, //xorg-util// and //xorg-xserver// are currently un-maintained but are mostly up to date. Many developers have project subscriptions for their particular spells and are walk in walk out positions. \\ Contact the [[mailto:grimoire@sourcemage.org|Grimoire Team Lead]] for more information.
 
