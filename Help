@@ -373,7 +373,7 @@ rendered inline.
 {{#math}}
 == Math
 
-This site doesn't render mathematical formulas all by itself, instead it displays images from an external service, such as http://mathtran.org (the default), [[http://www.forkosh.com/mimetex.html|mimeTeX]] or [[http://www.forkosh.dreamhost.com/source_mathtex.html|mathTeX]]. You can use LaTeX-like syntax, enclosed in double dollar signs {{{$$}}}. For example, you can write the famous Einstein--Pythagoras equation:
+This site doesn't render mathematical formulas all by itself, instead it displays images from an external service, such as https://www.mathjax.org (the default) or [[http://www.forkosh.com/mimetex.html|mimeTeX]]. You can use LaTeX-like syntax, enclosed in double dollar signs {{{$$}}}. For example, you can write the famous Einstein--Pythagoras equation:
 
 {{{#!text
 $$E=m(a^2+b^2)$$
