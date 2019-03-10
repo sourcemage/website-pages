@@ -11,7 +11,7 @@
 | **mirror.sobukus.de** | Germany | CET | [[http://mirror.sobukus.de/files/sourcemage/|HTTP]], [[https://mirror.sobukus.de/files/sourcemage/|HTTPS]] | Yes |
 | **mirror.belltower.us** | USA, NJ | UTC | [[http://mirror.belltower.us/sourcemage/|HTTP]], [[https://mirror.belltower.us/sourcemage/|HTTPS]], [[ftp://mirror.belltower.us/sourcemage/|FTP]] | Yes |
 | **muug.ca** | Canada, MB | CT | [[http://muug.ca/mirror/sourcemage/|HTTP]], [[https://muug.ca/mirror/sourcemage/|HTTPS]], [[ftp://ftp.muug.ca/mirror/sourcemage/|FTP]] | Yes |
-| **ftp.acc.umu.se** | Sweden | CET | [[http://ftp.acc.umu.se/mirror/sourcemage.org/|HTTP]], [[https://ftp.acc.umu.se/mirror/sourcemage.org/|HTTPS]], [[ftp://ftp.acc.umu.se/mirror/sourcemage.org/|FTP]], [[rsync://ftp.acc.umu.se/mirror/sourcemage.org/|rsync]] | Yes |
+| **ftp.acc.umu.se** | Sweden | CET | [[http://ftp.acc.umu.se/mirror/sourcemage.org/|HTTP]], [[https://ftp.acc.umu.se/mirror/sourcemage.org/|HTTPS]], [[rsync://ftp.acc.umu.se/mirror/sourcemage.org/|rsync]] | Yes |
 
 \\
 
