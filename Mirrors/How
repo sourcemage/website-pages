@@ -2,33 +2,25 @@
 
 Currently, we support mirroring via [[http://rsync.samba.org/|rsync]] //(in SMGL you can run {{{cast rsync}}} to install it)//. If you want to create a mirror for Source Mage, you can use the following commands to do so (where {{{/var/ftp/sourcemage}}} is your path served by HTTP or FTP server):
 
-{{{
-$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/" "/var/ftp/sourcemage/codex"
-}}}
+* {{{$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/codex/" "/var/ftp/sourcemage/codex"}}}
 
 This command will clone all our [[Codex]] sources located at [[http://download.sourcemage.org/codex/|download.sourcemage.org/codex/]].
 
-{{{
-$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/" "/var/ftp/sourcemage/sorcery"
-}}}
+* {{{$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/sorcery/" "/var/ftp/sourcemage/sorcery"}}}
 
 This one will copy all [[Sorcery]] branches located at [[http://download.sourcemage.org/sorcery/|download.sourcemage.org/sorcery/]].
 
-{{{
-$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/" "/var/ftp/sourcemage/iso"
-}}}
+* {{{$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/" "/var/ftp/sourcemage/iso"}}}
 
 And this command will do to the same for our ISO images at [[http://download.sourcemage.org/iso/|download.sourcemage.org/iso/]]. \\ Alternatively, you can use full path to a file (e.g. to an ISO image) to host it:
 
-{{{
-$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-x86(i486).iso.bz2" "/var/ftp/sourcemage/iso"
-}}}
+* {{{$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/iso/smgl-stable-x86(i486).iso.bz2" "/var/ftp/sourcemage/iso"}}}
 
 **Note:** for the entire mirror you might want to use the //download// rsync module instead:
 
-{{{
-$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/download/" "/var/ftp/sourcemage"
-}}}
+* {{{$ rsync -rptL --no-motd --delete --delete-after --force "rsync://master.download.sourcemage.org/download/" "/var/ftp/sourcemage"}}}
+
+----
 
 Here's an example of partial mirroring for the most important parts of Source Mage put into one crontab file:
 
