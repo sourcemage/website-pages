@@ -17,6 +17,7 @@
 | **mirror.belltower.us** | USA, NJ | UTC | [[http://mirror.belltower.us/sourcemage/|HTTP]], [[https://mirror.belltower.us/sourcemage/|HTTPS]], [[ftp://mirror.belltower.us/sourcemage/|FTP]] | Yes |
 | **muug.ca** | Canada, MB | CT | [[http://muug.ca/mirror/sourcemage/|HTTP]], [[https://muug.ca/mirror/sourcemage/|HTTPS]], [[ftp://ftp.muug.ca/mirror/sourcemage/|FTP]] | Yes |
 | **ftp.acc.umu.se** | Sweden | CET | [[http://ftp.acc.umu.se/mirror/sourcemage.org/|HTTP]], [[https://ftp.acc.umu.se/mirror/sourcemage.org/|HTTPS]], [[rsync://ftp.acc.umu.se/mirror/sourcemage.org/|rsync]] | Yes |
+| **distro.ibiblio.org** | USA, NC | ET | [[http://distro.ibiblio.org/sourcemage/|HTTP]], [[https://distro.ibiblio.org/sourcemage/|HTTPS]], [[ftp://distro.ibiblio.org/sourcemage/|FTP]] | No |
 
 \\
 
