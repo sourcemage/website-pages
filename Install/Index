@@ -4,6 +4,6 @@ We have several ways that allow you to install Source Mage on your computer:
 
 * [[Install/ISO|from the ISO]] -- **outdated**
 * [[Install/USB|from the USB flash drive]] -- **outdated**
-* [[Install/Chroot|from the chroot image]]
+* [[Install/Chroot|from the chroot image]] -- **revision WIP**
 
 **Note:** outdated guides will be updated on the next ISO release, current recommended method is to install from the chroot image.
