@@ -75,7 +75,7 @@ This section described how to update a grimoire tarball.
 
 **4.** Follow the prompts.
 
-The newly uploaded tarball will show up on [[http://master.download.sourcemage.org]] at around 30 minutes past every 3 hours, US Central Time //(12:30, 3:30, 6:30, etc.)//. [[Mirrors]] will update from there on their own schedules.
+The newly uploaded tarball will show up on [[http://master.download.sourcemage.org]] every 3 hours, UTC //(12:00, 3:00, 6:00, etc.)//. [[Mirrors]] will update from there on their own schedules.
 ----
 
 == How to test ==
