@@ -112,6 +112,14 @@ SOURCE_HINTS="no-check-certificate"
 SOURCE2_HINTS="no-check-certificate"
 }}}
 
+**SUMMON_SANITY**
+
+When set to 'off', disables summon filetype check protection that is used as an additional integrity check layer for downloaded sources.
+
+{{{
+SUMMON_SANITY=off
+}}}
+
 **FORCE_DOWNLOAD**
 
 When set to 'on', the source will be downloaded by sorcery, regardless of it being present in the spool directory.
