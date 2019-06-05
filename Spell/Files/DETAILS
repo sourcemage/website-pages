@@ -7,6 +7,8 @@ Example of a typical **DETAILS** file:
 {{{
            SPELL=foo
          VERSION=001
+      PATCHLEVEL=1 # Optional if 0
+  SECURITY_PATCH=0 # Optional if 0
           SOURCE=${SPELL}-${VERSION}.tar.bz2
          SOURCE2=${SOURCE}.asc
    SOURCE_URL[0]=http://example.com/dir/misc/${SOURCE}
@@ -19,8 +21,6 @@ SOURCE_DIRECTORY="${BUILD_DIRECTORY}/${SPELL}-${VERSION}"
         WEB_SITE=http://www.example.com
          ENTERED=20100610
       LICENSE[0]=GPL
-      PATCHLEVEL=1 # Optional if 0
-  SECURITY_PATCH=0 # Optional if 0
         KEYWORDS="example keywords"
            SHORT="this is a one-line brief description"
 cat << EOF
