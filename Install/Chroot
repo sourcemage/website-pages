@@ -53,7 +53,7 @@ This is done mostly with "fdisk" and/or "parted". Disk drives (SATA) are usually
 
 More complex disk setup (RAID/LVM) is also fine, but out of the topic.
 
-Here we start:
+Here we start, using "parted" in our example below:
 
 {{{
 # parted /dev/sda
@@ -76,26 +76,26 @@ Here we start:
 > name 7 var
 }}}
 
-look at them:
+To review the partitions you just created:
 
 {{{
 > p free
 }}}
 
-and quit "parted":
+Quit "parted" when you are satified with your setup:
 
 {{{
 > quit
 #
 }}}
 
-then create filesystems on these partitions (in example below we use XFS for {{{/}}}):
+Next, we create filesystems on these partitions (in example below we use XFS for {{{/}}}):
 
 {{{
 # mkfs.xfs -l internal,size=64m -d agcount=8 /dev/sda3
 }}}
 
-swap is organized with {{{mkswap}}} command:
+The swap space is then created with {{{mkswap}}} command:
 
 {{{
 # mkswap /dev/sda2
