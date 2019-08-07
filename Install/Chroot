@@ -36,7 +36,7 @@ Almost all modern Linux distributions support network configuration and have dow
 
 So it's usually not a problem. Though if you don't have (or you know that you won't have Internet-connection inplace for some reason) such ability, you can put the desired chroot image on your USB-key or CD/DVD disc.
 
-You can download the appropriate chroot image from our [[Download|downloads]] page; and we will use the one based on **0.60-stable** grimoire in the example below.
+You can download the appropriate chroot image from our [[Download|downloads]] page; and we will use the one based on **0.63-test** grimoire in the example below. While others are listed, I have found that they are too old and either do not provide a stable system to start with, or break during the update process noted towards the end of this guide. Also note, while the 0.63-test version is specifically mentioned, the datetime stamp may be different on the official download page as updates to the 0.63-test chroot image are made.
 
 Let's imagine there's no trouble with our Ethernet adapter, and we know how networking works in Linux on a very basic level:
 
@@ -44,7 +44,7 @@ Let's imagine there's no trouble with our Ethernet adapter, and we know how netw
 # ifconfig eth0 1.2.3.4 netmask 255.255.255.0
 # route add default gw 5.6.7.8
 # echo "nameserver 9.10.11.12" > /etc/resolv.conf
-# wget "http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2"
+# wget "http://download.sourcemage.org/image/official/test/smgl-test-0.63-20190513_0600-basesystem-x86_64.tar.xz"
 }}}
 
 **4. Partition your drive**
