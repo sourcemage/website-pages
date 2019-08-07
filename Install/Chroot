@@ -20,11 +20,16 @@ These steps will help you to do so in a proper order:
 
 **1. Get some bootable media**
 
-It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even the ISO of the [[http://www.ubuntu.com/download|operating system]] [[http://granivo.re|Mathieu]] prefers.
+It can be our installation [[Download#head-1-1|ISO]] or any compact Linux distribution image.
 
-Personally I recommend [[https://devuan.org/index.html#download|Devuan]], [[https://crux.nu/Main/Download|CRUX]] or [[https://alpinelinux.org/downloads/|Alpine Linux]]. They support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Also [[https://downloads.archlinux.de/iso/archboot/|Archboot]] is perfect for booting via network (PXE).
+Possible recommendations include:
+* [[https://devuan.org/index.html#download|Devuan]],
+* [[https://crux.nu/Main/Download|CRUX]], or
+* [[https://alpinelinux.org/downloads/|Alpine Linux]].
 
-But, as told above, it can be any Linux boot media you'd like to use.
+Those mentioned above support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Additionally, [[https://downloads.archlinux.de/iso/archboot/|Archboot]] is perfect for booting via network (PXE).
+
+But as already mentioned above, it can likely be any Linux distribution you would like to use or feel comfortable with.
 
 **2. Boot it**
 
