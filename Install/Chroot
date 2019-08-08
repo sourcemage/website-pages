@@ -31,9 +31,16 @@ Those mentioned above support all modern hardware, and it's easy to find the nea
 
 But as already mentioned above, it can likely be any Linux distribution you would like to use or feel comfortable with.
 
-**2. Boot it**
+**2. Burn it & Boot it**
 
-Burn the ISO image or {{{dd}}} a prepared boot image to your USB-key, or set up a TFTP-server to boot via network, and boot into its minimal environment.
+Potential methods for preparing a bootable media might include:
+* Burn the ISO image,
+* Using {{{dd}}} to prepare a USB-key with a prepared image, or
+* Set up a TFTP-server to boot via network for those seeking a network boot option
+
+If in doubt, check for documentation provided by the distribution you would like to use (e.g., Devuan) for information on how to create the appropriate bootable media.
+
+Once the bootable media has been created boot into the minimal environment provided and move on to the next step.
 
 **3. Get the chroot image**
 
