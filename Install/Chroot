@@ -131,11 +131,11 @@ Now you're almost ready to extract Source Mage from the chroot image. However, b
 
 **6. Extract from chroot**
 
-Finally, assuming you've downloaded x86_64 chroot image to the writable {{{/root}}} directory, extract it to your forthcoming mainspace:
+Finally, using the chroot image we fetched under Step (3) and assuming we wrote it to the {{{/root}}} directory, we extract the image to our forthcoming mainspace:
 
 {{{
 # cd /mnt/drive
-# tar xvjf /root/smgl-stable-0.60-basesystem-x86_64.tar.bz2
+# tar xvJf /root/smgl-test-0.63-20190513_0600-basesystem-x86_64.tar.xz
 }}}
 
 Done!
