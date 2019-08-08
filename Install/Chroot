@@ -115,7 +115,7 @@ The swap space is then created with {{{mkswap}}} command:
 
 **5. Mount partitions**
 
-Now you're almost ready to extract Source Mage from the chroot image. The last step before it is to mount partitions you've made in the previous step:
+Now you're almost ready to extract Source Mage from the chroot image. However, before we start the extraction process we must mount the partitions created in the previous step:
 
 {{{
 # mkdir /mnt/drive
