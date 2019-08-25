@@ -142,7 +142,7 @@ Done!
 
 **7. Finalize installation**
 
-Here are few final steps that were mentioned at the beginning of this guide.
+Here are a few final steps which were mentioned at the beginning of this guide.
 
 * Prepare chroot environment
 
@@ -191,16 +191,28 @@ Edit {{{/etc/fstab}}} file according to your disk setup in step №4:
 # nano /etc/fstab
 }}}
 
-* Compile a kernel (optional)
+* Update Sorcery and Scribe
 
-If you prefer to keep your system minimal, you might want to compile your own kernel with only needed hardware support and/or to include some advanced settings.
-You can do that just inside the chroot.
+** run {{{sorcery update}}} to update the sorcery scripts
+** run {{{scribe update && cast smgl-archspecs}}} to update the spell-lists and tell [[Sorcery]] the latest list for supported CPU architectures
+** configure Sorcery (run {{{sorcery}}}, then go to **Options**)
 
-There are 2 ways:
-# includes getting any desired image from http://www.kernel.org, extracting it to {{{/usr/src}}} (e.g.) and doing that by hand (via {{{make menuconfig}}}, {{{make}}}, {{{make modules}}}, copying bzImage, etc.)
-# includes typing:
+* Update Essential [[Spell|spells]] For Compiling
 
 {{{
+# sorcery hold g++
+# cast -c mpfr gmp
+# cast -c binutils gcc
+# sorcery unhold g++
+# cast -c g++ gettext glibc
+}}}
+
+* Compile a Kernel
+
+Because we are installing from chroot, we will need to compile our own kernel. While there are a number of ways that we might be able to do this, below we simply provide the following:
+
+{{{
+# cast -c elfutils
 # cast -r linux
 }}}
 
@@ -208,12 +220,11 @@ and following instructions in the menus.
 
 * Install a bootloader
 
-Chroot images come with 2 bootloaders: LILO and GRUB2. Feel free to use any.
-For example there's ready {{{/etc/lilo.conf}}}, where you only need to check for {{{root=}}} and {{{boot=}}} values and install it to your HDD:
+Now that we have our Linux kernel created, we need to install a bootloader. [[Spell|Spells]] are available for LILO and GRUB(2). For the purpose of this guide, we will be using LILO. While we will need to install the bootloader, an example has already been provided at {{{/etc/lilo.conf}}}.
 
 {{{
+# cast -c lilo
 # nano /etc/lilo.conf
-# lilo -A /dev/sda 1
 # lilo
 }}}
 
@@ -223,10 +234,10 @@ Chroot images come with only one locale -- **en_US**, and use UTF-8 version of i
 If  you need to change it, type:
 
 {{{
-# cast -r locale
+# cast -r local
 }}}
 
-select those you want, and then -- change {{{LANG}}} variable in {{{/etc/sysconfig/locale}}} file to the one you'd like to use.
+Select those you want, and then change the {{{LANG}}} variable in {{{/etc/sysconfig/locale}}} file to the one you'd like to use.
 
 By default timezone is set to UTC. To change it, you need to choose timezone file and symlink it with {{{/etc/localtime}}}.
 For example to set GMT-4 timezone:
@@ -236,6 +247,12 @@ For example to set GMT-4 timezone:
 }}}
 
 All timezone files are located in {{{/usr/share/zoneinfo}}} directory.
+
+Alternatively, you may also re-cast or reconfigure the time zone database using the following command:
+
+{{{
+# cast -r tzdata
+}}}
 
 * Get back to real environment
 
