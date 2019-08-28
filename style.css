@@ -175,7 +175,7 @@ div#hatta-content {
 /* dwb hack */
 @media screen and (max-width: 801px), (max-device-width: 801px) {
     div#hatta-content {
-        min-height: 400px;
+        min-height: 450px;
     }
 }
 div#hatta-content img {
