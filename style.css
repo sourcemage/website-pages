@@ -256,6 +256,9 @@ div#hatta-header div#hatta-menu a {
 div#hatta-header div#hatta-menu a.current {
     color: #999;
 }
+div#hatta-header div#hatta-menu span {
+    border-right: 1px solid #9cf;
+}
 
 /* Buttons */
 div#hatta-buttons {
