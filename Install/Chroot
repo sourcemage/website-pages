@@ -200,11 +200,7 @@ Edit {{{/etc/fstab}}} file according to your disk setup in step №4:
 * Update Essential [[Spell|spells]] For Compiling
 
 {{{
-# sorcery hold g++
-# cast -c mpfr gmp
-# cast -c binutils gcc
-# sorcery unhold g++
-# cast -c g++ gettext glibc
+# cast -c binutils gcc gettext glibc
 }}}
 
 * Compile a Kernel
@@ -234,7 +230,7 @@ Chroot images come with only one locale -- **en_US**, and use UTF-8 version of i
 If  you need to change it, type:
 
 {{{
-# cast -r local
+# cast -r locale
 }}}
 
 Select those you want, and then change the {{{LANG}}} variable in {{{/etc/sysconfig/locale}}} file to the one you'd like to use.
@@ -274,7 +270,30 @@ Now you're ready to boot into Source Mage GNU/Linux system, so type:
 
 **9. Continue on**
 
-Follow the [[Install/ISO#post-install|post-installation steps]] in our [[Install/ISO|ISO install guide]] to update and optimize the system for your hardware.
+As an option, you may wish to install and view the "smgl-setup" man page:
+
+{{{
+# cast smgl-setup
+# man smgl-setup
+}}}
+
+Now is the **perfect** time to do a rebuild of your system. You have already taken care of many of the preliminary steps above as you performed the chroot install. Once you have booted your new system, it's recommended to:
+
+* ensure that networking is up (run {{{ifconfig}}})
+* run {{{sorcery update}}} to update the sorcery scripts
+* run {{{scribe update}}} to update the spell-lists
+
+* run {{{sorcery rebuild}}} to build everything with your chosen optimizations
+
+Doing all of this will recompile your installed spells and optimize them for your processor. We **highly** recommend that you do this now, as it can speed up your system. \\ The longer you hold off, the more spells will be recompiled later on.
+
+Once again, to rebuild your system anytime, type:
+
+{{{
+# sorcery rebuild
+}}}
+
+//Welcome to Source Mage!//
 
 **10. Report**
 
