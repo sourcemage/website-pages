@@ -1,6 +1,6 @@
 = Chroot Install Guide =
 
-Here's a complete guide to install Source Mage GNU/Linux using chroot tarballs.
+Here's a complete guide to install [[About|Source Mage GNU/Linux]] using chroot tarballs.
 ----
 
 == What? ==
@@ -20,15 +20,28 @@ These steps will help you to do so in a proper order:
 
 **1. Get some bootable media**
 
-It can be our installation [[Download#head-1-1|ISO]], any compact (I hope so) Linux media distribution image, or even the ISO of the [[http://www.ubuntu.com/download|operating system]] [[http://granivo.re|Mathieu]] prefers.
+It can be our installation [[Download#head-1-1|ISO]] or any compact Linux distribution image.
 
-Personally I recommend [[https://devuan.org/index.html#download|Devuan]], [[https://crux.nu/Main/Download|CRUX]] or [[https://alpinelinux.org/downloads/|Alpine Linux]]. They support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Also [[https://downloads.archlinux.de/iso/archboot/|Archboot]] is perfect for booting via network (PXE).
+Possible recommendations include:
+* [[https://devuan.org/index.html#download|Devuan]],
+* [[https://voidlinux.org/download/|Void]],
+* [[https://crux.nu/Main/Download|CRUX]], or
+* [[https://alpinelinux.org/downloads/|Alpine Linux]].
 
-But, as told above, it can be any Linux boot media you'd like to use.
+Those mentioned above support all modern hardware, and it's easy to find the nearest mirror to you and get them pretty quickly. Additionally, [[https://downloads.archlinux.de/iso/archboot/|Archboot]] is perfect for booting via network (PXE).
 
-**2. Boot it**
+But as already mentioned above, it can likely be any Linux distribution you would like to use or feel comfortable with.
 
-Burn the ISO image or {{{dd}}} a prepared boot image to your USB-key, or set up a TFTP-server to boot via network, and boot into its minimal environment.
+**2. Burn it & Boot it**
+
+Potential methods for preparing a bootable media might include:
+* Burn the ISO image,
+* Using {{{dd}}} to prepare a USB-key with a prepared image, or
+* Set up a TFTP-server to boot via network for those seeking a network boot option
+
+If in doubt, check for documentation provided by the distribution you would like to use (e.g., Devuan) for information on how to create the appropriate bootable media.
+
+Once the bootable media has been created boot into the minimal environment provided and move on to the next step.
 
 **3. Get the chroot image**
 
@@ -36,7 +49,7 @@ Almost all modern Linux distributions support network configuration and have dow
 
 So it's usually not a problem. Though if you don't have (or you know that you won't have Internet-connection inplace for some reason) such ability, you can put the desired chroot image on your USB-key or CD/DVD disc.
 
-You can download the appropriate chroot image from our [[Download|downloads]] page; and we will use the one based on **0.60-stable** grimoire in the example below.
+You can download the appropriate chroot image from our [[Download|downloads]] page; and we will use the one based on **0.63-test** grimoire in the example below. While others are listed, I have found that they are too old and either do not provide a stable system to start with, or break during the update process noted towards the end of this guide. Also note, while the 0.63-test version is specifically mentioned, the datetime stamp may be different on the official download page as updates to the 0.63-test chroot image are made.
 
 Let's imagine there's no trouble with our Ethernet adapter, and we know how networking works in Linux on a very basic level:
 
@@ -44,7 +57,7 @@ Let's imagine there's no trouble with our Ethernet adapter, and we know how netw
 # ifconfig eth0 1.2.3.4 netmask 255.255.255.0
 # route add default gw 5.6.7.8
 # echo "nameserver 9.10.11.12" > /etc/resolv.conf
-# wget "http://download.sourcemage.org/image/official/smgl-stable-0.60-basesystem-x86_64.tar.bz2"
+# wget "http://download.sourcemage.org/image/official/test/smgl-test-0.63-20190513_0600-basesystem-x86_64.tar.xz"
 }}}
 
 **4. Partition your drive**
@@ -53,7 +66,7 @@ This is done mostly with "fdisk" and/or "parted". Disk drives (SATA) are usually
 
 More complex disk setup (RAID/LVM) is also fine, but out of the topic.
 
-Here we start:
+Here we start, using "parted" in our example below:
 
 {{{
 # parted /dev/sda
@@ -76,26 +89,26 @@ Here we start:
 > name 7 var
 }}}
 
-look at them:
+To review the partitions you just created:
 
 {{{
 > p free
 }}}
 
-and quit "parted":
+Quit "parted" when you are satified with your setup:
 
 {{{
 > quit
 #
 }}}
 
-then create filesystems on these partitions (in example below we use XFS for {{{/}}}):
+Next, we create filesystems on these partitions (in example below we use XFS for {{{/}}}):
 
 {{{
 # mkfs.xfs -l internal,size=64m -d agcount=8 /dev/sda3
 }}}
 
-swap is organized with {{{mkswap}}} command:
+The swap space is then created with {{{mkswap}}} command:
 
 {{{
 # mkswap /dev/sda2
@@ -103,7 +116,7 @@ swap is organized with {{{mkswap}}} command:
 
 **5. Mount partitions**
 
-Now you're almost ready to extract Source Mage from the chroot image. The last step before it is to mount partitions you've made in the previous step:
+Now you're almost ready to extract Source Mage from the chroot image. However, before we start the extraction process we must mount the partitions created in the previous step:
 
 {{{
 # mkdir /mnt/drive
@@ -119,18 +132,18 @@ Now you're almost ready to extract Source Mage from the chroot image. The last s
 
 **6. Extract from chroot**
 
-Finally, assuming you've downloaded x86_64 chroot image to the writable {{{/root}}} directory, extract it to your forthcoming mainspace:
+Finally, using the chroot image we fetched under Step (3) and assuming we wrote it to the {{{/root}}} directory, we extract the image to our forthcoming mainspace:
 
 {{{
 # cd /mnt/drive
-# tar xvjf /root/smgl-stable-0.60-basesystem-x86_64.tar.bz2
+# tar xvJf /root/smgl-test-0.63-20190513_0600-basesystem-x86_64.tar.xz
 }}}
 
 Done!
 
 **7. Finalize installation**
 
-Here are few final steps that were mentioned at the beginning of this guide.
+Here are a few final steps which were mentioned at the beginning of this guide.
 
 * Prepare chroot environment
 
@@ -179,16 +192,24 @@ Edit {{{/etc/fstab}}} file according to your disk setup in step №4:
 # nano /etc/fstab
 }}}
 
-* Compile a kernel (optional)
+* Update Sorcery and Scribe
 
-If you prefer to keep your system minimal, you might want to compile your own kernel with only needed hardware support and/or to include some advanced settings.
-You can do that just inside the chroot.
+** run {{{sorcery update}}} to update the sorcery scripts
+** run {{{scribe update && cast smgl-archspecs}}} to update the spell-lists and tell [[Sorcery]] the latest list for supported CPU architectures
+** configure Sorcery (run {{{sorcery}}}, then go to **Options**)
 
-There are 2 ways:
-# includes getting any desired image from http://www.kernel.org, extracting it to {{{/usr/src}}} (e.g.) and doing that by hand (via {{{make menuconfig}}}, {{{make}}}, {{{make modules}}}, copying bzImage, etc.)
-# includes typing:
+* Update Essential [[Spell|spells]] For Compiling
 
 {{{
+# cast -c binutils gcc gettext glibc
+}}}
+
+* Compile a Kernel
+
+Because we are installing from chroot, we will need to compile our own kernel. While there are a number of ways that we might be able to do this, below we simply provide the following:
+
+{{{
+# cast -c elfutils
 # cast -r linux
 }}}
 
@@ -196,12 +217,11 @@ and following instructions in the menus.
 
 * Install a bootloader
 
-Chroot images come with 2 bootloaders: LILO and GRUB2. Feel free to use any.
-For example there's ready {{{/etc/lilo.conf}}}, where you only need to check for {{{root=}}} and {{{boot=}}} values and install it to your HDD:
+Now that we have our Linux kernel created, we need to install a bootloader. [[Spell|Spells]] are available for LILO and GRUB(2). For the purpose of this guide, we will be using LILO. While we will need to install the bootloader, an example has already been provided at {{{/etc/lilo.conf}}}.
 
 {{{
+# cast -c lilo
 # nano /etc/lilo.conf
-# lilo -A /dev/sda 1
 # lilo
 }}}
 
@@ -214,7 +234,7 @@ If  you need to change it, type:
 # cast -r locale
 }}}
 
-select those you want, and then -- change {{{LANG}}} variable in {{{/etc/sysconfig/locale}}} file to the one you'd like to use.
+Select those you want, and then change the {{{LANG}}} variable in {{{/etc/sysconfig/locale}}} file to the one you'd like to use.
 
 By default timezone is set to UTC. To change it, you need to choose timezone file and symlink it with {{{/etc/localtime}}}.
 For example to set GMT-4 timezone:
@@ -224,6 +244,12 @@ For example to set GMT-4 timezone:
 }}}
 
 All timezone files are located in {{{/usr/share/zoneinfo}}} directory.
+
+Alternatively, you may also re-cast or reconfigure the time zone database using the following command:
+
+{{{
+# cast -r tzdata
+}}}
 
 * Get back to real environment
 
@@ -245,7 +271,30 @@ Now you're ready to boot into Source Mage GNU/Linux system, so type:
 
 **9. Continue on**
 
-Follow the [[Install/ISO#post-install|post-installation steps]] in our [[Install/ISO|ISO install guide]] to update and optimize the system for your hardware.
+As an option, you may wish to install and view the "smgl-setup" man page:
+
+{{{
+# cast smgl-setup
+# man smgl-setup
+}}}
+
+Now is the **perfect** time to do a rebuild of your system. You have already taken care of many of the preliminary steps above as you performed the chroot install. Once you have booted your new system, it's recommended to:
+
+* ensure that networking is up (run {{{ifconfig}}})
+* run {{{sorcery update}}} to update the sorcery scripts
+* run {{{scribe update}}} to update the spell-lists
+
+* run {{{sorcery rebuild}}} to build everything with your chosen optimizations
+
+Doing all of this will recompile your installed spells and optimize them for your processor. We **highly** recommend that you do this now, as it can speed up your system. \\ The longer you hold off, the more spells will be recompiled later on.
+
+Once again, to rebuild your system anytime, type:
+
+{{{
+# sorcery rebuild
+}}}
+
+//Welcome to Source Mage!//
 
 **10. Report**
 
