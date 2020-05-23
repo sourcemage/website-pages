@@ -27,6 +27,10 @@ Source Mage's installer and ISO generation scripts component.
 [[Tome]]
 
 Source Mage's documentation component, including general docs as well as end user-facing services such as web-sites, mailing lists, bug-tracking system, etc.
+
+[[Wand]]
+
+Source Mage' infrastructure, automation and tooling.
 ----
 
 == People ==
