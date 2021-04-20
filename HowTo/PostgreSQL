@@ -1,0 +1,214 @@
+= Upgrading PostgreSQL =
+
+This HOWTO explains how to set up and configure [[https://www.postgresql.org|PostgreSQL]] and how to properly upgrade it.
+
+== Installing PostgreSQL ==
+
+First of course we need to cast the //postgresql// spell:
+
+{{{
+# cast postgresql
+}}}
+
+=== Creating the Database Repository ===
+
+Next we need to create the database repository in a suitable place. You can decide yourself where exactly you want the repository, some people prefer to have the repository in {{{/home/postgres}}}, others prefer {{{/var/lib/postgres}}}, yet others {{{/srv/postgres}}}, etc. But really you can put the repository anywhere you want. For the purposes of this HOWTO we will assume we use {{{/srv/postgres}}}, if you decide to use another path adjust accordingly.
+
+First, as //root// we create the directory for the database and set it's ownership to the unprivileged //postgres// user and group which are created by the //postgresql// spell:
+
+{{{
+# mkdir -p /srv/postgres
+# chown postgres:postgres /srv/postgres
+}}}
+
+Now we create the repository in this directory as the unprivileged user:
+
+{{{
+# su postgres -s /bin/bash
+$ initdb /srv/postgres/data
+}}}
+
+By default {{{initdb}}} will use the currently set locale to determine the default locale and the default encoding for the repository, if you want to set a different locale you can use the {{{--locale}}} switch to {{{initdb}}}. You can also use the {{{--encoding}}} switch to {{{initdb}}} to explicitly set the encoding.
+
+For instance if you want the default locale to be "C" and the default encoding to be "UTF-8" you'd use the following {{{initdb}}} command instead:
+{{{
+$ initdb --locale="C" --encoding="UTF-8" /srv/postgres/data
+}}}
+
+See the [[https://www.postgresql.org/docs/current/locale.html|Locale Support]] section of the PostgreSQL manual for more information on this.
+
+Finally we need to configure the //postgresql// init script, by setting the appropriate values in {{{/etc/sysconfig/postgresql}}}. We only need to set {{{DBPATH}}} the other values can stay at their default.
+
+Set the {{{DBPATH}}} to the path of the database repository, which in our case means:
+
+{{{
+DBPATH=/srv/postgres/data
+}}}
+
+If you want to support SSL connections, we also need to set up an SSL certificate and key **before** starting the database server. Creating the certificate is outside the scope of this HOWTO, but you should put the key and certificate files in the database repository as {{{server.key}}} and {{{server.crt}}}, e.g. {{{/srv/postgres/data/server.key}}} and {{{/srv/postgres/data/server.crt}}}. Remember that you need to have enabled the //openssl// dependency to support SSL connections.
+
+See the [[https://www.postgresql.org/docs/current/ssl-tcp.html|Secure TCP/IP Connections with SSL]] section of the PostgreSQL manual for more info.
+
+You can now start PostgreSQL by starting the init script:
+
+{{{
+# telinit run postgresql start
+}}}
+
+By default PostgreSQL is configured with trust authentication, which means that any local user can connect with the database with:
+
+{{{
+# psql -U postgres
+}}}
+
+Usually you do not want trust authentication, we will set up proper authentication in the next section.
+
+== Configuring PostgreSQL ==
+
+First we shall set up the authentication configuration, this configuration can be found in the {{{pg_hba.conf}}} file in the database repository, open this file in an editor. You'll see some comments explaining the use and syntax of the file, read these to get an idea of how the config file is structured and what is possible with PostgreSQL authentication. Here we will only use {{{ident}}} and {{{md5}}} authentication, which is probably enough for most, if you want more involved setups, please read the [[https://www.postgresql.org/docs/current/client-authentication.html|Client Authentication]] section of the PostgreSQL manual.
+
+Initially you will see three uncommented lines which all have their method set to //trust//; //trust// means that any connection over the specified path will be allowed without a password, regardless of who initiates the connection. In other words, anyone who can connect to the database system will be allowed to make that connection.
+
+This will of course not do for most setups, so comment these lines out. Now we need to add some lines that allow valid connections to the DBMS:
+
+{{{
+local   all         postgres                          ident map=superuser
+local   samerole    all                               ident
+local   samerole    all                               md5
+host    samerole    all         127.0.0.1/32          md5
+host    samerole    all         ::1/128               md5
+}}}
+
+The first line is a special line, it provides a way for the database administrator to have access to the superuser //postgres// in the DBMS. We use //ident// authentication for this so that a superuser can easily connect to the database by way of {{{psql -U postgres}}}, since we normally will want to do this from the root unix account instead of the postgres unix account we set up an ident map called superuser a little later.
+
+The second line allows a user to connect with a database they have access to without a password over unix domain sockets. In other words a user can simply run {{{psql}}} to connect to their database which has the same name as their username. Of course the database and user have to exist in the DBMS for a specific user to be able to do so. The //samerole// in the DATABASE field means that the user must be a member of a role with the same name as the database (a user is also a role) and the //ident// field without a map means that the UNIX username must be the same as the PostgreSQL username. The next three lines allow a user to connect with a database they have access to specifying a password over unix domain sockets, IPv4 localhost and IPv6 localhost. Of course if you do not want any of these particular authentication options you can simply leave them out.
+
+Naturally you will not always want databases to have the same name as the user, or you want let several users have access to the same database, this is accomplished with roles. Each user is a role, which means a user //foo// automatically has access to database //foo// if that database exists. But a role can also be a member of another role, roles are really a generalization of users and groups. If you want to give a user //foo// access to a database //bar// you create a database //bar// and a role //bar// and make user //foo// a member of the role //bar//. We'll see how to do this later.
+
+You can also add the following two lines to allow passwordless connections over TCP/IP from //localhost//, but you must realize that the ident protocol was never intended for authentication and if someone can intercept the TCP stream they can obtain access to any database they want. Naturally this is a bigger problem if you allow connections from other IPs than just localhost, but even for localhost this can present problems if some people have low level access to the network stack.
+
+{{{
+host    samerole    all         127.0.0.1/32          ident
+host    samerole    all         ::1/128               ident
+}}}
+
+If you want to allow connections from other systems you can set the address accordingly. For example the line below will allow access to the database server from all systems in the //192.168.0.0/16// subnet.
+
+{{{
+host    samerole    all         192.168.0.0/16        md5
+}}}
+
+We still need to set up the superuser ident map we referred to, so save the {{{pg_hba.conf}}} file and open the {{{pg_ident.conf}}} file. Again you will see some comments explaining the use and syntax of the file, read through them to familiarize yourself with the use of the file and its syntax. We set up the superuser map to allow certain users access to the //postgres// superuser account in the DBMS.
+
+Add the following two lines to the bottom of the file:
+
+{{{
+superuser     postgres          postgres
+superuser     root              postgres
+}}}
+
+These lines will allow both user //root// and user //postgres// to run {{{psql -U postgres}}} to connect to the DBMS as superuser. You can add additional account mappings to this if you want, such as your own username, but be aware that if those accounts get compromised you are automatically allowing them superuser access to your DBMS so do this with care. That concludes the configuration of the client authentication, now for a bit of server configuration.
+
+=== Server Configuration ===
+
+On the whole you don't have to do much in the way of server configuration, in fact you don't really have to do anything. PostgreSQL is set up with some pretty sane defaults and now also includes an autovacuum daemon so you also don't really have to worry about routine database maintenance anymore. You can open up {{{postgresql.conf}}} and browse around, some of the values might be worth adjusting if you're going for a small personal or very large DBMS, especially the connection and resource settings. You can find a good explanation of the various options in the [[https://www.postgresql.org/docs/current/runtime-config.html|Server Configuration]] section of the PostgreSQL manual. As a beginning user however you don't need to mess about much with the server configuration so we'll skip right ahead to creating databases and users in the DBMS, but first we need to have PostgreSQL reload the configuration.
+
+We are done configuring PostgreSQL, but PostgreSQL is still running with the old configuration so now we need to let PostgreSQL know about the new configuration by reloading it:
+
+{{{
+# telinit run postgresql reload
+}}}
+
+=== Creating Databases and Users ===
+
+Using PostgreSQL is outside the scope of this HOWTO, but here we have at least the basics of creating a database and a user so that you can get started with an actual database. First we need to connect with the DBMS, so as //root//:
+
+{{{
+# psql -U postgres
+}}}
+
+We now have a superuser SQL prompt, so let us create a user //foo// and a database for this user:
+
+{{{
+# create user foo password 'yourpassword';
+# create database foo owner foo;
+}}}
+
+The first line creates a user foo (really a role foo with the login attribute, {{{create user $name}}} is an alias for {{{create role $name login}}}) with password //yourpassword//. You can leave out the password attribute if you only intend to connect through ident authentication or use an external method for client authentication like PAM or LDAP. The second line creates a database named //foo// owned by user //foo//. You can now connect to the database by simply running {{{psql}}} as user //foo//, that is if you allowed the local ident authentication we set up above. You can log into the database using a password with {{{psql -W}}}, and if you did not allow local ident authentication you will be asked for a password when you simply run {{{psql}}}. If you only use PostgreSQL as a personal database this is all you need really.
+
+Now we'll create another database bar and give user //foo// and a new user //foo2// access to this database:
+
+{{{
+# create user foo2 password 'yourpassword';
+# create role bar;
+# create database bar owner bar;
+# grant bar to foo;
+# grant bar to foo2;
+}}}
+
+First we create a new user like we did before. Since we wish to create a database not owned by a user we create a new role //bar// without login privileges and then create a database owned by that role. Finally we make users //foo// and //foo2// members of the //bar// role by granting the //bar// role to these users. Users //foo// and //foo2// can now connect to database //bar// with {{{psql bar}}}.
+
+== Upgrading PostgreSQL ==
+
+Upgrading PostgreSQL is not as straightforward as simply casting the spell, you don't need to do much, but it is important to do it right. The problem is that a PostgreSQL database repository only works with a specific major version of PostgreSQL, so if you were to upgrade by just casting the //postgresql// spell the new version would not be able to start since it will not operate on the database repository of a different major version, leaving you with a non-working DBMS and a database repository that you can't access. The major version of PostgreSQL is the first two numbers of the version string, i.e. the major version of **8.3.3** is **8.3**, which means that if you have **8.3.3** installed you could simply upgrade by casting the spell if the spell version is **8.3.x**, but not if the spell version is **8.4.x**. The [[About|Source Mage]] //postgresql// spell will warn you when upgrading to a different major version so you should be free of surprises.
+
+Throughout this process we'll assume the database repository is in {{{/srv/postgres}}}, if your repository is elsewhere substitute accordingly.
+
+First we need to make a complete dump of the database system, before we do so however we need to make sure that only the superuser can connect to the database, otherwise changes to the data after the dump would not be migrated to the new server. As a side note; this should make it clear that it is very bad form to use superuser accounts for actual data manipulation, aside from the obvious security issues you have no good way of stopping the superuser from modifying the data while doing a dump like this.
+
+Open up the {{{pg_hba.conf}}} file in the database repository and comment out all lines except the following line:
+
+{{{
+local   all         postgres                          ident superuser
+}}}
+
+Restart the server to make the new configuration active and ensure no non-superuser connections remain:
+
+{{{
+# telinit run postgresql restart
+}}}
+
+Now we can make the complete dump of the database system with the use of {{{pg_dumpall}}}:
+
+{{{
+# su postgres -s /bin/bash
+$ cd /srv/postgres
+$ pg_dumpall -f dump.sql
+}}}
+
+It is probably wise to archive the SQL dump; it gives you an extra backup and allows you an easy downgrade should there be unexpected problems with the new version of the server.
+
+Now that we have a complete dump of the database system we can move on to the process of actually upgrading the database server.
+
+First we stop the current database server and move the database repository out of the way for the new server and then we cast the spell:
+
+{{{
+# telinit run postgresql stop
+# mv /srv/postgres/data /srv/postgres/data.old
+# cast postgresql
+}}}
+
+We now have a new version of PostgreSQL, but no database repository for it to work on, so let's create a new repository. Remember that you can give the {{{initdb}}} command parameters.
+
+{{{
+# su postgres -s /bin/bash
+$ initdb /srv/postgres/data
+}}}
+
+We now have a fresh new database repository, but of course this repository needs to be configured again. Usually you can just copy over the configuration ({{{pg_hba.conf}}}, 
+{{{pg_indent.conf}}} and {{{postgresql.conf}}}) from the old database repository, but examine the new files first to see if there are any important changes. Keep {{{pg_hba.conf}}} restricted to only superuser access for now. Also if you use SSL connections you should copy the SSL certificate and key ({{{server.crt}}} and {{{server.key}}}) over to the new repository.
+
+You should now be able to start the new server and import the dump now by running:
+
+{{{
+# telinit run postgresql start
+# psql -U postgres -f /srv/postgres/dump.sql
+}}}
+
+Finally we need to give the regular users their access to the database system back, so open the {{{pg_hba.conf}}} file and uncomment all the lines you commented out to restrict access.
+
+Now just reload the configuration and we're done:
+
+{{{
+# telinit run postgresql reload
+}}}
