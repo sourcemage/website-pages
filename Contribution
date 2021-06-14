@@ -19,7 +19,7 @@ Here is a list of requirements/duties if you're thinking of contributing to Sour
 === Unofficial Developer ===
 
 * Submit patches and/or bug reports to [[Bugs|our bug-tracker]]
-* **Recommended, but not required**: hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]]
+* **Recommended, but not required**: hang out in [[irc://irc.libera.chat/#sourcemage|#sourcemage]] on [[https://libera.chat/|Libera.Chat]]
 * Have a read-only clone of [[http://scmweb.sourcemage.org/|our Git repositories]] and ask developers to pull changes from you (see [[Git guide]])
 
 === Official Developer ===
@@ -27,16 +27,16 @@ Here is a list of requirements/duties if you're thinking of contributing to Sour
 * Work under a Team Lead
 * Vote for Team Leads
 * Submit fixes through our Source Code Management (SCM) system
-* Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
-* **Recommended, but not required**: hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]])
+* Attend announced developer meetings in [[irc://irc.libera.chat/#sourcemage-admin|#sourcemage-admin]]
+* **Recommended, but not required**: hang out in [[irc://irc.libera.chat/#sourcemage|#sourcemage]] on [[https://libera.chat/|Libera.Chat]]
 
 === Official Lead (Lead) ===
 
 * Vote for Team Leads
 * Submit fixes through our Source Code Management (SCM) system
 * Communicate with other developers
-* Hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]]) and [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
-* Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+* Hang out in [[irc://irc.libera.chat/#sourcemage|#sourcemage]] on [[https://libera.chat/|Libera.Chat]] and [[irc://irc.libera.chat/#sourcemage-admin|#sourcemage-admin]]
+* Attend announced developer meetings in [[irc://irc.libera.chat/#sourcemage-admin|#sourcemage-admin]]
 
 === Official Team Lead (Component Lead) ===
 
@@ -45,8 +45,8 @@ Here is a list of requirements/duties if you're thinking of contributing to Sour
 * Communicate with their team members
 * Communicate with other Team Leads
 * Subscribe to and read all SCM commits by all developers //([[http://scmweb.sourcemage.org|scmweb.sourcemage.org]] is an alternative that may be easier to read than email)//
-* Hang out in [[irc://irc.freenode.net/#sourcemage|#sourcemage]] on [[http://www.freenode.net|irc.freenode.net]] as well as your team's #sourcemage-<team> channel (e.g. [[irc://irc.freenode.net/#sourcemage-sorcery|#sourcemage-sorcery]], all of them are listed in [[Contact/IRC]]) and [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
-* Attend announced developer meetings in [[irc://irc.freenode.net/#sourcemage-admin|#sourcemage-admin]]
+* Hang out in [[irc://irc.libera.chat/#sourcemage|#sourcemage]] on [[https://libera.chat/|Libera.Chat]] and [[irc://irc.libera.chat/#sourcemage-admin|#sourcemage-admin]]
+* Attend announced developer meetings in [[irc://irc.libera.chat/#sourcemage-admin|#sourcemage-admin]]
 
 === Project Lead ===
 
