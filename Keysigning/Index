@@ -50,7 +50,7 @@ Install an IRC client //(like xchat or irssi)//:
 $ cast irssi
 }}}
 
-Join [[irc://irc.freenode.net/#sourcemage-keysigning|#sourcemage-keysigning]] on [[irc://irc.freenode.net|irc.freenode.net]]:
+Join [[irc://irc.libera.chat/#sourcemage-keysigning|#sourcemage-keysigning]] on [[https://libera.chat/|Libera.Chat]]:
 
 {{{
 $ irssi -n <yournick> -c irc.freenode.net
