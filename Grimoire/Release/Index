@@ -103,5 +103,3 @@ We release once all spells on the list have:
 
 # An {{{X}}} in the {{{Searched}}} column indicating someone has at least searched the [[Bugs|bug-tracker]] for known issues, even if they found nothing.
 # Sign-off by the volunteer owning that spell this release, **or** sign-off by someone in the {{{Alt Sign-Off}}} column **if** there are no gating bugs noted by the owner.
-
-Join the [[irc://irc.freenode.net/#sourcemage-grimoire|#sourcemage-grimoire]] on [[http://www.freenode.net|irc.freenode.net]] if you want to help or need help.
