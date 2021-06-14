@@ -53,7 +53,7 @@ $ cast irssi
 Join [[irc://irc.libera.chat/#sourcemage-keysigning|#sourcemage-keysigning]] on [[https://libera.chat/|Libera.Chat]]:
 
 {{{
-$ irssi -n <yournick> -c irc.freenode.net
+$ irssi -n <yournick> -c irc.libera.chat
 > /join #sourcemage-keysigning
 }}}
 
