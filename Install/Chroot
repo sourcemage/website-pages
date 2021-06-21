@@ -239,7 +239,7 @@ While we will need to install the bootloader, an example has already been provid
 # cast -c grub2 efibootmgr
 }}}
 
-**Note:** when casting //grub2// choose either {{{efi/i386}}} or {{{efi/x86_64}}} platform (depending on your CPU arch).
+**Note:** when casting //grub2// choose either {{{i386-efi}}} or {{{x86_64-efi}}} platform (depending on your CPU arch).
 
 Make sure efivarfs is mounted:
 
