@@ -8,17 +8,17 @@ For installation instructions, please see the [[Install]] page.
 == Source Mage ISO ==
 
 === x86_64 ===
-* The current **test** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.10.0/test/smgl-test-quinq-x86_64-20090608.iso.bz2|0.10.0-20090608]] ([[http://download.sourcemage.org/iso/x86_64/0.10.0/test/smgl-test-quinq-x86_64-20090608.iso.bz2.md5|MD5]]):
+* The current **test** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.10.0/test/smgl-test-quinq-x86_64-20090608.iso.bz2|0.10.0-20090608]] ^^[[http://download.sourcemage.org/iso/x86_64/0.10.0/test/smgl-test-quinq-x86_64-20090608.iso.bz2.md5|md5]]^^
 ** Kernel version: ??
 ** Release date: **20090608**
 
-* The current **devel** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz|0.11.0-20151218]] ([[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz.sig|GPG]], [[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz.md5|MD5]]):
+* The current **devel** Source Mage x86_64 ISO is [[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz|0.11.0-20151218]] ^^[[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz.sig|pgp]] [[http://download.sourcemage.org/iso/x86_64/0.11.0/preview/smgl-devel-20151218.x86_64.iso.xz.md5|md5]]^^
 ** Kernel version: **4.1.14**
 ** Release date: **20151218**
 ** **DO NOT USE THIS VERSION, IT IS FOR TESTING ONLY (IT DOES NOT YIELD A WORKING INSTALL) !!!**
 
 === i686 ===
-* The current **test** Source Mage i686 ISO is [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2|0.10.0]] ([[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.sig|GPG]], [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.md5|MD5]]):
+* The current **test** Source Mage i686 ISO is [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2|0.10.0]] ^^[[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.sig|pgp]] [[http://download.sourcemage.org/iso/x86/0.10.0/smgl-0.10.0.iso.bz2.md5|md5]]^^
 ** Kernel version: ??
 ** Release date: **20090211**
 
@@ -41,31 +41,31 @@ For other ISO versions, please visit [[http://download.sourcemage.org/iso/|ISO d
 
 === x86_64 ===
 
-* The current **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-x86_64.tar.xz|0.62-11]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-x86_64.tar.xz.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-x86_64.tar.xz.sha512|SHA-512]]):
+* The current **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-x86_64.tar.xz|0.62-11]] ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-x86_64.tar.xz.sig|pgp]] [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-x86_64.tar.xz.sha512|sha512]]^^
 ** Kernel version: **N/A**
 ** Release date: **20181028**
-* The previous **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.xz.sig|GPG]]):
+* The previous **stable** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2|0.61]] ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.bz2.sig|pgp]]^^ ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.torrent|torrent]]^^, [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.xz|.xz image]] ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-x86_64.tar.xz.sig|pgp]]^^
 ** Kernel version: **3.4.51**
 ** Release date: **20150217**
-* The current **stable-rc** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz.sig|GPG]]):
+* The current **stable-rc** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2|0.61]] ^^[[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.bz2.sig|pgp]]^^, [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz|.xz image]] ^^[[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-x86_64.tar.xz.sig|pgp]]^^
 ** Kernel version: **3.0.31**
 ** Release date: **20120517**
-* The current **test** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-x86_64.tar.xz|0.63-20210227]] ([[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-x86_64.tar.xz.sig|GPG]], [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-x86_64.tar.xz.sha512|SHA-512]]):
+* The current **test** Source Mage x86_64 chroot image is [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-x86_64.tar.xz|0.63-20210227]] ^^[[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-x86_64.tar.xz.sig|pgp]] [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-x86_64.tar.xz.sha512|sha512]]^^
 ** Kernel version: **N/A**
 ** Release date: **20210227**
 
 === i686 ===
 
-* The current **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-i686.tar.xz|0.62-11]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-i686.tar.xz.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-i686.tar.xz.sha512|SHA-512]]):
+* The current **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-i686.tar.xz|0.62-11]] ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-i686.tar.xz.sig|pgp]] [[http://download.sourcemage.org/image/official/smgl-stable-0.62-11-basesystem-i686.tar.xz.sha512|sha512]]^^
 ** Kernel version: **N/A**
 ** Release date: **20181028**
-* The previous **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2.sig|GPG]], [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.torrent|torrent]]), [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz.sig|GPG]]):
+* The previous **stable** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2|0.61]] ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.bz2.sig|pgp]] [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.torrent|torrent]]^^, [[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz|.xz image]] ^^[[http://download.sourcemage.org/image/official/smgl-stable-0.61-basesystem-i686.tar.xz.sig|pgp]]^^
 ** Kernel version: **3.4.51**
 ** Release date: **20150217**
-* The current **stable-rc** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2|0.61]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2.sig|GPG]]), [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz|.xz image]] ([[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz.sig|GPG]]):
+* The current **stable-rc** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2|0.61]] ^^[[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.bz2.sig|pgp]]^^, [[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz|.xz image]] ^^[[http://download.sourcemage.org/image/official/stable-rc/smgl-stable-rc-0.61-basesystem-i686.tar.xz.sig|pgp]]^^
 ** Kernel version: **3.0.31**
 ** Release date: **20120517**
-* The current **test** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-i686.tar.xz|0.63-20210227]] ([[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-i686.tar.xz.sig|GPG]], [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-i686.tar.xz.sha512|SHA-512]]):
+* The current **test** Source Mage i686 chroot image is [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-i686.tar.xz|0.63-20210227]] ^^[[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-i686.tar.xz.sig|pgp]] [[http://download.sourcemage.org/image/official/test/smgl-test-0.63-20210227_0600-basesystem-i686.tar.xz.sha512|sha512]]^^
 ** Kernel version: **N/A**
 ** Release date: **20210227**
 
@@ -98,11 +98,11 @@ $ docker run -it sourcemage:0.62
 
 == Codex ==
 
-* The current [[Grimoire/stable|stable grimoire]] is [[http://download.sourcemage.org/codex/stable-0.62.tar.bz2|0.62]] ([[http://download.sourcemage.org/codex/stable-0.62.tar.bz2.asc|GPG]])
+* The current [[Grimoire/stable|stable grimoire]] is [[http://download.sourcemage.org/codex/stable-0.62.tar.bz2|0.62]] ^^[[http://download.sourcemage.org/codex/stable-0.62.tar.bz2.asc|pgp]]^^
 ** Release date: **20150301**
-* The previous **stable** grimoire is [[http://download.sourcemage.org/codex/stable-0.61.tar.bz2|0.61-23]] ([[http://download.sourcemage.org/codex/stable-0.61.tar.bz2.asc|GPG]])
+* The previous **stable** grimoire is [[http://download.sourcemage.org/codex/stable-0.61.tar.bz2|0.61-23]] ^^[[http://download.sourcemage.org/codex/stable-0.61.tar.bz2.asc|pgp]]^^
 ** Release date: **20150223**
-* The current [[Grimoire/stable-rc|stable-rc grimoire]] is [[http://download.sourcemage.org/codex/stable-rc-0.62.tar.bz2|0.62]] ([[http://download.sourcemage.org/codex/stable-rc-0.62.tar.bz2.asc|GPG]])
+* The current [[Grimoire/stable-rc|stable-rc grimoire]] is [[http://download.sourcemage.org/codex/stable-rc-0.62.tar.bz2|0.62]] ^^[[http://download.sourcemage.org/codex/stable-rc-0.62.tar.bz2.asc|pgp]]^^
 ** Release date: **20150223**
 
 * [[http://codex.sourcemage.org]] -- current [[Codex]] listing
