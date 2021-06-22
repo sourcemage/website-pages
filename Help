@@ -46,6 +46,10 @@ Horizontal rules have four or more '-', beginning in column 1.
 {{{#!text
 Plain text.
 
+^^Super^^script
+
+,,Sub,,script
+
 ##Monospace markup##
 
 //Italic markup//
@@ -61,6 +65,10 @@ Horizontal rule.
 }}}
 
 Plain text.
+
+^^Super^^script
+
+,,Sub,,script
 
 ##Monospace markup##
 
@@ -95,8 +103,6 @@ Horizontal rule.
 |{{{Go%%home}}}   |Go%%home   |&permil; |
 |{{{Go``home}}}   |Go``home   |&ldquo;  |
 |{{{Go''home}}}   |Go''home   |&rdquo;  |
-|{{{Go,,home}}}   |Go,,home   |&bdquo;  |
-
 ----
 {{#paragraph}}
 == Paragraph
