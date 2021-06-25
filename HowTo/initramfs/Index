@@ -1,5 +1,7 @@
 = initramfs guide
 
+Author: **Justin Boffemmyer** ([[~flux]])
+
 == What is an initramfs?
 
 An initramfs is an early userspace. The kernel will load this into a tmpfs space before it boots your real system. This allows for more difficult and complex boot options such as LVM-on-root, booting from an NFS mount, etc. You could even run an entire full Linux system from within an initramfs if you choose so (see http://www.tinycorelinux.net for an example of this).
