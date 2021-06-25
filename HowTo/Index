@@ -1,3 +1,4 @@
 = HowTo =
 
+* [[HowTo/initramfs|initramfs]]
 * [[HowTo/PostgreSQL|Upgrading PostgreSQL]]
