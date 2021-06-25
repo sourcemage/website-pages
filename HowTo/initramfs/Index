@@ -67,7 +67,9 @@ The {{{/init}}} script must perform several functions. First, in order for basic
 
 In order to switch over to the new system, the {{{/init}}} script must mount the real root filesystem to some directory (the example here will use /newroot as the mount point), unmount /dev, /sys, and /proc (or {{{mount --move}}} them to /newroot, if your real init system does not error out if they are already mounted), and then exec {{{switch_root}}}.
 
-I will here include my own initramfs /init script, which is both fairly generalized and quite minimal, so it should be easy to adapt to other needs.
+I will here include my own initramfs {{{/init}}} script, which is both fairly generalized and quite minimal, so it should be easy to adapt to other needs: [[HowTo/initramfs/init.sh]]
+
+**Note:** after downloading rename it from {{{init.sh}}} to {{{init}}}.
 
 The script will read the root device to boot into from the kernel boot command-line (the value of the boot parameter {{{root=}}}). However, should it fail for whatever reason, the script will drop to a shell where the user can execute {{{rootdev}}} (as shown below) to manually specify which device to mount and boot into. Note that {{{rootdev}}} is a very simple shell script which is created at run-time as a convenience. You could just as well create the {{{/rootdev}}} file manually, and do without the rootdev script if you were so inclined.
 
