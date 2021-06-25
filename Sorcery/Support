@@ -1,0 +1,5 @@
+= Software with Sorcery support
+
+The list of software products with built-in support for [[Sorcery]].
+
+* [[https://docs.ansible.com/ansible/latest/collections/community/general/sorcery_module.html|Sorcery module]] for [[https://www.ansible.com|Ansible]]
