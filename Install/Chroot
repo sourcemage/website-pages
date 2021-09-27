@@ -164,6 +164,12 @@ Here are a few final steps which were mentioned at the beginning of this guide.
 # chroot /mnt/drive
 }}}
 
+**Note:** in case your host system doesn't follow [[https://wiki.linuxfoundation.org/lsb/fhs|FHS]] directory structure, make sure to update the {{{$PATH}}} environment variable before proceeding:
+
+{{{
+# export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+}}}
+
 ==== 7.3 Set root password
 
 {{{
