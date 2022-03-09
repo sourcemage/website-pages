@@ -227,7 +227,7 @@ and following instructions in the menus.
 
 ==== 7.9 Install a bootloader
 
-Now that we have our Linux kernel created, we need to install a bootloader. [[Spell|Spells]] are available for LILO and GRUB(2). For the purpose of this guide, we will be using LILO for a BIOS/non-UEFI setup and GRUB2 -- for UEFI setup.
+Now that we have our Linux kernel created, we need to install a bootloader. [[Spell|Spells]] are available for LILO and GRUB(2). For the purpose of this guide, we will be using LILO for a BIOS/non-UEFI setup and GRUB2 -- for both non-UEFI and UEFI setups.
 
 ===== 7.9.1 BIOS/non-UEFI using LILO
 
