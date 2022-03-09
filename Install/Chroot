@@ -239,7 +239,18 @@ While we will need to install the bootloader, an example has already been provid
 # lilo
 }}}
 
-===== 7.9.2 UEFI using GRUB2
+===== 7.9.2 BIOS/non-UEFI using GRUB2
+
+{{{
+# cast -c grub2
+# grub-mkconfig -o /boot/grub/grub.cfg
+# parted /dev/sda
+> toggle 1 bios_grub
+> quit
+# grub-install /dev/sda
+}}}
+
+===== 7.9.3 UEFI using GRUB2
 
 {{{
 # cast -c grub2 efibootmgr
