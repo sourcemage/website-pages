@@ -1,6 +1,8 @@
 = Security format =
 
-When posting to sm-security@sourcemage.org for security vulnerabilities/exploits/disclosures your e-mail will need to be GPG-signed and consist of the following components:
+**Note:** sensitive submissions and general security concerns should be sent to security@sourcemage.org.
+
+When posting to sm-security@lists.ibiblio.org for security vulnerabilities/exploits/disclosures your e-mail will need to be GPG-signed and consist of the following components:
 
 # Synopsis -- a summary of the vulnerability.
 # Background -- a description of the affected package(s).
