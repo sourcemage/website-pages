@@ -12,4 +12,4 @@ Here are the lists of aliases to shorten and simplify links.
 
 == Key servers ==
 
-* [[Keyserver_PGP|http://pool.sks-keyservers.net:11371/pks/lookup?search=%s&fingerprint=on&op=index]]
+* [[Keyserver_PGP|https://keys.openpgp.org/search?q=%s]]
