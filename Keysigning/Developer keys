@@ -1,13 +1,13 @@
 =Source Mage Developer keys=
 
 |= ID =|= IRC nick =|= Name =|= Fingerprint =|
-| [[:Keyserver_PGP:0xF009764F|F009764F]] | ##emrys## | Jeremy Blosser | ##867D C269 21C2 7643 E9E3 6478 285D BEC5 F009 764F## |
-| [[:Keyserver_PGP:0x005096D5|005096D5]] | ##flux_control## | Justin Boffemmyer | ##D247 7C91 F758 6829 2895 0AC7 E565 ADFD 0050 96D5## |
-| [[:Keyserver_PGP:0x6319D895|6319D895]] | ##ismaell## | Ismael Luceno | ##D050 C4DA 0440 5CE2 7985 8413 350C 1228 6319 D895## |
-| [[:Keyserver_PGP:0xEBF6BC5B|EBF6BC5B]] | ##public## | Pavel Vinogradov | ##96B9 029A ED89 C11C CE0C 2FE5 2D53 5027 EBF6 BC5B## |
-| [[:Keyserver_PGP:0xA8EFDD61|A8EFDD61]] | ##sandalle## | Eric Sandall | ##FCFF 26A1 BE21 08F4 BB91 FAED 1D7B 7D74 A8EF DD61## |
-| [[:Keyserver_PGP:0xA46DEDBE|A46DEDBE]] | ##SilverSlayer## | David C. Haley | ##E9CE 4E0E C4AF E847 1343 0CCB 7EF1 D5B6 A46D EDBE## |
-| [[:Keyserver_PGP:0x60D5CAFE|60D5CAFE]] | ##sobukus## | Thomas Orgis | ##D021 FF8E CF4B E097 19D6 1A27 231C 4CBC 60D5 CAFE## |
-| [[:Keyserver_PGP:0x562C3225|562C3225]] | ##Stealth## | Vlad Glagolev | ##E818 7DE5 5F6F C19D B509 228A A980 B512 562C 3225## |
-| [[:Keyserver_PGP:0xA17729BE|A17729BE]] | ##treeve## | Treeve Jelbert | ##0908 820D DA87 7F9C AD7B F7FF EE82 88A7 A177 29BE## |
-| [[:Keyserver_PGP:0x1CCF3307|1CCF3307]] | ##wich## | Remko van der Vossen | ##E86A 69C4 8542 DA21 BA4D CCC9 42CF 3F36 1CCF 3307## |
+| [[:Keyserver_PGP:0xF04DDD08FD58851E|F04DDD08FD58851E]] | ##Xenanthropy## | Conner Clere | ##8BD8 454D F9A3 2400 70FA 7EB5 F04D DD08 FD58 851E## |
+| [[:Keyserver_PGP:0xE565ADFD005096D5|E565ADFD005096D5]] | ##flux_control## | Justin Boffemmyer | ##D247 7C91 F758 6829 2895 0AC7 E565 ADFD 0050 96D5## |
+| [[:Keyserver_PGP:0x350C12286319D895|350C12286319D895]] | ##ismaell## | Ismael Luceno | ##D050 C4DA 0440 5CE2 7985 8413 350C 1228 6319 D895## |
+| [[:Keyserver_PGP:0x2D535027EBF6BC5B|2D535027EBF6BC5B]] | ##public## | Pavel Vinogradov | ##96B9 029A ED89 C11C CE0C 2FE5 2D53 5027 EBF6 BC5B## |
+| [[:Keyserver_PGP:0x1D7B7D74A8EFDD61|1D7B7D74A8EFDD61]] | ##sandalle## | Eric Sandall | ##FCFF 26A1 BE21 08F4 BB91 FAED 1D7B 7D74 A8EF DD61## |
+| [[:Keyserver_PGP:0x7EF1D5B6A46DEDBE|7EF1D5B6A46DEDBE]] | ##SilverSlayer## | David C. Haley | ##E9CE 4E0E C4AF E847 1343 0CCB 7EF1 D5B6 A46D EDBE## |
+| [[:Keyserver_PGP:0x231C4CBC60D5CAFE|231C4CBC60D5CAFE]] | ##sobukus## | Thomas Orgis | ##D021 FF8E CF4B E097 19D6 1A27 231C 4CBC 60D5 CAFE## |
+| [[:Keyserver_PGP:0xA980B512562C3225|A980B512562C3225]] | ##Stealth## | Vlad Glagolev | ##E818 7DE5 5F6F C19D B509 228A A980 B512 562C 3225## |
+| [[:Keyserver_PGP:0xEE8288A7A17729BE|EE8288A7A17729BE]] | ##treeve## | Treeve Jelbert | ##0908 820D DA87 7F9C AD7B F7FF EE82 88A7 A177 29BE## |
+| [[:Keyserver_PGP:0x42CF3F361CCF3307|42CF3F361CCF3307]] | ##wich## | Remko van der Vossen | ##E86A 69C4 8542 DA21 BA4D CCC9 42CF 3F36 1CCF 3307## |
