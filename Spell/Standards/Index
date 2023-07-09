@@ -4,6 +4,15 @@ This page is for listing standards. It can be used as reference material for cre
 
 Another purpose of this document is to gather together info about everything that needs to be removed from/changed in the [[Grimoire|grimoires]]. Therefore when adding an entry, you should include some data about how often the //no-no// in question still appears in the grimoire(s).
 
+== Style guidelines ==
+
+* where possible, favor readability and simplicity over terse/compact code, with reasons being:
+** collaboration with other people: reverting the style choices of others is inefficient
+** existing code base is prevalent; if a major style change needs to happen, it must be done in the entire code base to avoid confusion
+** ability to parse DSL code if needed (where applies): complex code is harder to parse by automated means without prior execution/{{{eval}}}
+
+**Note:** if dispute over the meaning of the above arises, the component lead is the final say
+
 == Things spells should not do ==
 
 * contain tabs anywhere else than in [[Spell/Files/HISTORY|HISTORY]] (and even there only)
