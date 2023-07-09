@@ -1,6 +1,6 @@
 = HISTORY =
 
-The HISTORY file is used to contain the revision history of the [[Spell|spell]] for all to see: every change to a spell gets an entry in HISTORY, consisting of one entry head, and a number of entry lines describing the edit in more detail. The format is the common [[http://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html|ChangeLog format]]. The permissions are set to the standard 0644.
+The **HISTORY** file is used to contain the revision history of the [[Spell|spell]] for all to see: every change that impacts //behavior// gets an entry in **HISTORY**, consisting of one entry head, and a number of entry lines describing the edit in more detail. The format is the common [[http://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html|ChangeLog format]]. The permissions are set to the standard 0644.
 
 == Layout ==
 
@@ -56,7 +56,8 @@ will look like:
 
 == The "Don'ts" ==
 
-Some changes are not considered worth mentioning in HISTORY. \\ Those are:
-
+Some changes are not considered worth mentioning in **HISTORY**, such as:
 * changing spell signature between GPG key and SHA512 sum
 * removing/adding signature file
+* typo fixes
+* styling changes
