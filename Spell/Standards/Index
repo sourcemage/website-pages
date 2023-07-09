@@ -9,7 +9,7 @@ Another purpose of this document is to gather together info about everything tha
 * where possible, favor readability and simplicity over terse/compact code, with reasons being:
 ** collaboration with other people: reverting the style choices of others is inefficient
 ** existing code base is prevalent; if a major style change needs to happen, it must be done in the entire code base to avoid confusion
-** ability to parse DSL code if needed (where applies): complex code is harder to parse by automated means without prior execution/{{{eval}}}
+** ability to parse DSL code if needed (where applicable): complex code is harder to parse by automated means without prior execution/{{{eval}}}
 
 **Note:** if dispute over the meaning of the above arises, the component lead is the final say
 
