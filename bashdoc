@@ -4,6 +4,12 @@
 
 First of all, bashdoc is here to help you, the developer. It provides you with a simple, easy to use method of documenting your code. It also provides a standardized way to generate pretty HTML documentation as a reference.
 
+To get started, run:
+
+{{{
+# cast bashdoc
+}}}
+
 == Grammar ==
 {{{
 File := <FileSegment>*
