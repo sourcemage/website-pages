@@ -253,7 +253,7 @@ While we will need to install the bootloader, an example has already been provid
 ===== 7.9.3 UEFI using GRUB2
 
 {{{
-# cast -c grub2 efibootmgr
+# cast -r grub2 efibootmgr
 }}}
 
 **Note:** when casting //grub2// choose either {{{i386-efi}}} or {{{x86_64-efi}}} platform (depending on your CPU arch).
