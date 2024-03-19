@@ -140,7 +140,7 @@ Finally, using the chroot image we fetched in [[#head-1-2-3|step #3]] and assumi
 
 {{{
 # cd /mnt/drive
-# tar xvJf /root/smgl-test-0.63-20190513_0600-basesystem-x86_64.tar.xz
+# tar xvJf /root/smgl-test-0.63-20231208_1200-basesystem-x86_64.tar.xz --xattrs-include='*.*' --numeric-owner
 }}}
 
 Done!
