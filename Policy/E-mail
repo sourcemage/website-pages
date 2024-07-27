@@ -35,4 +35,10 @@ tls_cert_file ~/.mpop/user.crt
 account default : sourcemage
 }}}
 
+If the client requires TLS fingerprint setting to bypass self-signed certificate check, you can get it with:
+
+{{{
+$ openssl s_client -connect post.sourcemage.org:465 < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin | cut -d= -f2
+}}}
+
 **Note:** SMTP client setups vary.
